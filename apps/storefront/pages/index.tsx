@@ -85,8 +85,10 @@ export default function Home(e) {
           </div>
         </div>
         <h1 className="padding-top-66">Find us on</h1>
-        <div className="padding-top-10 text-align-center padding-bottom-350">
-          <img className="margin-auto" src="/social-icons.svg" alt="social" />
+        <div className="padding-top-10 row  padding-bottom-350 justify-center">
+          <img src="/facebook.png" alt="facebook" className="padding-sides-10 height-17" />
+          <img src="/instagram.png" alt="instagram" className="padding-sides-10 height-17" />
+          <img src="/youtube.png" alt="youtube" className="padding-sides-10 height-17" />
         </div>
       </main>
     </div>

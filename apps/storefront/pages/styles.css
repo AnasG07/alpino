@@ -94,7 +94,12 @@ input::placeholder {
   padding-left: 90px;
   padding-right: 90px;
 }
-
+.padding-sides-10 {
+  padding: 0px 10px;
+}
+.height-17 {
+  height: 17px;
+}
 .padding-top-10 {
   padding-top: 10px;
 }
