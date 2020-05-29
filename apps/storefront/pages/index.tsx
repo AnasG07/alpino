@@ -84,7 +84,7 @@ export default function Home() {
           </div>
         </div>
         <h4 className="padding-top-66 pb-5">Find us on</h4>
-        <div className="padding-top-10 row  padding-bottom-350 justify-center">
+        <div className="padding-top-10 row  padding-bottom-150 justify-center">
           <img src="/facebook.png" alt="facebook" className="padding-sides-10 height-17" />
           <img src="/instagram.png" alt="instagram" className="padding-sides-10 height-17" />
           <img src="/youtube.png" alt="youtube" className="padding-sides-10 height-17" />
