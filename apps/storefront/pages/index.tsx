@@ -1,19 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
-export default function Home(e) {
-  console.log(e);
+
+export default function Home() {
   return (
     <div className="min-h-screen padding-30 bg-black ">
       <Head>
-        <title>Create Next App</title>
+        <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <img src="/logo.svg" alt="Alipno Logo" className="logo" />
         <div className="background-image">
           <h1 className="padding-top-58">Coming Soon</h1>
-          <p className="max-width-565 style-content padding-top-29 margin-auto">
+          <p className="max-width-565 style-content padding-top-29 mx-auto">
             We know you’re moving to a better tomorrow. So we’ve decided to keep up with you. Bear with us as we build a
             new Alpino to meet our ever-growing family. To be the first to hear from us when our website is back, feel
             free to give us your E-mail id!
@@ -21,7 +20,7 @@ export default function Home(e) {
           <h2 className="padding-top-86"> Tech-a-boo</h2>
           <div className="padding-top-29 text-align-center">
             <span className="row justify-center">
-              <input placeholder="Enter your email address"></input>
+              <input placeholder="Enter your email address" className="pl-4" />
               <button className="padding-notify-button">Notify me</button>
             </span>
           </div>
@@ -84,7 +83,7 @@ export default function Home(e) {
             </span>
           </div>
         </div>
-        <h1 className="padding-top-66">Find us on</h1>
+        <h4 className="padding-top-66 pb-5">Find us on</h4>
         <div className="padding-top-10 row  padding-bottom-350 justify-center">
           <img src="/facebook.png" alt="facebook" className="padding-sides-10 height-17" />
           <img src="/instagram.png" alt="instagram" className="padding-sides-10 height-17" />
