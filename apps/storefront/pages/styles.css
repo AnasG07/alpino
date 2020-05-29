@@ -1,0 +1,188 @@
+.padding-30 {
+  padding: 30px;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #f2f2f2;
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+}
+
+button {
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 0px 30px 30px 0px;
+  outline: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 30px 0px 0px 30px;
+  outline: none;
+  width: 100%;
+  max-width: 240px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.padding-notify-button {
+  padding: 12px 20px 12px 14px;
+}
+
+.background-image {
+  background-image: url('/earphone-banner.svg');
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.padding-top-20 {
+  padding-top: 20px;
+}
+
+.padding-top-58 {
+  padding-top: 58px;
+}
+
+.padding-top-29 {
+  padding-top: 29px;
+}
+
+.padding-top-27 {
+  padding-top: 27px;
+}
+
+.padding-top-86 {
+  padding-top: 86px;
+}
+
+.padding-top-66 {
+  padding-top: 66px;
+}
+
+.padding-top-214 {
+  padding-top: 214px;
+}
+
+.padding-sides-90 {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.padding-sides-10 {
+  padding: 0px 10px;
+}
+
+.height-17 {
+  height: 17px;
+}
+
+.padding-top-10 {
+  padding-top: 10px;
+}
+
+.padding-top-13 {
+  padding-top: 13px;
+}
+
+.margin-left-60 {
+  margin-left: 60px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.min-height-560 {
+  min-height: 560px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+}
+
+.max-width-565 {
+  max-width: 565px;
+}
+
+.max-width-686 {
+  max-width: 686px;
+}
+
+.padding-bottom-150 {
+  padding-bottom: 150px;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.style-content {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
