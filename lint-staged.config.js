@@ -1,23 +1,16 @@
+const escape = require('shell-quote').quote;
+const isWin = process.platform === 'win32';
+
 module.exports = {
-  linters: {
-    '(README|DEVELOPING).md': ['npm run format-doctoc', 'git add'],
-    'package.json': ['npm run format-package-json', 'git add'],
-    '.editorconfig': ['prettier --write', 'git add'],
-    LICENSE: ['prettier --write', 'git add'],
-    '**/*.md': ['markdownlint'],
-    '**/*.{css,gql,graphql,html,json,less,md,mdx,scss,vue,yaml,yml}': ['prettier --write', 'git add'],
-    '**/*.{js,jsx,ts,tsx}': [
-      'import-sort --write',
-      'prettier --write',
-      "eslint --cache --ext '.js,.jsx,.ts,.tsx' --fix",
-      'git add',
-      'jest --bail --findRelatedTests',
-    ],
-    'src/**/*': [
-      // Run build without passing changed files to command: https://github.com/okonet/lint-staged/issues/174
-      "bash -c 'npm run build'",
-    ],
+  '**/*.{js,jsx,ts,tsx}': (filenames) => {
+    const escapedFileNames = filenames.map((filename) => `"${isWin ? filename : escape([filename])}"`).join(' ');
+    return [
+      `prettier --with-node-modules --write ${escapedFileNames}`,
+      `eslint --no-ignore --max-warnings=0 --fix ${filenames.map((f) => `"${f}"`).join(' ')}`,
+    ];
   },
-  // The formatting tools are ordered to run sequentially
-  concurrent: false,
+  '**/*.{json,md,mdx,css,html,yml,yaml,scss}': (filenames) => {
+    const escapedFileNames = filenames.map((filename) => `"${isWin ? filename : escape([filename])}"`).join(' ');
+    return [`prettier --with-node-modules --ignore-path --write ${escapedFileNames}`];
+  },
 };
