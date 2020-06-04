@@ -114,7 +114,16 @@ input {
   padding-left: 90px;
   padding-right: 90px;
 }
-
+.padding-sides-120 {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+.padding-left-120 {
+  padding-left: 120px;
+}
+.padding-right-120 {
+  padding-right: 120px;
+}
 .padding-sides-10 {
   padding: 0px 10px;
 }
@@ -177,7 +186,34 @@ input {
 .justify-space-between {
   justify-content: space-between;
 }
-
+.padding-top-90 {
+  padding-top: 90px;
+}
+.padding-left-90 {
+  padding-left: 90px;
+}
+.padding-right-90 {
+  padding-right: 90px;
+}
+.header-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+.footer-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
 .style-content {
   font-style: normal;
   font-weight: normal;
@@ -185,4 +221,33 @@ input {
   line-height: 30px;
   text-align: center;
   color: #ffffff;
+}
+.footer-font {
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.footer-text-color {
+  color: rgba(242, 242, 242, 0.6);
+}
+.input-color-footer {
+  color: rgba(242, 242, 242, 0.6);
+}
+.background-red-dark {
+  background-color: #d92b2b;
+}
+.max-width-50 {
+  max-width: 50%;
+}
+.button-transparent {
+  @apply leading-tight font-semibold text-lg  rounded-full;
+}
+.outline-none {
+  outline: none;
+}
+.item-description-color {
+  color: rgba(255, 255, 255, 0.6);
+}
+.background-image-people {
+  background-image: url('/people.svg');
 }
