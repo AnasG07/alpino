@@ -110,18 +110,18 @@ input {
   padding-top: 214px;
 }
 
-.padding-sides-90 {
+.px-22.5 {
   padding-left: 90px;
   padding-right: 90px;
 }
-.padding-sides-120 {
+.px-30 {
   padding-left: 120px;
   padding-right: 120px;
 }
-.padding-left-120 {
+.pl-30 {
   padding-left: 120px;
 }
-.padding-right-120 {
+.pr-30 {
   padding-right: 120px;
 }
 .padding-sides-10 {
@@ -150,11 +150,6 @@ input {
 
 .min-height-560 {
   min-height: 560px;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 30px;
 }
 
 .row {
@@ -186,15 +181,11 @@ input {
 .justify-space-between {
   justify-content: space-between;
 }
-.padding-top-90 {
+
+.pt-23 {
   padding-top: 90px;
 }
-.padding-left-90 {
-  padding-left: 90px;
-}
-.padding-right-90 {
-  padding-right: 90px;
-}
+
 .header-link {
   font-style: normal;
   font-weight: normal;
@@ -250,4 +241,22 @@ input {
 }
 .background-image-people {
   background-image: url('/people.svg');
+}
+.max-w-30 {
+  max-width: 480px;
+}
+.max-w-45 {
+  max-width: 720px;
+}
+.max-w-14 {
+  max-width: 220px;
+}
+.max-w-16 {
+  max-width: 250px;
+}
+.bg-greyCard {
+  background: rgba(255, 255, 255, 0.15);
+}
+.rounded-large {
+  border-radius: 30px;
 }

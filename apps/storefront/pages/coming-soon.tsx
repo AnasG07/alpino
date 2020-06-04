@@ -9,7 +9,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <img src="/logo.svg" alt="Alipno Logo" className="logo" />
         <div className="background-image">
           <h1 className="padding-top-58">Coming Soon</h1>
           <p className="max-width-565 style-content padding-top-29 mx-auto">
@@ -30,7 +29,7 @@ export default function Home() {
             you’re amongst the first 1,000 people to subscribe no matter what the order value is.
           </p>
         </div>
-        <div className="padding-top-214 padding-sides-90">
+        <div className="padding-top-214 px-22.5">
           <h1 className="text-align-left">Some of our Products</h1>
           <h3 className="padding-top-20">Best always deserves better</h3>
           <div className="row padding-top-66 justify-space-between">
