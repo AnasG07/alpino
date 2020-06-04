@@ -20,8 +20,10 @@ export default function ProductCard({ data: { image, name, price, description, l
       </div>
       {hoverValue ? (
         <div className="flex flex-row justify-between items-center pt-10">
-          <button className="rounded-full py-4 text-base px-10 outline-none border-none bg-black">Details</button>
-          <button className="rounded-full text-base py-4 px-8 outline-none border-none bg-white text-black">
+          <button className="rounded-full py-4 text-base px-10 outline-none border-none bg-black max-w-8 w-full flex justify-center">
+            Details
+          </button>
+          <button className="rounded-full text-base py-4 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
             {buttonText}
           </button>
         </div>

@@ -248,6 +248,9 @@ input {
 .max-w-45 {
   max-width: 720px;
 }
+.max-w-8 {
+  max-width: 120px;
+}
 .max-w-14 {
   max-width: 220px;
 }
