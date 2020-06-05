@@ -187,45 +187,25 @@ input {
 }
 
 .header-link {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
-  text-align: center;
-  color: #ffffff;
-  border: none;
-  outline: none;
+  @apply not-italic font-normal text-base text-center text-white leading-8;
 }
 .footer-link {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
-  color: #ffffff;
-  border: none;
-  outline: none;
+  @apply not-italic font-normal text-base text-center text-white leading-8;
 }
 .style-content {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 30px;
-  text-align: center;
-  color: #ffffff;
+  @apply not-italic font-normal text-sm text-center text-white leading-8;
 }
 .footer-font {
-  font-size: 14px;
-  line-height: 24px;
-  color: #ffffff;
+  @apply leading-6 text-sm text-white;
 }
 .footer-text-color {
-  color: rgba(242, 242, 242, 0.6);
+  @apply text-grey-light;
 }
 .input-color-footer {
-  color: rgba(242, 242, 242, 0.6);
+  @apply text-grey-light;
 }
 .background-red-dark {
-  background-color: #d92b2b;
+  @apply bg-maximum-red;
 }
 .max-width-50 {
   max-width: 50%;
@@ -237,7 +217,7 @@ input {
   outline: none;
 }
 .item-description-color {
-  color: rgba(255, 255, 255, 0.6);
+  @apply text-grey-light;
 }
 .background-image-people {
   background-image: url('/people.svg');
@@ -257,9 +237,18 @@ input {
 .max-w-16 {
   max-width: 250px;
 }
-.bg-greyCard {
-  background: rgba(255, 255, 255, 0.15);
+.bg-greyCard:hover {
+  @apply bg-grey-dark;
 }
 .rounded-large {
   border-radius: 30px;
+}
+.hover-show {
+  display: none;
+}
+.hover-main:hover .hover-show {
+  display: flex;
+}
+.hover-main:hover .hover-hide {
+  display: none;
 }

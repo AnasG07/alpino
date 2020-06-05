@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { ProductFeature, ProductCard } from '../components';
+import ProductFeature from '../components/ProductFeature.tsx';
+import ProductCard from '../components/ProductCard.tsx';
+
 export async function getServerSideProps(context) {
   return {
     props: {
