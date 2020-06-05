@@ -111,18 +111,18 @@ input {
 }
 
 .px-22.5 {
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 5.625rem;
+  padding-right: 5.625rem;
 }
 .px-30 {
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
 }
 .pl-30 {
-  padding-left: 120px;
+  padding-left: 7.5rem;
 }
 .pr-30 {
-  padding-right: 120px;
+  padding-right: 7.5rem;
 }
 .padding-sides-10 {
   padding: 0px 10px;
@@ -183,7 +183,7 @@ input {
 }
 
 .pt-23 {
-  padding-top: 90px;
+  padding-top: 5.625rem;
 }
 
 .header-link {
