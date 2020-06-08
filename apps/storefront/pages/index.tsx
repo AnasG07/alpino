@@ -63,7 +63,7 @@ export async function getServerSideProps(context) {
 
 export default function Home({ productFeature, productCard }) {
   return (
-    <div className="min-h-screen  bg-black ">
+    <div className="min-h-screen bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -75,11 +75,11 @@ export default function Home({ productFeature, productCard }) {
           ))}
         </div>
         <div content className="background-red-dark p-32">
-          <div className="flex flex-row ">
-            <div className="flex-grow  text-center">
-              <span className="card ">animation</span>
+          <div className="flex flex-row">
+            <div className="flex-grow text-center">
+              <span className="card">animation</span>
             </div>
-            <div className="flex-grow flex flex-col justify-center  max-width-50">
+            <div className="flex-grow flex flex-col justify-center max-width-50">
               <h1 className="text-black text-left max-w-30">
                 Your ideas are worthy of so much more than the kudos in your imagination.
               </h1>
@@ -91,7 +91,7 @@ export default function Home({ productFeature, productCard }) {
             </div>
           </div>
         </div>
-        <div content className="pt-32  ">
+        <div content className="pt-32">
           <div className="flex flex-row justify-between items-center px-30">
             <h1>Best Sellers</h1>
             <h3>Best always deserves better</h3>
@@ -108,18 +108,18 @@ export default function Home({ productFeature, productCard }) {
           </div>
         </div>
         <div content className="background-image-people p-32 bg-no-repeat mt-32">
-          <div className="flex flex-row ">
+          <div className="flex flex-row">
             <div className="flex-grow">
               <h1 className="text-left">About us </h1>
             </div>
-            <div className="flex-grow flex flex-col justify-center  max-width-50">
+            <div className="flex-grow flex flex-col justify-center max-width-50">
               <h3 className="text-left max-w-45">
                 We refuse to conform to the idea of being just a consumer electronics brand, and instead believe we’re a
                 lifestyle brand. As a fast-paced company, we make sure our products help you listen to the voice of
                 righteousness and block out the noise of negativity.
               </h3>
               <div className="pt-32">
-                <button className="button-transparent py-2 px-8  outline-none">Learn More</button>
+                <button className="button-transparent py-2 px-8 outline-none">Learn More</button>
               </div>
             </div>
           </div>

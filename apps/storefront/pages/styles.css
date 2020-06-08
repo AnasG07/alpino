@@ -252,3 +252,9 @@ input {
 .hover-main:hover .hover-hide {
   display: none;
 }
+.product-alignment:nth-child(even) {
+  @apply flex-row-reverse;
+}
+.product-alignment:nth-child(odd) {
+  @apply flex-row;
+}
