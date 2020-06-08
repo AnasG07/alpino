@@ -110,11 +110,20 @@ input {
   padding-top: 214px;
 }
 
-.padding-sides-90 {
-  padding-left: 90px;
-  padding-right: 90px;
+.px-22.5 {
+  padding-left: 5.625rem;
+  padding-right: 5.625rem;
 }
-
+.px-30 {
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+}
+.pl-30 {
+  padding-left: 7.5rem;
+}
+.pr-30 {
+  padding-right: 7.5rem;
+}
 .padding-sides-10 {
   padding: 0px 10px;
 }
@@ -141,11 +150,6 @@ input {
 
 .min-height-560 {
   min-height: 560px;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 30px;
 }
 
 .row {
@@ -178,11 +182,79 @@ input {
   justify-content: space-between;
 }
 
+.pt-23 {
+  padding-top: 5.625rem;
+}
+
+.header-link {
+  @apply not-italic font-normal text-base text-center text-white leading-8;
+}
+.footer-link {
+  @apply not-italic font-normal text-base text-center text-white leading-8;
+}
 .style-content {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 30px;
-  text-align: center;
-  color: #ffffff;
+  @apply not-italic font-normal text-sm text-center text-white leading-8;
+}
+.footer-font {
+  @apply leading-6 text-sm text-white;
+}
+.footer-text-color {
+  @apply text-grey-light;
+}
+.input-color-footer {
+  @apply text-grey-light;
+}
+.background-red-dark {
+  @apply bg-maximum-red;
+}
+.max-width-50 {
+  max-width: 50%;
+}
+.button-transparent {
+  @apply leading-tight font-semibold text-lg  rounded-full;
+}
+.outline-none {
+  outline: none;
+}
+.item-description-color {
+  @apply text-grey-light;
+}
+.background-image-people {
+  background-image: url('/people.svg');
+}
+.max-w-30 {
+  max-width: 480px;
+}
+.max-w-45 {
+  max-width: 720px;
+}
+.max-w-8 {
+  max-width: 120px;
+}
+.max-w-14 {
+  max-width: 220px;
+}
+.max-w-16 {
+  max-width: 250px;
+}
+.bg-greyCard:hover {
+  @apply bg-grey-dark;
+}
+.rounded-large {
+  border-radius: 30px;
+}
+.hover-show {
+  display: none;
+}
+.hover-main:hover .hover-show {
+  display: flex;
+}
+.hover-main:hover .hover-hide {
+  display: none;
+}
+.product-alignment:nth-child(even) {
+  @apply flex-row-reverse;
+}
+.product-alignment:nth-child(odd) {
+  @apply flex-row;
 }

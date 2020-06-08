@@ -1,93 +1,144 @@
 import React from 'react';
 import Head from 'next/head';
+import ProductFeature from '../components/ProductFeature.tsx';
+import ProductCard from '../components/ProductCard.tsx';
 
-export default function Home() {
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      productFeature: [
+        {
+          description: 'Sound that stirs beyond sense.',
+          image: '/rock-large.svg',
+          buttonText: 'Shop Speakers',
+        },
+        {
+          description: 'If ignorance is bliss, these will give youecstasy',
+          image: '/thar-large.svg',
+          buttonText: 'Shop Headphones',
+        },
+        {
+          description: 'Your closest workout partner.',
+          image: '/trip-large.svg',
+          buttonText: 'Shop Neckbands',
+        },
+        {
+          description: 'All ears, all year.',
+          image: '/earphone.svg',
+          buttonText: 'Shop Earphones',
+        },
+      ],
+      productCard: [
+        {
+          image: '/rock-bluetooth.svg',
+          name: 'Rock',
+          type: 'Blutetooth Speaker',
+          price: '1299',
+          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
+          launch: 'Estimated launch: 2 Months',
+          buttonText: 'Buy',
+        },
+        {
+          image: '/thar-bluetooth.svg',
+          name: 'Thar GT',
+          type: 'Bluetooth Headphone',
+          price: '1299',
+          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
+          launch: 'Estimated launch: 2 Months',
+          buttonText: 'Buy',
+        },
+        {
+          image: '/trip-flex.svg',
+          name: 'Town Flex',
+          type: ' Wireless Neckband',
+          price: '799',
+          description: 'Comfortable and secure fit, magnetic design with pure stereo sound. Playback time: 4.5 hours',
+          launch: 'Estimated launch: 2 Months',
+          buttonText: 'Buy',
+        },
+      ],
+    },
+  };
+}
+
+export default function Home({ productFeature, productCard }) {
   return (
-    <div className="min-h-screen padding-30 bg-black ">
+    <div className="min-h-screen bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <img src="/logo.svg" alt="Alipno Logo" className="logo" />
-        <div className="background-image">
-          <h1 className="padding-top-58">Coming Soon</h1>
-          <p className="max-width-565 style-content padding-top-29 mx-auto">
-            We know you’re moving to a better tomorrow. So we’ve decided to keep up with you. Bear with us as we build a
-            new Alpino to meet our ever-growing family. To be the first to hear from us when our website is back, feel
-            free to give us your E-mail id!
-          </p>
-          <h2 className="padding-top-86"> Tech-a-boo</h2>
-          <div className="padding-top-29 text-align-center">
-            <span className="row justify-center">
-              <input placeholder="Enter your email address" className="pl-4" />
-              <button className="padding-notify-button">Notify me</button>
-            </span>
-          </div>
-          <p className="padding-top-27 margin-auto style-content max-width-686">
-            In our bid to establish a more human connection with you, tell us a little more about yourself, and get the
-            chance to win FREE ALPINO TRIP EXTRA earphones on your first order, and EXCLUSIVE COUPONS and DISCOUNTS if
-            you’re amongst the first 1,000 people to subscribe no matter what the order value is.
-          </p>
+        <div content className="pb-56">
+          {productFeature.map((i, index) => (
+            <ProductFeature data={i} index={index} />
+          ))}
         </div>
-        <div className="padding-top-214 padding-sides-90">
-          <h1 className="text-align-left">Some of our Products</h1>
-          <h3 className="padding-top-20">Best always deserves better</h3>
-          <div className="row padding-top-66 justify-space-between">
-            <span className="column padding-30 min-height-560">
-              <img src="/rock-bluetooth.svg" alt="Rock bluetooth" />
-              <h3 className="padding-top-29">
-                Rock
-                <br />
-                Blutetooth Speaker
-              </h3>
-            </span>
-            <span className="column card margin-left-60 padding-30 min-height-560">
-              <img src="/thar-bluetooth.svg" alt="Thar bluetooth" />
-              <h3 className="padding-top-29">
-                Thar GT <br />
-                Bluetooth Headphone
-              </h3>
-            </span>
-            <span className="column margin-left-60 padding-30 min-height-560">
-              <img src="/trip-flex.svg" alt="Trip Flex" />
-              <h3 className="padding-top-29">
-                Trip Flex
-                <br /> Wireless Neckband
-              </h3>
-            </span>
+        <div content className="background-red-dark p-32">
+          <div className="flex flex-row">
+            <div className="flex-grow text-center">
+              <span className="card">animation</span>
+            </div>
+            <div className="flex-grow flex flex-col justify-center max-width-50">
+              <h1 className="text-black text-left max-w-30">
+                Your ideas are worthy of so much more than the kudos in your imagination.
+              </h1>
+              <div className="pt-64">
+                <button className="button-transparent py-4 px-8 border-none bg-black outline-none">
+                  Incubate with Alpino
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="row padding-top-66 justify-space-between">
-            <span className="column padding-30 min-height-560">
-              <img src="/flex-pro.svg" alt="Flex Pro" />
-              <h3 className="padding-top-29">
-                Flex Pro
-                <br />
-                Wireless Neckband
-              </h3>
-            </span>
-            <span className="column card margin-left-60 padding-30 min-height-560">
-              <img src="/power-flex.svg" alt="Power Flex" />
-              <h3 className="padding-top-29">
-                Power Flex
-                <br />
-                Wireless Neckband
-              </h3>
-            </span>
-            <span className="column margin-left-60 padding-30 min-height-560">
-              <img src="/town-square.svg" alt="Town Square" />
-              <h3 className="padding-top-13">
-                Town Square
-                <br /> Blutetooth Speaker
-              </h3>
+        </div>
+        <div content className="pt-32">
+          <div className="flex flex-row justify-between items-center px-30">
+            <h1>Best Sellers</h1>
+            <h3>Best always deserves better</h3>
+          </div>
+          <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
+            {productCard.map((i) => (
+              <ProductCard data={i} />
+            ))}
+            <span>
+              <button className="border-none outline-none">
+                <img className="inline-block" src="arrow-right.svg" />
+              </button>
             </span>
           </div>
         </div>
-        <h4 className="padding-top-66 pb-5">Find us on</h4>
-        <div className="padding-top-10 row  padding-bottom-150 justify-center">
-          <img src="/facebook.png" alt="facebook" className="padding-sides-10 height-17" />
-          <img src="/instagram.png" alt="instagram" className="padding-sides-10 height-17" />
-          <img src="/youtube.png" alt="youtube" className="padding-sides-10 height-17" />
+        <div content className="background-image-people p-32 bg-no-repeat mt-32">
+          <div className="flex flex-row">
+            <div className="flex-grow">
+              <h1 className="text-left">About us </h1>
+            </div>
+            <div className="flex-grow flex flex-col justify-center max-width-50">
+              <h3 className="text-left max-w-45">
+                We refuse to conform to the idea of being just a consumer electronics brand, and instead believe we’re a
+                lifestyle brand. As a fast-paced company, we make sure our products help you listen to the voice of
+                righteousness and block out the noise of negativity.
+              </h3>
+              <div className="pt-32">
+                <button className="button-transparent py-2 px-8 outline-none">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div content className="pt-32">
+          <div className="flex flex-row justify-between items-center px-30">
+            <h1>Sneak Peak</h1>
+            <h3>The future before it happens</h3>
+          </div>
+          <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
+            {productCard.map((i) => (
+              <ProductCard data={i} />
+            ))}
+            <span>
+              <button className="border-none outline-none">
+                <img className="inline-block" src="arrow-right.svg" />
+              </button>
+            </span>
+          </div>
         </div>
       </main>
     </div>
