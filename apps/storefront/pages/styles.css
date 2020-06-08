@@ -151,6 +151,9 @@ input {
 .min-height-560 {
   min-height: 560px;
 }
+.min-height-35 {
+  min-height: 35.3125rem;
+}
 
 .row {
   display: flex;
@@ -187,7 +190,7 @@ input {
 }
 
 .header-link {
-  @apply not-italic font-normal text-base text-center text-white leading-8;
+  @apply not-italic font-normal text-base text-white leading-8;
 }
 .footer-link {
   @apply not-italic font-normal text-base text-center text-white leading-8;
@@ -257,4 +260,14 @@ input {
 }
 .product-alignment:nth-child(odd) {
   @apply flex-row;
+}
+.subnav-content {
+  position: absolute;
+  display: none;
+}
+.subnav:hover .subnav-content {
+  display: block;
+}
+.subnav:hover img {
+  transform: rotate(180deg);
 }

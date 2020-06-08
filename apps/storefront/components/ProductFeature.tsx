@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ProductFeature({ data: { description, buttonText, image }, index }) {
+export default function ProductFeature({ data: { description, buttonText, image } }) {
   return (
     <div className="flex product-alignment">
       <div className="flex-grow flex flex-col justify-center pl-30">
