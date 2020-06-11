@@ -66,8 +66,8 @@ export async function getServerSideProps(context) {
 export default function Home({ productFeature, productCard }) {
   return (
     <>
-      <Header />
       <div className="min-h-screen bg-black">
+        <Header />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
@@ -128,7 +128,7 @@ export default function Home({ productFeature, productCard }) {
               </div>
             </div>
           </div>
-          <div className="pt-32">
+          <div className="pt-32 pb-32">
             <div className="flex flex-row justify-between items-center px-30">
               <h1>Sneak Peak</h1>
               <h3>The future before it happens</h3>

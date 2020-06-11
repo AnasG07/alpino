@@ -52,7 +52,9 @@ button {
   text-align: center;
   color: #f2f2f2;
 }
-
+button:focus {
+  outline: none;
+}
 input {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 30px 0px 0px 30px;
@@ -190,7 +192,7 @@ input {
 }
 
 .header-link {
-  @apply not-italic font-normal text-base text-white leading-8;
+  @apply not-italic font-normal text-base  leading-8;
 }
 .footer-link {
   @apply not-italic font-normal text-base text-center text-white leading-8;
@@ -270,4 +272,21 @@ input {
 }
 .subnav:hover img {
   transform: rotate(180deg);
+}
+.filter-invert {
+  filter: invert(1);
+}
+.min-height-60 {
+  min-height: 60rem;
+}
+.background-image-support {
+  background-image: url('/telephone.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.list-styled {
+  list-style: decimal;
+}
+.max-width-95-percent {
+  max-width: 95%;
 }
