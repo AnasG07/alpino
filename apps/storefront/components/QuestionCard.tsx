@@ -6,10 +6,10 @@ export default function QuestionCard({ data, index }) {
     <div className="py-8 border-solid border-t border-gray-custom">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col max-width-95-percent">
-          <span className="text-faq-question text-xl ">
+          <span className="text-faq-question text-xl font-semibold leading-16">
             {index + 1}. {data.question}
           </span>
-          {showAnswer && <span className="text-faq-answer pt-2">A. {data.answer}</span>}
+          {showAnswer && <span className="text-faq-answer pt-2 text-xl leading-8">A. {data.answer}</span>}
         </div>
         <div>
           <button className="border-none" onClick={() => updateShowAnswer(!showAnswer)}>

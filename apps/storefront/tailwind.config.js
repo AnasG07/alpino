@@ -11,6 +11,10 @@ module.exports = {
         'faq-question': '#303030',
         'faq-answer': '#2E2E2E',
       },
+      lineHeight: {
+        16: '4rem',
+        12: '3rem',
+      },
     },
   },
 };

@@ -112,7 +112,7 @@ input {
   padding-top: 214px;
 }
 
-.px-22.5 {
+.px-23 {
   padding-left: 5.625rem;
   padding-right: 5.625rem;
 }
@@ -152,6 +152,14 @@ input {
 
 .min-height-560 {
   min-height: 560px;
+}
+@media screen and (max-width: 1024px) {
+  .min-height-560 {
+    min-height: auto;
+  }
+}
+.max-width-23 {
+  max-width: 22.5rem;
 }
 .min-height-35 {
   min-height: 35.3125rem;
@@ -225,7 +233,7 @@ input {
   @apply text-grey-light;
 }
 .background-image-people {
-  background-image: url('/people.svg');
+  background-image: url('/people.jpg');
 }
 .max-w-30 {
   max-width: 480px;

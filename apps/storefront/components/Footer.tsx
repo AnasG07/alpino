@@ -9,133 +9,133 @@ export default function Footer() {
         <div className="flex-grow">
           <div className="pb-8">
             <Link href="/">
-              <a className="footer-link ">Support</a>
+              <a className="footer-link leading-8">Support</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="pt-8 footer-font"> Privacy Policy </a>
+              <a className="pt-8 footer-font leading-6"> Privacy Policy </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Terms and Condition </a>
+              <a className="footer-font leading-6"> Terms and Condition </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Warranty </a>
+              <a className="footer-font leading-6"> Warranty </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Refund </a>
+              <a className="footer-font leading-6"> Refund </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Support </a>
+              <a className="footer-font leading-6"> Support </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Contact us</a>
+              <a className="footer-font leading-6"> Contact us</a>
             </Link>
           </div>
         </div>
         <div className="flex-grow">
           <div className="pb-8">
             <Link href="/">
-              <a className="footer-link ">About</a>
+              <a className="footer-link leading-8 leading-6">About</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="pt-8 footer-font">Our Story</a>
+              <a className="pt-8 footer-font leading-6">Our Story</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Work with us</a>
+              <a className="footer-font leading-6"> Work with us</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font">Become a distributor </a>
+              <a className="footer-font leading-6">Become a distributor </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font">Affiliate </a>
+              <a className="footer-font leading-6">Affiliate </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font">Corporate enquiries </a>
+              <a className="footer-font leading-6">Corporate enquiries </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font">Press </a>
+              <a className="footer-font leading-6">Press </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Blogs</a>
+              <a className="footer-font leading-6"> Blogs</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font">News </a>
+              <a className="footer-font leading-6">News </a>
             </Link>
           </div>
         </div>
         <div className="flex-grow">
           <div className="pb-8">
             <Link href="/">
-              <a className="footer-link">Explore</a>
+              <a className="footer-link leading-8">Explore</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="pt-8 footer-font">All Products</a>
+              <a className="pt-8 footer-font leading-6">All Products</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font">Speakers </a>
+              <a className="footer-font leading-6">Speakers </a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Headphones</a>
+              <a className="footer-font leading-6"> Headphones</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Power Banks</a>
+              <a className="footer-font leading-6"> Power Banks</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Earphones</a>
+              <a className="footer-font leading-6"> Earphones</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Neckbands</a>
+              <a className="footer-font leading-6"> Neckbands</a>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <a className="footer-font"> Cables</a>
+              <a className="footer-font leading-6"> Cables</a>
             </Link>
           </div>
         </div>
         <div className="flex-grow">
           <div>
             <Link href="/">
-              <a className="footer-link">Join our newsletter</a>
+              <a className="footer-link leading-8">Join our newsletter</a>
             </Link>
           </div>
           <h6 className="footer-font footer-text-color pt-8"> Even Trump can’t call this news fake</h6>
@@ -144,10 +144,10 @@ export default function Footer() {
             <button className="padding-notify-button">Join</button>
           </span>
           <div className="pt-16 flex ">
-            <img src="/facebook.png" alt="facebook" className=" px-1 height-17" />
-            <img src="/instagram.png" alt="instagram" className="px-1 height-17" />
-            <img src="/youtube.png" alt="youtube" className=" px-1 height-17" />
-            <img src="/twitter.png" alt="twitter" className=" px-1 height-17" />
+            <img src="/facebook.png" alt="facebook" className="px-3 height-17" />
+            <img src="/instagram.png" alt="instagram" className="px-3 height-17" />
+            <img src="/youtube.png" alt="youtube" className=" px-3 height-17" />
+            <img src="/twitter.png" alt="twitter" className=" px-3 height-17" />
           </div>
         </div>
       </div>
