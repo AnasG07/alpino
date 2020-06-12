@@ -84,10 +84,10 @@ export default function Home({ productFeature, productCard }) {
                 <span className="card">animation</span>
               </div>
               <div className="flex-grow flex flex-col justify-center max-width-50">
-                <h1 className="text-black text-left max-w-30">
+                <h1 className="text-black text-left max-w-30 leading-12">
                   Your ideas are worthy of so much more than the kudos in your imagination.
                 </h1>
-                <div className="pt-64">
+                <div className="pt-64 leading-10">
                   <button className="button-transparent py-4 px-8 border-none bg-black outline-none">
                     Incubate with Alpino
                   </button>
@@ -97,7 +97,7 @@ export default function Home({ productFeature, productCard }) {
           </div>
           <div className="pt-32">
             <div className="flex flex-row justify-between items-center px-30">
-              <h1>Best Sellers</h1>
+              <h1 className="leading-12">Best Sellers</h1>
               <h3>Best always deserves better</h3>
             </div>
             <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
@@ -114,7 +114,7 @@ export default function Home({ productFeature, productCard }) {
           <div className="background-image-people p-32 bg-no-repeat mt-32 bg-cover">
             <div className="flex flex-row">
               <div className="flex-grow">
-                <h1 className="text-left">About us </h1>
+                <h1 className="text-left leading-12">About us </h1>
               </div>
               <div className="flex-grow flex flex-col justify-center max-width-50">
                 <h3 className="text-left max-w-45">
@@ -130,7 +130,7 @@ export default function Home({ productFeature, productCard }) {
           </div>
           <div className="pt-32 pb-32">
             <div className="flex flex-row justify-between items-center px-30">
-              <h1>Sneak Peak</h1>
+              <h1 className="leading-12">Sneak Peak</h1>
               <h3>The future before it happens</h3>
             </div>
             <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">

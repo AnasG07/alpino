@@ -29,53 +29,53 @@ export default function Home() {
             you’re amongst the first 1,000 people to subscribe no matter what the order value is.
           </p>
         </div>
-        <div className="padding-top-214 px-22.5">
-          <h1 className="text-align-left">Some of our Products</h1>
-          <h3 className="padding-top-20">Best always deserves better</h3>
-          <div className="row padding-top-66 justify-space-between">
-            <span className="column padding-30 min-height-560">
+        <div className="px-23 padding-top-214 ">
+          <h1 className=" text-center lg:text-left">Some of our Products</h1>
+          <h3 className="text-center lg:text-left padding-top-20">Best always deserves better</h3>
+          <div className="flex flex-col lg:flex-row padding-top-66 justify-space-between items-center">
+            <span className="column padding-30 min-height-560 mx-4 my-5 lg:my-0 max-width-23">
               <img src="/rock-bluetooth.svg" alt="Rock bluetooth" />
-              <h3 className="padding-top-29">
+              <h3 className="padding-top-29 text-center lg:text-left">
                 Rock
                 <br />
                 Blutetooth Speaker
               </h3>
             </span>
-            <span className="column card margin-left-60 padding-30 min-height-560">
+            <span className="column card max-width-23 padding-30 min-height-560 bg-grey-dark rounded-large mx-4 my-5 lg:my-0">
               <img src="/thar-bluetooth.svg" alt="Thar bluetooth" />
-              <h3 className="padding-top-29">
+              <h3 className="padding-top-29 text-center lg:text-left">
                 Thar GT <br />
                 Bluetooth Headphone
               </h3>
             </span>
-            <span className="column margin-left-60 padding-30 min-height-560">
+            <span className="column max-width-23 padding-30 min-height-560 mx-4 my-5 lg:my-0">
               <img src="/trip-flex.svg" alt="Trip Flex" />
-              <h3 className="padding-top-29">
+              <h3 className="padding-top-29 text-center lg:text-left">
                 Trip Flex
                 <br /> Wireless Neckband
               </h3>
             </span>
           </div>
-          <div className="row padding-top-66 justify-space-between">
-            <span className="column padding-30 min-height-560">
-              <img src="/flex-pro.svg" alt="Flex Pro" />
-              <h3 className="padding-top-29">
+          <div className="flex flex-col lg:flex-row padding-top-66 justify-space-between items-center">
+            <span className="column max-width-23 padding-30 min-height-560 mx-4 my-5 lg:my-0">
+              <img src="/flex-pro.svg" alt="Flex Psro" />
+              <h3 className="padding-top-29 text-center lg:text-left">
                 Flex Pro
                 <br />
                 Wireless Neckband
               </h3>
             </span>
-            <span className="column card margin-left-60 padding-30 min-height-560">
+            <span className="column card max-width-23  padding-30 min-height-560 bg-grey-dark rounded-large mx-4 my-5 lg:my-0">
               <img src="/power-flex.svg" alt="Power Flex" />
-              <h3 className="padding-top-29">
+              <h3 className="padding-top-29 text-center lg:text-left">
                 Power Flex
                 <br />
                 Wireless Neckband
               </h3>
             </span>
-            <span className="column margin-left-60 padding-30 min-height-560">
+            <span className="column   max-width-23 padding-30 min-height-560 mx-4 my-5 lg:my-0">
               <img src="/town-square.svg" alt="Town Square" />
-              <h3 className="padding-top-13">
+              <h3 className="padding-top-13 text-center lg:text-left">
                 Town Square
                 <br /> Blutetooth Speaker
               </h3>

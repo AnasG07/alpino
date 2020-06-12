@@ -3,7 +3,7 @@ import React from 'react';
 export default function ProductFeature({ data: { description, buttonText, image } }) {
   return (
     <div className="flex product-alignment">
-      <div className="flex-grow flex flex-col justify-center pl-30">
+      <div className="flex-grow flex flex-col justify-center pl-30 leading-12">
         <h1 className="max-w-30 text-left">{description}</h1>
         <div className="pt-16">
           <button className="button-transparent py-2 px-4 outline-none">{buttonText}</button>
