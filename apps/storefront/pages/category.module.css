@@ -1,0 +1,17 @@
+.imageContainer {
+  height: 42rem;
+  background-image: url('/wearables.png');
+  background-size: cover;
+  margin-top: 90px;
+}
+.container {
+  height: 35.375rem;
+  border-radius: 2rem;
+  background-color: #0c0c0c;
+}
+.padding {
+  padding: 7rem 15rem;
+}
+.image-background {
+  background-image: pink;
+}

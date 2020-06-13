@@ -257,13 +257,6 @@ input {
 .background-image-people {
   background-image: url('/people.jpg');
 }
-<<<<<<< HEAD
-.background-image-wearables {
-  background-image: url('/wearables.png');
-}
-=======
-
->>>>>>> 6e305027c4806208ccbc77b958f1dc01b0b1bdb6
 .max-w-30 {
   max-width: 480px;
 }
