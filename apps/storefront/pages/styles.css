@@ -52,9 +52,11 @@ button {
   text-align: center;
   color: #f2f2f2;
 }
+
 button:focus {
   outline: none;
 }
+
 input {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 30px 0px 0px 30px;
@@ -112,20 +114,26 @@ input {
   padding-top: 214px;
 }
 
-.px-23 {
-  padding-left: 5.625rem;
-  padding-right: 5.625rem;
+@media (min-width: 768px) {
+  .px-23 {
+    padding-left: 5.625rem;
+    padding-right: 5.625rem;
+  }
 }
+
 .px-30 {
   padding-left: 7.5rem;
   padding-right: 7.5rem;
 }
+
 .pl-30 {
   padding-left: 7.5rem;
 }
+
 .pr-30 {
   padding-right: 7.5rem;
 }
+
 .padding-sides-10 {
   padding: 0px 10px;
 }
@@ -153,14 +161,17 @@ input {
 .min-height-560 {
   min-height: 560px;
 }
+
 @media screen and (max-width: 1024px) {
   .min-height-560 {
     min-height: auto;
   }
 }
+
 .max-width-23 {
   max-width: 22.5rem;
 }
+
 .min-height-35 {
   min-height: 35.3125rem;
 }
@@ -200,101 +211,132 @@ input {
 }
 
 .header-link {
-  @apply not-italic font-normal text-base  leading-8;
+  @apply not-italic font-normal text-base leading-8;
 }
+
 .footer-link {
   @apply not-italic font-normal text-base text-center text-white leading-8;
 }
+
 .style-content {
   @apply not-italic font-normal text-sm text-center text-white leading-8;
 }
+
 .footer-font {
   @apply leading-6 text-sm text-white;
 }
+
 .footer-text-color {
   @apply text-grey-light;
 }
+
 .input-color-footer {
   @apply text-grey-light;
 }
+
 .background-red-dark {
   @apply bg-maximum-red;
 }
+
 .max-width-50 {
   max-width: 50%;
 }
+
 .button-transparent {
-  @apply leading-tight font-semibold text-lg  rounded-full;
+  @apply leading-tight font-semibold text-lg rounded-full;
 }
+
 .outline-none {
   outline: none;
 }
+
 .item-description-color {
   @apply text-grey-light;
 }
+
 .background-image-people {
   background-image: url('/people.jpg');
 }
+
 .max-w-30 {
   max-width: 480px;
 }
+
 .max-w-45 {
   max-width: 720px;
 }
+
 .max-w-8 {
   max-width: 120px;
 }
+
 .max-w-14 {
   max-width: 220px;
 }
+
 .max-w-16 {
   max-width: 250px;
 }
+
 .bg-greyCard:hover {
   @apply bg-grey-dark;
 }
+
 .rounded-large {
   border-radius: 30px;
 }
+
 .hover-show {
   display: none;
 }
+
 .hover-main:hover .hover-show {
   display: flex;
 }
+
 .hover-main:hover .hover-hide {
   display: none;
 }
+
 .product-alignment:nth-child(even) {
   @apply flex-row-reverse;
 }
+
 .product-alignment:nth-child(odd) {
   @apply flex-row;
 }
+
 .subnav-content {
   position: absolute;
   display: none;
 }
+
 .subnav:hover .subnav-content {
   display: block;
 }
+
 .subnav:hover img {
   transform: rotate(180deg);
 }
+
 .filter-invert {
   filter: invert(1);
 }
+
 .min-height-60 {
   min-height: 60rem;
 }
+
 .background-image-support {
   background-image: url('/telephone.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .list-styled {
   list-style: decimal;
 }
+
 .max-width-95-percent {
   max-width: 95%;
 }

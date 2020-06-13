@@ -29,8 +29,8 @@ export default function Home() {
             you’re amongst the first 1,000 people to subscribe no matter what the order value is.
           </p>
         </div>
-        <div className="px-23 padding-top-214 ">
-          <h1 className=" text-center lg:text-left">Some of our Products</h1>
+        <div className="px-23 padding-top-214">
+          <h1 className="text-center lg:text-left">Some of our Products</h1>
           <h3 className="text-center lg:text-left padding-top-20">Best always deserves better</h3>
           <div className="flex flex-col lg:flex-row padding-top-66 justify-space-between items-center">
             <span className="column padding-30 min-height-560 mx-4 my-5 lg:my-0 max-width-23">
