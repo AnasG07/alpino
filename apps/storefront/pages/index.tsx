@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-import ProductFeature from '../components/ProductFeature.tsx';
-import ProductCard from '../components/ProductCard.tsx';
-import Header from '../components/Header.tsx';
-import Footer from '../components/Footer.tsx';
+import ProductFeature from '../components/ProductFeature';
+import ProductCard from '../components/ProductCard';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export async function getServerSideProps(context) {
   return {
@@ -66,7 +66,7 @@ export async function getServerSideProps(context) {
 export default function Home({ productFeature, productCard }) {
   return (
     <>
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-black pt-20">
         <Header />
         <Head>
           <title>Alpino</title>

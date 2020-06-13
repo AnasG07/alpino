@@ -1,42 +1,47 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from '../components/Header.tsx';
-import Footer from '../components/Footer.tsx';
-import QuestionCard from '../components/QuestionCard.tsx';
-// import styles from './support.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import QuestionCard from '../components/QuestionCard';
 
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
   return {
     props: {
       faq: [
         {
           question: 'What all documents must be preserved to redeem the warranty period benefits?',
           answer:
-            ' In order to avail the benefits of the warranty period, the customer must preserve and present a copy of the original invoice. Along with this a simple form, available on our website must be filled which has details about their purchase date, order-id and e-commerce marketplace the customer purchased the product from.',
+            'In order to avail the benefits of the warranty period, the customer must preserve and present a copy of the original invoice. Along with this a simple form, available on our website must be filled which has details about their purchase date, order-id and e-commerce marketplace the customer purchased the product from.',
         },
         {
           question: 'How can I track my service request?',
-          answer: 'lorem ipsum',
+          answer:
+            'As a company that values its customers, we assure getting back to all service requests within two working days after the call/e-mail has reached us.',
         },
         {
           question: 'How do I repair or return my device?',
-          answer: 'lorem ipsum dipsuem',
+          answer:
+            'In keeping with our company policy, customers can only get their product(s) exchanged within 10 days of making the purchase. However, for the same process, the cost of one side logistics must be paid by the customer.',
         },
         {
           question: 'Is there a process with which I can buy specific parts for my device?',
-          answer: 'lorem ipsum dipsuem',
+          answer:
+            'Neither us nor any of our affiliate(s) sell specific parts as a separate item of purchase, yet. However, the customer may refer to our website if a certain product they are looking for, is sold as an accessory.',
         },
         {
           question: 'What are the advantages of subscribing to the Alpino Newsletter?',
-          answer: 'lorem ipsum dipsuem',
+          answer:
+            'The Alpino Newsletter offers our customers several advantages including receiving authentic information about our products and services before anyone else. They would also receive a 15% pre-launch discount on our products.',
         },
         {
           question: 'How can I redeem my discount after subscribing to the Alpino Newsletter?',
-          answer: 'lorem ipsum dipsuem',
+          answer:
+            'After subscribing to the Alpino Newsletter, the customers will instantly receive a coupon code in their registered email which they can use on checkout.',
         },
         {
           question: 'How do I unsubscribe to the Newsletter?',
-          answer: 'lorem ipsum dipsuem',
+          answer:
+            'You may unsubscribe from our newsletter at any time by clicking on the "Unsubscribe" link at the bottom of any Alpino Newsletter received in your email.',
         },
       ],
     },
@@ -51,7 +56,7 @@ export default function Support({ faq }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="background-image-support min-height-60">
+        <div className="background-image-support min-height-60 pt-20">
           <Header invert />
           <div className="flex justify-center flex-col items-center pt-24">
             <h1 className="text-black leading-8">Support</h1>
@@ -88,8 +93,8 @@ export default function Support({ faq }) {
         <div className="pt-16 px-32">
           <h1 className="text-black text-left leading-16">Frequently Asked Questions</h1>
           <div className="py-20">
-            {faq.map((i, index) => (
-              <QuestionCard data={i} index={index} />
+            {faq.map((data, index) => (
+              <QuestionCard data={data} index={index} />
             ))}
           </div>
         </div>

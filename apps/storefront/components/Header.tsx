@@ -3,13 +3,16 @@ import Link from 'next/link';
 
 export default function Header({ invert }) {
   return (
-    <div className="flex flex-row justify-between padding-30 items-baseline ">
+    <div
+      className={`flex flex-row justify-between padding-30 items-baseline fixed w-full top-0 ${
+        invert ? '' : 'bg-black'
+      }`}>
       <Link href="/">
         <a>
           <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && 'filter-invert'}`} />
         </a>
       </Link>
-      <span className="flex items-baseline">
+      <span className="flex items-center">
         <div className="subnav">
           <Link href="/earphones">
             <a className={`header-link px-4 text-right leading-8 ${invert ? 'text-black' : 'text-white'}`}>
