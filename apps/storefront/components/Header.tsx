@@ -25,22 +25,22 @@ export default function Header({ invert }) {
             </a>
           </Link>
           <div className="subnav-content">
-            <Link href="/neckbands">
+            <Link href="/earphones/neckbands">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Neckbands
               </a>
             </Link>
-            <Link href="/headphones">
+            <Link href="/earphones/headphones">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Headphones
               </a>
             </Link>
-            <Link href="/headsets-single-ear">
+            <Link href="/earphones/headsets-single-ear">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
-                Headsets- Single Ear
+                Headsets - Single Ear
               </a>
             </Link>
-            <Link href="/wires-earphones">
+            <Link href="/earphones/wired-earphones">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Wired earphones
               </a>
