@@ -227,6 +227,9 @@ input {
 .background-image-people {
   background-image: url('/people.svg');
 }
+.background-image-wearables {
+  background-image: url('/wearables.png');
+}
 .max-w-30 {
   max-width: 480px;
 }

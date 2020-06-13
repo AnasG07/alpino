@@ -7,7 +7,7 @@ export default function Header({ invert }) {
       <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && 'filter-invert'}`} />
       <span className="flex items-baseline">
         <div className="subnav">
-          <Link href="/">
+          <Link href="/category/category">
             <a className={`header-link px-4 text-right ${invert ? 'text-black' : 'text-white'}`}>
               Earphones
               <img
