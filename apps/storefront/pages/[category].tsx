@@ -4,11 +4,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import style from './category.module.css';
 import classNames from 'classnames';
+import CategoryCard from '../components/CategoryCard';
 
-export async function getStaticProps() {
+export async function getServerSideProps({ params }) {
   return {
     props: {
-      productFeature: [
+      subCategories: [
         {
           title: 'Headphones',
           description: 'OVER THE EAR',
@@ -34,7 +35,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Category({ productFeature }) {
+export default function Category({ subCategories }) {
   return (
     <>
       <div className="min-h-screen bg-black w-full">
@@ -44,8 +45,12 @@ export default function Category({ productFeature }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-          <div className={classNames(style.imageContainer, 'flex flex-col items-center justify-center bg-no-repeat')}>
-            <p className="text-center text-5xl text-white mt-32">Explore our wearables</p>
+          <div
+            className={classNames(
+              style.imageContainer,
+              'mt-20 flex flex-col items-center justify-center bg-no-repeat',
+            )}>
+            <h1 className="text-center text-5xl text-white mt-32">Explore our wearables</h1>
             <p className="text-center mt-6 text-white text-2xl">
               Renowed performance and superior comfort from <br /> designed to bring you closer to your music <br /> —
               and the world around you
@@ -53,14 +58,8 @@ export default function Category({ productFeature }) {
           </div>
           <div className={classNames(style.padding, 'flex justify-center ')}>
             <div className="flex flex-wrap justify-between -mx-4 overflow-hidden sm:-mx-1 md:-mx-4 lg:-mx-4 xl:-mx-6">
-              {productFeature.map((data, index) => (
-                <div>
-                  <button className={classNames(style.container, 'border-none flex items-center justify-center')}>
-                    <img src={data.image}></img>
-                  </button>
-                  <p className="text-4xl text-white text-center mt-4">{data.title}</p>
-                  <p className="text-base text-white text-center mt-6 mb-32">{data.description}</p>
-                </div>
+              {subCategories.map((data, index) => (
+                <CategoryCard data={data} index={index} />
               ))}
             </div>
           </div>

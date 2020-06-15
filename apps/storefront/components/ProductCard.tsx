@@ -6,8 +6,8 @@ export default function ProductCard({ data: { image, name, price, description, l
       <img src={image} alt="Rock bluetooth" />
       <div className="flex flex-row items-center  justify-between">
         <div>
-          <h3 className="max-w-14 leading-5">{name}</h3>
-          <h3 className="max-w-14 leading-5">{type}</h3>
+          <h3 className="max-w-14 leading-5 text-left text-white font-normal text-xl">{name}</h3>
+          <h3 className="max-w-14 leading-5 text-left text-white font-normal text-xl">{type}</h3>
         </div>
         <span className="text-white text-base">
           <img className="inline-block h-6" src="indian.png" />

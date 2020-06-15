@@ -14,7 +14,7 @@ export default function Header({ invert }) {
       </Link>
       <span className="flex items-center">
         <div className="subnav">
-          <Link href="/category">
+          <Link href="/[category]" as="/[category]">
             <a className={`header-link px-4 text-right leading-8 ${invert ? 'text-black' : 'text-white'}`}>
               Earphones
               <img
