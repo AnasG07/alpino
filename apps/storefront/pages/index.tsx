@@ -124,9 +124,15 @@ export default function Home() {
         </div>
         <h4 className="padding-top-66 pb-5 text-center text-white font-medium text-5xl leading-12">Find us on</h4>
         <div className="padding-top-10 row  padding-bottom-150 justify-center">
-          <img src="/facebook.png" alt="facebook" className="padding-sides-10 height-17" />
-          <img src="/instagram.png" alt="instagram" className="padding-sides-10 height-17" />
-          <img src="/youtube.png" alt="youtube" className="padding-sides-10 height-17" />
+          <a href="https://www.facebook.com/alpino.tech/" className="padding-sides-10">
+            <img src="/facebook.png" alt="facebook" className="height-17" />
+          </a>
+          <a href="https://www.instagram.com/alpino.tech/" className="padding-sides-10">
+            <img src="/instagram.png" alt="instagram" className="height-17" />
+          </a>
+          <a href="https://www.youtube.com/channel/UC9TU2qLRCWp24Dmm2F7M7Mg" className="padding-sides-10">
+            <img src="/youtube.png" alt="youtube" className="height-17" />
+          </a>
         </div>
       </main>
     </div>
