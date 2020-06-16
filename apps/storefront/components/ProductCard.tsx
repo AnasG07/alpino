@@ -14,7 +14,7 @@ export default function ProductCard({ data: { image, name, price, description, l
           {price}
         </span>
       </div>
-      <div className="flex flex-row justify-between items-center pt-10 hover-show">
+      <div className="flex flex-row justify-between items-center pt-10 hover-show min-height-24">
         <button className=" leading-5 rounded-full py-3 text-base px-8 outline-none border-none bg-black max-w-8 w-full flex justify-center">
           Details
         </button>
@@ -22,7 +22,9 @@ export default function ProductCard({ data: { image, name, price, description, l
           {buttonText}
         </button>
       </div>
-      <span className="leading-5 item-description-color pt-8 text-sm max-w-16 hover-hide">{description}</span>
+      <span className="leading-5 item-description-color pt-8 text-sm max-w-16 hover-hide min-height-24">
+        {description}
+      </span>
 
       <span className="text-xs item-description-color pt-8 leading-5">{launch}</span>
     </span>

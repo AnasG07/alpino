@@ -52,11 +52,14 @@ button {
   color: #f2f2f2;
 }
 
+input,
 button:focus {
   outline: none;
 }
-
-input {
+input::placeholder {
+  @apply text-white;
+}
+.input {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 30px 0px 0px 30px;
   outline: none;
@@ -68,7 +71,15 @@ input {
   line-height: 20px;
   color: #fff;
 }
-
+.h1 {
+  @apply leading-12 text-white font-medium text-5xl;
+}
+.h3 {
+  @apply text-lg text-white-light font-normal leading-tight;
+}
+.text-content {
+  @apply text-lg text-white-light font-normal leading-normal;
+}
 .padding-notify-button {
   padding: 12px 20px 12px 14px;
 }
@@ -134,7 +145,9 @@ input {
 .pl-30 {
   padding-left: 7.5rem;
 }
-
+.pt-30 {
+  padding-top: 7.5rem;
+}
 .pr-30 {
   padding-right: 7.5rem;
 }
@@ -162,11 +175,15 @@ input {
 .margin-auto {
   margin: auto;
 }
-
+.min-height-30 {
+  min-height: 30rem;
+}
 .min-height-560 {
   min-height: 560px;
 }
-
+.min-height-24 {
+  min-height: 5.75rem;
+}
 @media screen and (max-width: 1024px) {
   .min-height-560 {
     min-height: auto;
@@ -182,6 +199,9 @@ input {
 }
 .min-height-60 {
   min-height: 60rem;
+}
+.min-height-38 {
+  min-height: 37.5rem;
 }
 .row {
   display: flex;
@@ -247,6 +267,9 @@ input {
 
 .max-width-50 {
   max-width: 50%;
+}
+.max-width-25 {
+  max-width: 25%;
 }
 
 .button-transparent {
@@ -345,4 +368,7 @@ input {
 
 .max-width-95-percent {
   max-width: 95%;
+}
+.form-card {
+  @apply bg-black rounded-large;
 }

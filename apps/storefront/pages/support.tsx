@@ -56,7 +56,7 @@ export default function Support({ faq }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="background-image-support min-height-60 ">
+        <div className="background-image-support min-height-60">
           <Header invert />
           <div className="flex justify-center flex-col items-center pt-24">
             <h1 className="text-black leading-8 font-medium text-5xl text-left leading-12">Support</h1>

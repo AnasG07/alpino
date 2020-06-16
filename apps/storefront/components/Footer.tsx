@@ -140,7 +140,7 @@ export default function Footer() {
           </div>
           <h6 className="footer-font footer-text-color pt-8"> Even Trump can’t call this news fake</h6>
           <span className="row justify-start pt-6">
-            <input placeholder="Enter your email address" className="pl-4 input-footer-color" />
+            <input placeholder="Enter your email address" className="pl-4 input-footer-color input" />
             <button className="padding-notify-button">Join</button>
           </span>
           <div className="pt-16 flex ">
