@@ -84,7 +84,7 @@ export default function Home({ productFeature, productCard }) {
                 <span className="card">animation</span>
               </div>
               <div className="flex-grow flex flex-col justify-center max-width-50">
-                <h1 className="text-black text-left max-w-30 leading-12">
+                <h1 className="text-black leading-10 font-medium text-5xl text-left max-w-30 leading-12">
                   Your ideas are worthy of so much more than the kudos in your imagination.
                 </h1>
                 <div className="pt-64 leading-10">
@@ -97,8 +97,8 @@ export default function Home({ productFeature, productCard }) {
           </div>
           <div className="pt-32">
             <div className="flex flex-row justify-between items-center px-30">
-              <h1 className="leading-12">Best Sellers</h1>
-              <h3>Best always deserves better</h3>
+              <h1 className="leading-12 text-white font-medium text-5xl">Best Sellers</h1>
+              <h3 className="text-left text-xl text-white font-normal leading-tight">Best always deserves better</h3>
             </div>
             <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
               {productCard.map((i, index) => (
@@ -114,10 +114,10 @@ export default function Home({ productFeature, productCard }) {
           <div className="background-image-people p-32 bg-no-repeat mt-32 bg-cover">
             <div className="flex flex-row">
               <div className="flex-grow">
-                <h1 className="text-left leading-12">About us </h1>
+                <h1 className="text-left text-white font-medium text-5xl leading-12">About us </h1>
               </div>
               <div className="flex-grow flex flex-col justify-center max-width-50">
-                <h3 className="text-left max-w-45">
+                <h3 className="text-left text-xl text-white font-normal leading-tight max-w-45">
                   We refuse to conform to the idea of being just a consumer electronics brand, and instead believe we’re
                   a lifestyle brand. As a fast-paced company, we make sure our products help you listen to the voice of
                   righteousness and block out the noise of negativity.
@@ -130,8 +130,8 @@ export default function Home({ productFeature, productCard }) {
           </div>
           <div className="pt-32 pb-32">
             <div className="flex flex-row justify-between items-center px-30">
-              <h1 className="leading-12">Sneak Peak</h1>
-              <h3>The future before it happens</h3>
+              <h1 className="text-left text-white font-medium text-5xl leading-12">Sneak Peak</h1>
+              <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
             </div>
             <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
               {productCard.map((i, index) => (

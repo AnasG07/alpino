@@ -2,7 +2,7 @@
   padding: 30px;
 }
 
-h1 {
+/* h1 {
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
@@ -35,8 +35,7 @@ h4 {
   line-height: 50px;
   text-align: center;
   color: #ffffff;
-}
-
+} */
 button {
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
@@ -265,7 +264,6 @@ input {
 .background-image-people {
   background-image: url('/people.jpg');
 }
-
 .max-w-30 {
   max-width: 480px;
 }
