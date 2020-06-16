@@ -36,6 +36,9 @@ h4 {
   text-align: center;
   color: #ffffff;
 } */
+.textGrayColor {
+  color: #f2f2f2;
+}
 button {
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
@@ -277,11 +280,41 @@ input {
 }
 
 .bg-greyCard:hover {
-  @apply bg-grey-dark;
+  background-color: #262626;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.customGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.2fr;
+  grid-gap: 8rem;
 }
 
 .rounded-large {
   border-radius: 30px;
+}
+
+.starIconWhite {
+  filter: invert(100%);
+  background-color: white;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 1px;
+  height: 1rem;
+  width: 17px;
+}
+.starIconBlack {
+  filter: invert(-100%);
+  background-color: white;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 1px;
+  height: 1rem;
+  width: 17px;
 }
 
 .hover-show {

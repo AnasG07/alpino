@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Header({ invert }) {
   return (
     <div
-      className={`flex flex-row justify-between padding-30 items-baseline fixed w-full top-0 ${
+      className={`flex flex-row justify-between padding-30 z-10 items-baseline fixed w-full top-0 ${
         invert ? '' : 'bg-black'
       }`}>
       <Link href="/">
@@ -14,7 +14,7 @@ export default function Header({ invert }) {
       </Link>
       <span className="flex items-center">
         <div className="subnav">
-          <Link href="/[category]" as="/[category]">
+          <Link href="/category/[category]" as="/category/[category]">
             <a className={`header-link px-4 text-right leading-8 ${invert ? 'text-black' : 'text-white'}`}>
               Earphones
               <img

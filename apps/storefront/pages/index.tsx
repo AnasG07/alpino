@@ -4,6 +4,7 @@ import ProductFeature from '../components/ProductFeature';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import classNames from 'classnames';
 
 export async function getServerSideProps(context) {
   return {
@@ -67,7 +68,7 @@ export default function Home({ productFeature, productCard }) {
   return (
     <>
       <div className="min-h-screen bg-black pt-20">
-        <Header />
+        <Header invert={false} />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
@@ -100,7 +101,7 @@ export default function Home({ productFeature, productCard }) {
               <h1 className="leading-12 text-white font-medium text-5xl">Best Sellers</h1>
               <h3 className="text-left text-xl text-white font-normal leading-tight">Best always deserves better</h3>
             </div>
-            <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
+            <div className="customGrid pt-32 justify-between pl-30 pr-10 items-center">
               {productCard.map((i) => (
                 <ProductCard data={i} />
               ))}
@@ -133,7 +134,7 @@ export default function Home({ productFeature, productCard }) {
               <h1 className="text-left text-white font-medium text-5xl leading-12">Sneak Peak</h1>
               <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
             </div>
-            <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
+            <div className="customGrid pt-32 justify-between pl-30 pr-10 items-center">
               {productCard.map((i) => (
                 <ProductCard data={i} />
               ))}

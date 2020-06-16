@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import style from './category.module.css';
 import classNames from 'classnames';
-import CategoryCard from '../components/CategoryCard';
+import CategoryCard from '../../components/CategoryCard';
 
 export async function getServerSideProps({ params }) {
   return {
