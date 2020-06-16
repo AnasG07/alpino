@@ -66,7 +66,7 @@ export async function getServerSideProps(context) {
 export default function Home({ productFeature, productCard }) {
   return (
     <>
-      <div className="min-h-screen bg-black pt-20">
+      <div className="min-h-screen bg-black ">
         <Header />
         <Head>
           <title>Alpino</title>
@@ -74,8 +74,8 @@ export default function Home({ productFeature, productCard }) {
         </Head>
         <main>
           <div className="pb-56">
-            {productFeature.map((i) => (
-              <ProductFeature data={i} />
+            {productFeature.map((i, index) => (
+              <ProductFeature data={i} key={index} />
             ))}
           </div>
           <div className="background-red-dark p-32">
@@ -101,8 +101,8 @@ export default function Home({ productFeature, productCard }) {
               <h3>Best always deserves better</h3>
             </div>
             <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
-              {productCard.map((i) => (
-                <ProductCard data={i} />
+              {productCard.map((i, index) => (
+                <ProductCard data={i} key={index} />
               ))}
               <span>
                 <button className="border-none outline-none">
@@ -134,8 +134,8 @@ export default function Home({ productFeature, productCard }) {
               <h3>The future before it happens</h3>
             </div>
             <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
-              {productCard.map((i) => (
-                <ProductCard data={i} />
+              {productCard.map((i, index) => (
+                <ProductCard data={i} key={index * 2} />
               ))}
               <span>
                 <button className="border-none outline-none">

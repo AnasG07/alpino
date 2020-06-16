@@ -73,7 +73,13 @@ input {
 .padding-notify-button {
   padding: 12px 20px 12px 14px;
 }
-
+.py-100 {
+  padding-top: 25rem;
+  padding-bottom: 25rem;
+}
+.p-30 {
+  padding: 7.5rem;
+}
 .background-image {
   background-image: url('/earphone-banner.svg');
 }
@@ -175,7 +181,9 @@ input {
 .min-height-35 {
   min-height: 35.3125rem;
 }
-
+.min-height-60 {
+  min-height: 60rem;
+}
 .row {
   display: flex;
   flex-flow: row;

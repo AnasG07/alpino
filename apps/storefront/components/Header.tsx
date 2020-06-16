@@ -3,10 +3,7 @@ import Link from 'next/link';
 
 export default function Header({ invert }) {
   return (
-    <div
-      className={`flex flex-row justify-between padding-30 items-baseline fixed w-full top-0 ${
-        invert ? '' : 'bg-black'
-      }`}>
+    <div className={`flex flex-row justify-between padding-30 items-baseline`}>
       <Link href="/">
         <a>
           <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && 'filter-invert'}`} />

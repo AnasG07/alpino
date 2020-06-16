@@ -4,6 +4,7 @@ module.exports = {
       colors: {
         'grey-light': 'rgba(242, 242, 242, 0.6)',
         'grey-dark': 'rgba(255, 255, 255, 0.15)',
+        'grey-darker': 'rgba(242, 242, 242, 0.1)',
         'maximum-red': '#d92b2b',
         'link-color': '#0000EE',
         'background-grey': '#f8f8f8',
@@ -14,6 +15,9 @@ module.exports = {
       lineHeight: {
         16: '4rem',
         12: '3rem',
+      },
+      fontSize: {
+        '7xl': '4.5rem',
       },
     },
   },

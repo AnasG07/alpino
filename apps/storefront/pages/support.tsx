@@ -56,7 +56,7 @@ export default function Support({ faq }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="background-image-support min-height-60 pt-20">
+        <div className="background-image-support min-height-60 ">
           <Header invert />
           <div className="flex justify-center flex-col items-center pt-24">
             <h1 className="text-black leading-8">Support</h1>
@@ -94,7 +94,7 @@ export default function Support({ faq }) {
           <h1 className="text-black text-left leading-16">Frequently Asked Questions</h1>
           <div className="py-20">
             {faq.map((data, index) => (
-              <QuestionCard data={data} index={index} />
+              <QuestionCard data={data} index={index} key={index} />
             ))}
           </div>
         </div>
