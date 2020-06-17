@@ -38,14 +38,13 @@ export default function Home() {
             free to give us your E-mail id!
           </p>
           <h2 className="padding-top-86 leading-tight font-semibold text-center text-xl text-white font-normal">
-            {' '}
             Tech-a-boo
           </h2>
           <div className="padding-top-29 text-align-center">
             <span className="row justify-center">
               <input
                 placeholder="Enter your email address"
-                className="pl-4"
+                className="pl-4 input"
                 value={email}
                 disabled={loading || subscribed}
                 onChange={(e) => setEmail(e.target.value)}
