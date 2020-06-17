@@ -1,4 +1,5 @@
 import React from 'react';
+import RatingStars from './RatingStars';
 
 export default function ProductCard({
   data: { image, name, price, description, launch, type, buttonText },
@@ -27,16 +28,7 @@ export default function ProductCard({
           </button>
         </div>
         <span className="leading-5 item-description-color pt-8 text-sm max-w-16 hover-hide">{description}</span>
-        {showStars ? (
-          <div className="flex flex-row mt-10 items-center">
-            <img className="starIconBlack" src="/star1.png"></img>
-            <img className="starIconBlack" src="/star1.png"></img>
-            <img className="starIconBlack" src="/star1.png"></img>
-            <img className="starIconBlack" src="/star1.png"></img>
-            <img className="starIconWhite" src="/star1.png"></img>
-            <p className="textGrayColor text-sm ml-2">(71)</p>
-          </div>
-        ) : null}
+        {showStars ? <RatingStars numberOfRatings={71} /> : null}
         <span className="text-xs item-description-color pt-8 leading-5">{launch}</span>
       </span>
     </div>

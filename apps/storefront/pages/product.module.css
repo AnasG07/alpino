@@ -1,1 +1,26 @@
-import React from 'react';
+.pinkBgColor {
+  background-color: #e32575;
+}
+.grayBgColor {
+  background-color: #f2f2f2;
+}
+.greenBgColor {
+  background-color: #2fede2;
+}
+.lightBlackBgColor {
+  background-color: #0c0c0c;
+}
+.specsContainerBg {
+  background-color: #181818;
+}
+.reviewContainer {
+  background-color: #0c0c0c;
+}
+.reviewCardBgColor {
+  background-color: #171717;
+  border-radius: 5%;
+}
+.reviewStarsSize {
+  height: 20px;
+  width: 18px;
+}
