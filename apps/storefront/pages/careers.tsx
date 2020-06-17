@@ -47,33 +47,21 @@ export default function Careers() {
             <div className={classNames(styles['p-15'], 'form-card-darker')}>
               <form className={styles['pt-15']}>
                 <div>
-                  <input
-                    placeholder="Name"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border"
-                  />
+                  <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
-                  <input
-                    placeholder="Email ID"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border "
-                  />
+                  <input placeholder="Email ID" className={classNames(styles['input-style'], 'text-content')} />
                 </div>
                 <div className="pt-20">
-                  <input
-                    placeholder="Phone Number"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border "
-                  />
+                  <input placeholder="Phone Number" className={classNames(styles['input-style'], 'text-content')} />
                 </div>
                 <div className="pt-20">
-                  <input
-                    placeholder="Company & City"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border "
-                  />
+                  <input placeholder="Company & City" className={classNames(styles['input-style'], 'text-content')} />
                 </div>
                 <div className="pt-20">
                   <input
                     placeholder="Details of Requirements"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border "
+                    className={classNames(styles['input-style'], 'text-content')}
                   />
                 </div>
                 <div className="pt-30">

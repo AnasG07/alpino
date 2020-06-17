@@ -49,3 +49,6 @@
 .pt-86 {
   padding-top: 21.5rem;
 }
+.input-style {
+  @apply bg-transparent border-b pb-4 w-full border-grey-border;
+}

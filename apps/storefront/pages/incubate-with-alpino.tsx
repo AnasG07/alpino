@@ -136,27 +136,24 @@ export default function IncubateALpino() {
               </div>
               <form className={styles['pt-35']}>
                 <div>
-                  <input
-                    placeholder="Name"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border"
-                  />
+                  <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="College / Organization"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border "
+                    className={classNames(styles['input-style'], 'text-content')}
                   />
                 </div>
                 <div className="pt-20">
                   <input
                     placeholder="What problem are you passionate about solving?"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border "
+                    className={classNames(styles['input-style'], 'text-content')}
                   />
                 </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="What would you bring to the table?"
-                    className="text-content bg-transparent border-b pb-4 w-full border-grey-border "
+                    className={classNames(styles['input-style'], 'text-content')}
                   />
                 </div>
                 <div className="pt-30">
