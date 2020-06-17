@@ -245,13 +245,7 @@ export default function Product({ productToDisplay, productCard }) {
 
           <div className={classNames(style.reviewContainer, 'bg-black pl-24 pb-24')}>
             <h1 className="text-white text-5xl font-medium leading-10 pt-32">Customer Reviews</h1>
-            <div className="flex flex-row mt-10 items-center">
-              <img src="/products/fullStar.png"></img>
-              <img src="/products/fullStar.png"></img>
-              <img src="/products/fullStar.png"></img>
-              <img src="/products/fullStar.png"></img>
-              <img src="/products/halfStar.png"></img>
-            </div>
+            <RatingStars solidStars smallSize={false} />
             <div className="flex mt-10 max-w-sm font-semibold items-center">
               <p className="text-white mr-1 text-lg">4.9</p>
               <p className="text-white text-sm font-normal">based on 41 customer reviews</p>
@@ -262,13 +256,7 @@ export default function Product({ productToDisplay, productCard }) {
                   <img src="/products/review1.png"></img>
                   <h1 className="text-white font-medium text-3xl ml-10">Scarlett Alexander</h1>
                 </div>
-                <div className={classNames(style.reviewStarsSize, 'flex flex-row mt-10 items-center')}>
-                  <img src="/products/fullStar.png"></img>
-                  <img src="/products/fullStar.png"></img>
-                  <img src="/products/fullStar.png"></img>
-                  <img src="/products/fullStar.png"></img>
-                  <img src="/products/fullStar.png"></img>
-                </div>
+                <RatingStars solidStars smallSize />
                 <p className="text-white font-semibold text-lg mt-16">EXACTLY WHAT I WAS EXPECTING!!!</p>
                 <p className="text-white text-lg font-normal mt-5">
                   The good product under 800₹. Same product
@@ -285,13 +273,7 @@ export default function Product({ productToDisplay, productCard }) {
                   <img src="/products/review2.png"></img>
                   <h1 className="text-white font-medium text-3xl ml-10">Prashant Singh</h1>
                 </div>
-                <div className={classNames(style.reviewStarsSize, 'flex flex-row mt-10 items-center')}>
-                  <img src="/products/fullStar.png"></img>
-                  <img src="/products/fullStar.png"></img>
-                  <img src="/products/fullStar.png"></img>
-                  <img src="/products/fullStar.png"></img>
-                  <img src="/products/halfStar.png"></img>
-                </div>
+                <RatingStars solidStars smallSize />
                 <p className="text-white font-semibold text-lg mt-16">Satisfied!</p>
                 <p className="text-white text-lg font-normal mt-5">
                   Superb product... lightweight and has amazing
