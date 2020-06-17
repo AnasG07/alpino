@@ -159,7 +159,9 @@ input::placeholder {
 .height-17 {
   height: 17px;
 }
-
+.max-width-58 {
+  max-width: 58%;
+}
 .padding-top-10 {
   padding-top: 10px;
 }
@@ -170,6 +172,9 @@ input::placeholder {
 
 .margin-left-60 {
   margin-left: 60px;
+}
+.min-height-188 {
+  min-height: 46.875rem;
 }
 
 .margin-auto {
@@ -371,4 +376,7 @@ input::placeholder {
 }
 .form-card {
   @apply bg-black rounded-large;
+}
+.form-card-darker {
+  @apply bg-grey-darker rounded-large;
 }

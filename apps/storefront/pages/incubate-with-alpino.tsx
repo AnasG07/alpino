@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import styles from './incubate-with-alpino.module.css';
+import styles from './static.module.css';
 import classNames from 'classnames';
 
 export default function IncubateALpino() {
@@ -17,7 +17,7 @@ export default function IncubateALpino() {
           <Header />
           <div className="flex px-30 py-100 justify-end items-center">
             <div>
-              <h1 className="text-7xl h1">Incubate</h1>
+              <h1 className={styles['text-heading']}>Incubate</h1>
               <h3 className="pt-5 h3">WITH ALPINO</h3>
             </div>
           </div>
