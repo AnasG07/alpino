@@ -97,7 +97,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/product">
               <a className="pt-8 footer-font leading-6">All Products</a>
             </Link>
           </div>
