@@ -6,34 +6,10 @@ import Link from 'next/link';
 import style from './checkout.module.css';
 import classNames from 'classnames';
 import Dropdown from 'react-dropdown';
-import CardItemCard from '../components/CartItemCard';
 
 const options = ['Home', 'Work'];
 
 const defaultOption = options[0];
-
-export async function getServerSideProps(context) {
-  return {
-    props: {
-      items: [
-        {
-          image: '/cart/cart1.png',
-          title: 'Thar GT',
-          cost: '₹ 2999',
-          color: 'Black',
-          quantity: '1',
-        },
-        {
-          image: '/cart/cart2.png',
-          title: 'Flex Pro',
-          cost: '₹ 2499',
-          color: 'Black',
-          quantity: '2',
-        },
-      ],
-    },
-  };
-}
 
 export default function Checkout({ items }) {
   return (
@@ -70,49 +46,59 @@ export default function Checkout({ items }) {
         </div>
 
         <div className="mt-10 min-h-screen flex justify-around">
-          <div className={classNames(style.card, 'px-8')}>
-            <h1 className="text-xl font-medium mt-6">Contact Information</h1>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-2" placeholder="Email ID"></input>
-            <h1 className="text-xl font-medium mt-6">Shipping Address</h1>
-            <h1 className={classNames(style.labelColor, 'text-base font-normal mt-2 mb-2')}>Full Name</h1>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-2" placeholder="Email ID"></input>
-            <h1 className={classNames(style.labelColor, 'text-base font-normal mt-4 mb-2')}>Address</h1>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-2" placeholder="Address line 1"></input>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-6" placeholder="Address line 2"></input>
-            <div className="flex flex-row flex-wrap justify-between items-center">
-              <input
-                className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
-                placeholder="City"></input>
-              <input
-                className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
-                placeholder="State"></input>
-              <input
-                className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
-                placeholder="Pincode"></input>
-              <input
-                className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
-                placeholder="Country"></input>
+          <div className={classNames(style.shippingCard, 'px-8')}>
+            <h1 className="text-xl font-medium mt-6">Shipping Information</h1>
+
+            <h1 className="text-lg font-normal ml-4 mt-6">Contact Details</h1>
+            <div className="flex flex-row items-center justify-between px-10">
+              <div className="flex flex-rol items-center justify-between w-3/5">
+                <h1 className="text-sm font-light tracking-wider mt-6 mb-6">Email ID</h1>
+                <h1 className="text-lg font-normal tracking-wider mt-6 mb-6">johndoe12@gmail.com</h1>
+              </div>
+              <div className="flex flex-row justify-center items-center mr-4">
+                <img src="/cart/edit.png"></img>
+                <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
+              </div>
             </div>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-6" placeholder="Mobile Number"></input>
-            <h1 className={classNames(style.labelColor, 'text-base font-normal mt-8 mb-2')}>Address Type</h1>
-            <Dropdown
-              options={options}
-              // onChange={this._onSelect}
-              value={defaultOption}
-              placeholder="Select an option"
-            />
-            <div className="flex items-center">
-              <img className="w-2 h-2 mr-2 mt-2" src="/cart/checkbox.png"></img>
-              <p className={classNames(style.labelColor, 'text-sm font-light tracking-wider mt-2')}>
-                Save this information for next time
-              </p>
+
+            <h1 className="text-lg font-normal ml-4 mt-1">Shipping Address</h1>
+            <div className="flex flex-row items-center justify-between px-10">
+              <div className="flex flex-rol items-center w-9/12 justify-between">
+                <h1 className="text-sm font-light tracking-wider mt-6 mb-6">Ship to</h1>
+                <h1 className="text-lg font-normal tracking-wider mt-6 mb-6">
+                  Rose Cottage
+                  <br /> 9 Garden Walk
+                  <br /> Happy Valley Retirement Village
+                  <br /> 75 Davis Street
+                  <br /> NORWOOD SA 5067
+                </h1>
+              </div>
+              <div className="flex flex-row justify-center items-center mr-4">
+                <img src="/cart/edit.png"></img>
+                <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
+              </div>
             </div>
-            <div className="flex flex-row w-full justify-center items-center mt-4">
+            <h1 className="text-lg font-normal ml-4 mt-4">Shipping method</h1>
+            <div className="flex flex-row grayBackGroundColor items-center bg-black ml-4 p-4 mt-4 rounded-md mt-2">
+              <img className={classNames(style.ellipse)} src="/cart/ellipse.png"></img>
+              <p className="text-sm font-light ml-4">Express Shipping</p>
+            </div>
+
+            <div className="flex flex-row w-full justify-start ml-4 mt-2 items-center mt-4">
               <img className="mr-2" src="/cart/leftarrow.png"></img>
               <h1 classNames={classNames(style.keepShoppingText, 'text-base font-normal tracking-wider')}>
-                Keep Shopping
+                Return to information
               </h1>
             </div>
+            <Link href="">
+              <div
+                className={classNames(
+                  style.continueButton,
+                  'cursor-pointer mx-auto flex justify-center items-center mt-6',
+                )}>
+                <h1 className="text-base text-white font-medium">Continue to payment</h1>
+              </div>
+            </Link>
           </div>
           <div className={classNames(style.card1, 'px-8 flex flex-col justify-between')}>
             <div className={classNames(style.smallCard, 'flex flex-col justify-around px-6')}>
@@ -173,7 +159,7 @@ export default function Checkout({ items }) {
                 </div>
               </div>
             </div>
-            <div className={classNames(style.smallCard, 'px-6')}>
+            <div className={classNames(style.smallCard1, 'px-6')}>
               <h1 className="text-xl font-medium tracking-wide mt-6">Order Summary</h1>
               <p className={classNames(style.labelColor, 'text-sm font-light')}>
                 Total cost includes taxes and delivery charges
@@ -199,13 +185,19 @@ export default function Checkout({ items }) {
                 <h1 className={classNames(style.greenFontColor, 'text-lg font-normal tracking-wider ml-4')}>Total</h1>
                 <p className={classNames(style.greenFontColor, 'text-sm font-medium')}>₹ 48</p>
               </div>
-              <Link href="/shipping">
+              <div>
+                <h1 className="text-lg font-medium tracking-wider text-center ml-4">Coupon code</h1>
+                <input
+                  className="grayBackGroundColor text-black p-4 rounded-md mt-2"
+                  placeholder="Enter Coupon Code"></input>
+              </div>
+              <Link href="/checkout">
                 <div
                   className={classNames(
-                    style.continueButton,
+                    style.applyButton,
                     'cursor-pointer mx-auto flex justify-center items-center mt-8',
                   )}>
-                  <h1 className="text-base text-white font-medium">Continue to shipping</h1>
+                  <h1 className="text-base text-white font-medium">Apply</h1>
                 </div>
               </Link>
             </div>
