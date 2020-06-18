@@ -1,41 +1,124 @@
+@import '../node_modules/react-alice-carousel/lib/alice-carousel.css';
+@import '../node_modules/react-dropdown/style.css';
+
+.alice-carousel {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.Dropdown-control {
+  position: relative;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #333;
+  cursor: default;
+  outline: none;
+  padding: 0.8rem;
+  transition: all 200ms ease;
+}
+.Dropdown-control:hover {
+  box-shadow: none;
+}
+
+.Dropdown-arrow {
+  border-width: 5px 5px 0;
+  content: ' ';
+  display: block;
+  height: 20px;
+  margin-top: -ceil(2.5);
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  width: 10px;
+}
+.Dropdown-menu {
+  background-color: white;
+  border: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+}
+.Dropdown-option.is-selected {
+  background-color: white;
+  color: #333;
+}
+
+.Dropdown-option:hover {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.is-open .Dropdown-arrow {
+  border: none;
+}
+
+.alice-carousel__stage {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.alice-carousel__stage-item {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.alice-carousel__stage-item * {
+  line-height: initial;
+  margin: 0 auto;
+}
+.alice-carousel__stage-item.__cloned {
+  visibility: hidden;
+  opacity: 0;
+}
+.alice-carousel__dots {
+  margin: 60px 3px 5px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.alice-carousel__dots-item {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.3);
+}
+.alice-carousel__dots-item:hover,
+.alice-carousel__dots-item.__active {
+  background-color: #f2f2f2;
+}
+
 .padding-30 {
   padding: 30px;
 }
 
-/* h1 {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 50px;
-  text-align: center;
-  color: #ffffff;
-}
-
-h2 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 20px;
-  text-align: center;
-  color: #ffffff;
-}
-
-h3 {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 20px;
+.textGrayColor {
   color: #f2f2f2;
 }
 
-h4 {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 50px;
-  text-align: center;
-  color: #ffffff;
-} */
+.grayBackGroundColor {
+  background-color: #f9f9f9;
+}
+
 button {
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
@@ -64,7 +147,6 @@ input::placeholder {
   border-radius: 30px 0px 0px 30px;
   outline: none;
   width: 100%;
-  max-width: 240px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -317,11 +399,41 @@ input::placeholder {
 }
 
 .bg-greyCard:hover {
-  @apply bg-grey-dark;
+  background-color: #262626;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.customGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.2fr;
+  grid-gap: 8rem;
 }
 
 .rounded-large {
   border-radius: 30px;
+}
+
+.starIconWhite {
+  filter: invert(100%);
+  background-color: white;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 1px;
+  height: 1rem;
+  width: 17px;
+}
+.starIconBlack {
+  filter: invert(-100%);
+  background-color: white;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 1px;
+  height: 1rem;
+  width: 17px;
 }
 
 .hover-show {

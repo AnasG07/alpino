@@ -1,9 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Header({ invert }) {
+export default function Header({ invert, openModal }) {
   return (
-    <div className={`flex flex-row justify-between padding-30 items-baseline`}>
+    <div
+      className={`flex flex-row justify-between padding-30 z-10 items-baseline fixed w-full top-0 ${
+        invert ? 'grayBackGroundColor' : 'bg-black'
+      }`}>
       <Link href="/">
         <a>
           <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && 'filter-invert'}`} />
@@ -11,7 +14,7 @@ export default function Header({ invert }) {
       </Link>
       <span className="flex items-center">
         <div className="subnav">
-          <Link href="/[category]" as="/[category]">
+          <Link href="/category/[category]" as="/category/[category]">
             <a className={`header-link px-4 text-right leading-8 ${invert ? 'text-black' : 'text-white'}`}>
               Earphones
               <img
@@ -63,11 +66,11 @@ export default function Header({ invert }) {
             <img src="/user.svg" />
           </a>
         </Link>
-        <Link href="/cart">
-          <a className={`header-link px-4 inline-block ${invert && 'filter-invert'}`}>
+        <button className="border-none outline-none">
+          <a onClick={openModal} className={`header-link px-4 inline-block ${invert && 'filter-invert'}`}>
             <img src="/cart.svg" />
           </a>
-        </Link>
+        </button>
       </span>
     </div>
   );

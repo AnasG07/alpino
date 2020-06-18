@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import ProductFeature from '../components/ProductFeature';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Cart from './cart';
 
 export async function getServerSideProps(context) {
   return {
@@ -59,15 +60,47 @@ export async function getServerSideProps(context) {
           buttonText: 'Buy',
         },
       ],
+      items: [
+        {
+          image: '/cart/cart1.png',
+          title: 'Thar GT',
+          cost: '₹ 2999',
+          color: 'Black',
+          quantity: '1',
+        },
+        {
+          image: '/cart/cart2.png',
+          title: 'Flex Pro',
+          cost: '₹ 2499',
+          color: 'Black',
+          quantity: '2',
+        },
+        {
+          image: '/cart/cart3.png',
+          title: 'Thar Blaze',
+          cost: '₹ 1999',
+          color: 'Black',
+          quantity: '1',
+        },
+      ],
     },
   };
 }
 
-export default function Home({ productFeature, productCard }) {
+export default function Home({ productFeature, productCard, items }) {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   return (
     <>
-      <div className="min-h-screen bg-black ">
-        <Header />
+      <div className="min-h-screen bg-black pt-20">
+        <Header openModal={openModal} />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
@@ -100,7 +133,7 @@ export default function Home({ productFeature, productCard }) {
               <h1 className="leading-12 text-white font-medium text-5xl">Best Sellers</h1>
               <h3 className="text-left text-xl text-white font-normal leading-tight">Best always deserves better</h3>
             </div>
-            <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
+            <div className="customGrid pt-32 justify-between pl-30 pr-10 items-center">
               {productCard.map((i, index) => (
                 <ProductCard data={i} key={index} />
               ))}
@@ -133,7 +166,7 @@ export default function Home({ productFeature, productCard }) {
               <h1 className="text-left text-white font-medium text-5xl leading-12">Sneak Peak</h1>
               <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
             </div>
-            <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
+            <div className="customGrid pt-32 justify-between pl-30 pr-10 items-center">
               {productCard.map((i, index) => (
                 <ProductCard data={i} key={index * 2} />
               ))}
@@ -146,6 +179,7 @@ export default function Home({ productFeature, productCard }) {
           </div>
         </main>
       </div>
+      <Cart items={items} modalIsOpen={modalIsOpen} closeModal={closeModal} />
       <Footer />
     </>
   );
