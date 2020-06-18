@@ -5,7 +5,7 @@ export default function Header({ invert, openModal }) {
   return (
     <div
       className={`flex flex-row justify-between padding-30 z-10 items-baseline fixed w-full top-0 ${
-        invert ? '' : 'bg-black'
+        invert ? 'grayBackGroundColor' : 'bg-black'
       }`}>
       <Link href="/">
         <a>
