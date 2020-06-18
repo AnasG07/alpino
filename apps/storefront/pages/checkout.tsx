@@ -107,6 +107,12 @@ export default function Checkout({ items }) {
                 Save this information for next time
               </p>
             </div>
+            <div className="flex flex-row w-full justify-center items-center mt-4">
+              <img className="mr-2" src="/cart/leftarrow.png"></img>
+              <h1 classNames={classNames(style.keepShoppingText, 'text-base font-normal tracking-wider')}>
+                Keep Shopping
+              </h1>
+            </div>
           </div>
           <div className={classNames(style.card1, 'px-8 flex flex-col justify-between')}>
             <div className={classNames(style.smallCard, 'flex flex-col justify-around px-6')}>
@@ -168,7 +174,7 @@ export default function Checkout({ items }) {
               </div>
             </div>
             <div className={classNames(style.smallCard, 'px-6')}>
-              <h1 className="text-xl font-medium tracking-wide mt-6">Cart Summary</h1>
+              <h1 className="text-xl font-medium tracking-wide mt-6">Order Summary</h1>
               <p className={classNames(style.labelColor, 'text-sm font-light')}>
                 Total cost includes taxes and delivery charges
               </p>
