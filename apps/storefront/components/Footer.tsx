@@ -13,7 +13,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/privacy-policy">
               <a className="pt-8 footer-font leading-6"> Privacy Policy </a>
             </Link>
           </div>
@@ -23,12 +23,12 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/warranty">
               <a className="footer-font leading-6"> Warranty </a>
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/refund">
               <a className="footer-font leading-6"> Refund </a>
             </Link>
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/contact">
               <a className="footer-font leading-6"> Contact us</a>
             </Link>
           </div>
@@ -140,7 +140,7 @@ export default function Footer() {
           </div>
           <h6 className="footer-font footer-text-color pt-8"> Even Trump can’t call this news fake</h6>
           <span className="row justify-start pt-6">
-            <input placeholder="Enter your email address" className="pl-4 input-footer-color" />
+            <input placeholder="Enter your email address" className="pl-4 input-footer-color input" />
             <button className="padding-notify-button">Join</button>
           </span>
           <div className="pt-16 flex ">

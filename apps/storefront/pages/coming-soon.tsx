@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 
+async function subscribe(email) {
+  return fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email }),
+  });
+}
+
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+  const [subscribed, setSubscribed] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const onSubscribe = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    await subscribe(email);
+    setSubscribed(true);
+    setLoading(false);
+  };
+
   return (
     <div className="min-h-screen padding-30 bg-black ">
       <Head>
@@ -17,13 +38,24 @@ export default function Home() {
             free to give us your E-mail id!
           </p>
           <h2 className="padding-top-86 leading-tight font-semibold text-center text-xl text-white font-normal">
-            {' '}
             Tech-a-boo
           </h2>
           <div className="padding-top-29 text-align-center">
             <span className="row justify-center">
-              <input placeholder="Enter your email address" className="pl-4" />
-              <button className="padding-notify-button">Notify me</button>
+              <input
+                placeholder="Enter your email address"
+                className="pl-4 input"
+                value={email}
+                disabled={loading || subscribed}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button
+                style={loading || subscribed ? { cursor: 'default' } : {}}
+                className="padding-notify-button"
+                onClick={onSubscribe}
+                disabled={loading || subscribed}>
+                {loading ? 'Subscribing' : subscribed ? 'Subscribed' : 'Notify me'}
+              </button>
             </span>
           </div>
           <p className="padding-top-27 margin-auto style-content max-width-686">

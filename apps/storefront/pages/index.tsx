@@ -100,15 +100,15 @@ export default function Home({ productFeature, productCard, items }) {
   return (
     <>
       <div className="min-h-screen bg-black pt-20">
-        <Header openModal={openModal} invert={false} />
+        <Header openModal={openModal} />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
           <div className="pb-56">
-            {productFeature.map((i) => (
-              <ProductFeature data={i} />
+            {productFeature.map((i, index) => (
+              <ProductFeature data={i} key={index} />
             ))}
           </div>
           <div className="background-red-dark p-32">
@@ -134,8 +134,8 @@ export default function Home({ productFeature, productCard, items }) {
               <h3 className="text-left text-xl text-white font-normal leading-tight">Best always deserves better</h3>
             </div>
             <div className="customGrid pt-32 justify-between pl-30 pr-10 items-center">
-              {productCard.map((i) => (
-                <ProductCard data={i} />
+              {productCard.map((i, index) => (
+                <ProductCard data={i} key={index} />
               ))}
               <span>
                 <button className="border-none outline-none">
@@ -167,8 +167,8 @@ export default function Home({ productFeature, productCard, items }) {
               <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
             </div>
             <div className="customGrid pt-32 justify-between pl-30 pr-10 items-center">
-              {productCard.map((i) => (
-                <ProductCard data={i} />
+              {productCard.map((i, index) => (
+                <ProductCard data={i} key={index * 2} />
               ))}
               <span>
                 <button className="border-none outline-none">
