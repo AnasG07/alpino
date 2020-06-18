@@ -111,7 +111,7 @@ export default function Warranty({ faq }) {
         <div className="flex flex-row bg-white">
           <div className="max-width-50">
             <div
-              className={classNames(styles['min-height-50'], 'pl-30 pr-20 pt-24 pb-16 flex flex-col justify-between')}>
+              className={classNames(styles['min-height-53'], 'pl-30 pr-20 pt-24 pb-16 flex flex-col justify-between')}>
               <h1 className={(styles['text-color-black-h1'], styles['font-size-14'])}>Product Registration Form</h1>
               <p className="text-2xl texxt-black leading-10">
                 It’s always a delight to hear from you! It not only gives us a chance to hear from a valued customer,
