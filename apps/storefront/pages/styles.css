@@ -173,7 +173,7 @@ input::placeholder {
 .margin-left-60 {
   margin-left: 60px;
 }
-.min-height-188 {
+.min-height-47 {
   min-height: 46.875rem;
 }
 
@@ -183,6 +183,10 @@ input::placeholder {
 .min-height-30 {
   min-height: 30rem;
 }
+.min-height-31 {
+  min-height: 31.25rem;
+}
+
 .min-height-560 {
   min-height: 560px;
 }
@@ -379,4 +383,9 @@ input::placeholder {
 }
 .form-card-darker {
   @apply bg-grey-darker rounded-large;
+}
+
+.py-15 {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }

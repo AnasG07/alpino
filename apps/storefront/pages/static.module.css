@@ -9,6 +9,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.background-privacy {
+  background-image: url('/privacy.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .background-glass {
   background-image: url('/careers.jpg');
   background-size: cover;
@@ -19,11 +24,19 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.background-warranty {
+  background-image: url('/heart.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .text-color-black-h1 {
   @apply leading-12 text-black font-medium text-5xl;
 }
 .text-color-black-h3 {
   @apply text-lg text-black font-normal leading-tight;
+}
+.text-color-warranty {
+  @apply text-2xl text-black font-normal leading-tight;
 }
 .text-h3 {
   @apply text-lg text-white font-normal leading-normal;
@@ -49,6 +62,48 @@
 .pt-86 {
   padding-top: 21.5rem;
 }
+.pt-36 {
+  padding-top: 9rem;
+}
+.px-36 {
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
 .input-style {
   @apply bg-transparent border-b pb-4 w-full border-grey-border;
+}
+.img-height {
+  height: 870px;
+  width: 100%;
+}
+.privacy-heading {
+  @apply text-4xl leading-12 text-black;
+}
+.max-width-1000 {
+  max-width: 1000px;
+}
+.min-height-55 {
+  min-height: 54.375rem;
+}
+.min-height-42 {
+  min-height: 41.875rem;
+}
+.font-size-14 {
+  font-size: 3.5rem;
+}
+.min-height-64 {
+  min-height: 64rem;
+}
+.min-height-80 {
+  min-height: 79.375rem;
+}
+.mt-188 {
+  margin-top: 47rem;
+}
+.img-clock {
+  height: 300px;
+  border-radius: 30px;
+}
+.max-width-49 {
+  max-width: 48.75rem;
 }

@@ -36,7 +36,7 @@ export default function Careers() {
           </div>
           <img className="max-width-50 min-height-60" src="./visa.jpg" alt="visa" />
         </div>
-        <div className={classNames(styles['background-enquiry'], 'min-height-188 bg-black')}>
+        <div className={classNames(styles['background-enquiry'], 'min-height-47 bg-black')}>
           <h3 className="leading-normal text-2xl text-white pt-16  max-width-58 m-auto text-center">
             We also offer the advantage of limitless choice. With over 300SKUs to choose from , you have the liberty to
             select the product that suits your organiszation best
