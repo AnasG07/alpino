@@ -13,7 +13,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/privacy-policy">
               <a className="pt-8 footer-font leading-6"> Privacy Policy </a>
             </Link>
           </div>
@@ -23,12 +23,12 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/warranty">
               <a className="footer-font leading-6"> Warranty </a>
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/refund">
               <a className="footer-font leading-6"> Refund </a>
             </Link>
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/contact">
               <a className="footer-font leading-6"> Contact us</a>
             </Link>
           </div>

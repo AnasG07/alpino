@@ -14,6 +14,8 @@ module.exports = {
         'faq-question': '#303030',
         'white-light': '#f2f2f2',
         'faq-answer': '#2E2E2E',
+        'black-privacy': '#212121',
+        'black-warranty': '#2A2220',
       },
       lineHeight: {
         16: '4rem',
