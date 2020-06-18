@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import ProductFeature from '../components/ProductFeature';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Cart from './cart';
 
 export async function getServerSideProps(context) {
   return {
@@ -59,15 +60,47 @@ export async function getServerSideProps(context) {
           buttonText: 'Buy',
         },
       ],
+      items: [
+        {
+          image: '/cart/cart1.png',
+          title: 'Thar GT',
+          cost: '₹ 2999',
+          color: 'Black',
+          quantity: '1',
+        },
+        {
+          image: '/cart/cart2.png',
+          title: 'Flex Pro',
+          cost: '₹ 2499',
+          color: 'Black',
+          quantity: '2',
+        },
+        {
+          image: '/cart/cart3.png',
+          title: 'Thar Blaze',
+          cost: '₹ 1999',
+          color: 'Black',
+          quantity: '1',
+        },
+      ],
     },
   };
 }
 
-export default function Home({ productFeature, productCard }) {
+export default function Home({ productFeature, productCard, items }) {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   return (
     <>
       <div className="min-h-screen bg-black pt-20">
-        <Header invert={false} />
+        <Header openModal={openModal} invert={false} />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
@@ -146,6 +179,7 @@ export default function Home({ productFeature, productCard }) {
           </div>
         </main>
       </div>
+      <Cart items={items} modalIsOpen={modalIsOpen} closeModal={closeModal} />
       <Footer />
     </>
   );
