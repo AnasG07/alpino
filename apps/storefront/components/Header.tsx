@@ -14,33 +14,29 @@ export default function Header({ invert, openModal }) {
       </Link>
       <span className="flex items-center">
         <div className="subnav">
-          <Link href="/category/[category]" as="/category/[category]">
+          <Link href="/category/[category]" as="/category/earphones">
             <a className={`header-link px-4 text-right leading-8 ${invert ? 'text-black' : 'text-white'}`}>
               Earphones
-              <img
-                src="./down-arrow.png"
-                alt="arrow"
-                className={`inline-block h-3 px-2 ${invert && 'filter-invert'}`}
-              />
+              <img src="/down-arrow.png" alt="arrow" className={`inline-block h-3 px-2 ${invert && 'filter-invert'}`} />
             </a>
           </Link>
           <div className="subnav-content">
-            <Link href="/earphones/neckbands">
+            <Link href="/neckbands">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Neckbands
               </a>
             </Link>
-            <Link href="/earphones/headphones">
+            <Link href="/headphones">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Headphones
               </a>
             </Link>
-            <Link href="/earphones/headsets-single-ear">
+            <Link href="/headsets-single-ear">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Headsets - Single Ear
               </a>
             </Link>
-            <Link href="/earphones/wired-earphones">
+            <Link href="/wired-earphones">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Wired earphones
               </a>
