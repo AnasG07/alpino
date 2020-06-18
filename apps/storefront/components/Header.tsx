@@ -1,9 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Header({ invert }) {
+export default function Header({ invert, openModal }) {
   return (
-    <div className={`flex flex-row justify-between padding-30 items-baseline`}>
+    <div
+      className={`flex flex-row justify-between padding-30 z-10 items-baseline fixed w-full top-0 ${
+        invert ? 'grayBackGroundColor' : 'bg-black'
+      }`}>
       <Link href="/">
         <a>
           <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && 'filter-invert'}`} />
@@ -11,33 +14,29 @@ export default function Header({ invert }) {
       </Link>
       <span className="flex items-center">
         <div className="subnav">
-          <Link href="/[category]" as="/[category]">
+          <Link href="/category/[category]" as="/category/earphones">
             <a className={`header-link px-4 text-right leading-8 ${invert ? 'text-black' : 'text-white'}`}>
               Earphones
-              <img
-                src="./down-arrow.png"
-                alt="arrow"
-                className={`inline-block h-3 px-2 ${invert && 'filter-invert'}`}
-              />
+              <img src="/down-arrow.png" alt="arrow" className={`inline-block h-3 px-2 ${invert && 'filter-invert'}`} />
             </a>
           </Link>
           <div className="subnav-content">
-            <Link href="/earphones/neckbands">
+            <Link href="/neckbands">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Neckbands
               </a>
             </Link>
-            <Link href="/earphones/headphones">
+            <Link href="/headphones">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Headphones
               </a>
             </Link>
-            <Link href="/earphones/headsets-single-ear">
+            <Link href="/headsets-single-ear">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Headsets - Single Ear
               </a>
             </Link>
-            <Link href="/earphones/wired-earphones">
+            <Link href="/wired-earphones">
               <a className={`header-link px-4 block text-left leading-8 ${invert ? 'text-black' : 'text-white'}`}>
                 Wired earphones
               </a>
@@ -63,11 +62,11 @@ export default function Header({ invert }) {
             <img src="/user.svg" />
           </a>
         </Link>
-        <Link href="/cart">
-          <a className={`header-link px-4 inline-block ${invert && 'filter-invert'}`}>
+        <button className="border-none outline-none">
+          <a onClick={openModal} className={`header-link px-4 inline-block ${invert && 'filter-invert'}`}>
             <img src="/cart.svg" />
           </a>
-        </Link>
+        </button>
       </span>
     </div>
   );
