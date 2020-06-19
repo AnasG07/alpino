@@ -6,7 +6,6 @@ import Link from 'next/link';
 import style from './checkout.module.css';
 import classNames from 'classnames';
 import Dropdown from 'react-dropdown';
-import CardItemCard from '../components/CartItemCard';
 
 const options = ['Home', 'Work'];
 
@@ -72,13 +71,17 @@ export default function Checkout({ items }) {
         <div className="mt-10 min-h-screen flex justify-around">
           <div className={classNames(style.card, 'px-8')}>
             <h1 className="text-xl font-medium mt-6">Contact Information</h1>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-2" placeholder="Email ID"></input>
+            <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2" placeholder="Email ID"></input>
             <h1 className="text-xl font-medium mt-6">Shipping Address</h1>
             <h1 className={classNames(style.labelColor, 'text-base font-normal mt-2 mb-2')}>Full Name</h1>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-2" placeholder="Email ID"></input>
+            <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2" placeholder="Email ID"></input>
             <h1 className={classNames(style.labelColor, 'text-base font-normal mt-4 mb-2')}>Address</h1>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-2" placeholder="Address line 1"></input>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-6" placeholder="Address line 2"></input>
+            <input
+              className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2"
+              placeholder="Address line 1"></input>
+            <input
+              className="grayBackGroundColor text-black p-4 w-full rounded-md mt-6"
+              placeholder="Address line 2"></input>
             <div className="flex flex-row flex-wrap justify-between items-center">
               <input
                 className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
@@ -93,7 +96,9 @@ export default function Checkout({ items }) {
                 className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
                 placeholder="Country"></input>
             </div>
-            <input className="grayBackGroundColor text-black p-4 rounded-md mt-6" placeholder="Mobile Number"></input>
+            <input
+              className="grayBackGroundColor text-black w-full p-4 rounded-md mt-6"
+              placeholder="Mobile Number"></input>
             <h1 className={classNames(style.labelColor, 'text-base font-normal mt-8 mb-2')}>Address Type</h1>
             <Dropdown
               options={options}
