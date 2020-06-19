@@ -14,7 +14,7 @@ export default function Contact() {
       </Head>
       <main className="bg-black">
         <div className={classNames(styles['background-contact'], 'min-height-60')}>
-          <Header />
+          <Header transparent />
           <div className={classNames(styles['min-height-55'], 'flex p-30 flex-col items-end justify-end')}>
             <h1 className={classNames(styles['font-size-14'], 'leading-12 text-white font-medium text-right')}>
               Contact

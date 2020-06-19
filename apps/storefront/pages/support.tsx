@@ -58,7 +58,7 @@ export default function Support({ faq }) {
       <main>
         <div className="background-image-support min-height-60">
           <Header invert />
-          <div className="flex justify-center flex-col items-center pt-24">
+          <div className="flex justify-center flex-col items-center pt-40">
             <h1 className="text-black leading-8 font-medium text-5xl text-left leading-12">Support</h1>
             <h3 className="text-black text-2xl max-w-lg text-center pt-2 leading-8">
               For power that never runsout, support that’s always by your side

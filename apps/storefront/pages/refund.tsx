@@ -15,10 +15,13 @@ export default function Refund() {
       <main className="bg-black">
         <div className={classNames(styles['background-warranty'], styles['min-height-80'])}>
           <Header invert />
-          <div className="pt-20 flex justify-center flex-col items-center">
+          <div className="pt-48 flex justify-center flex-col items-center">
             <h1 className={classNames(styles['text-heading-black'], 'text-center', styles['font-size-14'])}>Refund</h1>
             <h3
-              className={classNames(styles['text-color-warranty'], 'max-w-30 text-center leading-normal text-center')}>
+              className={classNames(
+                styles['text-color-warranty'],
+                'max-w-30 text-center leading-normal text-center pt-4',
+              )}>
               Getting in touch with us is as easy as can be
             </h3>
           </div>
