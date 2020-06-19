@@ -136,8 +136,12 @@ button {
   text-align: center;
   color: #f2f2f2;
 }
-
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 input,
+select,
 button:focus {
   outline: none;
 }
@@ -163,6 +167,9 @@ button:focus {
 }
 .text-content {
   @apply text-lg text-white-light font-normal leading-normal;
+}
+.text-content-select {
+  @apply text-lg text-black-form font-normal leading-normal;
 }
 .padding-notify-button {
   padding: 12px 20px 12px 14px;

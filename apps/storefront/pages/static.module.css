@@ -3,7 +3,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.background-story {
+  background-image: url('/story.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .background-headphone {
   background-image: url('/incubate-headphone.jpg');
   background-size: cover;
@@ -11,6 +15,11 @@
 }
 .background-privacy {
   background-image: url('/privacy.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background-contact {
+  background-image: url('/bench.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -70,7 +79,7 @@
   padding-right: 9rem;
 }
 .input-style {
-  @apply bg-transparent border-b pb-4 w-full border-grey-border;
+  @apply bg-transparent border-b pb-2 w-full border-grey-border;
 }
 .img-height {
   height: 870px;
@@ -106,4 +115,34 @@
 }
 .max-width-49 {
   max-width: 48.75rem;
+}
+.max-width-25 {
+  max-width: 24.25rem;
+}
+.font-size-3 {
+  font-size: 2.5rem;
+}
+.max-width-33 {
+  max-width: 33.125rem;
+}
+.height-60 {
+  height: 60rem;
+}
+.min-height-39 {
+  min-height: 38.75rem;
+}
+.min-height-50 {
+  min-height: 50rem;
+}
+.min-height-53 {
+  min-height: 52.5rem;
+}
+.text-form {
+  @apply text-black-form;
+}
+.background-gradient {
+  background: linear-gradient(90deg, #e14444 0%, #d2415b 98.44%);
+}
+.max-width-42 {
+  max-width: 41.875rem;
 }

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="flex flex-row pt-23">
         <div className="flex-grow">
           <div className="pb-8">
-            <Link href="/">
+            <Link href="/support">
               <a className="footer-link leading-8">Support</a>
             </Link>
           </div>
@@ -33,7 +33,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/support">
               <a className="footer-font leading-6"> Support </a>
             </Link>
           </div>
@@ -50,7 +50,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/our-story">
               <a className="pt-8 footer-font leading-6">Our Story</a>
             </Link>
           </div>
@@ -70,7 +70,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/corporate-enquiries">
               <a className="footer-font leading-6">Corporate enquiries </a>
             </Link>
           </div>
