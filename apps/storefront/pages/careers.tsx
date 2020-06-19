@@ -69,8 +69,8 @@ export default function Careers({ job }) {
             Some of the portfolios, we’re looking at include
           </p>
           <div className={'flex flex-row flex-wrap justify-between pb-24'}>
-            {job.map((i) => (
-              <JobCard data={i} className="max-width-50 w-full" />
+            {job.map((i, index) => (
+              <JobCard data={i} className="max-width-50 w-full" key={index} />
             ))}
 
             <span className="text-white leading-10 text-4xl p-15 max-width-50 w-full">
