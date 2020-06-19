@@ -15,7 +15,11 @@ module.exports = {
         'white-light': '#f2f2f2',
         'faq-answer': '#2E2E2E',
         'black-privacy': '#212121',
+        'black-about': '#1C1C1C',
         'black-warranty': '#2A2220',
+        'black-form': '#777777',
+        'faq-invert': '#C1C1C1',
+        'faq-border-invert': '#848484',
       },
       lineHeight: {
         16: '4rem',

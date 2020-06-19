@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 
-export default function QuestionCard({ data, index }) {
+export default function QuestionCard({ data, index, invert }) {
   const [showAnswer, updateShowAnswer] = useState(false);
   return (
-    <div className="py-8 border-solid border-t border-gray-custom">
+    <div className={`py-8 border-solid border-t ${invert ? 'border-faq-border-invert' : 'border-gray-custom'}`}>
       <div className="flex flex-row justify-between">
         <div className="flex flex-col max-width-95-percent">
-          <span className="text-faq-question text-xl font-semibold leading-16">
+          <span className={`${invert ? 'text-white' : 'text-faq-question'} text-xl font-semibold leading-16`}>
             {index + 1}. {data.question}
           </span>
-          {showAnswer && <span className="text-faq-answer pt-2 text-xl leading-8">A. {data.answer}</span>}
+          {showAnswer && (
+            <span className={`${invert ? 'text-faq-invert' : 'text-faq-answer'} pt-2 text-xl leading-8`}>
+              A. {data.answer}
+            </span>
+          )}
         </div>
         <div>
           <button className="border-none" onClick={() => updateShowAnswer(!showAnswer)}>
             <img
               src="./side-arrow-solid.svg"
               alt="down-arrow"
-              className={`h-5 ${showAnswer && 'transform rotate-90'}`}
+              className={`h-5 ${showAnswer && 'transform rotate-90'} ${invert && 'filter-invert'}`}
             />
           </button>
         </div>

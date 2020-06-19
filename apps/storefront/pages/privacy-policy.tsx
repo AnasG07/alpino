@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
             <h3
               className={classNames(
                 styles['text-color-warranty'],
-                'pt-8 max-w-30 text-center leading-normal text-2xl',
+                'pt-2 max-w-30 text-center leading-normal text-2xl',
               )}>
               Our products have sneaks, but we don’t peek
             </h3>
@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
             </p>
           </div>
           <div className="bg-black min-height-60 max-width-50">
-            <img className src="./workplace.jpg" alt="workplace" className={styles['img-height']} />
+            <img src="./workplace.jpg" alt="workplace" className={styles['img-height']} />
           </div>
         </div>
         <div className="min-height-31 bg-white flex flex-col">
@@ -78,7 +78,7 @@ export default function PrivacyPolicy() {
             </p>
           </div>
           <div className="bg-black max-width-50 min-height-47">
-            <img className src="./key.jpg" alt="key" className={styles['img-height']} />
+            <img src="./key.jpg" alt="key" className={styles['img-height']} />
           </div>
         </div>
         <div className={classNames('bg-white pt-16', styles['px-36'], styles['min-height-55'])}>
@@ -115,24 +115,23 @@ export default function PrivacyPolicy() {
             Additionally, you may encounter "cookies" or other similar devices on certain pages of the Site that are
             placed by third parties. For example, if you view a web page created by a user, there may be a "cookie"
             placed within that web page. We do not control the use of cookies by third parties.
-            <p className="text-xl leading-loose text-white pt-4 text-center">
-              If you choose to buy on the Site, we collect information about your buying behavior. We also collect other
-              users' comments about you in our feedback area.
-            </p>
-            <p className="text-xl leading-loose text-white pt-4 text-center">
-              If you choose to post messages on our message boards, chat rooms or other message areas or leave feedback
-              for other users, we will collect that information you provide to us. We retain this information as
-              necessary to resolve disputes, provide customer support and troubleshoot problems as permitted by law. If
-              you send us personal correspondence, such as emails or letters, or if other users or third parties send us
-              correspondence about your activities or postings on the Site, we may collect such information into a file
-              specific to you.
-            </p>
-            <p className="text-xl leading-loose text-white pt-4 text-center">
-              {' '}
-              If you register for the Site on another web site or use a website providing a service for Alpino or a web
-              site that helps facilitate your activity on the Site, that web site may provide personal information about
-              you and your transactions back to us.
-            </p>
+          </p>
+          <p className="text-xl leading-loose text-white pt-4 text-center">
+            If you choose to buy on the Site, we collect information about your buying behavior. We also collect other
+            users' comments about you in our feedback area.
+          </p>
+          <p className="text-xl leading-loose text-white pt-4 text-center">
+            If you choose to post messages on our message boards, chat rooms or other message areas or leave feedback
+            for other users, we will collect that information you provide to us. We retain this information as necessary
+            to resolve disputes, provide customer support and troubleshoot problems as permitted by law. If you send us
+            personal correspondence, such as emails or letters, or if other users or third parties send us
+            correspondence about your activities or postings on the Site, we may collect such information into a file
+            specific to you.
+          </p>
+          <p className="text-xl leading-loose text-white pt-4 text-center">
+            If you register for the Site on another web site or use a website providing a service for Alpino or a web
+            site that helps facilitate your activity on the Site, that web site may provide personal information about
+            you and your transactions back to us.
           </p>
         </div>
       </main>
