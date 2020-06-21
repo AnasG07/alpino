@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
       <main className="bg-black">
         <div className={classNames(styles['background-privacy'], 'min-height-60')}>
           <Header invert />
-          <div className={classNames(styles['pt-36'], 'flex justify-center flex-col items-center ')}>
+          <div className="flex justify-center flex-col items-center pt-48">
             <h1 className={classNames(styles['text-heading-black'], 'text-center', styles['font-size-14'])}>
               Privacy Policies
             </h1>

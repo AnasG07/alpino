@@ -14,7 +14,7 @@ export default function Careers() {
       </Head>
       <main className="bg-black">
         <div className={classNames(styles['background-glass'], 'min-height-60 ')}>
-          <Header invert />
+          <Header invert unfixed />
           <div className={classNames(styles['pt-86'], 'flex justify-center flex-col items-center ')}>
             <h1 className={classNames(styles['text-heading-black'], 'text-center')}>Corporate Enquiries</h1>
             <h3 className={classNames(styles['text-color-black-h3'], 'pt-10 max-w-30 text-center')}>

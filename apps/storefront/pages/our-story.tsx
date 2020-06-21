@@ -15,7 +15,7 @@ export default function OurStory() {
       <main className="bg-black">
         <div className={classNames(styles['background-story'], 'min-height-60')}>
           <Header invert />
-          <div className="pt-24 flex justify-center flex-col items-center">
+          <div className="pt-40 flex justify-center flex-col items-center">
             <h1 className={classNames(styles['text-heading-black'], 'text-center', styles['font-size-14'])}>
               Our Story
             </h1>
