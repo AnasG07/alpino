@@ -217,7 +217,7 @@ export default class Home extends React.Component {
                 <h1 className="leading-12 text-white font-medium text-5xl">Best Sellers</h1>
                 <h3 className="text-left text-xl text-white font-normal leading-tight">Best always deserves better</h3>
               </div>
-              <div className="customGrid pt-32 justify-between pl-30 pr-10 items-center">
+              <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
                 {productCard.map((i, index) => (
                   <ProductCard data={i} key={index} />
                 ))}
@@ -250,9 +250,9 @@ export default class Home extends React.Component {
                 <h1 className="text-left text-white font-medium text-5xl leading-12">Sneak Peak</h1>
                 <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
               </div>
-              <div className="customGrid pt-32 justify-between pl-30 pr-10 items-center">
+              <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
                 {productCard.map((i, index) => (
-                  <ProductCard data={i} key={index * 2} />
+                  <ProductCard data={i} key={index * 2} comingSoon />
                 ))}
                 <span>
                   <button className="border-none outline-none">

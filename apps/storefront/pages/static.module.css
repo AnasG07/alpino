@@ -2,9 +2,16 @@
   background-image: url('/background-incubate.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
+
 .background-story {
   background-image: url('/story.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background-distributor {
+  background-image: url('/distributor.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -72,6 +79,10 @@
 }
 .pt-35 {
   padding-top: 8.75rem;
+}
+.px-35 {
+  padding-left: 8.75rem;
+  padding-right: 8.75rem;
 }
 .pt-86 {
   padding-top: 21.5rem;
