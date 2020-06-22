@@ -409,11 +409,6 @@ button:focus {
 
 .bg-greyCard:hover {
   background-color: #262626;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .customGrid {
@@ -525,4 +520,7 @@ button:focus {
 }
 .job-main:hover .job-button {
   @apply bg-white border-none text-black;
+}
+.min-height-25 {
+  min-height: 25rem;
 }

@@ -1,9 +1,8 @@
 import React from 'react';
-import RatingStars from './RatingStars';
 
 export default function ProductCard({
   data: { image, name, price, description, launch, type, buttonText },
-  showStars,
+  comingSoon,
 }) {
   return (
     <div className="relative h-full">
@@ -28,8 +27,8 @@ export default function ProductCard({
           </button>
         </div>
         <span className="leading-5 item-description-color pt-8 text-sm max-w-16 hover-hide">{description}</span>
-        {showStars ? <RatingStars numberOfRatings={71} /> : null}
-        <span className="text-xs item-description-color pt-8 leading-5">{launch}</span>
+
+        {comingSoon && <span className="text-xs item-description-color pt-8 leading-5">{launch}</span>}
       </span>
     </div>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Header({ invert, openModal, transparent, unfixed }) {
+export default function Header({ invert, openModal, transparent, unfixed, opacity }) {
   return (
     <div
       className={`flex flex-row justify-between padding-30 z-10 items-baseline ${!unfixed && 'fixed'} w-full top-0 ${
-        invert || transparent ? 'bg-transparent' : 'bg-black'
+        opacity ? 'bg-header-opacity' : invert || transparent ? 'bg-transparent' : 'bg-black'
       }`}>
       <Link href="/">
         <a>

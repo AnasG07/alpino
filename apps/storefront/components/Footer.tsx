@@ -60,7 +60,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/become-distributor">
               <a className="footer-font leading-6">Become a distributor </a>
             </Link>
           </div>
@@ -80,7 +80,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/blogs">
               <a className="footer-font leading-6"> Blogs</a>
             </Link>
           </div>
