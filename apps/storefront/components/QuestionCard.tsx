@@ -4,7 +4,7 @@ export default function QuestionCard({ data, index, invert }) {
   const [showAnswer, updateShowAnswer] = useState(false);
   return (
     <div className={`py-8 border-solid border-t ${invert ? 'border-faq-border-invert' : 'border-gray-custom'}`}>
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between items-center">
         <div className="flex flex-col max-width-95-percent">
           <span className={`${invert ? 'text-white' : 'text-faq-question'} text-xl font-semibold leading-16`}>
             {index + 1}. {data.question}
