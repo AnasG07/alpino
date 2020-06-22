@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-//import styles from './static.module.css';
-// import classNames from 'classnames';
 import BlogCard from '../components/BlogCard';
 
 export async function getStaticProps() {
@@ -55,9 +53,11 @@ export default function Blog({ blogs }) {
           </div>
         </div>
         <div className="bg-white min-height-60">
-          <div className="p-30 flex flex-row flex-wrap">
+          <div className="py-30 px-16 flex flex-row flex-wrap">
             {blogs.map((i, index) => (
-              <BlogCard data={i} key={index} className="max-width-50 w-full" />
+              <div className="width-33 px-4 pt-12" key={index}>
+                <BlogCard data={i} />
+              </div>
             ))}
           </div>
         </div>

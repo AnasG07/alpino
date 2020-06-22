@@ -524,3 +524,13 @@ button:focus {
 .min-height-25 {
   min-height: 25rem;
 }
+.width-33 {
+  width: 33%;
+}
+.rounded-large-top {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.min-height-20 {
+  height: 285px;
+}
