@@ -13,15 +13,9 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
 
   return (
     <div
-<<<<<<< HEAD
-      className={`flex flex-row justify-between padding-30 z-10 items-baseline ${
-        !invert && 'fixed bg-black'
-      } w-full top-0 `}>
-=======
       className={`flex flex-row justify-between padding-30 z-10 items-baseline ${!unfixed && 'fixed'} w-full top-0 ${
         scroll ? 'bg-black' : opacity ? 'bg-header-opacity' : invert || transparent ? 'bg-transparent' : 'bg-black'
       }`}>
->>>>>>> cb6dfc85b982e26fcaab18501b52e44264f0bfac
       <Link href="/">
         <a>
           <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && !scroll && 'filter-invert'}`} />

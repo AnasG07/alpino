@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import JobCard from '../components/JobCard';
+import JobCard from '../components/jobCard';
 import styles from './static.module.css';
 import classNames from 'classnames';
 

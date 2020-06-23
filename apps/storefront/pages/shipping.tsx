@@ -14,7 +14,7 @@ const defaultOption = options[0];
 export default function Checkout({ items }) {
   return (
     <>
-      <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full')}>
+      <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-24')}>
         <Header openModal={false} invert={true}></Header>
         <Head>
           <title>Alpino</title>

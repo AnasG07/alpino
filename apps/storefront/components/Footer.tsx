@@ -60,11 +60,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-<<<<<<< HEAD
-            <Link href="/become-a-distributor">
-=======
             <Link href="/become-distributor">
->>>>>>> cb6dfc85b982e26fcaab18501b52e44264f0bfac
               <a className="footer-font leading-6">Become a distributor </a>
             </Link>
           </div>
