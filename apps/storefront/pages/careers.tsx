@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import JobCard from '../components/JobCard';
+import JobCard from '../components/job-card.tsx';
 import styles from './static.module.css';
 import classNames from 'classnames';
 
@@ -70,7 +70,7 @@ export default function Careers({ job }) {
           </p>
           <div className={'flex flex-row flex-wrap justify-between pb-24'}>
             {job.map((i, index) => (
-              <JobCard data={i} className="max-width-50 w-full" key={index} />
+              <JobCard data={i} key={index} />
             ))}
 
             <span className="text-white leading-10 text-4xl p-15 max-width-50 w-full">
