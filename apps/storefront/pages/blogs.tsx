@@ -39,7 +39,7 @@ export async function getStaticProps() {
 
 export default function Blog({ blogs }) {
   return (
-    <>
+    <div className="min-h-screen overflow-x-hidden">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -48,14 +48,16 @@ export default function Blog({ blogs }) {
         <div className="bg-black min-height-25">
           <Header />
           <div>
-            <h1 className="text-white text-4.5xl leading-loose pt-32 text-center">Blogs</h1>
-            <h3 className="text-white text-center text-2xl leading-loose">It rains cats and blogs here</h3>
+            <h1 className="text-white text-2xl md:text-4.5xl leading-loose pt-32 text-center">Blogs</h1>
+            <h3 className="text-white text-center text-sm md:text-2xl leading-snug md:leading-loose">
+              It rains cats and blogs here
+            </h3>
           </div>
         </div>
         <div className="bg-white min-height-60">
           <div className="py-30 px-16 flex flex-row flex-wrap">
             {blogs.map((i, index) => (
-              <div className="width-33 px-4 pt-12" key={index}>
+              <div className="w-full md:w-2/4 lg:w-2/6 px-4 pt-12" key={index}>
                 <BlogCard data={i} />
               </div>
             ))}
@@ -63,6 +65,6 @@ export default function Blog({ blogs }) {
         </div>
         <Footer />
       </main>
-    </>
+    </div>
   );
 }

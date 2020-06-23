@@ -3,6 +3,10 @@
 @import '../node_modules/react-alice-carousel/lib/alice-carousel.css';
 @import '../node_modules/react-dropdown/style.css';
 
+body {
+  overflow-x: hidden;
+}
+
 .alice-carousel {
   position: relative;
   box-sizing: border-box;
@@ -167,6 +171,11 @@ button:focus {
 .text-content {
   @apply text-lg text-white-light font-normal leading-normal;
 }
+@media (max-width: 768px) {
+  .text-content {
+    @apply text-sm text-white-light font-normal leading-tight;
+  }
+}
 .text-content-select {
   @apply text-lg text-black-form font-normal leading-normal;
 }
@@ -249,6 +258,11 @@ button:focus {
 .height-17 {
   height: 17px;
 }
+@media (max-width: 768px) {
+  .height-17 {
+    height: 14px;
+  }
+}
 .max-width-58 {
   max-width: 58%;
 }
@@ -324,10 +338,6 @@ button:focus {
   padding-bottom: 150px;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
 .justify-space-between {
   justify-content: space-between;
 }
@@ -343,7 +353,6 @@ button:focus {
 .footer-link {
   @apply not-italic font-normal text-base text-center text-white leading-8;
 }
-
 .style-content {
   @apply not-italic font-normal text-sm text-center text-white leading-8;
 }
@@ -351,7 +360,17 @@ button:focus {
 .footer-font {
   @apply leading-6 text-sm text-white;
 }
-
+@media (max-width: 768px) {
+  .footer-font {
+    @apply text-xs leading-4;
+  }
+  .footer-link {
+    @apply text-sm;
+  }
+  button {
+    @apply text-sm;
+  }
+}
 .footer-text-color {
   @apply text-grey-light;
 }
@@ -532,4 +551,16 @@ button:focus {
 }
 .min-height-20 {
   height: 285px;
+}
+.rounded-large-bottom {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.width-30 {
+  width: 30px;
+}
+@media (max-width: 768px) {
+  .width-30 {
+    width: 17px;
+  }
 }
