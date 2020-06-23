@@ -20,11 +20,13 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .background-careers {
   background-image: url('/careers.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .background-privacy {
   background-image: url('/privacy.png');
   background-size: cover;
@@ -35,6 +37,17 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media (max-width: 768px) {
+  .background-contact {
+    background-color: black;
+    background-image: none;
+  }
+  .background-distributor {
+    background-color: black;
+    background-image: none;
+  }
+}
+
 .background-glass {
   background-image: url('/careers.jpg');
   background-size: cover;
@@ -53,6 +66,18 @@
 .text-color-black-h1 {
   @apply leading-12 text-black font-medium text-5xl;
 }
+
+@media (max-width: 1024px) {
+  .text-color-black-h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .font-size-14 {
+    @apply text-2xl;
+  }
+}
+
 .text-color-black-h3 {
   @apply text-lg text-black font-normal leading-tight;
 }
@@ -71,12 +96,21 @@
 .p-15 {
   padding: 3.75rem;
 }
+@media (max-width: 768px) {
+  .p-15 {
+    padding: 1.75rem;
+  }
+  .text-2xl-semibold {
+    @apply font-semibold text-xs;
+  }
+}
 .pt-15 {
   padding-top: 3.75rem;
 }
 .text-2xl-semibold {
   @apply font-semibold text-2xl;
 }
+
 .pt-35 {
   padding-top: 8.75rem;
 }

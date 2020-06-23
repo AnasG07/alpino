@@ -32,6 +32,17 @@ module.exports = {
         '7xl': '4.5rem',
         '4.5xl': '3.5rem',
       },
+      minHeight: {
+        '25': '25rem',
+        '60': '60rem',
+        '55': '54.375rem',
+      },
+      flexGrow: {
+        '7': '7',
+      },
+      maxHeight: {
+        '700': '700px',
+      },
     },
   },
 };
