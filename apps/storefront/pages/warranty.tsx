@@ -78,7 +78,7 @@ export default function Warranty({ faq }) {
       <main className="bg-black">
         <div className={classNames(styles['background-warranty'], styles['min-height-64'])}>
           <Header invert />
-          <div className="pt-20 flex justify-center flex-col items-center ">
+          <div className="pt-40 flex justify-center flex-col items-center ">
             <h1 className={classNames(styles['text-heading-black'], 'text-center', styles['font-size-14'])}>
               Warranty
             </h1>

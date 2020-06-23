@@ -14,7 +14,7 @@ export default function IncubateALpino() {
       </Head>
       <main className="bg-black pb-16">
         <div className={classNames(styles['background-image'], 'min-height-60')}>
-          <Header />
+          <Header transparent />
           <div className="flex px-30 py-100 justify-end items-center">
             <div>
               <h1 className={styles['text-heading']}>Incubate</h1>

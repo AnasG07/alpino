@@ -2,14 +2,26 @@
   background-image: url('/background-incubate.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
+
 .background-story {
   background-image: url('/story.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
 }
+.background-distributor {
+  background-image: url('/distributor.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .background-headphone {
   background-image: url('/incubate-headphone.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background-careers {
+  background-image: url('/careers.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -67,6 +79,10 @@
 }
 .pt-35 {
   padding-top: 8.75rem;
+}
+.px-35 {
+  padding-left: 8.75rem;
+  padding-right: 8.75rem;
 }
 .pt-86 {
   padding-top: 21.5rem;
@@ -145,4 +161,11 @@
 }
 .max-width-42 {
   max-width: 41.875rem;
+}
+.min-height-45 {
+  min-height: 45rem;
+}
+.px-15 {
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
 }

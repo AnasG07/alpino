@@ -2,10 +2,38 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import JobCard from '../components/JobCard';
 import styles from './static.module.css';
 import classNames from 'classnames';
 
-export default function Careers() {
+export async function getStaticProps() {
+  return {
+    props: {
+      job: [
+        {
+          title: 'Communication Design',
+          role:
+            'A key strategic position for any organization, a Communication Designer would be required to help scale our brand to the next level. Working closely with our Design and Marketing teams, the Communication Designer would be regularly revamping our brand recognition programs and brand strategies.',
+        },
+        {
+          title: 'Graphic Designer',
+          role:
+            'A key strategic position for any organization, a Communication Designer would be required to help scale our brand to the next level. Working closely with our Design and Marketing teams, the Communication Designer would be regularly revamping our brand recognition programs and brand strategies.',
+        },
+        {
+          title: 'Developer',
+          role:
+            'A key strategic position for any organization, a Communication Designer would be required to help scale our brand to the next level. Working closely with our Design and Marketing teams, the Communication Designer would be regularly revamping our brand recognition programs and brand strategies.',
+        },
+      ],
+    },
+  };
+}
+
+export default function Careers({ job }) {
+  const fileUpload = () => {
+    document.getElementById('resume').click();
+  };
   return (
     <>
       <Head>
@@ -13,85 +41,100 @@ export default function Careers() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-black">
-        <div className={classNames(styles['background-glass'], 'min-height-60 ')}>
+        <div className={classNames(styles['background-careers'], 'min-height-60 ')}>
           <Header invert />
-          <div className={classNames(styles['pt-86'], 'flex justify-center flex-col items-center ')}>
-            <h1 className={classNames(styles['text-heading-black'], 'text-center')}>Corporate Enquiries</h1>
-            <h3 className={classNames(styles['text-color-black-h3'], 'pt-10 max-w-30 text-center')}>
-              After successfully serving individual customers across India, we’re now ready to open our services and our
-              hearts to Corporates.
-            </h3>
+          <div className={classNames('flex justify-center flex-col items-center', styles['min-height-55'])}>
+            <h1 className="leading-12 text-black text-7xl">Work at Alpino</h1>
+            <button className="mt-8 button-transparent py-2 px-4 outline-none text-black border-black">
+              {' '}
+              view openings
+            </button>
           </div>
         </div>
-        <div className="flex flex-row">
-          <div className="bg-black min-height-60 max-width-50 p-30 justify-between items-center flex flex-col">
-            <h1 className="h1">
-              We value the individuality of each of our customers and hence offer customization in our products
-              according to your organisation’s needs. The option of co-branding is also available.
-            </h1>
-            <h3 className={styles['text-h3']}>
-              Keeping in with our policy of inclusivity, as far as we’re concerned, size doesn’t matter. We offer bulk
-              orders irrespective of your organisation’s size and are ready to deliver orders of any quantity.{' '}
-            </h3>
-          </div>
-          <img className="max-width-50 min-height-60" src="./visa.jpg" alt="visa" />
+        <div className="min-height-30 bg-grey-darker flex flex-row justify-between items-start pt-40 px-30">
+          <p className="text-white-light leading-8 text-lg max-w-30">
+            As a self-funded fast-paced lifestyle brand with more than 300 SKUs, boasting of an offline distribution
+            network in 10 states with a repeat order percentage of 65%, we’re constantly looking for individuals who can
+            not just innovate to keep up with our 4 SKUs that are launched every 25 days, but who are driven to
+            accelerate our growth.
+          </p>
+          <p className="text-white-light leading-8 text-lg max-w-30">
+            With our focus on essentials, we make it our mission to invest not only in the goals of Alpino, but also
+            each part of the Alpino family. Being in the rapid-speed tech industry, we need problem solvers who bring
+            more than just knowledge to the table.{' '}
+          </p>
         </div>
-        <div className={classNames(styles['background-enquiry'], 'min-height-47 bg-black')}>
-          <h3 className="leading-normal text-2xl text-white pt-16  max-width-58 m-auto text-center">
-            We also offer the advantage of limitless choice. With over 300SKUs to choose from , you have the liberty to
-            select the product that suits your organiszation best
-          </h3>
-        </div>
-        <div className="flex flex-row bg-grey-medium">
-          <div className={classNames('min-height-60 max-width-50 w-full', styles['p-15'])}>
-            <div className={classNames(styles['p-15'], 'form-card-darker')}>
-              <form className={styles['pt-15']}>
-                <div>
-                  <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
-                </div>
-                <div className="pt-20 ">
-                  <input placeholder="Email ID" className={classNames(styles['input-style'], 'text-content')} />
-                </div>
-                <div className="pt-20">
-                  <input placeholder="Phone Number" className={classNames(styles['input-style'], 'text-content')} />
-                </div>
-                <div className="pt-20">
-                  <input placeholder="Company & City" className={classNames(styles['input-style'], 'text-content')} />
-                </div>
-                <div className="pt-20">
-                  <input
-                    placeholder="Details of Requirements"
-                    className={classNames(styles['input-style'], 'text-content')}
-                  />
-                </div>
-                <div className="pt-30">
-                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
+        <div className={(classNames('bg-black min-height-60'), styles['px-15'])}>
+          <p className="text-white-light leading-8 text-lg text-center pt-24 w-full pb-16">
+            Some of the portfolios, we’re looking at include
+          </p>
+          <div className={'flex flex-row flex-wrap justify-between pb-24'}>
+            {job.map((i, index) => (
+              <JobCard data={i} className="max-width-50 w-full" key={index} />
+            ))}
+
+            <span className="text-white leading-10 text-4xl p-15 max-width-50 w-full">
+              Even when we are not actively hiring, we’re constantly looking for Designers, Bloggers, Content Creators,
+              Consultants, Engineers and so on, and we welcome connecting with freelancers.
+            </span>
           </div>
-          <div className="min-height-60 max-width-50">
-            <div className="p-30 flex flex-col min-height-60 justify-between">
-              <h1 className="h1">
-                Get the answers to your bulk shopping woes! Fill in the form and we'll get right back to you.
-              </h1>
+        </div>
+        <div className="min-height-60 bg-grey-darker p-30 flex flex-row">
+          <div className="flex flex-col justify-between pr-30">
+            <h2 className="text-4xl leading-10 text-white-light">
+              “Every time I’ve come to a point in my career where I felt no longer challenged, Alpino has always given
+              me the opportunity to try something new.”
+            </h2>
+            <p className="text-lg leading-5 text-white-light">
+              As a self-funded fast-paced lifestyle brand with more than 300 SKUs, boasting of an offline distribution
+              network in 10 states with a repeat order percentage of 65%, we’re constantly looking for individuals who
+              can not just innovate to keep up with our 4 SKUs that are launched every 25 days, but who are driven to
+              accelerate our growth
+            </p>
+          </div>
+          <img src="/johndoe.jpeg" alt="none" className={classNames('max-width-50', styles['min-height-45'])} />
+        </div>
+        <div className="bg-black min-height-60 p-30 flex flex-row justify-between">
+          <div className={classNames('flex flex-col justify-between pr-30', styles['min-height-45'])}>
+            <p className="text-white-light leading-8 text-lg max-w-30">
+              Joining us would mean more than just joining a team. It would mean adding value to your life and the life
+              of others. If our ideas resonate with you, and you’d like to join us in this journey of growth, introduce
+              yourself and write to us at &nbsp;
+              <span>
+                <a href="https://connect@alpino.tech" className="underline">
+                  connect@alpino.tech
+                </a>
+              </span>
+            </p>
+            <p className="text-white-light leading-8 text-lg max-w-30">
+              Alpino Tech is an inclusive employer, with a special emphasis on diversity and a drug-free workplace.
+            </p>
+          </div>
+          <div className="rounded-large bg-grey-darker max-width-50 w-full">
+            <div className={classNames(styles['px-15'], 'py-30')}>
               <div>
-                <h3 className={styles['text-h3']}>
-                  {' '}
-                  Our highest priority has always been customer satisfaction. As the cherry on top of the cherry, we
-                  don’t just stop at providing products of the highest quality, we ensure our products add value to your
-                  life. A testament of this belief is our excellent after sales service.
-                </h3>
-                <h3 className={classNames(styles['text-h3'], 'pt-4')}>
-                  You can also reach us at{' '}
-                  <span>
-                    <a href="https://connect@alpino.tech" className="underline">
-                      connect@alpino.tech
-                    </a>
-                  </span>
-                </h3>
+                <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
+              </div>
+              <div className="pt-8">
+                <input placeholder="Email ID" className={classNames(styles['input-style'], 'text-content')} />
+              </div>
+              <div className="pt-8">
+                <input placeholder="Phone Number" className={classNames(styles['input-style'], 'text-content')} />
+              </div>
+              <div className="pt-8">
+                <input placeholder="Profile" className={classNames(styles['input-style'], 'text-content')} />
+              </div>
+              <input className={classNames(styles['input-style'], 'text-content hidden')} type="file" id="resume" />
+              <div className="pt-8 border-b pb-2 w-full border-grey-border flex flex-row justify-between">
+                <p className="text-content">Resume / Portfolio</p>
+                <button className="button-transparent py-2 px-4" onClick={() => fileUpload()}>
+                  Upload
+                </button>
+              </div>
+              <div className="pt-24 flex justify-start">
+                <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center text-right">
+                  Apply
+                </button>
               </div>
             </div>
           </div>
