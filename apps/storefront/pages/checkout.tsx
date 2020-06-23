@@ -37,7 +37,7 @@ export async function getServerSideProps(context) {
 export default function Checkout({ items }) {
   return (
     <>
-      <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-32')}>
+      <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-24')}>
         <Header openModal={false} invert={true}></Header>
         <Head>
           <title>Alpino</title>

@@ -14,7 +14,7 @@ const defaultOption = options[0];
 export default function Checkout({ items }) {
   return (
     <>
-      <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-32')}>
+      <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-24')}>
         <Header openModal={false} invert={true}></Header>
         <Head>
           <title>Alpino</title>
@@ -90,7 +90,7 @@ export default function Checkout({ items }) {
                 Return to information
               </h1>
             </div>
-            <Link href="">
+            <Link href="/">
               <div
                 className={classNames(
                   style.continueButton,
@@ -188,7 +188,7 @@ export default function Checkout({ items }) {
               <div>
                 <h1 className="text-lg font-medium tracking-wider text-center ml-4">Coupon code</h1>
                 <input
-                  className="grayBackGroundColor text-black p-4 rounded-md mt-2"
+                  className="grayBackGroundColor text-black p-4 rounded-md mt-2 w-full"
                   placeholder="Enter Coupon Code"></input>
               </div>
               <Link href="/checkout">
