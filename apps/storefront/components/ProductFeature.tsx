@@ -67,15 +67,20 @@ export default class ProductFeature extends React.Component {
       },
     });
 
-    const controller = new ScrollMagic.Controller();
+    this.scrollController = new ScrollMagic.Controller();
 
-    new ScrollMagic.Scene({
+    this.scrollScene = new ScrollMagic.Scene({
       triggerElement: '#trigger',
       duration: 3200,
     })
       .setTween(tween)
       .addIndicators()
-      .addTo(controller);
+      .addTo(this.scrollController);
+  }
+
+  componentWillUnmount() {
+    this.scrollScene.destroy();
+    this.scrollController.destroy();
   }
 
   render() {

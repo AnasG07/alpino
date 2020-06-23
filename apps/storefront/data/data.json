@@ -1,0 +1,936 @@
+[
+  {
+    "id": 1,
+    "name": "Alpino thar GT",
+    "type": "Bluetooth Headphone",
+    "mainDescription": "Take a ride into music with bass so supersonic it cannot be contained even by our cushioned earcups.",
+    "availableInColors": { "black": "#000000", "white": "#f2f2f2" },
+    "cost": 2999,
+    "images": {
+      "mainImage": "/allProducts/tharGT1.png",
+      "img1": "/allProducts/tharGT2.png",
+      "img2": "/allProducts/tharGT3.png",
+      "img3": "/allProducts/tharGT4.png",
+      "img4": "/allProducts/tharGT5.png",
+      "img5": "/allProducts/tharGT6.png"
+    },
+    "descriptions": {
+      "description1": "Crossing all bass-lines",
+      "description2": "Cushion earcups that never spill",
+      "description3": "Noise isolation for that zen energy",
+      "description4": "Microphone monsieur",
+      "description5": "Adjustable anatomy"
+    },
+    "descriptionText": {
+      "text1": "With dual powerful 40mm sound stage drivers, experience bass that makes the world move.",
+      "text2": "Sweat-proof cushion earcups that make undisturbed music more relaxing than ever.",
+      "text3": "Passive noise cancelling headphones make for truly living in the moment with other sounds blocked up.",
+      "text4": "Bluetooth headphones come with built-in microphone for hands-free calling.",
+      "text5": "Snug fit, foldable and adjustable headphones with comfort over 200 mah make sure you experience the comfort of luxury."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "17 cm x 7cm x 18cm",
+      "weight": "240 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 3.1 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Thar GT headphones",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Alpino Flex Pro",
+    "type": "Bluetooth Neckband",
+    "mainDescription": "Nano-coating and a powerful battery makes this neckband a sweat-proof powerhouse that keeps connecting with Bluetooth and magnetic earbuds.",
+    "availableInColors": {
+      "black": "#000000",
+      "red": "#EDIB28",
+      "grey": "#707271",
+      "yellow": "#E0AB50",
+      "white": "#f2f2f2"
+    },
+    "cost": 2499,
+    "images": {
+      "mainImage": "/allProducts/flexPro1.png",
+      "img1": "/allProducts/flexPro2.png",
+      "img2": "/allProducts/flexPro2.png",
+      "img3": "/allProducts/flexPro3.png",
+      "img4": "/allProducts/flexPro4.png",
+      "img5": "/allProducts/flexPro5.png",
+      "img5.1": "/allProducts/flexPro5.1.png",
+      "img5.2": "/allProducts/flexPro5.2.png"
+    },
+    "descriptions": {
+      "description1": "Power that doesn’t corrupt",
+      "description2": "Pushing boundaries",
+      "description3": "Don’t sweat the little things",
+      "description4": "Tech-Tonic",
+      "description5": "Magical magnets"
+    },
+    "descriptionText": {
+      "text1": "Nothing can stop this device from having a powerful 260mAh battery with unmatched 23 hours playback and upto 500 hours of standby time in a full charge.",
+      "text2": "In-line Button Voice Control, Change the tracks, Play/ Pause Button with Battery indicator display (on select model smartphones) give you the opportunity to literally push boundaries. We also give you an in-built microphone to make your voice travel the world.",
+      "text3": "Ergonomic sport design coupled with our invisible nano coating makes sure your workouts make you sweat, not your earphones.",
+      "text4": "Bluetooth 5.0 allows you to use this device even at a distance of 10metres and our A2DP technology allows you to pair with and connect to 2 devices simultaneously.",
+      "text5": "Metallic magnetic earbuds make for the perfect safety when not using our flexible and foldable neckband."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "17 cm x 7cm x 18cm",
+      "weight": "240 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 25 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Flex Pro neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Alpino Power Flex",
+    "type": "Bluetooth Neckband",
+    "mainDescription": "The only thing more powerful than the magnetic earbuds, is the device itself. Give in to a neckband that sings and hears.",
+    "availableInColors": {
+      "black": "#000000",
+      "yellow": "#E0AB50",
+      "darkGrey": "#686868",
+      "white": "#f2f2f2"
+    },
+    "cost": 2499,
+    "images": {
+      "mainImage": "/allProducts/powerFlex1.png",
+      "img1": "/allProducts/powerFlex2.png",
+      "img2": "/allProducts/powerFlex3.png",
+      "img3": "/allProducts/powerFlex4.png",
+      "img4": "/allProducts/powerFlex4.1.png",
+      "img4.1": "/allProducts/powerFlex4.2.png",
+      "img4.2": "/allProducts/powerFlex5.png",
+      "img5": "/allProducts/powerFlex6.png"
+    },
+    "descriptions": {
+      "description1": "Get. Sweat. Go.",
+      "description2": "Push the right buttons",
+      "description3": "Bluetooth dentists don’t mind",
+      "description4": "Your new superpower",
+      "description5": "Never poles apart"
+    },
+    "descriptionText": {
+      "text1": "Ergonomic sport design coupled with our invisible nano coating makes sure your earphones, unlike your workouts remain sweat-free.",
+      "text2": "In-built microphone along with in-line Button Voice Control, Change the tracks, Play/ Pause Button with Battery indicator display (on select model smartphones) give you the opportunity to literally push the buttons of your choice.",
+      "text3": "Bluetooth 5.0 allows you to use this device even at a distance of 10metres and our A2DP technology allows you to pair with and connect to 2 devices simultaneously.",
+      "text4": "A powerful 250mAh battery with unmatched 23 hours playback and upto 500 hours of standby time in a full charge, makes for undisturbed usage.",
+      "text5": "Metallic magnetic earbuds make for the perfect safety when not using our lightweight flexible and foldable neckband."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "17 cm x 7cm x 18cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 22 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Alpino Trip Flex",
+    "type": "Bluetooth Neckband",
+    "mainDescription": "Stay flexin’ on exercise with an ergonomically designed sweat-proof neckband with a battery life longer than your workouts.",
+    "availableInColors": {
+      "black": "#000000",
+      "darkGrey": "#686868",
+      "red": "#E02D2D"
+    },
+    "cost": 2499,
+    "images": {
+      "mainImage": "/allProducts/tripFlex1.png",
+      "img1": "/allProducts/tripFlex2.png",
+      "img2": "/allProducts/tripFlex3.png",
+      "img3": "/allProducts/tripFlex4.png",
+      "img4": "/allProducts/tripFlex5.png",
+      "img4.1": "/allProducts/powerFlex5.1.png",
+      "img4.2": "/allProducts/powerFlex5.2.png",
+      "img5": "/allProducts/powerFlex6.png"
+    },
+    "descriptions": {
+      "description1": "It’s never Sweat-er weather",
+      "description2": "Carrying the button",
+      "description3": "OverPowered earphone",
+      "description4": "Bluetooth fairy",
+      "description5": "Magnetic fields of protection"
+    },
+    "descriptionText": {
+      "text1": "Ergonomic sport design coupled with our invisible nano coating makes sure your earphones, unlike your workouts remain sweat-free.",
+      "text2": "In-built microphone along with in-line Button Voice Control, Change the tracks, Play/ Pause Button with Battery indicator display (on select model smartphones) give you the opportunity to literally push the buttons of your choice.",
+      "text3": "Rechargeable 135mAh battery that gives 18 hours of playback along with 180hours of standby so your music can be enjoyed unplugged.",
+      "text4": "Bluetooth 5.0 allows you to use this device even at a distance of 10metres and our A2DP technology allows you to pair with and connect to 2 devices simultaneously.",
+      "text5": "Metallic magnetic earbuds make for the perfect safety when not using our lightweight flexible and foldable neckband."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "17 cm x 7cm x 18cm",
+      "weight": "40.8 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 2 hours",
+      "batteryLife": "Battery life: 18 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Alpino Thar fit",
+    "type": "Bluetooth Neckband",
+    "mainDescription": "Oblique ear fittings in a lightweight acoustic delight with bass powerful enough to drive you into fitness.",
+    "availableInColors": {
+      "black": "#000000",
+      "yellow": "#E9D579",
+      "grey": "#CCCACB"
+    },
+    "cost": 2499,
+    "images": {
+      "mainImage": "/allProducts/tharFit1.png",
+      "img1": "/allProducts/tharFit1.png",
+      "img2": "/allProducts/tharFit3.png",
+      "img3": "/allProducts/tharFit4.png",
+      "img4": "/allProducts/tharFit5.png",
+      "img5": "/allProducts/tharFit6.png",
+      "img6": "/allProducts/tharFit7.png"
+    },
+    "descriptions": {
+      "description1": "Touching Bass",
+      "description2": "Lightweight champion",
+      "description3": "Comfort comes first",
+      "description4": "Better-y life",
+      "description5": "Talk and Treble",
+      "description6": "Blood, pain and no sweat",
+      "description7": "Conveniently Compatible,"
+    },
+    "descriptionText": {
+      "text1": "A powerful 10mm speaker to give you HD bass that makes your music take flight.",
+      "text2": "Light earphones that are champions in style and make you forget the world.",
+      "text3": "Oblique angled ear fittings to give you the comfort of a mother’s touch.",
+      "text4": "8 hours of talk-time for uninterrupted music on the go.",
+      "text5": "In-built microphone with voice assistant so your voice reaches above and beyond.",
+      "text6": "IPX4 certified sweat-proof earphone so summer days or workout evenings don’t interrupt your music.",
+      "text7": "The fitness earphones are equipped with sensitivity of about 96±3db which make it’s convenience to the best and with the earphones."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "14 cm x 10cm x 8cm",
+      "weight": "99.8 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 2 hours",
+      "batteryLife": "Battery life: 18 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Alpino Town Square Mini",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "Use this speaker to make music the mega center of your life with the power of connectivity and controls at the touch of a finger.",
+    "availableInColors": {
+      "black": "#000000",
+      "darkGrey": "#6D6E6C",
+      "red": "#E92E2E",
+      "green": "#35803D",
+      "blue": "#3E80B7"
+    },
+    "cost": 1999,
+    "images": {
+      "mainImage": "/allProducts/townSquare1.png",
+      "img1": "/allProducts/townSquare2.png",
+      "img2": "/allProducts/townSquare3.png",
+      "img3": "/allProducts/townSquare4.png"
+    },
+    "descriptions": {
+      "description1": "Mega power in mini",
+      "description2": "Better Bluetooth",
+      "description3": "Buttons and more buttons"
+    },
+    "descriptionText": {
+      "text1": "Supreme 500mAh rechargeable battery that makes for undisturbed music upto 4 hours.",
+      "text2": "Bluetooth 4.1 with a 10m range gives you the flexibility to move in the entire town.",
+      "text3": "Volume rockers, power, mode, forward, backward, pause, play controls along with aux-in, USB and micro SD card slots give this device autonomous power."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "14 cm x 10cm x 8cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 4 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Alpino Thar Drift",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "Never put your feet off the gas, with beats that are stronger, power that lasts longer and connectivity that takes you farther.",
+    "availableInColors": {
+      "black": "#000000"
+    },
+    "cost": 2999,
+    "images": {
+      "mainImage": "/allProducts/tharDrift1.png",
+      "img1": "/allProducts/tharDrift2.png",
+      "img2": "/allProducts/tharDrift3.png",
+      "img3": "/allProducts/tharDrift4.png",
+      "img4": "/allProducts/tharDrift5.png"
+    },
+    "descriptions": {
+      "description1": "Power packed performer",
+      "description2": "Truly together",
+      "description3": "Filled with features",
+      "description4": "Wireless winning"
+    },
+    "descriptionText": {
+      "text1": "1200 mAh rechargeable battery means your music can live upto your energy levels for 6 hours straight and you can enjoy 160 hours of standby time.",
+      "text2": "Bluetooth 5.0 with a 10m range of connectivity means your music never leaves your side.",
+      "text3": "USB, FM radio, SD card, Aux-in port, microphone, holding strap, are just some of the features that you can drive with on the Thar Drift.",
+      "text4": "Our wireless speaker gives you the adventures of a lifetime with the mobility you deserve."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "24.6 cm x 11.9 cm x 13.5 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable 1200mah lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Alpino Thar Drift",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "Never put your feet off the gas, with beats that are stronger, power that lasts longer and connectivity that takes you farther.",
+    "availableInColors": {
+      "black": "#000000"
+    },
+    "cost": 2999,
+    "images": {
+      "mainImage": "/allProducts/tharDrift1.png",
+      "img1": "/allProducts/tharDrift2.png",
+      "img2": "/allProducts/tharDrift3.png",
+      "img3": "/allProducts/tharDrift4.png",
+      "img4": "/allProducts/tharDrift5.png"
+    },
+    "descriptions": {
+      "description1": "Power packed performer",
+      "description2": "Truly together",
+      "description3": "Filled with features",
+      "description4": "Wireless winning"
+    },
+    "descriptionText": {
+      "text1": "1200 mAh rechargeable battery means your music can live upto your energy levels for 6 hours straight and you can enjoy 160 hours of standby time.",
+      "text2": "Bluetooth 5.0 with a 10m range of connectivity means your music never leaves your side.",
+      "text3": "USB, FM radio, SD card, Aux-in port, microphone, holding strap, are just some of the features that you can drive with on the Thar Drift.",
+      "text4": "Our wireless speaker gives you the adventures of a lifetime with the mobility you deserve."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "24.6 cm x 11.9 cm x 13.5 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable 1200mah lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Alpino Rock",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "Go back in time with a look inspired by the good ol’ age of music, but take a leap into the future with features that are centuries ahead.",
+    "availableInColors": {
+      "black": "#000000",
+      "darkGrey": "#6D6E6C",
+      "red": "#E92E2E",
+      "green": "#35803D",
+      "blue": "#3E80B7"
+    },
+    "cost": 2499,
+    "images": {
+      "mainImage": "/allProducts/rock1.png",
+      "img1": "/allProducts/rock2.png",
+      "img2": "/allProducts/rock3.png",
+      "img3": "/allProducts/rock4.png",
+      "img4": "/allProducts/rock5.png",
+      "img5": "/allProducts/rock6.png"
+    },
+    "descriptions": {
+      "description1": "Retro rock",
+      "description2": "Bass boulder",
+      "description3": "Bluetooth and nail",
+      "description4": "Power forever",
+      "description5": "For Smarter Smartphones",
+      "description6": "Plenty of rocks to throw on"
+    },
+    "descriptionText": {
+      "text1": "Antenna gives this modern device a classic feel, for those that love to go retro!",
+      "text2": "A powerful bass radiator transforms Alpino Rock into a boulder when the music starts playing.",
+      "text3": "Bluetooth 5.0 with a 10m range makes this device deliver sound so strong that there is no scope for competition.",
+      "text4": "With a 1200mAh rechargeable battery, this speaker can go on playing for 8 hours with a standby time of 100hours.",
+      "text5": "This speaker packs a unique smartphone stand along with USB input, FM Radio, SD card input, Aux In & Microphone in support and holding strap that give it top of the line features.",
+      "text6": "With the availability of red, black, yellow, grey and blue colour variants, and a refreshing mesh-design you have the options that match your unique style."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "21 cm x 5.5cm x 9cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 8 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Alpino Thar Wave",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "Surf on the sound waves with a speaker that makes music truly wireless and bass truly limitless.",
+    "availableInColors": {
+      "black": "#000000"
+    },
+    "cost": 1999,
+    "images": {
+      "mainImage": "/allProducts/tharWave1.png",
+      "img1": "/allProducts/tharWave2.png",
+      "img2": "/allProducts/tharWave3.png",
+      "img3": "/allProducts/tharWave4.png",
+      "img4": "/allProducts/tharWave5.png"
+    },
+    "descriptions": {
+      "description1": "Power play",
+      "description2": "Connected consistent",
+      "description3": "Forever features",
+      "description4": "Only waves, no wires"
+    },
+    "descriptionText": {
+      "text1": "1200 mAh rechargeable battery means you can burn the dance floor for 6hours straight and enjoy 160 hours of standby time.",
+      "text2": "Bluetooth 5.0 with a 10m range of connectivity means your music can finally go the distance.",
+      "text3": "USB, FM radio, SD card, Aux-in port, microphone, holding strap, are just some of the features we pack in every piece of Thar Wave.",
+      "text4": "Our wireless speaker ensures you ride on sound waves into bass town without any wires required."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "17 cm x 8.2 cm x 8.5 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable 1200mah lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Alpino Trip Extra",
+    "type": "Earphones",
+    "mainDescription": "Wires long enough to not stop you from connecting with your music that is enhanced by drivers more elite than F1.",
+    "availableInColors": {
+      "black": "#000000",
+      "white": "#ffffff"
+    },
+    "cost": 399,
+    "images": {
+      "mainImage": "/allProducts/tharWave1.png",
+      "img1": "/allProducts/tharWave2.png",
+      "img2": "/allProducts/tharWave3.png",
+      "img3": "/allProducts/tharWave4.png",
+      "img4": "/allProducts/tharWave5.png"
+    },
+    "descriptions": {
+      "description1": "Bottomless Bass",
+      "description2": "Comfort and able",
+      "description3": "Long Trip",
+      "description4": "Colour combo"
+    },
+    "descriptionText": {
+      "text1": "Deep HD bass with 10mm dynamic drivers allow for a sound experience like never before.",
+      "text2": "lightweight body with comfortable earplugs and built-in mic, make this device more than just comfortable.",
+      "text3": "A 1.2m long cable with our tangle free technology makes these earphones perfect for a long trip into music.",
+      "text4": "Black and white variants for a earphone that goes with your attire and persona."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "10 cm x 10 cm x 8 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable 1200mah lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Alpino Thar Blaze",
+    "type": "Earphones",
+    "mainDescription": "LED lights, superior bass and a connectivity of 10metres. Is there any more you can ask of a speaker?",
+    "availableInColors": {
+      "black": "#000000"
+    },
+    "cost": 1999,
+    "images": {
+      "mainImage": "/allProducts/blaze1.png",
+      "img1": "/allProducts/blaze2.png",
+      "img2": "/allProducts/blaze3.png",
+      "img3": "/allProducts/blaze4.png",
+      "img4": "/allProducts/blaze5.png",
+      "img5": "/allProducts/blaze6.png"
+    },
+    "descriptions": {
+      "description1": "Trailblazing Battery",
+      "description2": "Bluetooth alone triumphs",
+      "description3": "Blazing the dance floor",
+      "description4": "Ultra attributes",
+      "description5": "Music that moves with you"
+    },
+    "descriptionText": {
+      "text1": "1200mAh battery with 8 hours playback and upto 160 hours standby time gives you the edge in playing music tirelessly.",
+      "text2": "Bluetooth 5.0 with a connectivity range upto 10m makes sure music never takes a back seat.",
+      "text3": "LED RGB lights that blaze up the dance floor for a house party to remember.",
+      "text4": "LED RGB lights, USB, FM radio, SD Card, Aux-In Port, Microphone Input, holding strap make sure this speaker’s superiority is written in stone.",
+      "text5": "Our wireless technology makes sure you get the most movement while grooving to your music."
+    },
+    "dimensions": {
+      "type": "Over-ear Headphones",
+      "dimension": "17 cm x 8.2 cm x 8.5 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 22 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Alpino Twist",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "Rediscover angles with a design that can be felt in your palm and a sound that can be felt in your heart.",
+    "availableInColors": {
+      "black": "#000000"
+    },
+    "cost": 2499,
+    "images": {
+      "mainImage": "/allProducts/twist1.png",
+      "img1": "/allProducts/twist2.png",
+      "img2": "/allProducts/twist3.png",
+      "img3": "/allProducts/twist4.png",
+      "img4": "/allProducts/twist5.png",
+      "img5": "/allProducts/twist6.png"
+    },
+    "descriptions": {
+      "description1": "Bass friends forever",
+      "description2": "Nothing but the Bluetooth",
+      "description3": "Your personal discothequer",
+      "description4": "Endless attributes",
+      "description5": "No strings attached"
+    },
+    "descriptionText": {
+      "text1": "HD Bass and clear sound makes this speaker your partner in crime for all parties.",
+      "text2": "Bluetooth 5.0 with upto 10 meters connectivity ensures your music has the flexibility to move like you.",
+      "text3": "Our angular soft touch exterior comes with LED RGB lights powerful enough to illuminate your life.",
+      "text4": "1200mAh battery with upto 8 hours playback, USB input, FM Radio, SD card input, Aux In & Microphone, holding strap, we have it all",
+      "text5": "Completely wireless speaker which can be carried in the palm of your hand."
+    },
+    "dimensions": {
+      "type": "Bluetooth Speaker",
+      "dimension": "8 x 6 x 22 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 8 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Alpino Thar Flash",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "Flashes of power will last longer than ever in a speaker with LED lights, OP battery and wireless connectivity.",
+    "availableInColors": {
+      "black": "#000000"
+    },
+    "cost": 2999,
+    "images": {
+      "mainImage": "/allProducts/flash1.png",
+      "img1": "/allProducts/flash2.png",
+      "img2": "/allProducts/flash3.png",
+      "img3": "/allProducts/flash4.png",
+      "img4": "/allProducts/flash5.png",
+      "img5": "/allProducts/flash6.png",
+      "img6": "/allProducts/flash7.png"
+    },
+    "descriptions": {
+      "description1": "Endless Energy",
+      "description2": "Every move you make",
+      "description3": "Thor of Speakers",
+      "description4": "For fans of features",
+      "description5": "Where’re the wires?"
+    },
+    "descriptionText": {
+      "text1": "1200mAh battery with 6 hours playback and upto 160 hours of standby time allows for endless music.",
+      "text2": "10 meters connectivity with Bluetooth 5.0 makes music on the move possible.",
+      "text3": "LED RGB lights powerful enough to summon the God of Thunder.",
+      "text4": "USB , FM radio, SD Card, Aux In Port, Mic, LED lights, Holding strap are just some of the features packed into this speaker.",
+      "text5": "Move to a truly wireless future with headphones that rely on technology not wires."
+    },
+    "dimensions": {
+      "type": "Bluetooth Speaker",
+      "dimension": "25 x 9 x 13.5 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Alpino Trip Escape",
+    "type": "Bluetooth Earphones",
+    "mainDescription": "Unique earhooks with the power to choose from three variants, only make this wired wonder an even better choice for your musical escapes.",
+    "availableInColors": {
+      "black": "#000000",
+      "grey": "#9B9B9B",
+      "red": "#E91716"
+    },
+    "cost": 499,
+    "images": {
+      "mainImage": "/allProducts/trip1.png",
+      "img1": "/allProducts/trip2.png",
+      "img2": "/allProducts/trip3.png",
+      "img3": "/allProducts/trip4.png",
+      "img4": "/allProducts/trip5.png"
+    },
+    "descriptions": {
+      "description1": "Bountiful Bass",
+      "description2": "Ergonomic ear-hooks",
+      "description3": "Long Way Forward",
+      "description4": "Third time’s a charm"
+    },
+    "descriptionText": {
+      "text1": "Our dynamic 10mm drivers deliver heavy bass and HD sound strong enough to make you escape the world.",
+      "text2": "Comfortable earbuds with ear-hooks that make for a secure fit during workouts.",
+      "text3": "1.2m cable that doesn’t tangle and an in-built microphone doesn’t stop this device from being lightweight and comfortable.",
+      "text4": "We give you three colour variants – red, black and white, so you get charmed on your first time itself."
+    },
+    "dimensions": {
+      "type": "Bluetooth Speaker",
+      "dimension": "14 x 10 x 8 cm",
+      "weight": "99.8 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "No Battery"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Alpino JP22 BT Headset",
+    "type": "Bluetooth Headset",
+    "mainDescription": "Enjoy long hours of hands-free calling with a device that brings the best connectivity to your fingertips.",
+    "availableInColors": {
+      "black": "#000000"
+    },
+    "cost": 499,
+    "images": {
+      "mainImage": "/allProducts/trip1.png",
+      "img1": "/allProducts/trip2.png",
+      "img2": "/allProducts/trip3.png",
+      "img3": "/allProducts/trip4.png",
+      "img4": "/allProducts/trip5.png"
+    },
+    "descriptions": {
+      "description1": "Power behind every Throne play",
+      "description2": "Eye for an eye and Bluetooth for a Bluetooth",
+      "description3": "Comfort Captured",
+      "description4": "Quality Conscious"
+    },
+    "descriptionText": {
+      "text1": "With the power to talk for 6 hours non-stop, rise to the executive position of your dreams. Along with a powerful battery, the headset also has a Deep-Sleep Power Saving mode to hibernate when necessary.",
+      "text2": "Bluetooth 5.0 and enhanced audio clarity makes this devide the perfect partner for working out, unwinding, GPS directions or business calls!",
+      "text3": "Even after long-usage hours, enjoy our comfortable and lightweight device that doesn’t strain the ears!",
+      "text4": "Latest bee wireless headset with premium CSR chip that delivers top-notch HD sound which is crystal clear."
+    },
+    "dimensions": {
+      "type": "Bluetooth Speaker",
+      "dimension": "14 x 10 x 8 cm",
+      "weight": "99.8 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "No Battery"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Power Flex neckband",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  }
+]

@@ -8,20 +8,20 @@ export default function Footer() {
       <div className="flex flex-row pt-23">
         <div className="flex-grow">
           <div className="pb-8">
-            <Link href="/support">
+            {/* <Link href="/support">
               <a className="footer-link leading-8">Support</a>
-            </Link>
+            </Link> */}
           </div>
           <div>
             <Link href="/privacy-policy">
               <a className="pt-8 footer-font leading-6"> Privacy Policy </a>
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link href="/terms-and-condition">
               <a className="footer-font leading-6"> Terms and Condition </a>
             </Link>
-          </div>
+          </div> */}
           <div>
             <Link href="/warranty">
               <a className="footer-font leading-6"> Warranty </a>
@@ -45,9 +45,9 @@ export default function Footer() {
         </div>
         <div className="flex-grow">
           <div className="pb-8">
-            <Link href="/about">
+            {/* <Link href="/about">
               <a className="footer-link leading-8 leading-6">About</a>
-            </Link>
+            </Link> */}
           </div>
           <div>
             <Link href="/our-story">
@@ -55,7 +55,7 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link href="/work-with-us">
+            <Link href="/careers">
               <a className="footer-font leading-6"> Work with us</a>
             </Link>
           </div>
@@ -64,37 +64,37 @@ export default function Footer() {
               <a className="footer-font leading-6">Become a distributor </a>
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link href="/affiliate">
               <a className="footer-font leading-6">Affiliate </a>
             </Link>
-          </div>
+          </div> */}
           <div>
             <Link href="/corporate-enquiries">
               <a className="footer-font leading-6">Corporate enquiries </a>
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link href="/">
               <a className="footer-font leading-6">Press </a>
             </Link>
-          </div>
+          </div> */}
           <div>
             <Link href="/blogs">
               <a className="footer-font leading-6"> Blogs</a>
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link href="/news">
               <a className="footer-font leading-6">News </a>
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="flex-grow">
           <div className="pb-8">
-            <Link href="/explore">
+            {/* <Link href="/explore">
               <a className="footer-link leading-8">Explore</a>
-            </Link>
+            </Link> */}
           </div>
           <div>
             <Link href="/product">
@@ -126,18 +126,18 @@ export default function Footer() {
               <a className="footer-font leading-6"> Neckbands</a>
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link href="/cables">
               <a className="footer-font leading-6"> Cables</a>
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="flex-grow">
-          <div>
+          {/* <div>
             <Link href="/join-our-newsletter">
               <a className="footer-link leading-8">Join our newsletter</a>
             </Link>
-          </div>
+          </div> */}
           <h6 className="footer-font footer-text-color pt-8"> Even Trump can’t call this news fake</h6>
           <span className="row justify-start pt-6">
             <input placeholder="Enter your email address" className="pl-4 input-footer-color input" />
