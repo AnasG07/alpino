@@ -3,7 +3,10 @@ import Link from 'next/link';
 
 export default function Header({ invert, openModal }) {
   return (
-    <div className={`flex flex-row justify-between padding-30 z-10 items-baseline ${!invert && 'fixed'} w-full top-0 `}>
+    <div
+      className={`flex flex-row justify-between padding-30 z-10 items-baseline ${
+        !invert && 'fixed bg-black'
+      } w-full top-0 `}>
       <Link href="/">
         <a>
           <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && 'filter-invert'}`} />
