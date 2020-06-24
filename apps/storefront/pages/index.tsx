@@ -193,7 +193,7 @@ export default class Home extends React.Component {
   render() {
     const { productFeature, items, productCard } = this.props;
     return (
-      <>
+      <div className="overflow-x-hidden">
         <div className="min-h-screen bg-black pt-20">
           <Header openModal={this.openModal} />
           <Head>
@@ -206,18 +206,18 @@ export default class Home extends React.Component {
                 <ProductFeature data={i} key={index} />
               ))}
             </div>
-            <div className="background-red-dark p-32">
-              <div className="flex flex-row">
+            <div className="background-red-dark p-16 md:p-32">
+              <div className="flex flex-col md:flex-row">
                 <div className="flex-grow text-center">
                   {/* <div id="imagesequence">
                     <img src="/animation/Speaker01_0000.png"></img>
                   </div> */}
                 </div>
-                <div className="flex-grow flex flex-col justify-center max-width-50">
-                  <h1 className="text-black leading-10 font-medium text-5xl text-left max-w-30 leading-12">
+                <div className="flex-grow flex flex-col justify-center items-center md:items-start md:w-2/4 w-full">
+                  <h1 className="text-black leading-10 font-medium text-5xl md:text-left  text-center max-w-30 leading-12">
                     Your ideas are worthy of so much more than the kudos in your imagination.
                   </h1>
-                  <div className="pt-64 leading-10">
+                  <div className="md:pt-64 pt-24 leading-10">
                     <button className="button-transparent py-4 px-8 border-none bg-black outline-none">
                       Incubate with Alpino
                     </button>
@@ -225,50 +225,58 @@ export default class Home extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="pt-32">
-              <div className="flex flex-row justify-between items-center px-30">
+            <div className="pt-16 md:pt-32">
+              <div className="flex flex-col md:flex-row justify-between  items-start md:items-center px-16 md:px-31">
                 <h1 className="leading-12 text-white font-medium text-5xl">Best Sellers</h1>
                 <h3 className="text-left text-xl text-white font-normal leading-tight">Best always deserves better</h3>
               </div>
-              <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
-                {productCard.map((i, index) => (
-                  <ProductCard data={i} key={index} />
-                ))}
+              <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
+                <div className="flex flex-row ">
+                  {productCard.map((i, index) => (
+                    <div className={`${index !== 0 && 'hidden'} lg:block`}>
+                      <ProductCard data={i} key={index} />
+                    </div>
+                  ))}
+                </div>
                 <span>
-                  <button className="border-none outline-none">
+                  <button className="border-none outline-none hidden lg:block">
                     <img className="inline-block" src="arrow-right.svg" />
                   </button>
                 </span>
               </div>
             </div>
-            <div className="background-image-people p-32 bg-no-repeat mt-32 bg-cover">
-              <div className="flex flex-row">
+            <div className="background-image-people p-16 md:p-32 bg-no-repeat mt-16  md:mt-32 bg-cover">
+              <div className="flex flex-col md:flex-row">
                 <div className="flex-grow">
                   <h1 className="text-left text-white font-medium text-5xl leading-12">About us </h1>
                 </div>
-                <div className="flex-grow flex flex-col justify-center max-width-50">
+                <div className="flex-grow flex flex-col justify-center md:w-2/4 w-full md:pt-0 pt-8">
                   <h3 className="text-left text-xl text-white font-normal leading-tight max-w-45">
                     We refuse to conform to the idea of being just a consumer electronics brand, and instead believe
                     we’re a lifestyle brand. As a fast-paced company, we make sure our products help you listen to the
                     voice of righteousness and block out the noise of negativity.
                   </h3>
-                  <div className="pt-32">
+                  <div className="pt-12 md:pt-32 flex md:justify-start justify-center">
                     <button className="button-transparent py-2 px-8 outline-none">Learn More</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="pt-32 pb-32">
-              <div className="flex flex-row justify-between items-center px-30">
+            <div className="pt-16 md:pt-32 pb-8 md:pb-32">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-16 md:px-31">
                 <h1 className="text-left text-white font-medium text-5xl leading-12">Sneak Peak</h1>
                 <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
               </div>
-              <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
-                {productCard.map((i, index) => (
-                  <ProductCard data={i} key={index * 2} comingSoon />
-                ))}
+              <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
+                <div className="flex flex-row ">
+                  {productCard.map((i, index) => (
+                    <div className={`${index !== 0 && 'hidden'} lg:block`}>
+                      <ProductCard data={i} key={index} comingSoon />
+                    </div>
+                  ))}
+                </div>
                 <span>
-                  <button className="border-none outline-none">
+                  <button className="border-none outline-none hidden lg:block">
                     <img className="inline-block" src="arrow-right.svg" />
                   </button>
                 </span>
@@ -278,7 +286,7 @@ export default class Home extends React.Component {
         </div>
         <Cart items={items} modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} />
         <Footer />
-      </>
+      </div>
     );
   }
 }

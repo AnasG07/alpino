@@ -461,6 +461,14 @@ button:focus {
 .hover-show {
   display: none;
 }
+@media (max-width: 1024px) {
+  .hover-show {
+    display: flex;
+  }
+  .hover-hide {
+    display: none;
+  }
+}
 
 .hover-main:hover .hover-show {
   display: flex;
@@ -476,6 +484,11 @@ button:focus {
 
 .product-alignment:nth-child(odd) {
   @apply flex-row;
+}
+@media (max-width: 768px) {
+  .product-alignment {
+    flex-flow: column-reverse !important;
+  }
 }
 
 .subnav-content {
@@ -503,6 +516,13 @@ button:focus {
   background-image: url('/telephone.svg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .background-image-support {
+    background-color: black;
+    background-image: none;
+  }
 }
 
 .list-styled {
