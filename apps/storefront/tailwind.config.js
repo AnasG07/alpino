@@ -22,6 +22,7 @@ module.exports = {
         'link-color': 'rgb(24,130,195)',
         'header-opacity': 'rgba(0, 0, 0, 0.2)',
         'black-distributor': '#1B1B1B',
+        'border-respon': '#3D3D3D',
       },
       lineHeight: {
         16: '4rem',
@@ -42,6 +43,9 @@ module.exports = {
       },
       maxHeight: {
         '700': '700px',
+      },
+      padding: {
+        '31': '7.5rem',
       },
     },
   },

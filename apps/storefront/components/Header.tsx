@@ -25,7 +25,10 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
         <div className="flex flex-row">
           <div className="subnav">
             <Link href="/category/[category]" as="/category/earphones">
-              <a className={`header-link px-4 text-right leading-8 ${invert && !scroll ? 'text-black' : 'text-white'}`}>
+              <a
+                className={`header-link px-4 text-right leading-8 text-white md:${
+                  invert && !scroll ? 'text-black' : 'text-white'
+                }`}>
                 Earphones
                 <img
                   src="/down-arrow.png"
@@ -37,7 +40,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
             <div className="subnav-content">
               <Link href="/neckbands">
                 <a
-                  className={`header-link px-4 block text-left leading-8 ${
+                  className={`header-link px-4 block text-left leading-8 text-white md:${
                     invert && !scroll ? 'text-black' : 'text-white'
                   }`}>
                   Neckbands
@@ -45,7 +48,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
               </Link>
               <Link href="/headphones">
                 <a
-                  className={`header-link px-4 block text-left leading-8 ${
+                  className={`header-link px-4 block text-left leading-8 text-white md:${
                     invert && !scroll ? 'text-black' : 'text-white'
                   }`}>
                   Headphones
@@ -53,7 +56,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
               </Link>
               <Link href="/headsets-single-ear">
                 <a
-                  className={`header-link px-4 block text-left leading-8 ${
+                  className={`header-link px-4 block text-left leading-8 text-white md:${
                     invert && !scroll ? 'text-black' : 'text-white'
                   }`}>
                   Headsets - Single Ear
@@ -61,7 +64,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
               </Link>
               <Link href="/wired-earphones">
                 <a
-                  className={`header-link px-4 block text-left leading-8 ${
+                  className={`header-link px-4 block text-left leading-8 text-white md:${
                     invert && !scroll ? 'text-black' : 'text-white'
                   }`}>
                   Wired earphones
@@ -70,22 +73,34 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
             </div>
           </div>
           <Link href="/speakers">
-            <a className={`header-link px-4 text-right leading-8 ${invert && !scroll ? 'text-black' : 'text-white'}`}>
+            <a
+              className={`header-link px-4 text-right leading-8 text-white md:${
+                invert && !scroll ? 'text-black' : 'text-white'
+              }`}>
               Speakers
             </a>
           </Link>
           <Link href="/support">
-            <a className={`header-link px-4 text-right leading-8 ${invert && !scroll ? 'text-black' : 'text-white'}`}>
+            <a
+              className={`header-link px-4 text-right leading-8 text-white md:${
+                invert && !scroll ? 'text-black' : 'text-white'
+              }`}>
               Support
             </a>
           </Link>
           <Link href="/incubate-with-alpino">
-            <a className={`header-link px-4 text-right leading-8 ${invert && !scroll ? 'text-black' : 'text-white'}`}>
+            <a
+              className={`header-link px-4 text-right leading-8 text-white md:${
+                invert && !scroll ? 'text-black' : 'text-white'
+              }`}>
               Incubate with Alpino
             </a>
           </Link>
           <Link href="/careers">
-            <a className={`header-link px-4 text-right leading-8 ${invert && !scroll ? 'text-black' : 'text-white'}`}>
+            <a
+              className={`header-link px-4 text-right leading-8 text-white md:${
+                invert && !scroll ? 'text-black' : 'text-white'
+              }`}>
               Careers
             </a>
           </Link>

@@ -37,12 +37,26 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.background-warranty {
+  background-image: url('/heart.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 768px) {
   .background-contact {
     background-color: black;
     background-image: none;
   }
   .background-distributor {
+    background-color: black;
+    background-image: none;
+  }
+  .background-story {
+    background-color: black;
+    background-image: none;
+  }
+  .background-warranty {
     background-color: black;
     background-image: none;
   }
@@ -58,11 +72,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.background-warranty {
-  background-image: url('/heart.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 .text-color-black-h1 {
   @apply leading-12 text-black font-medium text-5xl;
 }
@@ -92,6 +102,14 @@
 }
 .text-heading-black {
   @apply leading-12 text-black font-medium text-7xl;
+}
+@media (max-width: 768px) {
+  .text-heading-black {
+    @apply leading-12 text-white font-medium text-7xl;
+  }
+  .text-color-warranty {
+    @apply text-2xl text-white font-normal leading-tight;
+  }
 }
 .p-15 {
   padding: 3.75rem;
@@ -153,12 +171,23 @@
 .min-height-64 {
   min-height: 64rem;
 }
+
 .min-height-80 {
   min-height: 79.375rem;
 }
 .mt-188 {
   margin-top: 47rem;
 }
+
+@media (max-width: 768px) {
+  .min-height-80 {
+    min-height: auto;
+  }
+  .mt-188 {
+    margin-top: 5rem;
+  }
+}
+
 .img-clock {
   height: 300px;
   border-radius: 30px;
@@ -180,6 +209,11 @@
 }
 .min-height-39 {
   min-height: 38.75rem;
+}
+@media (max-width: 768px) {
+  .min-height-39 {
+    min-height: auto;
+  }
 }
 .min-height-50 {
   min-height: 50rem;

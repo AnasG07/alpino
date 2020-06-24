@@ -25,19 +25,20 @@ export default function Refund() {
               Getting in touch with us is as easy as can be
             </h3>
           </div>
-          <div className={classNames('bg-black flex flex-col justify-center items-center', styles['mt-188'])}>
-            <h1 className={classNames(styles['font-size-14'], 'leading-loose text-white pt-16')}>
+          <div
+            className={classNames('bg-black flex flex-col justify-center items-center px-8 md:px-0', styles['mt-188'])}>
+            <h1 className={classNames(styles['font-size-14'], 'leading-loose text-white   pt-8 md:pt-16')}>
               Refund and Replacement Policy
             </h1>
-            <h3 className="leading-12 text-2xl text-white max-width-686 text-center">
+            <h3 className="leading-12 text-2xl text-white max-width-686 text-left md:text-center">
               Refund/Replacement is only applicable under the following circumstances -
             </h3>
           </div>
         </div>
-        <div className="bg-black flex flex-row pt-16 justify-between">
-          <div className="pl-30">
-            <h3 className="leading-12 text-2xl text-white max-width-686">Delayed Delivery</h3>
-            <p className="leading-12 text-lg text-white max-width-686 ">
+        <div className="bg-black flex flex-col-reverse md:flex-row pt-16 justify-between">
+          <div className="px-8 md:pl-31 md:border-none">
+            <h3 className="leading-12 text-2xl text-white max-width-686 pt-8 md:pt-0">Delayed Delivery</h3>
+            <p className="leading-12 text-lg text-white max-width-686 border-b border-border-respon ">
               If the product delivery takes more time than promised (reasons like natural calamities, delay due to the
               logistics partner(s), unavailability of the customer, etc. are covered under exceptions and a refund will
               not be entertained under such circumstances), then the customer can cancel the order and the full amount
@@ -45,17 +46,19 @@ export default function Refund() {
               delay in refund because of the delays made by the bank, calamities or national holidays.
             </p>
           </div>
-          <div className="px-10">
+          <div className="px-10 flex justify-center">
             <img src="/clock.jpeg" alt="clock" className={styles['img-clock']} />
           </div>
         </div>
-        <div className="bg-black flex flex-row pt-16 justify-between">
-          <div className="px-10">
+        <div className="bg-black flex flex-col md:flex-row pt-16 justify-between">
+          <div className="px-10 flex justify-center">
             <img src="/yellow.jpeg" alt="clock" className={styles['img-clock']} />
           </div>
-          <div className="pr-30">
-            <h3 className="leading-12 text-2xl text-white max-width-686 text-right">Wrong Product received</h3>
-            <p className="leading-12 text-lg text-white max-width-686 text-right">
+          <div className="px-8 md:pr-31 pt-4 md:pt-0">
+            <h3 className="leading-12 text-2xl text-white max-width-686  text-left md:text-right">
+              Wrong Product received
+            </h3>
+            <p className="leading-12 text-lg text-white max-width-686 text-left md:text-right border-b border-border-respon">
               A customer can ask for a refund if the specifications of the product received are not as per the
               specifications mentioned in the website or if the product replacement takes more than 14 working days. A
               refund will, however, not be initiated, if the customer is unhappy with the look/sound quality of a defect
@@ -63,9 +66,9 @@ export default function Refund() {
             </p>
           </div>
         </div>
-        <div className="bg-black flex flex-row pt-16 justify-between">
-          <div className="pl-30">
-            <h3 className="leading-12 text-2xl text-white max-width-686">Damaged Product received</h3>
+        <div className="bg-black flex flex-col-reverse md:flex-row pt-16 justify-between">
+          <div className="px-8 md:pl-31 pb-8 md:pb-0">
+            <h3 className="leading-12 text-2xl text-white max-width-686 pt-4 md:pt-0">Damaged Product received</h3>
             <p className="leading-12 text-lg text-white max-width-686">
               We reserve the right to inspect the Product and verify fault. You are required to return the faulty
               Product to us for assessment and the Product must be returned in a reasonable condition with documentation
@@ -80,11 +83,11 @@ export default function Refund() {
               to you plus any costs of inspecting the Product.
             </p>
           </div>
-          <div className="px-10">
+          <div className="px-10 flex justify-center">
             <img src="/broken.jpeg" alt="clock" className={styles['img-clock']} />
           </div>
         </div>
-        <div className="bg-black flex flex-row justify-center py-20">
+        <div className="bg-black-privacy md:bg-black flex flex-row justify-center py-20 px-8 md:px-0 ">
           <div className={styles['max-width-49']}>
             <p className="leading-12 text-lg text-white text-center">
               The refund/replacement will only be processed upon the receipt and verification of complete product with

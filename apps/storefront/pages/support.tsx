@@ -50,22 +50,22 @@ export async function getStaticProps() {
 
 export default function Support({ faq }) {
   return (
-    <>
+    <div className="min-h-screen overflow-x-hidden">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="background-image-support min-height-60">
+        <div className="background-image-support md:min-h-60">
           <Header invert />
           <div className="flex justify-center flex-col items-center pt-40">
-            <h1 className="text-black leading-8 font-medium text-5xl text-left leading-12">Support</h1>
-            <h3 className="text-black text-2xl max-w-lg text-center pt-2 leading-8">
+            <h1 className="text-white md:text-black leading-8 font-medium text-5xl text-left leading-12">Support</h1>
+            <h3 className="text-white md:text-black text-2xl max-w-lg text-center pt-2 leading-8">
               For power that never runsout, support that’s always by your side
             </h3>
           </div>
         </div>
-        <div className="bg-black flex flex-row py-20">
+        <div className="bg-black flex flex-col-reverse md:flex-row py-20">
           <div className="flex flex-col p-24">
             <span className="text-xl leading-8 text-white">
               At Alpino, we’re committed to providing our customers the best of products, to help make their life
@@ -88,13 +88,13 @@ export default function Support({ faq }) {
               </a>
             </span>
           </div>
-          <img src="./window.jpg" alt="window" className="max-w-45" />
+          <img src="./window.jpg" alt="window" className="md:w-2/4 w-full" />
         </div>
-        <div className="pt-16 px-32">
+        <div className="pt-8 md:pt-16 px-12 md:px-32">
           <h1 className="text-black text-left leading-16 font-medium text-5xl leading-12">
             Frequently Asked Questions
           </h1>
-          <div className="py-20">
+          <div className="py-12 md:py-20">
             {faq.map((data, index) => (
               <QuestionCard data={data} index={index} key={index} />
             ))}
@@ -102,6 +102,6 @@ export default function Support({ faq }) {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -477,6 +477,11 @@ button:focus {
 .product-alignment:nth-child(odd) {
   @apply flex-row;
 }
+@media (max-width: 768px) {
+  .product-alignment {
+    flex-flow: column-reverse !important;
+  }
+}
 
 .subnav-content {
   position: absolute;
@@ -503,6 +508,13 @@ button:focus {
   background-image: url('/telephone.svg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .background-image-support {
+    background-color: black;
+    background-image: none;
+  }
 }
 
 .list-styled {
