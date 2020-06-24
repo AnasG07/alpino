@@ -500,12 +500,28 @@ button:focus {
   display: block;
 }
 
+@media (max-width: 1024px) {
+  .subnav-content {
+    position: relative;
+  }
+  .subnav:hover .subnav-content {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+  }
+}
+
 .subnav:hover img {
   transform: rotate(180deg);
 }
 
 .filter-invert {
   filter: invert(1);
+}
+@media (max-width: 768px) {
+  .filter-invert {
+    filter: invert(0);
+  }
 }
 
 .min-height-60 {
@@ -582,5 +598,14 @@ button:focus {
 @media (max-width: 768px) {
   .width-30 {
     width: 17px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hover-toggle-content {
+    display: none;
+  }
+  .hover-toggle:hover .hover-toggle-content {
+    display: block;
   }
 }
