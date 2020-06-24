@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import classNames from 'classnames';
 import style from './tag.module.css';
-import ProductCard from '../components/ProductCard';
+import ProductCard from '../../components/ProductCard';
 
 export async function getServerSideProps(context) {
   return {
