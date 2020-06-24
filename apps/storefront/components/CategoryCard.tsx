@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function CategoryCard({ data, index }) {
   return (
     <div key={index}>
-      <Link href="/[tag]" as="/[tag]">
+      <Link href="/collections/[tag]" as="/collections/[tag]">
         <div className={classNames(style.container, 'border-none cursor-pointer flex items-center justify-center')}>
           <img src={data.image}></img>
         </div>
