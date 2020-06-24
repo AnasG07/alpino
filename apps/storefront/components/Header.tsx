@@ -72,7 +72,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
               </Link>
             </div>
           </div>
-          <Link href="/speakers">
+          <Link href="/collections/[tag]" as="/collections/speakers">
             <a
               className={`header-link px-4 text-right leading-8 text-white md:${
                 invert && !scroll ? 'text-black' : 'text-white'
