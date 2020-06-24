@@ -461,6 +461,14 @@ button:focus {
 .hover-show {
   display: none;
 }
+@media (max-width: 1024px) {
+  .hover-show {
+    display: flex;
+  }
+  .hover-hide {
+    display: none;
+  }
+}
 
 .hover-main:hover .hover-show {
   display: flex;

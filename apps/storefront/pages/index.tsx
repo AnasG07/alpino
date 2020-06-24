@@ -230,16 +230,16 @@ export default class Home extends React.Component {
                 <h1 className="leading-12 text-white font-medium text-5xl">Best Sellers</h1>
                 <h3 className="text-left text-xl text-white font-normal leading-tight">Best always deserves better</h3>
               </div>
-              <div className="flex flex-row pt-16 md:pt-32 justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
-                <div className="flex flex-row flex-wrap">
+              <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
+                <div className="flex flex-row ">
                   {productCard.map((i, index) => (
-                    <div className="lg:w-1/3 w-full">
+                    <div className={`${index !== 0 && 'hidden'} lg:block`}>
                       <ProductCard data={i} key={index} />
                     </div>
                   ))}
                 </div>
                 <span>
-                  <button className="border-none outline-none">
+                  <button className="border-none outline-none hidden lg:block">
                     <img className="inline-block" src="arrow-right.svg" />
                   </button>
                 </span>
@@ -267,12 +267,16 @@ export default class Home extends React.Component {
                 <h1 className="text-left text-white font-medium text-5xl leading-12">Sneak Peak</h1>
                 <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
               </div>
-              <div className="flex flex-row pt-32 justify-between pl-30 pr-10 items-center">
-                {productCard.map((i, index) => (
-                  <ProductCard data={i} key={index * 2} comingSoon />
-                ))}
+              <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
+                <div className="flex flex-row ">
+                  {productCard.map((i, index) => (
+                    <div className={`${index !== 0 && 'hidden'} lg:block`}>
+                      <ProductCard data={i} key={index} comingSoon />
+                    </div>
+                  ))}
+                </div>
                 <span>
-                  <button className="border-none outline-none">
+                  <button className="border-none outline-none hidden lg:block">
                     <img className="inline-block" src="arrow-right.svg" />
                   </button>
                 </span>

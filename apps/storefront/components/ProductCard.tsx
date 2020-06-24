@@ -6,7 +6,7 @@ export default function ProductCard({
 }) {
   return (
     <div className="relative h-full">
-      <span className="flex flex-col p-8 min-height-35 mr-8 rounded-large bg-greyCard hover-main">
+      <span className="flex flex-col p-8 min-height-35 mr-8 rounded-large bg-grey-card lg:bg-black bg-greyCard hover-main">
         <img src={image} alt="Rock bluetooth" />
         <div className="flex flex-row items-center  justify-between">
           <div>
