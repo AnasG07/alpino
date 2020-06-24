@@ -208,7 +208,7 @@ export default class Home extends React.Component {
             </div>
             <div className="background-red-dark p-16 md:p-32">
               <div className="flex flex-col md:flex-row">
-                <div className="flex-grow text-center">
+                <div className="flex-grow text-center w-2/4">
                   {/* <div id="imagesequence">
                     <img src="/animation/Speaker01_0000.png"></img>
                   </div> */}
