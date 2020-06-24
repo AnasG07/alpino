@@ -358,7 +358,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Town Square Mini",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -468,7 +468,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Thar Drift",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -532,7 +532,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Rock",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -587,7 +587,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Thar Wave",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -643,7 +643,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Trip Extra",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -701,7 +701,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Thar Blaze",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -759,7 +759,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Twist",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -818,7 +818,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Thar Flash",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -873,7 +873,7 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino Trip Escape",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",
@@ -881,7 +881,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Alpino JP22 BT Headset",
     "type": "Bluetooth Headset",
     "mainDescription": "Enjoy long hours of hands-free calling with a device that brings the best connectivity to your fingertips.",
@@ -890,11 +890,12 @@
     },
     "cost": 499,
     "images": {
-      "mainImage": "/allProducts/trip1.png",
-      "img1": "/allProducts/trip2.png",
-      "img2": "/allProducts/trip3.png",
-      "img3": "/allProducts/trip4.png",
-      "img4": "/allProducts/trip5.png"
+      "mainImage": "/allProducts/jp221.png",
+      "img1": "/allProducts/jp222.png",
+      "img2": "/allProducts/jp223.png",
+      "img3": "/allProducts/jp224.png",
+      "img4": "/allProducts/jp225.png",
+      "img5": "/allProducts/jp226.png"
     },
     "descriptions": {
       "description1": "Power behind every Throne play",
@@ -909,13 +910,15 @@
       "text4": "Latest bee wireless headset with premium CSR chip that delivers top-notch HD sound which is crystal clear."
     },
     "dimensions": {
-      "type": "Bluetooth Speaker",
-      "dimension": "14 x 10 x 8 cm",
-      "weight": "99.8 g",
+      "type": "Bluetooth Headset",
+      "dimension": "6 x 1 x 1 cm",
+      "weight": "249 g",
       "material": "Plastic"
     },
     "battery": {
-      "type": "No Battery"
+      "type": "Rechargeable 1200mah lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
     },
     "features": {
       "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
@@ -926,7 +929,175 @@
       "feature6": "Matte Colors"
     },
     "whatsInTheBox": {
-      "item1": "Alpino Power Flex neckband",
+      "item1": "Alpino JP22 BT Headset",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Alpino Thar Beast",
+    "type": "Earphone",
+    "mainDescription": "Rule the desert with more powerful drivers and a longer cable for an experience beyond the ordinary.",
+    "availableInColors": {
+      "black": "#000000",
+      "white": "#f0f0f0"
+    },
+    "cost": 399,
+    "images": {
+      "mainImage": "/allProducts/beast1.png",
+      "img1": "/allProducts/beast2.png",
+      "img2": "/allProducts/beast3.png",
+      "img3": "/allProducts/beast4.png",
+      "img4": "/allProducts/beast5.png",
+      "img5": "/allProducts/beast6.png"
+    },
+    "descriptions": {
+      "description1": "Jungle Bass",
+      "description2": "Baby Beast",
+      "description3": "Explore the Wilderness",
+      "description4": "Monochrome Magic"
+    },
+    "descriptionText": {
+      "text1": "10mm dynamic drivers in this in-ear earphone give you HD bass with balanced acoustic sound.",
+      "text2": "Lightweight earphones with built-in mic give you the comfort to use them all day.",
+      "text3": "with a 1.2m long cable you have the freedom to move around and connect the cable at a distance with ease.",
+      "text4": "Black and white colour options available for you to choose what compliments your personality."
+    },
+    "dimensions": {
+      "type": "Bluetooth Headset",
+      "dimension": "10 x 10 x 8 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "battery": "No Battery"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Thar Beast earphone",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Alpino Kick Start",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "Powerful bass and an even more powerful battery make this speaker the perfect start for any musical session.",
+    "availableInColors": {
+      "black": "#000000",
+      "red": "#E62E2E"
+    },
+    "cost": 2999,
+    "images": {
+      "mainImage": "/allProducts/kick1.png",
+      "img1": "/allProducts/kick2.png",
+      "img2": "/allProducts/kick3.png",
+      "img3": "/allProducts/kick4.png",
+      "img4": "/allProducts/kick5.png"
+    },
+    "descriptions": {
+      "description1": "Kickin’ all day",
+      "description2": "Bluetooth for your blues",
+      "description3": "Star Performer",
+      "description4": "Life without wires"
+    },
+    "descriptionText": {
+      "text1": "Powerful rechargeable 1200mAh battery with a playback of upto 6 hours and standby time of 100 hours, ensuring Alpino Kick Star is the star of your music.",
+      "text2": "Bluetooth 4.2 with a range of 10m to drive away your blues with music.",
+      "text3": "USB input, FM radio, SD card input, AUX in & microphone in support, andn holding strap are just some of the features that come with our Kick Star speaker.",
+      "text4": "Wires become things of the past with our superior wireless speaker."
+    },
+    "dimensions": {
+      "type": "Bluetooth Headset",
+      "dimension": "17 x 8.2 x 8.5 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable 1200mah lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Kick Start speaker",
+      "item2": "USB charging cable",
+      "item3": "Carrying case",
+      "item4": "Quick setup guide",
+      "item5": "Warranty card"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Alpino Flex",
+    "type": "Bluetooth Speaker",
+    "mainDescription": "With a 30 hour battery life on this magnetic in-ear neckband, enjoy music upto 20,000hz and immerse your day into the world of sound and bass.",
+    "availableInColors": {
+      "black": "#000000",
+      "grey": "#BBBBBB",
+      "yellow": "#E09C4B"
+    },
+    "cost": 2999,
+    "images": {
+      "mainImage": "/allProducts/kick1.png",
+      "img1": "/allProducts/kick2.png",
+      "img2": "/allProducts/kick3.png",
+      "img3": "/allProducts/kick4.png",
+      "img4": "/allProducts/kick5.png"
+    },
+    "descriptions": {
+      "description1": "Kickin’ all day",
+      "description2": "Bluetooth for your blues",
+      "description3": "Star Performer",
+      "description4": "Life without wires"
+    },
+    "descriptionText": {
+      "text1": "Powerful rechargeable 1200mAh battery with a playback of upto 6 hours and standby time of 100 hours, ensuring Alpino Kick Star is the star of your music.",
+      "text2": "Bluetooth 4.2 with a range of 10m to drive away your blues with music.",
+      "text3": "USB input, FM radio, SD card input, AUX in & microphone in support, andn holding strap are just some of the features that come with our Kick Star speaker.",
+      "text4": "Wires become things of the past with our superior wireless speaker."
+    },
+    "dimensions": {
+      "type": "Bluetooth Headset",
+      "dimension": "17 x 8.2 x 8.5 cm",
+      "weight": "249 g",
+      "material": "Plastic"
+    },
+    "battery": {
+      "type": "Rechargeable 1200mah lithium-ion battery(included)",
+      "time": "Charging time: 1-2 hours",
+      "batteryLife": "Battery life: 6 hours per full charge"
+    },
+    "features": {
+      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
+      "feature2": "Super Bass Stereo",
+      "feature3": "High Quality",
+      "feature4": "Built-in microphone",
+      "feature5": "Super Comfortable",
+      "feature6": "Matte Colors"
+    },
+    "whatsInTheBox": {
+      "item1": "Alpino Kick Start speaker",
       "item2": "USB charging cable",
       "item3": "Carrying case",
       "item4": "Quick setup guide",

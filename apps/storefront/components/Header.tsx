@@ -24,7 +24,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
       <span className="flex items-center flex-row-reverse md:flex-row">
         <div className="flex flex-row">
           <div className="subnav">
-            <Link href="/category/[category]" as="/category/earphones">
+            <Link href="/[category]" as="/earphones">
               <a
                 className={`header-link px-4 text-right leading-8 text-white md:${
                   invert && !scroll ? 'text-black' : 'text-white'
@@ -38,7 +38,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
               </a>
             </Link>
             <div className="subnav-content">
-              <Link href="/neckbands">
+              <Link href="/collections/[tag]" as="/collections/neckbands">
                 <a
                   className={`header-link px-4 block text-left leading-8 text-white md:${
                     invert && !scroll ? 'text-black' : 'text-white'
@@ -46,7 +46,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
                   Neckbands
                 </a>
               </Link>
-              <Link href="/headphones">
+              <Link href="/collections/[tag]" as="/collections/headphones">
                 <a
                   className={`header-link px-4 block text-left leading-8 text-white md:${
                     invert && !scroll ? 'text-black' : 'text-white'
@@ -54,7 +54,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
                   Headphones
                 </a>
               </Link>
-              <Link href="/headsets-single-ear">
+              <Link href="/collections/[tag]" as="/collections/headsets-single-ear">
                 <a
                   className={`header-link px-4 block text-left leading-8 text-white md:${
                     invert && !scroll ? 'text-black' : 'text-white'
@@ -62,7 +62,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
                   Headsets - Single Ear
                 </a>
               </Link>
-              <Link href="/wired-earphones">
+              <Link href="/collections/[tag]" as="/collections/wired-earphones">
                 <a
                   className={`header-link px-4 block text-left leading-8 text-white md:${
                     invert && !scroll ? 'text-black' : 'text-white'
