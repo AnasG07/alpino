@@ -1,16 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
+import { startCase } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import classNames from 'classnames';
 import style from './tag.module.css';
 import ProductCard from '../../components/ProductCard';
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ params }) {
   return {
     props: {
+      tag: params.tag,
       productCard: [
         {
+          slug: 'rock',
           image: '/Thar05.png',
           name: 'Rock',
           type: 'Bluetooth Speaker',
@@ -19,6 +22,7 @@ export async function getServerSideProps(context) {
           buttonText: 'Buy',
         },
         {
+          slug: 'bluetooth-headphone',
           image: '/Thar031.png',
           name: 'Thar GT',
           type: 'Bluetooth Headphone',
@@ -27,6 +31,7 @@ export async function getServerSideProps(context) {
           buttonText: 'Buy',
         },
         {
+          slug: 'town-flex',
           image: '/Thar041.png',
           name: 'Town Flex',
           type: 'Wireless Neckband',
@@ -35,6 +40,7 @@ export async function getServerSideProps(context) {
           buttonText: 'Buy',
         },
         {
+          slug: 'rock',
           image: '/rock-bluetooth.svg',
           name: 'Rock',
           type: 'Blutetooth Speaker',
@@ -43,6 +49,7 @@ export async function getServerSideProps(context) {
           buttonText: 'Buy',
         },
         {
+          slug: 'thar-gt',
           image: '/thar-bluetooth.svg',
           name: 'Thar GT',
           type: 'Bluetooth Headphone',
@@ -51,6 +58,7 @@ export async function getServerSideProps(context) {
           buttonText: 'Buy',
         },
         {
+          slug: 'town-flex',
           image: '/trip-flex.svg',
           name: 'Town Flex',
           type: ' Wireless Neckband',
@@ -63,20 +71,20 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default function Tag({ productCard }) {
+export default function Tag({ tag, productCard }) {
   return (
     <>
       <div className="min-h-screen bg-black w-full">
-        <Header invert={false}></Header>
+        <Header invert={false} />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
           <div className="flex flex-col items-center justify-center md:mt-30 mt-20">
-            <img className="bg-no-repeat w-full" src="/earphones.png"></img>
+            <img className="bg-no-repeat w-full" src="/earphones.png" />
             <div className="absolute">
-              <h1 className="text-center text-5xl text-white mt-16">Earphones</h1>
+              <h1 className="text-center text-5xl text-white mt-16">{startCase(tag)}</h1>
               <p className="text-center mt-6 text-white text-2xl">Tune in and you’d never want to pull the plug</p>
             </div>
           </div>

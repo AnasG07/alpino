@@ -70,7 +70,7 @@ export default function Warranty({ faq }) {
   ];
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -78,7 +78,7 @@ export default function Warranty({ faq }) {
       <main className="bg-black">
         <div className={classNames(styles['background-warranty'], styles['min-height-64'])}>
           <Header invert />
-          <div className="pt-40 flex justify-center flex-col items-center ">
+          <div className="pt-24 pb-8 md:pb-0 md:pt-40 flex justify-center flex-col items-center ">
             <h1 className={classNames(styles['text-heading-black'], 'text-center', styles['font-size-14'])}>
               Warranty
             </h1>
@@ -91,8 +91,8 @@ export default function Warranty({ faq }) {
             </h3>
           </div>
         </div>
-        <div className="flex flex-row">
-          <div className="bg-black min-height-60 max-width-50 p-30  items-center flex flex-col">
+        <div className="flex flex-col-reverse md:flex-row">
+          <div className="bg-black md:min-h-60 w-full md:w-2/4 p-8 md:p-31  items-center flex flex-col">
             <p className="text-3xl leading-12 text-white">
               All warranty claims are subject to Alpino Tech’s authorization and occur at our sole discretion only.
             </p>
@@ -106,14 +106,24 @@ export default function Warranty({ faq }) {
               mandatory, especially if the order has been placed through amazon/flipkart.
             </p>
           </div>
-          <img className="max-width-50 min-height-60" src="./visa.jpg" alt="visa" />
+          <img className=" w-full md:w-2/4 md:min-h-60" src="./visa.jpg" alt="visa" />
         </div>
-        <div className="flex flex-row bg-white">
-          <div className="max-width-50">
+        <div className="flex flex-col lg:flex-row bg-white">
+          <div className="w-full lg:w-2/4">
             <div
-              className={classNames(styles['min-height-53'], 'pl-30 pr-20 pt-24 pb-16 flex flex-col justify-between')}>
-              <h1 className={(styles['text-color-black-h1'], styles['font-size-14'])}>Product Registration Form</h1>
-              <p className="text-2xl texxt-black leading-10">
+              className={classNames(
+                styles['min-height-53'],
+                'pl-8 lg:pl-31 pr-8 lg:pr-20 pt-8 lg:pt-24 pb-8 lg:pb-16 flex flex-col justify-between',
+              )}>
+              <h1
+                className={classNames(
+                  styles['text-color-black-h1'],
+                  styles['font-size-14'],
+                  'text-left md:text-center',
+                )}>
+                Product Registration Form
+              </h1>
+              <p className="text-2xl text-black leading-10 pt-6 lg:pt-0">
                 It’s always a delight to hear from you! It not only gives us a chance to hear from a valued customer,
                 but also helps us improve our services. Reach out to us at{' '}
                 <span>
@@ -126,7 +136,7 @@ export default function Warranty({ faq }) {
               </p>
             </div>
           </div>
-          <div className={classNames('max-width-50 w-full', styles['p-15'], styles['min-height-53'])}>
+          <div className={classNames('w-full lg:w-2/4', styles['p-15'], styles['min-height-53'])}>
             <div className={classNames(styles['p-15'], 'form-card ')}>
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row">
@@ -180,7 +190,7 @@ export default function Warranty({ faq }) {
             </div>
           </div>
         </div>
-        <div className="pt-16 px-32 bg-black">
+        <div className="pt-16 px-8 md:px-32 bg-black">
           <h1 className="text-white text-left leading-16 font-medium text-5xl leading-12">
             Frequently Asked Questions
           </h1>
@@ -190,26 +200,45 @@ export default function Warranty({ faq }) {
             ))}
           </div>
         </div>
-        <div className={classNames(styles['background-gradient'], 'min-height-38 flex flex-col pt-20 pb-20')}>
+        <div
+          className={classNames(
+            styles['background-gradient'],
+            'min-height-38 flex flex-col pt-4 pb-4 md:pt-20 md:pb-20 px-4 md:px-0',
+          )}>
           <h1 className="leading-12 text-4xl text-white text-center">Cancellation Policy</h1>
           <p
-            className={classNames('leading-loose text-xl text-white text-center pt-8 mx-auto', styles['max-width-42'])}>
+            className={classNames(
+              'leading-loose text-xl text-white text-left md:text-center pt-8 md:mx-auto',
+              styles['max-width-42'],
+            )}>
             In keeping with our longstanding belief of customer satisfaction, it is important to us to ensure each of
             our customers have a fulfilling experience. We, therefore, follow a liberal cancellation policy.
           </p>
-          <p className={classNames('leading-loose text-xl text-white text-center mx-auto', styles['max-width-42'])}>
+          <p
+            className={classNames(
+              'leading-loose text-xl text-white text-left md:text-center pt-4 md:pt-0 md:mx-auto',
+              styles['max-width-42'],
+            )}>
             Under this policy:
           </p>
-          <p className={classNames('leading-loose text-xl text-white text-center mx-auto', styles['max-width-42'])}>
+          <p
+            className={classNames(
+              'leading-loose text-xl text-white text-left md:text-center md:mx-auto',
+              styles['max-width-42'],
+            )}>
             1. Cancellation requests will not be entertained if the order has been dispatched from the warehouse.
           </p>
-          <p className={classNames('leading-loose text-xl text-white text-center mx-auto', styles['max-width-42'])}>
+          <p
+            className={classNames(
+              'leading-loose text-xl text-white text-left md:text-center md:mx-auto',
+              styles['max-width-42'],
+            )}>
             2. To cancel your order, send us an e-mail on support@alpino.tech with your ORDER id within 6 hours of
             placing the order.
           </p>
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

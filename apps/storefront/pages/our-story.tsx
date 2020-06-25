@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export default function OurStory() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -85,6 +85,6 @@ export default function OurStory() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-export default function Header({ invert, openModal, transparent, unfixed, opacity }) {
+interface HeaderProps {
+  invert?: boolean;
+  transparent?: boolean;
+  openModal(): void;
+  opacity?: boolean;
+  unfixed?: boolean;
+}
+
+export default function Header({ invert, openModal, transparent, unfixed, opacity }: HeaderProps) {
   const [scroll, updateScroll] = useState(false);
   if (process.browser) {
     window.addEventListener('scroll', () => {
-      if (scrollY < 90) {
+      if (document.body.offsetWidth > 1024 && scrollY < 90) {
         updateScroll(false);
       } else updateScroll(true);
     });
@@ -13,11 +21,11 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
 
   return (
     <div
-      className={`flex flex-row justify-between padding-30 z-10 items-baseline ${!unfixed && 'fixed'} w-full top-0 ${
+      className={`flex flex-row justify-between padding-30 z-10 items-baseline fixed w-full top-0 ${
         scroll ? 'bg-black' : opacity ? 'bg-header-opacity' : invert || transparent ? 'bg-transparent' : 'bg-black'
       }`}>
       <Link href="/">
-        <a>
+        <a className="flex-shrink-0">
           <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && !scroll && 'filter-invert'}`} />
         </a>
       </Link>
@@ -113,7 +121,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
             </Link>
           </>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row flex-shrink-0">
           <Link href="/user">
             <a className={`header-link px-4 inline-block ${invert && !scroll && 'filter-invert'}`}>
               <img src="/user.svg" />
