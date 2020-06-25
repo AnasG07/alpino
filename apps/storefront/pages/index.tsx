@@ -197,7 +197,7 @@ export default class Home extends React.Component {
                 <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
               </div>
               <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
-                <div className="flex flex-row ">
+                <div className="flex flex-row">
                   {productCard.map((i, index) => (
                     <div className={`${index !== 0 && 'hidden'} lg:block`}>
                       <ProductCard data={i} key={index} comingSoon />
