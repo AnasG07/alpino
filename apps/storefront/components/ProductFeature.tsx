@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const images = [
   '/animation/Speaker01_0001.png',
@@ -49,6 +50,9 @@ const images = [
 ];
 
 export default class ProductFeature extends React.Component {
+  scrollController: any;
+  scrollScene: any;
+
   componentDidMount() {
     const { TweenMax, TimelineMax } = require('gsap');
     const ScrollMagic = require('scrollmagic');
@@ -85,7 +89,7 @@ export default class ProductFeature extends React.Component {
 
   render() {
     const {
-      data: { description, buttonText, image, animation },
+      data: { description, buttonText, image, animation, link },
     } = this.props;
     return (
       <div className="flex product-alignment p-16" id="trigger">
@@ -94,7 +98,9 @@ export default class ProductFeature extends React.Component {
             {description}
           </h1>
           <div className="pt-16">
-            <button className="button-transparent py-2 px-4 outline-none">{buttonText}</button>
+            <Link href="/collections/[tag]" as={link}>
+              <a className="button button-transparent py-2 px-4 outline-none">{buttonText}</a>
+            </Link>
           </div>
         </div>
         <div className="flex-grow">

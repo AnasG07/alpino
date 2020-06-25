@@ -1,9 +1,15 @@
 import React from 'react';
+import Link from 'next/link';
+
+interface ProductCardProps {
+  data: any;
+  comingSoon?: boolean;
+}
 
 export default function ProductCard({
-  data: { image, name, price, description, launch, type, buttonText },
+  data: { slug, image, name, price, description, launch, type, buttonText },
   comingSoon,
-}) {
+}: ProductCardProps) {
   return (
     <div className="relative h-full">
       <span className="flex flex-col p-8 min-height-35 mr-8 rounded-large bg-grey-card lg:bg-black bg-greyCard hover-main">
@@ -19,12 +25,16 @@ export default function ProductCard({
           </span>
         </div>
         <div className="flex flex-row justify-between items-center pt-10 hover-show">
-          <button className=" leading-5 rounded-full py-3 text-base px-8 outline-none border-none bg-black max-w-8 w-full flex justify-center">
-            Details
-          </button>
-          <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
-            {buttonText}
-          </button>
+          <Link href="/products/[slug]" as={`/products/${slug}`}>
+            <a className="leading-5 rounded-full py-3 text-base px-8 outline-none border-none bg-black max-w-8 w-full flex justify-center text-white">
+              Details
+            </a>
+          </Link>
+          {!comingSoon && (
+            <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
+              {buttonText}
+            </button>
+          )}
         </div>
         <span className="leading-5 item-description-color pt-8 text-sm max-w-16 hover-hide">{description}</span>
 

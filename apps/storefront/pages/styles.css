@@ -26,6 +26,7 @@ body {
   padding: 0.8rem;
   transition: all 200ms ease;
 }
+
 .Dropdown-control:hover {
   box-shadow: none;
 }
@@ -41,6 +42,7 @@ body {
   top: 24px;
   width: 10px;
 }
+
 .Dropdown-menu {
   background-color: white;
   border: none;
@@ -55,6 +57,7 @@ body {
   z-index: 1000;
   -webkit-overflow-scrolling: touch;
 }
+
 .Dropdown-option.is-selected {
   background-color: white;
   color: #333;
@@ -78,20 +81,24 @@ body {
   padding: 0;
   white-space: nowrap;
 }
+
 .alice-carousel__stage-item {
   position: relative;
   display: inline-block;
   width: 100%;
   height: 100%;
 }
+
 .alice-carousel__stage-item * {
   line-height: initial;
   margin: 0 auto;
 }
+
 .alice-carousel__stage-item.__cloned {
   visibility: hidden;
   opacity: 0;
 }
+
 .alice-carousel__dots {
   margin: 60px 3px 5px;
   padding: 0;
@@ -108,6 +115,7 @@ body {
   border-radius: 50%;
   background-color: rgba(242, 242, 242, 0.3);
 }
+
 .alice-carousel__dots-item:hover,
 .alice-carousel__dots-item.__active {
   background-color: #f2f2f2;
@@ -140,15 +148,18 @@ button {
   text-align: center;
   color: #f2f2f2;
 }
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 input,
 select,
 button:focus {
   outline: none;
 }
+
 /* input::placeholder {
   @apply text-white;
 } */
@@ -162,33 +173,42 @@ button:focus {
   line-height: 20px;
   color: #fff;
 }
+
 .h1 {
   @apply leading-12 text-white font-medium text-5xl;
 }
+
 .h3 {
   @apply text-lg text-white-light font-normal leading-tight;
 }
+
 .text-content {
   @apply text-lg text-white-light font-normal leading-normal;
 }
+
 @media (max-width: 768px) {
   .text-content {
     @apply text-sm text-white-light font-normal leading-tight;
   }
 }
+
 .text-content-select {
   @apply text-lg text-black-form font-normal leading-normal;
 }
+
 .padding-notify-button {
   padding: 12px 20px 12px 14px;
 }
+
 .py-100 {
   padding-top: 25rem;
   padding-bottom: 25rem;
 }
+
 .p-30 {
   padding: 7.5rem;
 }
+
 .background-image {
   background-image: url('/earphone-banner.svg');
 }
@@ -244,9 +264,11 @@ button:focus {
 .pl-30 {
   padding-left: 7.5rem;
 }
+
 .pt-30 {
   padding-top: 7.5rem;
 }
+
 .pr-30 {
   padding-right: 7.5rem;
 }
@@ -258,14 +280,17 @@ button:focus {
 .height-17 {
   height: 17px;
 }
+
 @media (max-width: 768px) {
   .height-17 {
     height: 14px;
   }
 }
+
 .max-width-58 {
   max-width: 58%;
 }
+
 .padding-top-10 {
   padding-top: 10px;
 }
@@ -277,6 +302,7 @@ button:focus {
 .margin-left-60 {
   margin-left: 60px;
 }
+
 .min-height-47 {
   min-height: 46.875rem;
 }
@@ -284,9 +310,11 @@ button:focus {
 .margin-auto {
   margin: auto;
 }
+
 .min-height-30 {
   min-height: 30rem;
 }
+
 .min-height-31 {
   min-height: 31.25rem;
 }
@@ -294,9 +322,11 @@ button:focus {
 .min-height-560 {
   min-height: 560px;
 }
+
 .min-height-24 {
   min-height: 5.75rem;
 }
+
 @media screen and (max-width: 1024px) {
   .min-height-560 {
     min-height: auto;
@@ -310,12 +340,15 @@ button:focus {
 .min-height-35 {
   min-height: 35.3125rem;
 }
+
 .min-height-60 {
   min-height: 60rem;
 }
+
 .min-height-38 {
   min-height: 37.5rem;
 }
+
 .row {
   display: flex;
   flex-flow: row;
@@ -353,6 +386,7 @@ button:focus {
 .footer-link {
   @apply not-italic font-normal text-base text-center text-white leading-8;
 }
+
 .style-content {
   @apply not-italic font-normal text-sm text-center text-white leading-8;
 }
@@ -360,17 +394,21 @@ button:focus {
 .footer-font {
   @apply leading-6 text-sm text-white;
 }
+
 @media (max-width: 768px) {
   .footer-font {
     @apply text-xs leading-4;
   }
+
   .footer-link {
     @apply text-sm;
   }
+
   button {
     @apply text-sm;
   }
 }
+
 .footer-text-color {
   @apply text-grey-light;
 }
@@ -386,12 +424,29 @@ button:focus {
 .max-width-50 {
   max-width: 50%;
 }
+
 .max-width-25 {
   max-width: 25%;
 }
 
+.button {
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 0px 30px 30px 0px;
+  outline: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #f2f2f2;
+}
+
 .button-transparent {
-  @apply leading-tight font-semibold text-lg rounded-full;
+  @apply inline-block leading-tight font-semibold text-lg rounded-full;
 }
 
 .outline-none {
@@ -405,6 +460,7 @@ button:focus {
 .background-image-people {
   background-image: url('/people.jpg');
 }
+
 .max-w-30 {
   max-width: 480px;
 }
@@ -448,6 +504,7 @@ button:focus {
   height: 1rem;
   width: 17px;
 }
+
 .starIconBlack {
   filter: invert(-100%);
   background-color: white;
@@ -461,10 +518,12 @@ button:focus {
 .hover-show {
   display: none;
 }
+
 @media (max-width: 1024px) {
   .hover-show {
     display: flex;
   }
+
   .hover-hide {
     display: none;
   }
@@ -485,6 +544,7 @@ button:focus {
 .product-alignment:nth-child(odd) {
   @apply flex-row;
 }
+
 @media (max-width: 768px) {
   .product-alignment {
     flex-flow: column-reverse !important;
@@ -532,9 +592,11 @@ button:focus {
 .max-width-95-percent {
   max-width: 95%;
 }
+
 .form-card {
   @apply bg-black rounded-large;
 }
+
 .form-card-darker {
   @apply bg-grey-darker rounded-large;
 }
@@ -543,42 +605,54 @@ button:focus {
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
 }
+
 .py-30 {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 }
+
 .max-width-38 {
   max-width: 37.5rem;
 }
+
 .p-15 {
   padding: 3.75rem;
 }
+
 .job-main:hover {
   @apply bg-grey-darker;
 }
+
 .job-main:hover .job-button {
   @apply bg-white border-none text-black;
 }
+
 .min-height-25 {
   min-height: 25rem;
 }
+
 .width-33 {
   width: 33%;
 }
+
 .rounded-large-top {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
+
 .min-height-20 {
   height: 285px;
 }
+
 .rounded-large-bottom {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+
 .width-30 {
   width: 30px;
 }
+
 @media (max-width: 768px) {
   .width-30 {
     width: 17px;
