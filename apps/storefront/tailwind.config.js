@@ -47,6 +47,7 @@ module.exports = {
       },
       padding: {
         '31': '7.5rem',
+        '1400': '1400px',
       },
       screens: {},
     },

@@ -25,7 +25,6 @@ const customStyles = {
 };
 
 export default function Cart({ modalIsOpen, closeModal, items }) {
-  console.log('this is the items');
   return (
     <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}>
       <Head>
