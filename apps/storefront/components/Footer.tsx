@@ -56,7 +56,7 @@ export default function Footer() {
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/careers">
                 <a className="footer-font leading-6"> Work with us</a>
               </Link>
             </div>
