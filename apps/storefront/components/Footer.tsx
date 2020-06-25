@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <div className="px-12 md:px-20 lg:px-28 pb-8 bg-black">
-      <div className="border-gray-900 border"></div>
+      <hr className="border-gray-900 border" />
       <div className="flex flex-col lg:flex-row pt-23">
         <div className="flex flex-row flex-grow-7 flex-wrap">
           <div className="flex-grow w-2/4 md:w-2/6">
@@ -18,11 +18,11 @@ export default function Footer() {
                 <a className="pt-8 footer-font leading-6"> Privacy Policy </a>
               </Link>
             </div>
-            <div>
-              <Link href="/">
-                <a className="footer-font leading-6"> Terms and Condition </a>
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="/">*/}
+            {/*    <a className="footer-font leading-6"> Terms and Condition </a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
             <div>
               <Link href="/warranty">
                 <a className="footer-font leading-6"> Warranty </a>
@@ -66,36 +66,19 @@ export default function Footer() {
               </Link>
             </div>
             <div>
-              <Link href="/">
-                <a className="footer-font leading-6">Affiliate </a>
-              </Link>
-            </div>
-            <div>
               <Link href="/corporate-enquiries">
                 <a className="footer-font leading-6">Corporate enquiries </a>
               </Link>
             </div>
             <div>
-              <Link href="/">
-                <a className="footer-font leading-6">Press </a>
-              </Link>
-            </div>
-            <div>
-              <Link href="/blogs">
+              <Link href="/blog">
                 <a className="footer-font leading-6"> Blogs</a>
               </Link>
             </div>
-            <div>
-              <Link href="/">
-                <a className="footer-font leading-6">News </a>
-              </Link>
-            </div>
           </div>
-          <div className="flex-grow w-2/4 md:w-2/6">
+          <div className="flex-grow w-2/4 md:w-2/6 mt-12 md:mt-0">
             <div className="pb-2 md:pb-8">
-              <Link href="/">
-                <a className="footer-link leading-8">Explore</a>
-              </Link>
+              <span className="footer-link leading-8">Explore</span>
             </div>
             <div>
               <Link href="/all-products">
@@ -103,32 +86,32 @@ export default function Footer() {
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/collections/[tag]" as="/collections/speakers">
                 <a className="footer-font leading-6">Speakers </a>
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/collections/[tag]" as="/collections/headphones">
                 <a className="footer-font leading-6"> Headphones</a>
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/collections/[tag]" as="/collections/power-banks">
                 <a className="footer-font leading-6"> Power Banks</a>
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/collections/[tag]" as="/collections/earphones">
                 <a className="footer-font leading-6"> Earphones</a>
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/collections/[tag]" as="/collections/neckbands">
                 <a className="footer-font leading-6"> Neckbands</a>
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/collections/[tag]" as="/collections/cables">
                 <a className="footer-font leading-6"> Cables</a>
               </Link>
             </div>
