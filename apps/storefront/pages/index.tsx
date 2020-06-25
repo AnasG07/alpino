@@ -184,7 +184,7 @@ export default class Home extends React.Component {
                     voice of righteousness and block out the noise of negativity.
                   </h3>
                   <div className="pt-12 md:pt-32 flex md:justify-start justify-center">
-                    <Link href="/incubate-with-alpino">
+                    <Link href="/our-story">
                       <a className="button button-transparent py-2 px-8 outline-none">Learn More</a>
                     </Link>
                   </div>
