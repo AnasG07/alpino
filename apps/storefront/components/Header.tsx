@@ -29,89 +29,97 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
           <img src="/logo.svg" alt="Alipno Logo" className={`logo ${invert && !scroll && 'filter-invert'}`} />
         </a>
       </Link>
-      <span className="flex items-center flex-row-reverse lg:flex-row">
-        <div className="flex-row hidden lg:flex">
-          <div className="subnav">
-            <Link href="/[category]" as="/earphones">
+
+      <span className={`flex items-start lg:items-center flex-row-reverse lg:flex-row`}>
+        <div className="flex flex-col lg:flex-row items-end lg:items-center hover-toggle">
+          <div className="lg:hidden mr-4 mt-1">
+            <button className="border-none">
+              <img src="/collapse.svg" alt="none" />
+            </button>
+          </div>
+          <>
+            <div className="subnav hover-toggle-content">
+              <Link href="/[category]" as="/earphones">
+                <a
+                  className={` flex lg:flex-row flex-row-reverse items-center header-link px-4 text-right leading-8 text-white md:${
+                    invert && !scroll ? 'text-black' : 'text-white'
+                  }`}>
+                  Earphones
+                  <img
+                    src="/down-arrow.png"
+                    alt="arrow"
+                    className={`inline-block h-3 px-2 ${invert && !scroll && 'filter-invert'}`}
+                  />
+                </a>
+              </Link>
+              <div className="subnav-content">
+                <Link href="/collections/[tag]" as="/collections/neckbands">
+                  <a
+                    className={`header-link px-4 block text-left leading-8 text-white md:${
+                      invert && !scroll ? 'text-black' : 'text-white'
+                    }`}>
+                    Neckbands
+                  </a>
+                </Link>
+                <Link href="/collections/[tag]" as="/collections/headphones">
+                  <a
+                    className={`header-link px-4 block text-left leading-8 text-white md:${
+                      invert && !scroll ? 'text-black' : 'text-white'
+                    }`}>
+                    Headphones
+                  </a>
+                </Link>
+                <Link href="/collections/[tag]" as="/collections/headsets-single-ear">
+                  <a
+                    className={`header-link px-4 block text-left leading-8 text-white md:${
+                      invert && !scroll ? 'text-black' : 'text-white'
+                    }`}>
+                    Headsets - Single Ear
+                  </a>
+                </Link>
+                <Link href="/collections/[tag]" as="/collections/wired-earphones">
+                  <a
+                    className={`header-link px-4 block text-left leading-8 text-white md:${
+                      invert && !scroll ? 'text-black' : 'text-white'
+                    }`}>
+                    Wired earphones
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <Link href="/speakers">
               <a
-                className={`header-link px-4 text-right leading-8 text-white md:${
+                className={`hover-toggle-content header-link px-4 text-right leading-8 text-white md:${
                   invert && !scroll ? 'text-black' : 'text-white'
                 }`}>
-                Earphones
-                <img
-                  src="/down-arrow.png"
-                  alt="arrow"
-                  className={`inline-block h-3 px-2 ${invert && !scroll && 'filter-invert'}`}
-                />
+                Speakers
               </a>
             </Link>
-            <div className="subnav-content">
-              <Link href="/collections/[tag]" as="/collections/neckbands">
-                <a
-                  className={`header-link px-4 block text-left leading-8 text-white md:${
-                    invert && !scroll ? 'text-black' : 'text-white'
-                  }`}>
-                  Neckbands
-                </a>
-              </Link>
-              <Link href="/collections/[tag]" as="/collections/headphones">
-                <a
-                  className={`header-link px-4 block text-left leading-8 text-white md:${
-                    invert && !scroll ? 'text-black' : 'text-white'
-                  }`}>
-                  Headphones
-                </a>
-              </Link>
-              <Link href="/collections/[tag]" as="/collections/headsets-single-ear">
-                <a
-                  className={`header-link px-4 block text-left leading-8 text-white md:${
-                    invert && !scroll ? 'text-black' : 'text-white'
-                  }`}>
-                  Headsets - Single Ear
-                </a>
-              </Link>
-              <Link href="/collections/[tag]" as="/collections/wired-earphones">
-                <a
-                  className={`header-link px-4 block text-left leading-8 text-white md:${
-                    invert && !scroll ? 'text-black' : 'text-white'
-                  }`}>
-                  Wired earphones
-                </a>
-              </Link>
-            </div>
-          </div>
-          <Link href="/collections/[tag]" as="/collections/speakers">
-            <a
-              className={`header-link px-4 text-right leading-8 text-white md:${
-                invert && !scroll ? 'text-black' : 'text-white'
-              }`}>
-              Speakers
-            </a>
-          </Link>
-          <Link href="/support">
-            <a
-              className={`header-link px-4 text-right leading-8 text-white md:${
-                invert && !scroll ? 'text-black' : 'text-white'
-              }`}>
-              Support
-            </a>
-          </Link>
-          <Link href="/incubate-with-alpino">
-            <a
-              className={`header-link px-4 text-right leading-8 text-white md:${
-                invert && !scroll ? 'text-black' : 'text-white'
-              }`}>
-              Incubate with Alpino
-            </a>
-          </Link>
-          <Link href="/careers">
-            <a
-              className={`header-link px-4 text-right leading-8 text-white md:${
-                invert && !scroll ? 'text-black' : 'text-white'
-              }`}>
-              Careers
-            </a>
-          </Link>
+            <Link href="/support">
+              <a
+                className={` hover-toggle-content header-link px-4 text-right leading-8 text-white md:${
+                  invert && !scroll ? 'text-black' : 'text-white'
+                }`}>
+                Support
+              </a>
+            </Link>
+            <Link href="/incubate-with-alpino">
+              <a
+                className={` hover-toggle-content header-link px-4 text-right leading-8 text-white md:${
+                  invert && !scroll ? 'text-black' : 'text-white'
+                }`}>
+                Incubate with Alpino
+              </a>
+            </Link>
+            <Link href="/careers">
+              <a
+                className={` hover-toggle-content header-link px-4 text-right leading-8 text-white md:${
+                  invert && !scroll ? 'text-black' : 'text-white'
+                }`}>
+                Careers
+              </a>
+            </Link>
+          </>
         </div>
         <div className="flex flex-row flex-shrink-0">
           <Link href="/user">

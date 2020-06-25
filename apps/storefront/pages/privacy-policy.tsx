@@ -7,15 +7,15 @@ import classNames from 'classnames';
 
 export default function PrivacyPolicy() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-black">
-        <div className={classNames(styles['background-privacy'], 'min-height-60')}>
+        <div className={classNames(styles['background-privacy'], 'md:min-h-60')}>
           <Header invert />
-          <div className="flex justify-center flex-col items-center pt-48">
+          <div className="flex justify-center flex-col items-center pt-32 px-4 pb-12 md:pt-48 md:pb-0 md:px-0 ">
             <h1 className={classNames(styles['text-heading-black'], 'text-center', styles['font-size-14'])}>
               Privacy Policies
             </h1>
@@ -28,8 +28,8 @@ export default function PrivacyPolicy() {
             </h3>
           </div>
         </div>
-        <div className="flex flex-row">
-          <div className="bg-black min-height-60 max-width-50 px-30  py-15 justify-between items-center flex flex-col">
+        <div className="flex flex-col-reverse md:flex-row">
+          <div className="bg-black md:min-h-60 w-full md:w-2/4 px-12 md:px-31  py-15 justify-between items-center flex flex-col">
             <p className="text-xl leading-loose text-white">
               At Alpino, we respect your privacy and recognise the need to protect personally identifiable information
               (any information by which you can be identified, such as but not limited to name, address, and telephone
@@ -47,16 +47,20 @@ export default function PrivacyPolicy() {
               collect and maintain certain information regarding your products and service preferences.
             </p>
           </div>
-          <div className="bg-black min-height-60 max-width-50">
-            <img src="./workplace.jpg" alt="workplace" className={styles['img-height']} />
-          </div>
+          <img
+            src="./workplace.jpg"
+            alt="workplace"
+            className={classNames('md:min-h-60 w-full md:w-2/4 mb-0 md:mb-12')}
+          />
         </div>
-        <div className="min-height-31 bg-white flex flex-col">
-          <h1 className={classNames(styles['privacy-heading'], 'pt-30 text-center')}>ALPINO PRIVACY GUARANTEE</h1>
+        <div className="min-height-31 bg-white flex flex-col md:px-0 px-4">
+          <h1 className={classNames(styles['privacy-heading'], 'pt-12 md:pt-31 text-center')}>
+            ALPINO PRIVACY GUARANTEE
+          </h1>
           <p
             className={classNames(
               styles['max-width-1000'],
-              'text-xl leading-loose text-black text-center pt-12 mx-auto',
+              'text-xl leading-loose text-black text-center pt-6 md:pt-12 mx-auto',
             )}>
             Alpino promises that it will not sell or rent your personal information to third parties for their marketing
             purposes without your explicit consent. From time to time we may reveal general statistical information
@@ -64,8 +68,8 @@ export default function PrivacyPolicy() {
             etc. Your trust and confidence are and will always be our highest priority.
           </p>
         </div>
-        <div className="flex flex-row bg-black min-height-60 py-16">
-          <div className="bg-maximum-red max-width-50  px-30  py-15  items-center flex flex-col min-height-47">
+        <div className="flex flex-col md:flex-row bg-black md:min-h-60 py-8 md:py-16">
+          <div className="bg-maximum-red w-full md:w-2/4   px-12 md:px-31  py-15  items-center flex flex-col min-height-47">
             <h1 className="text-4xl leading-12 text-white"> INFORMATION WE COLLECT</h1>
             <p className="text-xl leading-loose text-white pt-8">
               When you use our Site, we collect and store your personal information from you. Our primary goal in doing
@@ -77,12 +81,10 @@ export default function PrivacyPolicy() {
               not anonymous to us.
             </p>
           </div>
-          <div className="bg-black max-width-50 min-height-47">
-            <img src="./key.jpg" alt="key" className={styles['img-height']} />
-          </div>
+          <img src="./key.jpg" alt="key" className="bg-black w-full md:w-2/4 min-height-47" />
         </div>
-        <div className={classNames('bg-white pt-16', styles['px-36'], styles['min-height-55'])}>
-          <p className="text-xl leading-loose text-black text-center  mx-auto">
+        <div className={classNames('bg-white pt-8 md:pt-16 pb-4 md:pb-0 ', styles['px-36'], styles['min-height-55'])}>
+          <p className="text-xl leading-loose text-black text-left md:text-center  mx-auto">
             To fully use our Site, you will need to register using our online registration form, where you may be
             required to provide us with your contact and identity information, residence / place of business
             information, billing information, shipping information, bank account details and other personal information
@@ -90,7 +92,7 @@ export default function PrivacyPolicy() {
             and which fields are optional. You always have the option to not to provide information by choosing not to
             use a particular service or feature on the Site.
           </p>
-          <p className="text-xl leading-loose text-black text-center pt-4 mx-auto">
+          <p className="text-xl leading-loose text-black text-left md:text-center pt-4 mx-auto">
             We may automatically track certain information about you based upon your behavior on our site. We use this
             information to do internal research on our users' demographics, interests, and behavior to better
             understand, protect and serve our users. This information is compiled and analyzed on an aggregated basis.
@@ -98,7 +100,7 @@ export default function PrivacyPolicy() {
             URL you next go to (whether this URL is on our site or not), your computer browser information, and your IP
             address.
           </p>
-          <p className="text-xl leading-loose text-black text-center pt-4 mx-auto">
+          <p className="text-xl leading-loose text-black text-left text-left md:text-center pt-4 mx-auto">
             We use data collection devices such as "cookies" on certain pages of the Site to help analyze our web page
             flow, measure promotional effectiveness, and promote trust and safety. "Cookies" are small files placed on
             your hard drive that assist us in providing our services. We offer certain features that are only available
@@ -110,17 +112,22 @@ export default function PrivacyPolicy() {
             frequently during a session.
           </p>
         </div>
-        <div className={classNames(styles['min-height-42'], styles['px-36'], 'mt-16 bg-black-privacy pt-16')}>
-          <p className="text-xl leading-loose text-white text-center">
+        <div
+          className={classNames(
+            styles['min-height-42'],
+            styles['px-36'],
+            'mt-16 bg-black-privacy pt-8 pb-4 md:pb-0 md:pt-16',
+          )}>
+          <p className="text-xl leading-loose text-white text-left md:text-center">
             Additionally, you may encounter "cookies" or other similar devices on certain pages of the Site that are
             placed by third parties. For example, if you view a web page created by a user, there may be a "cookie"
             placed within that web page. We do not control the use of cookies by third parties.
           </p>
-          <p className="text-xl leading-loose text-white pt-4 text-center">
+          <p className="text-xl leading-loose text-white pt-4 text-left md:text-center">
             If you choose to buy on the Site, we collect information about your buying behavior. We also collect other
             users' comments about you in our feedback area.
           </p>
-          <p className="text-xl leading-loose text-white pt-4 text-center">
+          <p className="text-xl leading-loose text-white pt-4 text-left md:text-center">
             If you choose to post messages on our message boards, chat rooms or other message areas or leave feedback
             for other users, we will collect that information you provide to us. We retain this information as necessary
             to resolve disputes, provide customer support and troubleshoot problems as permitted by law. If you send us
@@ -128,7 +135,7 @@ export default function PrivacyPolicy() {
             correspondence about your activities or postings on the Site, we may collect such information into a file
             specific to you.
           </p>
-          <p className="text-xl leading-loose text-white pt-4 text-center">
+          <p className="text-xl leading-loose text-white pt-4 text-left md:text-center">
             If you register for the Site on another web site or use a website providing a service for Alpino or a web
             site that helps facilitate your activity on the Site, that web site may provide personal information about
             you and your transactions back to us.
@@ -136,6 +143,6 @@ export default function PrivacyPolicy() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

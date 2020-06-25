@@ -318,7 +318,12 @@ button:focus {
 .min-height-31 {
   min-height: 31.25rem;
 }
-
+@media (max-width: 768px) {
+  .min-height-31,
+  .min-height-47 {
+    min-height: auto;
+  }
+}
 .min-height-560 {
   min-height: 560px;
 }
@@ -348,7 +353,11 @@ button:focus {
 .min-height-38 {
   min-height: 37.5rem;
 }
-
+@media (max-width: 768px) {
+  .min-height-38 {
+    min-height: auto;
+  }
+}
 .row {
   display: flex;
   flex-flow: row;
@@ -560,12 +569,28 @@ button:focus {
   display: block;
 }
 
+@media (max-width: 1024px) {
+  .subnav-content {
+    position: relative;
+  }
+  .subnav:hover .subnav-content {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+  }
+}
+
 .subnav:hover img {
   transform: rotate(180deg);
 }
 
 .filter-invert {
   filter: invert(1);
+}
+@media (max-width: 768px) {
+  .filter-invert {
+    filter: invert(0);
+  }
 }
 
 .min-height-60 {
@@ -656,5 +681,14 @@ button:focus {
 @media (max-width: 768px) {
   .width-30 {
     width: 17px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hover-toggle-content {
+    display: none;
+  }
+  .hover-toggle:hover .hover-toggle-content {
+    display: block;
   }
 }

@@ -18,11 +18,11 @@ export default function Footer() {
                 <a className="pt-8 footer-font leading-6"> Privacy Policy </a>
               </Link>
             </div>
-            {/*<div>*/}
-            {/*  <Link href="/">*/}
-            {/*    <a className="footer-font leading-6"> Terms and Condition </a>*/}
-            {/*  </Link>*/}
-            {/*</div>*/}
+            <div>
+              <Link href="/">
+                <a className="footer-font leading-6"> Terms and Condition </a>
+              </Link>
+            </div>
             <div>
               <Link href="/warranty">
                 <a className="footer-font leading-6"> Warranty </a>
@@ -66,13 +66,28 @@ export default function Footer() {
               </Link>
             </div>
             <div>
+              <Link href="/">
+                <a className="footer-font leading-6">Affiliate </a>
+              </Link>
+            </div>
+            <div>
               <Link href="/corporate-enquiries">
                 <a className="footer-font leading-6">Corporate enquiries </a>
               </Link>
             </div>
             <div>
               <Link href="/blog">
+                <a className="footer-font leading-6"> Press</a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/blog">
                 <a className="footer-font leading-6"> Blogs</a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/blog">
+                <a className="footer-font leading-6"> Neev</a>
               </Link>
             </div>
           </div>

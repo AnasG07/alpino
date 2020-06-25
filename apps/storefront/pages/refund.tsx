@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export default function Refund() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -102,6 +102,6 @@ export default function Refund() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

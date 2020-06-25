@@ -44,19 +44,11 @@
 }
 
 @media (max-width: 768px) {
-  .background-contact {
-    background-color: black;
-    background-image: none;
-  }
-  .background-distributor {
-    background-color: black;
-    background-image: none;
-  }
+  .background-warranty,
+  .background-privacy,
+  .background-contact,
+  .background-distributor,
   .background-story {
-    background-color: black;
-    background-image: none;
-  }
-  .background-warranty {
     background-color: black;
     background-image: none;
   }
@@ -146,12 +138,24 @@
   padding-left: 9rem;
   padding-right: 9rem;
 }
+@media (max-width: 768px) {
+  .px-36 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
 .input-style {
   @apply bg-transparent border-b pb-2 w-full border-grey-border;
 }
 .img-height {
   height: 870px;
   width: 100%;
+}
+@media (max-width: 1024px) {
+  .img-height {
+    height: auto;
+    width: 100%;
+  }
 }
 .privacy-heading {
   @apply text-4xl leading-12 text-black;
@@ -165,11 +169,26 @@
 .min-height-42 {
   min-height: 41.875rem;
 }
-.font-size-14 {
-  font-size: 3.5rem;
-}
 .min-height-64 {
   min-height: 64rem;
+}
+.min-height-53 {
+  min-height: 52.5rem;
+}
+@media (max-width: 768px) {
+  .min-height-55,
+  .min-height-42,
+  .min-height-64 {
+    min-height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .min-height-53 {
+    min-height: auto;
+  }
+}
+.font-size-14 {
+  font-size: 3.5rem;
 }
 
 .min-height-80 {
@@ -218,9 +237,7 @@
 .min-height-50 {
   min-height: 50rem;
 }
-.min-height-53 {
-  min-height: 52.5rem;
-}
+
 .text-form {
   @apply text-black-form;
 }
