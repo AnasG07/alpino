@@ -37,7 +37,7 @@ export async function getServerSideProps({ params }) {
 
 export default function Category({ subCategories }) {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
         <Header invert={false} />
         <Head>
@@ -56,8 +56,8 @@ export default function Category({ subCategories }) {
               and the world around you
             </p>
           </div>
-          <div className={classNames(style.padding, 'flex justify-center ')}>
-            <div className="flex flex-wrap justify-between -mx-4 overflow-hidden sm:-mx-1 md:-mx-4 lg:-mx-4 xl:-mx-6">
+          <div className={classNames(style.padding, 'flex justify-center')}>
+            <div className="flex flex-wrap justify-center lg:justify-between mx-1 overflow-hidden sm:-mx-1 md:-mx-4 lg:-mx-4 xl:-mx-6">
               {subCategories.map((data, index) => (
                 <CategoryCard data={data} index={index} />
               ))}
@@ -66,6 +66,6 @@ export default function Category({ subCategories }) {
         </main>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

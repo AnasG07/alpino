@@ -3,11 +3,24 @@
   background-image: url('/wearables.png');
   background-size: cover;
 }
+.padding {
+  padding: 7rem 15rem;
+}
+@media (max-width: 768px) {
+  .imageContainer {
+    height: auto;
+    background-color: black;
+    background-image: none;
+  }
+  .padding {
+    padding: 7rem 3rem 2rem 3rem;
+  }
+}
+
 .container {
   height: 35.375rem;
   border-radius: 2rem;
   background-color: #0c0c0c;
 }
-.padding {
-  padding: 7rem 15rem;
-}
+
+@media (max-width: );

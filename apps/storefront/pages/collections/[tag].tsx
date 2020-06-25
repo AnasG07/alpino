@@ -73,7 +73,7 @@ export async function getServerSideProps({ params }) {
 
 export default function Tag({ tag, productCard }) {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
         <Header invert={false} />
         <Head>
@@ -82,7 +82,7 @@ export default function Tag({ tag, productCard }) {
         </Head>
         <main>
           <div className="flex flex-col items-center justify-center md:mt-30 mt-20">
-            <img className="bg-no-repeat w-full" src="/earphones.png" />
+            <img className="opacity-0 md:opacity-100 bg-no-repeat w-full" src="/earphones.png" />
             <div className="absolute">
               <h1 className="text-center text-5xl text-white mt-16">{startCase(tag)}</h1>
               <p className="text-center mt-6 text-white text-2xl">Tune in and you’d never want to pull the plug</p>
@@ -94,7 +94,9 @@ export default function Tag({ tag, productCard }) {
                 <h1 className="text-lg">Filter</h1>
               </button>
               <div className="flex flex-row justify-center items-center">
-                <h1 className={classNames(style.sortColor, 'font-semibold w-full text-lg mr-5')}>Sort By</h1>
+                <h1 className={classNames(style.sortColor, 'hidden md:block font-semibold w-full text-lg mr-5')}>
+                  Sort By
+                </h1>
                 <button className="flex flex-row justify-center items-center relative leading-5 rounded-full text-base py-3 px-8 outline border bg-transparent w-full">
                   <h1 className="text-lg mr-2">Popularity</h1>
                   <div className="flex justify-center items-center rounded-full p-2 border-solid border-white border-2">
@@ -104,7 +106,7 @@ export default function Tag({ tag, productCard }) {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-32 pt-32 justify-between pl-30 pr-10 pb-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-32 pt-32 justify-between pl-40 pr-40 lg:pl-31 lg:pr-10 pb-24 items-center">
             {productCard.map((i) => (
               <ProductCard data={i} showStars />
             ))}
@@ -112,6 +114,6 @@ export default function Tag({ tag, productCard }) {
         </main>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
