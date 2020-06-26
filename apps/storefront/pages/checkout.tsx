@@ -36,40 +36,41 @@ export async function getServerSideProps(context) {
 
 export default function Checkout({ items }) {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-24')}>
         <Header openModal={false} invert={true}></Header>
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className={classNames(style.statusBar, 'mx-auto flex justify-center')}>
-          <div className="flex items-center h-full">
-            <div className={classNames(style.greenDot)}>
-              <p className="text-white flex justify-center items-center text-md font-normal">1</p>
+        <div className="px-6 md:px-0 pt-8">
+          <div className={classNames(style.statusBar, 'mx-auto flex justify-center')}>
+            <div className="flex items-center h-full">
+              <div className={classNames(style.greenDot)}>
+                <p className="text-white flex justify-center items-center text-md font-normal">1</p>
+              </div>
+              <h1 className="text-base text-black font-normal we ml-1">Information</h1>
+              <div className={classNames(style.greenBorder, 'mt-1 ml-1')}></div>
             </div>
-            <h1 className="text-base text-black font-normal we ml-1">Information</h1>
-            <div className={classNames(style.greenBorder, 'mt-1 ml-1')}></div>
-          </div>
 
-          <div className="flex items-center h-full ml-3">
-            <div className={classNames(style.blackDot)}>
-              <p className="text-white flex justify-center items-center text-md font-normal">2</p>
+            <div className="flex items-center h-full ml-3">
+              <div className={classNames(style.blackDot)}>
+                <p className="text-white flex justify-center items-center text-md font-normal">2</p>
+              </div>
+              <h1 className="text-base text-black font-normal ml-3">Shipping</h1>
+              <div className={classNames(style.grayBorder, 'mt-1 ml-3')}></div>
             </div>
-            <h1 className="text-base text-black font-normal ml-3">Shipping</h1>
-            <div className={classNames(style.grayBorder, 'mt-1 ml-3')}></div>
-          </div>
 
-          <div className="flex items-center h-full ml-3">
-            <div className={classNames(style.blackDot)}>
-              <p className="text-white flex justify-center items-center text-md font-normal">3</p>
+            <div className="flex items-center h-full ml-3">
+              <div className={classNames(style.blackDot)}>
+                <p className="text-white flex justify-center items-center text-md font-normal">3</p>
+              </div>
+              <h1 className="text-base text-black font-normal ml-3">Payment</h1>
             </div>
-            <h1 className="text-base text-black font-normal ml-3">Payment</h1>
           </div>
         </div>
-
-        <div className="mt-10 min-h-screen flex justify-around">
-          <div className={classNames(style.card, 'px-8')}>
+        <div className="mt-10 min-h-screen flex flex-col items-center px-6 pb-24 lg:flex-row justify-around">
+          <div className={classNames(style.card, 'px-8 mb-8 lg:mb-0 mx-6 lg:mx-0')}>
             <h1 className="text-xl font-medium mt-6">Contact Information</h1>
             <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2" placeholder="Email ID"></input>
             <h1 className="text-xl font-medium mt-6">Shipping Address</h1>
@@ -119,8 +120,8 @@ export default function Checkout({ items }) {
               </h1>
             </div>
           </div>
-          <div className={classNames(style.card1, 'px-8 flex flex-col justify-between')}>
-            <div className={classNames(style.smallCard, 'flex flex-col justify-around px-6')}>
+          <div className={classNames(style.card1, 'px-8 flex flex-col items-center justify-around lg:justify-between')}>
+            <div className={classNames(style.smallCard, 'flex flex-col items-center justify-around px-6')}>
               <div className="flex flex-row items-center justify-between">
                 <h1 className="text-xl font-medium tracking-wide mt-6 mb-6">Cart Summary</h1>
                 <div className="flex flex-row justify-center items-center mr-4">
@@ -129,7 +130,7 @@ export default function Checkout({ items }) {
                 </div>
               </div>
               <div className={classNames(style.itemCards, 'flex flex-row h-32 mb-8')}>
-                <div className={classNames(style.imagesBorderRadius, 'bg-black h-42 w-56 flex')}>
+                <div className={classNames(style.imagesBorderRadius, 'bg-black w-24 h-42 md:w-56 flex')}>
                   <img className="mx-auto my-auto" src="/cart/cart1.png"></img>
                 </div>
                 <div className="flex flex-col w-full justify-around items-start">
@@ -154,7 +155,7 @@ export default function Checkout({ items }) {
               </div>
 
               <div className={classNames(style.itemCards, 'flex flex-row h-32 mb-8')}>
-                <div className={classNames(style.imagesBorderRadius, 'bg-black h-42 w-56 flex')}>
+                <div className={classNames(style.imagesBorderRadius, 'bg-black w-24 h-42 md:w-56 flex')}>
                   <img className="mx-auto my-auto" src="/cart/cart2.png"></img>
                 </div>
                 <div className="flex flex-col w-full justify-around items-start">
@@ -218,6 +219,6 @@ export default function Checkout({ items }) {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
