@@ -86,10 +86,9 @@ export default function Careers({ job }) {
               me the opportunity to try something new.”
             </h2>
             <p className="text-lg leading-5 text-white-light">
-              As a self-funded fast-paced lifestyle brand with more than 300 SKUs, boasting of an offline distribution
-              network in 10 states with a repeat order percentage of 65%, we’re constantly looking for individuals who
-              can not just innovate to keep up with our 4 SKUs that are launched every 25 days, but who are driven to
-              accelerate our growth
+              John Doe <br />
+              Strategy Manager,
+              <br /> Brand and Communications
             </p>
           </div>
           <img src="/johndoe.jpeg" alt="none" className={classNames('max-width-50', styles['min-height-45'])} />
