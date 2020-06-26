@@ -354,7 +354,8 @@ button:focus {
   min-height: 37.5rem;
 }
 @media (max-width: 768px) {
-  .min-height-38 {
+  .min-height-38,
+  .min-height-35 {
     min-height: auto;
   }
 }
@@ -456,6 +457,11 @@ button:focus {
 
 .button-transparent {
   @apply inline-block leading-tight font-semibold text-lg rounded-full;
+}
+@media (max-width: 768px) {
+  .button-transparent {
+    @apply inline-block leading-tight font-semibold text-base rounded-full;
+  }
 }
 
 .outline-none {
