@@ -139,10 +139,10 @@ export default class Home extends React.Component {
                   </div> */}
                 </div>
                 <div className="flex-grow flex flex-col justify-center items-center md:items-start md:w-2/4 w-full">
-                  <h1 className="text-black leading-10 font-medium text-5xl md:text-left  text-center max-w-30 leading-12">
+                  <h1 className="text-black leading-10 font-medium text-2xl md:text-5xl md:text-left  text-center max-w-30 leading-loose md:leading-12">
                     Your ideas are worthy of so much more than the kudos in your imagination.
                   </h1>
-                  <div className="md:pt-64 pt-24 leading-10">
+                  <div className="md:pt-64 pt-8 leading-10">
                     <Link href="/incubate-with-alpino">
                       <a className="button-transparent py-4 px-8 border-none bg-black outline-none text-white">
                         Incubate with Alpino
@@ -154,8 +154,12 @@ export default class Home extends React.Component {
             </div>
             <div className="pt-16 md:pt-32">
               <div className="flex flex-col md:flex-row justify-between  items-start md:items-center px-16 md:px-31">
-                <h1 className="leading-12 text-white font-medium text-5xl">Best Sellers</h1>
-                <h3 className="text-left text-xl text-white font-normal leading-tight">Best always deserves better</h3>
+                <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
+                  Best Sellers
+                </h1>
+                <h3 className="text-left text-xs md:text-xl text-white font-normal leading-tight">
+                  Best always deserves better
+                </h3>
               </div>
               <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
                 <div className="flex flex-row ">
@@ -175,10 +179,12 @@ export default class Home extends React.Component {
             <div className="background-image-people p-16 md:p-32 bg-no-repeat mt-16  md:mt-32 bg-cover">
               <div className="flex flex-col md:flex-row">
                 <div className="flex-grow">
-                  <h1 className="text-left text-white font-medium text-5xl leading-12">About us </h1>
+                  <h1 className="text-left text-white font-medium text-2xl md:text-5xl leading-loose md:leading-12">
+                    About us{' '}
+                  </h1>
                 </div>
                 <div className="flex-grow flex flex-col justify-center md:w-2/4 w-full md:pt-0 pt-8">
-                  <h3 className="text-left text-xl text-white font-normal leading-tight max-w-45">
+                  <h3 className="text-left text-xs md:text-xl text-white font-normal leading-tight max-w-45">
                     We refuse to conform to the idea of being just a consumer electronics brand, and instead believe
                     we’re a lifestyle brand. As a fast-paced company, we make sure our products help you listen to the
                     voice of righteousness and block out the noise of negativity.
@@ -193,8 +199,12 @@ export default class Home extends React.Component {
             </div>
             <div className="pt-16 md:pt-32 pb-8 md:pb-32">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-16 md:px-31">
-                <h1 className="text-left text-white font-medium text-5xl leading-12">Sneak Peak</h1>
-                <h3 className="text-left text-white font-normal leading-tight text-xl">The future before it happens</h3>
+                <h1 className="text-left text-white font-medium text-2xl md:text-5xl leading-loose md:leading-12">
+                  Sneak Peak
+                </h1>
+                <h3 className="text-left text-white font-normal leading-tight text-xs md:text-xl">
+                  The future before it happens
+                </h3>
               </div>
               <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
                 <div className="flex flex-row">

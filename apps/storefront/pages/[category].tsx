@@ -50,14 +50,14 @@ export default function Category({ subCategories }) {
               style.imageContainer,
               'mt-20 flex flex-col items-center justify-center bg-no-repeat',
             )}>
-            <h1 className="text-center text-5xl text-white mt-32">Explore our wearables</h1>
-            <p className="text-center mt-6 text-white text-2xl">
+            <h1 className="text-center text-2xl md:text-5xl text-white mt-32">Explore our wearables</h1>
+            <p className="text-center mt-2  md:mt-6 text-white text-sm md:text-2xl">
               Renowed performance and superior comfort from <br /> designed to bring you closer to your music <br /> —
               and the world around you
             </p>
           </div>
           <div className={classNames(style.padding, 'flex justify-center')}>
-            <div className="flex flex-wrap justify-center lg:justify-between mx-1 overflow-hidden sm:-mx-1 md:-mx-4 lg:-mx-4 xl:-mx-6">
+            <div className="flex flex-wrap justify-center xl:justify-between mx-1 overflow-hidden sm:-mx-1 md:-mx-4 lg:-mx-4 xl:-mx-6">
               {subCategories.map((data, index) => (
                 <CategoryCard data={data} index={index} />
               ))}

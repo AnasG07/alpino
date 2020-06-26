@@ -11,8 +11,8 @@ export default function CategoryCard({ data, index }) {
           <img src={data.image}></img>
         </div>
       </Link>
-      <h2 className="text-4xl text-white text-center mt-4">{data.title}</h2>
-      <h3 className="text-base text-white text-center mt-6 mb-32">{data.description}</h3>
+      <h2 className="text-2xl md:text-4xl text-white text-center mt-4">{data.title}</h2>
+      <h3 className="text-sm md:text-base text-white text-center mt-6 mb-32">{data.description}</h3>
     </div>
   );
 }
