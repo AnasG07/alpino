@@ -34,7 +34,7 @@ export default function IncubateALpino() {
               </p>
             </div>
           </div>
-          <img src="/comp.png" alt="comp" className="w-full md:w-2/4 min-h-30 md:min-h-60" />
+          <img src="/comp.png" alt="comp" className="w-full md:w-2/4 md:min-h-60" />
         </div>
         <div className="flex flex-col-reverse md:flex-row">
           <img src="incubate-headphone.jpg" alt="headphone" className="md:min-h-60 w-full md:w-2/4" />
@@ -67,9 +67,9 @@ export default function IncubateALpino() {
         </div>
         <img src="incubate-class.jpg" className="md:min-h-30" />
         <div className="flex flex-row">
-          <img className="max-width-50 md:min-h-30" src="incubate-work.jpg" alt="work" />
-          <img className="max-width-25 md:min-h-30" src="incubate-laptop.jpg" alt="work" />
-          <img className="max-width-25 md:min-h-30" src="incubate-laptoptwo.jpg" alt="laptop" />
+          <img className="max-width-50" src="incubate-work.jpg" alt="work" />
+          <img className="max-width-25" src="incubate-laptop.jpg" alt="work" />
+          <img className="max-width-25" src="incubate-laptoptwo.jpg" alt="laptop" />
         </div>
         <div className="flex flex-col lg:flex-row">
           <img src="/incubate-people.jpg" alt="people" className="lg:min-h-30 w-full lg:w-2/4 mt-20 lg:mt-0" />
@@ -122,7 +122,7 @@ export default function IncubateALpino() {
               </p>
             </div>
           </div>
-          <img src="/compfinal.png" alt="comfinal" className="w-full lg:w-2/4 min-h-30 lg:min-h-60" />
+          <img src="/compfinal.png" alt="comfinal" className="w-full lg:w-2/4  lg:min-h-60" />
         </div>
         <div className="flex flex-col lg:flex-row bg-maximum-red">
           <div className="lg:min-h-60 w-full lg:w-2/4">

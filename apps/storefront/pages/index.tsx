@@ -133,11 +133,7 @@ export default class Home extends React.Component {
             </div>
             <div className="background-red-dark p-16 md:p-31">
               <div className="flex flex-col lg:flex-row items-center lg:items-start">
-                <img
-                  src="/incubate-headphone.jpg"
-                  alt="head"
-                  className="min-h-30 lg:min-h-40 w-full md:w-2/4 rounded-large"
-                />
+                <img src="/incubate-headphone.jpg" alt="head" className=" w-full md:w-2/4 rounded-large" />
 
                 <div className="flex-grow flex flex-col justify-between pt-8 lg:pt-0 pl-0  lg:pl-31 items-center lg:items-start md:w-2/4 w-full">
                   <h1 className="text-black font-medium text-2xl md:text-5xl lg:text-left  text-center max-w-30 leading-7 md:leading-12">
