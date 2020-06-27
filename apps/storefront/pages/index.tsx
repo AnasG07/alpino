@@ -131,18 +131,19 @@ export default class Home extends React.Component {
                 <ProductFeature data={i} key={index} />
               ))}
             </div>
-            <div className="background-red-dark p-16 md:p-32">
-              <div className="flex flex-col md:flex-row">
-                <div className="flex-grow text-center w-2/4">
-                  {/* <div id="imagesequence">
-                    <img src="/animation/Speaker01_0000.png"></img>
-                  </div> */}
-                </div>
-                <div className="flex-grow flex flex-col justify-center items-center md:items-start md:w-2/4 w-full">
-                  <h1 className="text-black leading-10 font-medium text-2xl md:text-5xl md:text-left  text-center max-w-30 leading-loose md:leading-12">
+            <div className="background-red-dark p-16 md:p-31">
+              <div className="flex flex-col lg:flex-row items-center lg:items-start">
+                <img
+                  src="/incubate-headphone.jpg"
+                  alt="head"
+                  className="min-h-30 lg:min-h-40 w-full md:w-2/4 rounded-large"
+                />
+
+                <div className="flex-grow flex flex-col justify-between pt-8 lg:pt-0 pl-0  lg:pl-31 items-center lg:items-start md:w-2/4 w-full">
+                  <h1 className="text-black font-medium text-2xl md:text-5xl lg:text-left  text-center max-w-30 leading-7 md:leading-12">
                     Your ideas are worthy of so much more than the kudos in your imagination.
                   </h1>
-                  <div className="md:pt-64 pt-8 leading-10">
+                  <div className="lg:pt-64 pt-8 leading-10">
                     <Link href="/incubate-with-alpino">
                       <a className="button-transparent py-4 px-8 border-none bg-black outline-none text-white">
                         Incubate with Alpino
@@ -180,11 +181,11 @@ export default class Home extends React.Component {
               <div className="flex flex-col md:flex-row">
                 <div className="flex-grow">
                   <h1 className="text-left text-white font-medium text-2xl md:text-5xl leading-loose md:leading-12">
-                    About us{' '}
+                    About us
                   </h1>
                 </div>
                 <div className="flex-grow flex flex-col justify-center md:w-2/4 w-full md:pt-0 pt-8">
-                  <h3 className="text-left text-xs md:text-xl text-white font-normal leading-tight max-w-45">
+                  <h3 className="text-left text-xs md:text-xl text-white font-normal leading-3 md:leading-tight max-w-45">
                     We refuse to conform to the idea of being just a consumer electronics brand, and instead believe
                     we’re a lifestyle brand. As a fast-paced company, we make sure our products help you listen to the
                     voice of righteousness and block out the noise of negativity.

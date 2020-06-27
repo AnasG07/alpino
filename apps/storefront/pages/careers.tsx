@@ -41,9 +41,9 @@ export default function Careers({ job }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-black">
-        <div className={classNames(styles['background-careers'], 'min-height-60 ')}>
-          <Header invert />
-          <div className={classNames('flex justify-center flex-col items-center', styles['min-height-55'])}>
+        <div className={classNames(styles['background-careers'], 'min-h-30 md:min-h-60 ')}>
+          <Header invert black />
+          <div className={classNames('flex justify-center flex-col items-center pt-48')}>
             <h1 className="leading-12 text-black text-7xl">Work at Alpino</h1>
             <button className="mt-8 button-transparent py-2 px-4 outline-none text-black border-black">
               {' '}

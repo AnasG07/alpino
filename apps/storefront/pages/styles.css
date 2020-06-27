@@ -460,7 +460,7 @@ button:focus {
 }
 @media (max-width: 768px) {
   .button-transparent {
-    @apply inline-block leading-tight font-semibold text-base rounded-full;
+    @apply inline-block leading-tight font-medium text-base rounded-full;
   }
 }
 
@@ -582,7 +582,7 @@ button:focus {
   .subnav:hover .subnav-content {
     display: flex;
     flex-flow: column;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 }
 
@@ -592,6 +592,9 @@ button:focus {
 
 .filter-invert {
   filter: invert(1);
+}
+.filter-invert-temp {
+  filter: invert(1) !important;
 }
 @media (max-width: 768px) {
   .filter-invert {
@@ -689,12 +692,8 @@ button:focus {
     width: 17px;
   }
 }
-
-@media (max-width: 1024px) {
-  .hover-toggle-content {
-    display: none;
-  }
-  .hover-toggle:hover .hover-toggle-content {
-    display: block;
-  }
+.header-position {
+  position: absolute;
+  top: 64px;
+  left: 0;
 }

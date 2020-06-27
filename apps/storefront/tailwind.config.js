@@ -35,7 +35,11 @@ module.exports = {
         '4.5xl': '3.5rem',
       },
       minHeight: {
+        '20': '20rem',
         '25': '25rem',
+        '30': '30rem',
+        '40': '40rem',
+        '50': '50rem',
         '60': '60rem',
         '55': '54.375rem',
       },
@@ -48,6 +52,7 @@ module.exports = {
       padding: {
         '31': '7.5rem',
         '1400': '1400px',
+        '136': '33.75rem',
       },
       screens: {},
     },
