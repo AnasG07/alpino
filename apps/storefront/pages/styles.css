@@ -696,4 +696,5 @@ button:focus {
   position: absolute;
   top: 64px;
   left: 0;
+  background: black;
 }
