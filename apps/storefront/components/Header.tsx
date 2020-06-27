@@ -38,7 +38,9 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
           <img
             src="/logo.svg"
             alt="Alipno Logo"
-            className={`logo ${invert && !scroll && 'filter-invert'} ${black && !scroll && 'filter-invert-temp'}`}
+            className={`logo ${invert && !scroll && 'filter-invert'} ${
+              black && !scroll && 'filter-inver-temp'
+            } pl-24 lg:pl-0`}
           />
         </a>
       </Link>
@@ -132,7 +134,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
       <div className="flex flex-row flex-shrink-0">
         <Link href="/user">
           <a
-            className={`header-link px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
+            className={`header-link px-2  lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
               invert && !scroll && 'filter-invert'
             }`}>
             <img src="/user.svg" />
@@ -141,7 +143,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
         <button className="border-none outline-none">
           <a
             onClick={openModal}
-            className={`header-link px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
+            className={`header-link px-2  lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
               invert && !scroll && 'filter-invert'
             }`}>
             <img src="/cart.svg" />
