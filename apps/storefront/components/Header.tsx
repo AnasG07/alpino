@@ -145,7 +145,7 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
         <button className="border-none outline-none">
           <a
             onClick={openModal}
-            className={`header-link px-2  lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
+            className={`header-link pl-2 pr-0 lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
               invert && !scroll && 'filter-invert'
             }`}>
             <img src="/cart.svg" />
