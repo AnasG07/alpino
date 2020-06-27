@@ -82,7 +82,7 @@ export default function Tag({ tag, productCard }) {
         </Head>
         <main>
           <div className="flex flex-col items-center justify-center md:mt-30 mt-20">
-            <img className="opacity-0 md:opacity-100 bg-no-repeat w-full" src="/earphones.png" />
+            <img className="bg-no-repeat w-full" src="/earphones.png" />
             <div className="absolute">
               <h1 className="text-center text-5xl text-white mt-16">{startCase(tag)}</h1>
               <p className="text-center mt-6 text-white text-2xl">Tune in and you’d never want to pull the plug</p>

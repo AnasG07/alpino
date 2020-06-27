@@ -16,8 +16,8 @@ export default function ProductCard({
         <img src={image} alt="Rock bluetooth" />
         <div className="flex flex-row items-center  justify-between">
           <div>
-            <h3 className="max-w-14 leading-5 text-left text-white font-normal text-sm md:text-xl">{name}</h3>
-            <h3 className="max-w-14 leading-5 text-left text-white font-normal text-sm md:text-xl">{type}</h3>
+            <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{name}</h3>
+            <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{type}</h3>
           </div>
           <span className="text-white text-xs md:text-base">
             <img className="inline-block h-6" src="indian.png" />

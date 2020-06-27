@@ -81,12 +81,12 @@ export default function Footer() {
               </Link>
             </div>
             <div>
-              <Link href="/blog">
+              <Link href="/blogs">
                 <a className="footer-font leading-6"> Blogs</a>
               </Link>
             </div>
             <div>
-              <Link href="/blog">
+              <Link href="/neev">
                 <a className="footer-font leading-6"> Neev</a>
               </Link>
             </div>

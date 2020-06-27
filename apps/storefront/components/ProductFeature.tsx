@@ -94,7 +94,7 @@ export default class ProductFeature extends React.Component {
     return (
       <div className="flex product-alignment p-16" id="trigger">
         <div className="flex-grow flex flex-col justify-center pl-0 md:pl-32 md:items-start items-center leading-12">
-          <h1 className="max-w-30 text-center md:text-left text-white font-medium text-2xl md:text-5xl leading-loose md:leading-12">
+          <h1 className="max-w-30 text-center md:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
             {description}
           </h1>
           <div className="pt-4 md:pt-16">

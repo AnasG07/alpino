@@ -1,5 +1,5 @@
 .background-image {
-  background-image: url('/background-incubate.jpg');
+  background-image: url('/incubate-alpino-new.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
@@ -42,6 +42,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.background-glass {
+  background-image: url('/careers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 @media (max-width: 768px) {
   .background-warranty,
@@ -54,11 +59,6 @@
   }
 }
 
-.background-glass {
-  background-image: url('/careers.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .background-enquiry {
   background-image: url('/enquiry.png');
   background-size: cover;
@@ -97,12 +97,16 @@
 }
 @media (max-width: 768px) {
   .text-heading-black {
-    @apply leading-12 text-white font-medium text-7xl;
+    @apply leading-loose text-white font-medium text-2xl;
   }
   .text-color-warranty {
     @apply text-2xl text-white font-normal leading-tight;
   }
+  .text-h3 {
+    @apply text-sm leading-tight text-white font-normal leading-normal;
+  }
 }
+
 .p-15 {
   padding: 3.75rem;
 }
@@ -130,6 +134,11 @@
 }
 .pt-86 {
   padding-top: 21.5rem;
+}
+@media (max-width: 768px) {
+  .pt-86 {
+    padding-top: 9rem;
+  }
 }
 .pt-36 {
   padding-top: 9rem;

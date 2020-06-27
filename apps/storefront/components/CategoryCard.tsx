@@ -8,7 +8,7 @@ export default function CategoryCard({ data, index }) {
     <div key={index}>
       <Link href="/collections/[tag]" as="/collections/[tag]">
         <div className={classNames(style.container, 'border-none cursor-pointer flex items-center justify-center')}>
-          <img src={data.image}></img>
+          <img src={data.image} className></img>
         </div>
       </Link>
       <h2 className="text-2xl md:text-4xl text-white text-center mt-4">{data.title}</h2>
