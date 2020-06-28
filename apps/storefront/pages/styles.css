@@ -183,12 +183,12 @@ button:focus {
 }
 
 .text-content {
-  @apply text-lg text-white-light font-normal leading-normal;
+  @apply text-lg text-white-light font-medium leading-normal;
 }
 
 @media (max-width: 768px) {
   .text-content {
-    @apply text-sm text-white-light font-normal leading-tight;
+    @apply text-sm text-white-light font-light leading-tight;
   }
 }
 
@@ -696,4 +696,10 @@ button:focus {
   position: absolute;
   top: 64px;
   left: 0;
+}
+.font-bold-imp {
+  font-weight: 700 !important;
+}
+.font-semi-imp {
+  font-weight: 600 !important;
 }

@@ -90,20 +90,29 @@
   @apply text-lg text-white font-normal leading-normal;
 }
 .text-heading {
-  @apply leading-12 text-white font-medium text-7xl;
+  @apply leading-12 text-white font-bold text-7xl;
 }
 .text-heading-black {
-  @apply leading-12 text-black font-medium text-7xl;
+  @apply leading-12 text-black font-semibold text-7xl;
+}
+.text-heading-black-new {
+  @apply leading-12 text-black font-semibold text-4.5xl;
 }
 @media (max-width: 768px) {
   .text-heading-black {
     @apply leading-loose text-white font-medium text-2xl;
   }
+  .text-heading-black-new {
+    @apply leading-loose text-white font-medium text-2xl;
+  }
   .text-color-warranty {
-    @apply text-2xl text-white font-normal leading-tight;
+    @apply text-sm text-white font-normal leading-7;
   }
   .text-h3 {
     @apply text-sm leading-tight text-white font-normal leading-normal;
+  }
+  .text-heading {
+    @apply leading-12 text-white font-medium text-7xl;
   }
 }
 
@@ -218,6 +227,7 @@
 
 .img-clock {
   height: 300px;
+  width: auto;
   border-radius: 30px;
 }
 .max-width-49 {

@@ -79,9 +79,7 @@ export default function Warranty({ faq }) {
         <div className={classNames(styles['background-warranty'], styles['min-height-64'])}>
           <Header invert />
           <div className="pt-24 pb-8 md:pb-0 md:pt-40 flex justify-center flex-col items-center ">
-            <h1 className={classNames(styles['text-heading-black'], 'text-center', styles['font-size-14'])}>
-              Warranty
-            </h1>
+            <h1 className={classNames(styles['text-heading-black-new'], 'text-center')}>Warranty</h1>
             <h3
               className={classNames(
                 styles['text-color-warranty'],
@@ -93,20 +91,20 @@ export default function Warranty({ faq }) {
         </div>
         <div className="flex flex-col-reverse md:flex-row">
           <div className="bg-black md:min-h-60 w-full md:w-2/4 p-8 md:p-31  items-center flex flex-col">
-            <p className="text-3xl leading-12 text-white">
+            <p className="text-sm md:text-3xl leading-7 md:leading-12 font-normal md:font-medium text-white">
               All warranty claims are subject to Alpino Tech’s authorization and occur at our sole discretion only.
             </p>
-            <p className="text-3xl leading-12 text-white pt-6">
+            <p className="text-sm md:text-3xl leading-7 md:leading-12 font-normal md:font-medium  text-white pt-6">
               Along with excellent products and a choice of over 300 SKUs, we provide our customers with a warranty
               period of 1 year/ 6 months/ 3 months depending on the product category.
             </p>
-            <p className="text-3xl leading-12 text-white pt-6">
+            <p className="text-sm md:text-3xl leading-7 md:leading-12 font-normal md:font-medium  text-white pt-6">
               {' '}
               To claim the warranty on our products, filling the product registration form through our website is
               mandatory, especially if the order has been placed through amazon/flipkart.
             </p>
           </div>
-          <img className=" w-full md:w-2/4 md:min-h-60" src="./visa.jpg" alt="visa" />
+          <img className="w-full md:w-2/4 md:min-h-60" src="./visa.jpg" alt="visa" />
         </div>
         <div className="flex flex-col lg:flex-row bg-white">
           <div className="w-full lg:w-2/4">
@@ -117,22 +115,13 @@ export default function Warranty({ faq }) {
               )}>
               <h1
                 className={classNames(
-                  styles['text-color-black-h1'],
-                  styles['font-size-14'],
-                  'text-left md:text-center',
+                  'leading-8 md:leading-12 text-black text-2xl md:text-5xl text-center md:text-left  font-semibold',
                 )}>
                 Product Registration Form
               </h1>
-              <p className="text-2xl text-black leading-10 pt-6 lg:pt-0">
-                It’s always a delight to hear from you! It not only gives us a chance to hear from a valued customer,
-                but also helps us improve our services. Reach out to us at{' '}
-                <span>
-                  <a href="https://connect@alpino.tech" className="text-link-color">
-                    connect@alpino.tech{' '}
-                  </a>
-                </span>
-                or on our Toll Free Number +91-9870-456-457 If you’re in Delhi NCR, and want to hang, we’ll be more than
-                happy to host you in our office.
+              <p className="text-sm md:text-3xl text-black leading-loose md:leading-12 pt-6 lg:pt-0">
+                To claim the warranty on our products, filling the product registration form through our website is
+                mandatory
               </p>
             </div>
           </div>
@@ -141,7 +130,12 @@ export default function Warranty({ faq }) {
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row">
                   <img src="/logo-only.svg" alt="logo" />
-                  <p className={classNames(styles['text-2xl-semibold'], 'text-content pl-2')}>Contact</p>
+                  <p
+                    className={classNames(
+                      'text-xs md:text-2xl md:font-semibold text-white-light leading-tight md:leading-normal pl-2',
+                    )}>
+                    Warranty
+                  </p>
                 </div>
                 <p className="text-content"> Registration Form</p>
               </div>
@@ -182,7 +176,7 @@ export default function Warranty({ faq }) {
                   </div>
                 </div>
                 <div className="pt-30 flex justify-end">
-                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center text-right">
+                  <button className="font-semibold leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center text-right">
                     Submit
                   </button>
                 </div>
@@ -191,7 +185,7 @@ export default function Warranty({ faq }) {
           </div>
         </div>
         <div className="pt-16 px-8 md:px-32 bg-black">
-          <h1 className="text-white text-left leading-16 font-medium text-5xl leading-12">
+          <h1 className="text-white text-left md:leading-16  text-2xl md:text-5xl  font-semibold leading-8">
             Frequently Asked Questions
           </h1>
           <div className="py-20">
@@ -205,10 +199,12 @@ export default function Warranty({ faq }) {
             styles['background-gradient'],
             'min-height-38 flex flex-col pt-4 pb-4 md:pt-20 md:pb-20 px-4 md:px-0',
           )}>
-          <h1 className="leading-12 text-4xl text-white text-center">Cancellation Policy</h1>
+          <h1 className="leading-8 md:leading-12 text-2xl md:text-4xl text-white text-center font-semibold">
+            Cancellation Policy
+          </h1>
           <p
             className={classNames(
-              'leading-loose text-xl text-white text-left md:text-center pt-8 md:mx-auto',
+              'leading-7 md:leading-loose text-sm md:text-xl text-white text-left md:text-center pt-8 md:mx-auto',
               styles['max-width-42'],
             )}>
             In keeping with our longstanding belief of customer satisfaction, it is important to us to ensure each of
@@ -216,21 +212,21 @@ export default function Warranty({ faq }) {
           </p>
           <p
             className={classNames(
-              'leading-loose text-xl text-white text-left md:text-center pt-4 md:pt-0 md:mx-auto',
+              'leading-7 md:leading-loose text-sm text-white text-left md:text-center pt-4 md:pt-0 md:mx-auto',
               styles['max-width-42'],
             )}>
             Under this policy:
           </p>
           <p
             className={classNames(
-              'leading-loose text-xl text-white text-left md:text-center md:mx-auto',
+              'leading-7 md:leading-loose text-sm text-white text-left md:text-center md:mx-auto',
               styles['max-width-42'],
             )}>
             1. Cancellation requests will not be entertained if the order has been dispatched from the warehouse.
           </p>
           <p
             className={classNames(
-              'leading-loose text-xl text-white text-left md:text-center md:mx-auto',
+              'leading-7 md:leading-loose text-sm text-white text-left md:text-center md:mx-auto',
               styles['max-width-42'],
             )}>
             2. To cancel your order, send us an e-mail on support@alpino.tech with your ORDER id within 6 hours of

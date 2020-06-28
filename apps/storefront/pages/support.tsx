@@ -59,24 +59,26 @@ export default function Support({ faq }) {
         <div className="background-image-support md:min-h-60">
           <Header invert />
           <div className="flex justify-center flex-col items-center pt-40">
-            <h1 className="text-white md:text-black leading-8 font-medium text-5xl text-left leading-12">Support</h1>
-            <h3 className="text-white md:text-black text-2xl max-w-lg text-center pt-2 leading-8">
+            <h1 className="text-white md:text-black leading-8 font-medium md:font-semibold text-2xl md:text-5xl text-left leading-loose md:leading-12">
+              Support
+            </h1>
+            <h3 className="text-white md:text-black font-normal md:font-medium text-sm  md:text-2xl max-w-lg text-center pt-2 leading-tight md:leading-8">
               For power that never runsout, support that’s always by your side
             </h3>
           </div>
         </div>
         <div className="bg-black flex flex-col-reverse md:flex-row py-20">
           <div className="flex flex-col p-24">
-            <span className="text-xl leading-8 text-white">
+            <span className="text-sm md:text-xl leading-7 md:leading-8 text-white">
               At Alpino, we’re committed to providing our customers the best of products, to help make their life
               better. In keeping with our long-standing belief of superior quality, we leave no stone unturned in
               ensuring our products power up your life and add bass to more than just your music.
             </span>
-            <span className="text-xl leading-8 text-white pt-16">
+            <span className="text-sm md:text-xl leading-7 md:leading-8 text-white pt-16">
               All our products go through a Three-Level Quality Check and we go the extra mile by taking down all the
               SKUs that get a rating lower than 3-stars on amazon.
             </span>
-            <span className="text-xl leading-8 text-white pt-16">
+            <span className="text-sm md:text-xl leading-7 md:leading-8 text-white pt-16">
               All our products come with a guarantee of excellence and if there persists any problem during the warranty
               usage of any product, feel free to reach out to us at +91-9870-456-457 or write to us at &nbsp;
               <a
@@ -91,7 +93,7 @@ export default function Support({ faq }) {
           <img src="./window.jpg" alt="window" className="md:w-2/4 w-full" />
         </div>
         <div className="pt-8 md:pt-16 px-12 md:px-32">
-          <h1 className="text-black text-left leading-16 font-medium text-5xl leading-12">
+          <h1 className="text-black text-left leading-8 md:leading-16 font-semibold text-2xl md:text-5xl">
             Frequently Asked Questions
           </h1>
           <div className="py-12 md:py-20">
