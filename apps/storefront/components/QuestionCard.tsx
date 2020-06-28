@@ -8,7 +8,9 @@ export default function QuestionCard({ data, index, invert }) {
         <button className="border-none w-full justify-between" onClick={() => updateShowAnswer(!showAnswer)}>
           <div className="flex flex-col max-width-95-percent">
             <span
-              className={`${invert ? 'text-white' : 'text-faq-question'} text-xl font-semibold leading-16 text-left `}>
+              className={`${
+                invert ? 'text-white' : 'text-faq-question'
+              } text-sm md:text-xl font-semibold leading-7 md:leading-16 text-left `}>
               {index + 1}. {data.question}
             </span>
           </div>
@@ -23,8 +25,11 @@ export default function QuestionCard({ data, index, invert }) {
       </div>
       <div className="flex flex-col max-width-95-percent">
         {showAnswer && (
-          <span className={`${invert ? 'text-faq-invert' : 'text-faq-answer'} pt-2 text-xl leading-8`}>
-            A. {data.answer}
+          <span
+            className={`${
+              invert ? 'text-faq-invert' : 'text-faq-answer'
+            } pt-2 text-sm  md:text-xl leading-7 md:leading-8 `}>
+            <span className="font-semibold">A.</span> {data.answer}
           </span>
         )}
       </div>

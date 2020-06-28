@@ -27,7 +27,7 @@ export default function Careers() {
         </div>
         <div className="flex flex-col lg:flex-row">
           <div className="bg-black lg:min-h-60 w-full  lg:w-2/4  p-30 justify-between items-center flex flex-col">
-            <h1 className="leading-loose md:leading-12 text-white font-medium text-xl md:text-5xl pb-12 lg:pb-0">
+            <h1 className="leading-loose md:leading-12 text-white font-medium md:font-normal text-xl md:text-5xl pb-12 lg:pb-0">
               We value the individuality of each of our customers and hence offer customization in our products
               according to your organisation’s needs. The option of co-branding is also available.
             </h1>
@@ -68,7 +68,7 @@ export default function Careers() {
                   />
                 </div>
                 <div className="pt-30">
-                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
+                  <button className="leading-5 rounded-full font-semibold text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
                     Submit
                   </button>
                 </div>

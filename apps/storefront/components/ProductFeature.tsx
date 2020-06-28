@@ -75,7 +75,7 @@ export default class ProductFeature extends React.Component {
 
     this.scrollScene = new ScrollMagic.Scene({
       triggerElement: '#trigger',
-      duration: 3200,
+      duration: 2600,
     })
       .setTween(tween)
       .addIndicators()

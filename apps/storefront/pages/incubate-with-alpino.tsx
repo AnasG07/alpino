@@ -18,27 +18,27 @@ export default function IncubateALpino() {
           <div className="flex px-8 md:px-31 py-100 justify-end items-center">
             <div>
               <h1 className={styles['text-heading']}>Incubate</h1>
-              <h3 className="pt-5 h3">WITH ALPINO</h3>
+              <h3 className="pt-5 h3 text-right">WITH ALPINO</h3>
             </div>
           </div>
         </div>
         <div className="flex flex-col md:flex-row bg-black">
-          <div className="bg-black md:min-h-60 w-full md:w-2/4">
-            <div className="p-8 md:p-31 flex flex-col md:min-h-60 justify-between">
+          <div className="bg-black  w-full md:w-2/4">
+            <div className="p-8 md:p-31 flex flex-col  justify-between">
               <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
                 Incubating Ideas
               </h1>
-              <p className="text-base md:text-lg text-white-light font-normal leading-tight pt-8 md:pt-0">
+              <p className="text-base md:text-lg text-white-light font-normal leading-tight pt-8 md:pt-18.75">
                 At Alpino, we recognize that ideas represent the gap between idle and ideal. At the same time, we also
                 recognize that without the right platform and support, ideas may never be realized
               </p>
             </div>
           </div>
-          <img src="/comp.png" alt="comp" className="w-full md:w-2/4 md:min-h-60" />
+          <img src="/comp.png" alt="comp" className="w-full md:w-2/4" />
         </div>
         <div className="flex flex-col-reverse md:flex-row">
-          <img src="incubate-headphone.jpg" alt="headphone" className="md:min-h-60 w-full md:w-2/4" />
-          <div className="bg-black md:min-h-60 w-full md:w-2/4">
+          <img src="incubate-headphone.jpg" alt="headphone" className=" w-full md:w-2/4" />
+          <div className="bg-black  w-full md:w-2/4">
             <div className="p-8 md:p-31">
               <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
                 Pioneers of the Nation
@@ -73,7 +73,7 @@ export default function IncubateALpino() {
         </div>
         <div className="flex flex-col lg:flex-row">
           <img src="/incubate-people.jpg" alt="people" className="lg:min-h-30 w-full lg:w-2/4 mt-20 lg:mt-0" />
-          <div className="bg-black lg:min-h-60 w-full lg:w-2/4">
+          <div className="bg-black w-full lg:w-2/4">
             <div className="p-8 md:p-31">
               <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30">
                 “The Alpino Ideation Challenge organized by Yuva, Shaheed Sukhdev College of Business Studies and
@@ -106,8 +106,8 @@ export default function IncubateALpino() {
           </div>
         </div>
         <div className="flex flex-col-reverse lg:flex-row bg-black">
-          <div className="bg-black lg:min-h-60 w-full lg:w-2/4">
-            <div className="p-12 md:p-31 flex flex-col lg:min-h-60 justify-between">
+          <div className="bg-black w-full lg:w-2/4">
+            <div className="p-12 md:p-31 flex flex-col lg:min-h-40 justify-between">
               <p className="text-base md:text-lg text-white-light font-normal leading-tight">
                 <span className="font-bold"> Alpino Ideation Challenge 2020 </span> was our first step in leveraging our
                 community and it made us realise how much we’re missing out on the skills and resources you have to
@@ -122,7 +122,9 @@ export default function IncubateALpino() {
               </p>
             </div>
           </div>
-          <img src="/compfinal.png" alt="comfinal" className="w-full lg:w-2/4  lg:min-h-60" />
+          <div className="w-full lg:w-2/4  ">
+            <img src="/background-incubate.jpg" alt="comfinal" className="w-full lg:min-h-40" />
+          </div>
         </div>
         <div className="flex flex-col lg:flex-row bg-maximum-red">
           <div className="lg:min-h-60 w-full lg:w-2/4">
@@ -142,9 +144,9 @@ export default function IncubateALpino() {
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row">
                   <img src="/logo-only.svg" alt="logo" />
-                  <p className={classNames(styles['text-2xl-semibold'], 'text-content pl-2')}>Incubate</p>
+                  <p className={classNames(styles['text-2xl-semibold'], 'text-content pl-2 font-bold-imp')}>Incubate</p>
                 </div>
-                <p className="text-content"> Application Form</p>
+                <p className="text-content font-semi-imp"> Application Form</p>
               </div>
               <form className={styles['pt-35']}>
                 <div>
@@ -169,7 +171,7 @@ export default function IncubateALpino() {
                   />
                 </div>
                 <div className="pt-30">
-                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
+                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center font-semibold">
                     Submit
                   </button>
                 </div>

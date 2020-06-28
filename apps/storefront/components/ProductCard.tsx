@@ -9,10 +9,14 @@ interface ProductCardProps {
 export default function ProductCard({
   data: { slug, image, name, price, description, launch, type, buttonText },
   comingSoon,
+  noround,
 }: ProductCardProps) {
   return (
     <div className="relative h-full">
-      <span className="flex flex-col p-8 min-height-35 mr-8 rounded-large bg-grey-card lg:bg-black bg-greyCard hover-main">
+      <span
+        className={`flex flex-col p-8 min-height-35 mr-0 md:mr-8  ${
+          noround ? 'rounded-none' : 'rounded-super'
+        } md:rounded-super bg-grey-card lg:bg-black bg-greyCard hover-main`}>
         <img src={image} alt="Rock bluetooth" />
         <div className="flex flex-row items-center  justify-between">
           <div>
@@ -26,12 +30,12 @@ export default function ProductCard({
         </div>
         <div className="flex flex-row justify-between items-center pt-10 hover-show">
           <Link href="/products/[slug]" as={`/products/${slug}`}>
-            <a className="leading-5 rounded-full py-3 text-xs md:text-base px-8 outline-none border-none bg-black max-w-8 w-full flex justify-center text-white">
+            <a className="leading-5 rounded-full py-3 text-xs md:text-base px-8 outline-none border-none bg-black max-w-8 w-full flex justify-center text-white font-semibold">
               Details
             </a>
           </Link>
           {!comingSoon && (
-            <button className="leading-5 rounded-full text-xs md:text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
+            <button className="leading-5 rounded-full text-xs md:text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center font-semibold">
               {buttonText}
             </button>
           )}

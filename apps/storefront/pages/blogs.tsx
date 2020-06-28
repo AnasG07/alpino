@@ -48,8 +48,10 @@ export default function Blog({ blogs }) {
         <div className="bg-black min-height-25">
           <Header />
           <div>
-            <h1 className="text-white text-2xl md:text-4.5xl leading-loose pt-32 text-center">Blogs</h1>
-            <h3 className="text-white text-center text-sm md:text-2xl leading-snug md:leading-loose">
+            <h1 className="text-white text-2xl md:text-4.5xl leading-loose pt-32 text-center font-medium font-semibold">
+              Blogs
+            </h1>
+            <h3 className="text-white text-center text-sm md:text-2xl leading-snug md:leading-loose font-semibold md:font-medium">
               It rains cats and blogs here
             </h3>
           </div>

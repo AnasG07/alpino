@@ -51,10 +51,14 @@ module.exports = {
       },
       padding: {
         '31': '7.5rem',
+        '17': '3.75rem',
+        '75': '18.75rem',
         '1400': '1400px',
         '136': '33.75rem',
       },
-      screens: {},
+      borderRadius: {
+        super: '30px',
+      },
     },
   },
 };

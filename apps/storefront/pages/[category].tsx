@@ -50,7 +50,9 @@ export default function Category({ subCategories }) {
               style.imageContainer,
               'mt-20 flex flex-col items-center justify-center bg-no-repeat',
             )}>
-            <h1 className="text-center text-2xl md:text-5xl text-white mt-32">Explore our wearables</h1>
+            <h1 className="text-center text-2xl md:text-5xl text-white mt-32 font-medium md:font-semibold">
+              Explore our wearables
+            </h1>
             <p className="text-center mt-2  md:mt-6 text-white text-sm md:text-2xl">
               Renowed performance and superior comfort from <br /> designed to bring you closer to your music <br /> —
               and the world around you
