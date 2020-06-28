@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 const images = [
   '/animation/Speaker01_0001.png',
@@ -54,6 +55,9 @@ export default class ProductFeature extends React.Component {
   scrollScene: any;
 
   componentDidMount() {
+    if (!this.props.data.animation) {
+      return;
+    }
     const { TweenMax, TimelineMax } = require('gsap');
     const ScrollMagic = require('scrollmagic');
     const { ScrollMagicPluginGsap } = require('scrollmagic-plugin-gsap');
@@ -75,14 +79,16 @@ export default class ProductFeature extends React.Component {
 
     this.scrollScene = new ScrollMagic.Scene({
       triggerElement: '#trigger',
-      duration: 2600,
+      duration: 2000,
     })
       .setTween(tween)
-      .addIndicators()
       .addTo(this.scrollController);
   }
 
   componentWillUnmount() {
+    if (!this.props.data.animation) {
+      return;
+    }
     this.scrollScene.destroy();
     this.scrollController.destroy();
   }
@@ -92,7 +98,7 @@ export default class ProductFeature extends React.Component {
       data: { description, buttonText, image, animation, link },
     } = this.props;
     return (
-      <div className="flex product-alignment p-16" id="trigger">
+      <div className={classNames('flex product-alignment p-16')} id={animation ? 'trigger' : ''}>
         <div className="flex-grow flex flex-col justify-center pl-0 md:pl-32 md:items-start items-center leading-12">
           <h1 className="max-w-30 text-center md:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
             {description}
