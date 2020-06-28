@@ -16,28 +16,25 @@ export async function getServerSideProps(context) {
           image: '/animation/Speaker01_0001.png',
           buttonText: 'Shop Speakers',
           link: '/collections/speakers',
-          animation: 'yes',
+          animation: true,
         },
         {
           description: 'If ignorance is bliss, these will give you ecstasy',
           image: '/thar-large.svg',
           buttonText: 'Shop Headphones',
           link: '/collections/headphones',
-          animation: 'no',
         },
         {
           description: 'Your closest workout partner.',
           image: '/trip-large.svg',
           buttonText: 'Shop Neckbands',
           link: '/collections/neckbands',
-          animation: 'no',
         },
         {
           description: 'All ears, all year.',
           image: '/earphone.svg',
           buttonText: 'Shop Earphones',
           link: '/collections/earphones',
-          animation: 'no',
         },
       ],
       productCard: [
@@ -126,6 +123,7 @@ export default class Home extends React.Component {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <main>
+            <div className="pt-30" />
             <div className="pb-56">
               {productFeature.map((i, index) => (
                 <ProductFeature data={i} key={index} />
