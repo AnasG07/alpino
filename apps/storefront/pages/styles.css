@@ -1,10 +1,11 @@
 /*  ONLY THOSE CLASSES WHICH WILL BE USED IN SEVERAL COMPONENTS */
 
-@import '../node_modules/react-alice-carousel/lib/alice-carousel.css';
-@import '../node_modules/react-dropdown/style.css';
+@import '~react-alice-carousel/lib/alice-carousel.css';
+@import '~react-dropdown/style.css';
 
 body {
   overflow-x: hidden;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu;
 }
 
 .alice-carousel {

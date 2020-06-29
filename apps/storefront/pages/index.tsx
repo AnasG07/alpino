@@ -4,7 +4,6 @@ import ProductFeature from '../components/ProductFeature';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Cart from '../components/cart';
 import Link from 'next/link';
 
 export async function getServerSideProps(context) {
@@ -69,29 +68,6 @@ export async function getServerSideProps(context) {
           buttonText: 'Buy',
         },
       ],
-      items: [
-        {
-          image: '/cart/cart1.png',
-          title: 'Thar GT',
-          cost: '₹ 2999',
-          color: 'Black',
-          quantity: '1',
-        },
-        {
-          image: '/cart/cart2.png',
-          title: 'Flex Pro',
-          cost: '₹ 2499',
-          color: 'Black',
-          quantity: '2',
-        },
-        {
-          image: '/cart/cart3.png',
-          title: 'Thar Blaze',
-          cost: '₹ 1999',
-          color: 'Black',
-          quantity: '1',
-        },
-      ],
     },
   };
 }
@@ -105,19 +81,12 @@ export default class Home extends React.Component {
     };
   }
 
-  openModal = () => {
-    this.setState({ modalIsOpen: true });
-  };
-  closeModal = () => {
-    this.setState({ modalIsOpen: false });
-  };
-
   render() {
-    const { productFeature, items, productCard } = this.props;
+    const { productFeature, productCard } = this.props;
     return (
       <div className="overflow-x-hidden">
         <div className="min-h-screen bg-black pt-20">
-          <Header openModal={this.openModal} />
+          <Header />
           <Head>
             <title>Alpino</title>
             <link rel="icon" href="/favicon.ico" />
@@ -218,7 +187,6 @@ export default class Home extends React.Component {
             </div>
           </main>
         </div>
-        <Cart items={items} modalIsOpen={this.state.modalIsOpen} closeModal={this.closeModal} />
         <Footer />
       </div>
     );

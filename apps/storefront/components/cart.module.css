@@ -1,12 +1,16 @@
 .headingColor {
   color: #ebebeb;
 }
+
 .Icon {
   filter: invert(100%);
 }
+
 .productsHeading {
   color: #373737;
 }
+
 .checkoutButton {
-  border-radius: 45px;
+  color: #ebebeb;
+  line-height: 2.375rem;
 }
