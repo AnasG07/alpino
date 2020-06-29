@@ -50,21 +50,21 @@ export default function Careers() {
             <div className={classNames(styles['p-15'], 'form-card-darker')}>
               <form className={styles['pt-15']}>
                 <div>
-                  <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
-                  <input placeholder="Email ID" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20">
-                  <input placeholder="Phone Number" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Phone Number" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20">
-                  <input placeholder="Company & City" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Company & City" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20">
                   <input
                     placeholder="Details of Requirements"
-                    className={classNames(styles['input-style'], 'text-content')}
+                    className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-30">

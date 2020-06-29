@@ -4,69 +4,15 @@ import { startCase } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import classNames from 'classnames';
-import style from './tag.module.css';
+import styles from './tag.module.css';
 import ProductCard from '../../components/ProductCard';
+import { getProductsByTag } from '../../data/functions';
 
 export async function getServerSideProps({ params }) {
   return {
     props: {
       tag: params.tag,
-      productCard: [
-        {
-          slug: 'alpino-rock',
-          image: '/Thar05.png',
-          name: 'Rock',
-          type: 'Bluetooth Speaker',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo. Playback time: 6 hours',
-          buttonText: 'Buy',
-        },
-        {
-          slug: 'alpino-thar-gt',
-          image: '/Thar031.png',
-          name: 'Thar GT',
-          type: 'Bluetooth Headphone',
-          price: '1299',
-          description: 'Comfortable and secure fit, magnetic design with pure stereo sound. Playback time: 4.5 hours',
-          buttonText: 'Buy',
-        },
-        {
-          slug: 'alpino-trip-flex',
-          image: '/Thar041.png',
-          name: 'Town Flex',
-          type: 'Wireless Neckband',
-          price: '799',
-          description: 'Comfortable and secure fit, magnetic design with pure stereo sound. Playback time: 4.5 hours',
-          buttonText: 'Buy',
-        },
-        {
-          slug: 'alpino-rock',
-          image: '/rock-bluetooth.svg',
-          name: 'Rock',
-          type: 'Blutetooth Speaker',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
-          buttonText: 'Buy',
-        },
-        {
-          slug: 'alpino-thar-gt',
-          image: '/thar-bluetooth.svg',
-          name: 'Thar GT',
-          type: 'Bluetooth Headphone',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
-          buttonText: 'Buy',
-        },
-        {
-          slug: 'alpino-trip-flex',
-          image: '/trip-flex.svg',
-          name: 'Town Flex',
-          type: ' Wireless Neckband',
-          price: '799',
-          description: 'Comfortable and secure fit, magnetic design with pure stereo sound. Playback time: 4.5 hours',
-          buttonText: 'Buy',
-        },
-      ],
+      productCard: getProductsByTag(params.tag),
     },
   };
 }
@@ -98,7 +44,7 @@ export default function Tag({ tag, productCard }) {
                 <h1 className="text-sm md:text-lg">Filter</h1>
               </button>
               <div className="flex flex-row justify-center items-center">
-                <h1 className={classNames(style.sortColor, 'hidden md:block font-semibold w-full text-lg mr-5')}>
+                <h1 className={classNames(styles.sortColor, 'hidden md:block font-semibold w-full text-lg mr-5')}>
                   Sort By
                 </h1>
                 <button className="flex flex-row justify-center items-center relative leading-5 rounded-full text-base py-3 px-8 outline border bg-transparent w-full">
@@ -110,9 +56,9 @@ export default function Tag({ tag, productCard }) {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-32 pt-32 justify-between pl-0 pr-0 md:pl-40 md:pr-40 lg:pl-31 lg:pr-10 pb-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-32 justify-between pl-0 pr-0 md:pl-40 md:pr-40 lg:pl-31 lg:pr-10 pb-24 items-center">
             {productCard.map((i) => (
-              <ProductCard data={i} showStars noround />
+              <ProductCard className={styles.card} data={i} showStars noround />
             ))}
           </div>
         </main>

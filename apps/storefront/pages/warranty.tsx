@@ -141,33 +141,33 @@ export default function Warranty({ faq }) {
               </div>
               <form className="pt-24">
                 <div>
-                  <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-16">
-                  <input placeholder="Email ID" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-16">
-                  <input placeholder="Order ID" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Order ID" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-16">
-                  <input placeholder="Marketplace" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Marketplace" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-16 flex flex-row ">
                   <p className="text-content">Order Date</p>
                   <div className="flex flex-row pl-24">
-                    <select className={classNames(styles['input-style'], 'text-content-select pb-2 mx-4 px-2 ')}>
+                    <select className={classNames(styles['input-styles'], 'text-content-select pb-2 mx-4 px-2 ')}>
                       <option value="">DD</option>
                       {[...Array(31).keys()].map((i) => (
                         <option value={i + 1}>{i + 1} </option>
                       ))}
                     </select>
-                    <select className={classNames(styles['input-style'], 'text-content-select pb-2 mx-4 px-2 ')}>
+                    <select className={classNames(styles['input-styles'], 'text-content-select pb-2 mx-4 px-2 ')}>
                       <option value="">MM</option>
                       {[...Array(12).keys()].map((i) => (
                         <option value={i + 1}>{i + 1} </option>
                       ))}
                     </select>
-                    <select className={classNames(styles['input-style'], 'text-content-select pb-2 mx-4 px-2 ')}>
+                    <select className={classNames(styles['input-styles'], 'text-content-select pb-2 mx-4 px-2 ')}>
                       <option value="">YY</option>
                       {year.map((i) => (
                         <option value={i}>{i} </option>

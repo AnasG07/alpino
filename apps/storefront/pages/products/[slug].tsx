@@ -6,9 +6,8 @@ import { startCase } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
-import RatingStars from '../../components/RatingStars';
 import style from './product.module.css';
-import dataFetch from '../../data/functions.ts';
+import dataFetch, { getSimilarProducts } from '../../data/functions.ts';
 
 export async function getServerSideProps({ params: { slug } }) {
   const selectedProduct = dataFetch(slug);
@@ -70,32 +69,7 @@ export async function getServerSideProps({ params: { slug } }) {
           },
         },
       ],
-      productCard: [
-        {
-          image: '/rock-bluetooth.svg',
-          name: 'Rock',
-          type: 'Blutetooth Speaker',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
-          buttonText: 'Buy',
-        },
-        {
-          image: '/thar-bluetooth.svg',
-          name: 'Thar GT',
-          type: 'Bluetooth Headphone',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
-          buttonText: 'Buy',
-        },
-        {
-          image: '/trip-flex.svg',
-          name: 'Town Flex',
-          type: ' Wireless Neckband',
-          price: '799',
-          description: 'Comfortable and secure fit, magnetic design with pure stereo sound. Playback time: 4.5 hours',
-          buttonText: 'Buy',
-        },
-      ],
+      productCard: getSimilarProducts(selectedProduct.tags[0], slug),
     },
   };
 }
@@ -311,13 +285,11 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
               <p className="text-white text-xs md:text-lg font-normal mb-10 mt-2">Best always deserves better</p>
             </div>
             <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
-              <div className="flex flex-row">
-                {productCard.map((i, index) => (
-                  <div className={`${index !== 0 && 'hidden'} lg:block`}>
-                    <ProductCard data={i} key={index} />
-                  </div>
-                ))}
-              </div>
+              {productCard.map((i, index) => (
+                <div className={`${index !== 0 && 'hidden'} lg:block`}>
+                  <ProductCard data={i} key={index} />
+                </div>
+              ))}
             </div>
           </div>
         </main>

@@ -1,3 +1,7 @@
 .sortColor {
   color: rgba(242, 242, 242, 0.3);
 }
+
+.card {
+  max-width: 25rem;
+}

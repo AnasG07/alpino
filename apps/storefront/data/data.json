@@ -2,6 +2,7 @@
   {
     "id": 1,
     "slug": "alpino-thar-gt",
+    "tags": ["headphones", "earphones"],
     "name": "Alpino thar GT",
     "type": "Bluetooth Headphone",
     "mainDescription": "Take a ride into music with bass so supersonic it cannot be contained even by our cushioned earcups.",
@@ -59,6 +60,7 @@
   {
     "id": 2,
     "slug": "alpino-flex-pro",
+    "tags": ["neckbands", "earphones"],
     "name": "Alpino Flex Pro",
     "type": "Bluetooth Neckband",
     "mainDescription": "Nano-coating and a powerful battery makes this neckband a sweat-proof powerhouse that keeps connecting with Bluetooth and magnetic earbuds.",
@@ -124,6 +126,7 @@
   {
     "id": 3,
     "slug": "alpino-power-flex",
+    "tags": ["neckbands", "earphones"],
     "name": "Alpino Power Flex",
     "type": "Bluetooth Neckband",
     "mainDescription": "The only thing more powerful than the magnetic earbuds, is the device itself. Give in to a neckband that sings and hears.",
@@ -189,6 +192,7 @@
     "id": 4,
     "slug": "alpino-trip-flex",
     "name": "Alpino Trip Flex",
+    "tags": ["neckbands", "earphones"],
     "type": "Bluetooth Neckband",
     "mainDescription": "Stay flexin’ on exercise with an ergonomically designed sweat-proof neckband with a battery life longer than your workouts.",
     "availableInColors": {
@@ -252,6 +256,7 @@
     "id": 5,
     "slug": "alpino-thar-fit",
     "name": "Alpino Thar fit",
+    "tags": ["neckbands", "earphones"],
     "type": "Bluetooth Neckband",
     "mainDescription": "Oblique ear fittings in a lightweight acoustic delight with bass powerful enough to drive you into fitness.",
     "availableInColors": {
@@ -318,6 +323,7 @@
     "id": 6,
     "slug": "alpino-town-square-mini",
     "name": "Alpino Town Square Mini",
+    "tags": ["speakers"],
     "type": "Bluetooth Speaker",
     "mainDescription": "Use this speaker to make music the mega center of your life with the power of connectivity and controls at the touch of a finger.",
     "availableInColors": {
@@ -376,6 +382,7 @@
     "slug": "alpino-thar-drift",
     "name": "Alpino Thar Drift",
     "type": "Bluetooth Speaker",
+    "tags": ["speakers"],
     "mainDescription": "Never put your feet off the gas, with beats that are stronger, power that lasts longer and connectivity that takes you farther.",
     "availableInColors": {
       "black": "#000000"
@@ -430,6 +437,7 @@
   {
     "id": 8,
     "slug": "alpino-thar-drift-2",
+    "tags": ["speakers"],
     "name": "Alpino Thar Drift",
     "type": "Bluetooth Speaker",
     "mainDescription": "Never put your feet off the gas, with beats that are stronger, power that lasts longer and connectivity that takes you farther.",
@@ -486,6 +494,7 @@
   {
     "id": 9,
     "slug": "alpino-rock",
+    "tags": ["speakers"],
     "name": "Alpino Rock",
     "type": "Bluetooth Speaker",
     "mainDescription": "Go back in time with a look inspired by the good ol’ age of music, but take a leap into the future with features that are centuries ahead.",
@@ -551,6 +560,7 @@
   {
     "id": 10,
     "slug": "alpino-thar-wave",
+    "tags": ["speakers"],
     "name": "Alpino Thar Wave",
     "type": "Bluetooth Speaker",
     "mainDescription": "Surf on the sound waves with a speaker that makes music truly wireless and bass truly limitless.",
@@ -607,6 +617,7 @@
   {
     "id": 11,
     "slug": "alpino-trip-extra",
+    "tags": ["earphones", "wired-earphones"],
     "name": "Alpino Trip Extra",
     "type": "Earphones",
     "mainDescription": "Wires long enough to not stop you from connecting with your music that is enhanced by drivers more elite than F1.",
@@ -664,6 +675,7 @@
   {
     "id": 12,
     "slug": "alpino-thar-blaze",
+    "tags": ["earphones", "wired-earphones"],
     "name": "Alpino Thar Blaze",
     "type": "Earphones",
     "mainDescription": "LED lights, superior bass and a connectivity of 10metres. Is there any more you can ask of a speaker?",
@@ -724,6 +736,7 @@
     "id": 13,
     "slug": "alpino-twist",
     "name": "Alpino Twist",
+    "tags": ["speakers"],
     "type": "Bluetooth Speaker",
     "mainDescription": "Rediscover angles with a design that can be felt in your palm and a sound that can be felt in your heart.",
     "availableInColors": {
@@ -782,6 +795,7 @@
   {
     "id": 14,
     "slug": "alpino-thar-flash",
+    "tags": ["speakers"],
     "name": "Alpino Thar Flash",
     "type": "Bluetooth Speaker",
     "mainDescription": "Flashes of power will last longer than ever in a speaker with LED lights, OP battery and wireless connectivity.",
@@ -841,6 +855,7 @@
   },
   {
     "id": 15,
+    "tags": ["earphones"],
     "slug": "alpino-trip-escape",
     "name": "Alpino Trip Escape",
     "type": "Bluetooth Earphones",
@@ -900,6 +915,7 @@
     "slug": "alpino-jp22-bt-headset",
     "name": "Alpino JP22 BT Headset",
     "type": "Bluetooth Headset",
+    "tags": ["headset", "earphones"],
     "mainDescription": "Enjoy long hours of hands-free calling with a device that brings the best connectivity to your fingertips.",
     "availableInColors": {
       "black": "#000000"
@@ -957,6 +973,7 @@
     "slug": "alpino-thar-beast",
     "name": "Alpino Thar Beast",
     "type": "Earphone",
+    "tags": ["earphones"],
     "mainDescription": "Rule the desert with more powerful drivers and a longer cable for an experience beyond the ordinary.",
     "availableInColors": {
       "black": "#000000",
@@ -1013,6 +1030,7 @@
     "slug": "alpino-kick-start",
     "name": "Alpino Kick Start",
     "type": "Bluetooth Speaker",
+    "tags": ["speakers"],
     "mainDescription": "Powerful bass and an even more powerful battery make this speaker the perfect start for any musical session.",
     "availableInColors": {
       "black": "#000000",
@@ -1070,6 +1088,7 @@
     "slug": "alpino-flex",
     "name": "Alpino Flex",
     "type": "Bluetooth Speaker",
+    "tags": ["speaker"],
     "mainDescription": "With a 30 hour battery life on this magnetic in-ear neckband, enjoy music upto 20,000hz and immerse your day into the world of sound and bass.",
     "availableInColors": {
       "black": "#000000",
