@@ -8,10 +8,13 @@ import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
 import RatingStars from '../../components/RatingStars';
 import style from './product.module.css';
+import dataFetch from '../../data/functions.ts';
 
 export async function getServerSideProps({ params: { slug } }) {
+  const selectedProduct = dataFetch(slug);
   return {
     props: {
+      selectedProduct: selectedProduct,
       productToDisplay: [
         {
           slug,
@@ -97,7 +100,8 @@ export async function getServerSideProps({ params: { slug } }) {
   };
 }
 
-export default function Slug({ productToDisplay, productCard }) {
+export default function Slug({ productToDisplay, productCard, selectedProduct }) {
+  console.log(selectedProduct);
   const handleOnDragStart = (e) => e.preventDefault();
   const { specs } = productToDisplay[0];
   return (
@@ -112,19 +116,19 @@ export default function Slug({ productToDisplay, productCard }) {
           <div className="h-screen pb-1400 md:pb-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40">
               <AliceCarousel buttonsDisabled>
-                <img src={productToDisplay[0].image1} onDragStart={handleOnDragStart} />
-                <img src={productToDisplay[0].image3} onDragStart={handleOnDragStart} />
-                <img src={productToDisplay[0].image3} onDragStart={handleOnDragStart} />
-                <img src={productToDisplay[0].image4} onDragStart={handleOnDragStart} />
+                <img src={selectedProduct.images.img1} onDragStart={handleOnDragStart} />
+                <img src={selectedProduct.images.img2} onDragStart={handleOnDragStart} />
+                <img src={selectedProduct.images.img3} onDragStart={handleOnDragStart} />
+                <img src={selectedProduct.images.img4} onDragStart={handleOnDragStart} />
               </AliceCarousel>
               <div className="flex flex-col justify-center px-12 md:pr-4 md:px-0 lg:pr-0">
                 <h1 className="text-white md:text-2xl leading-8 font-medium  md:text-5xl md:leading-12 ">
-                  {productToDisplay[0].title}
+                  {selectedProduct.name}
                 </h1>
                 {/*<RatingStars numberOfRatings={71} />*/}
 
                 <p className="text-white text-sm md:text-lg max-w-md leading-tight md:leading-normal textGrayColor mt-8">
-                  {productToDisplay[0].description}
+                  {selectedProduct.mainDescription}
                 </p>
                 <div className="flex flex-row mt-6">
                   <div className="h-5 bg-transparent border-2 border-white w-5 rounded-full mr-5" />
@@ -133,7 +137,7 @@ export default function Slug({ productToDisplay, productCard }) {
                   <div className={classNames(style.greenBgColor, 'h-5 w-5 rounded-full mr-5')} />
                 </div>
                 <p className="text-white text-sm md:text-lg font-medium leadnig-tight md:leading-normal textGrayColor mt-8">
-                  MRP Rs. {productToDisplay[0].Mrp}
+                  MRP Rs. {selectedProduct.cost}
                 </p>
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
                   <button className="rounded-full py-3 px-10 outline-none border-none bg-white flex justify-center">
@@ -153,150 +157,146 @@ export default function Slug({ productToDisplay, productCard }) {
           </div>
           <div className={classNames(style.lightBlackBgColor)}>
             <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center pt-20 textGrayColor font-medium px-4 md:px-0">
-              Crossing all bass-lines
+              {selectedProduct.descriptions.description1}
             </h1>
-            <p className="px-4 md:px-0 text-white text-sm md:text-lg text-center mt-4 weight-normal leading-tight md:leading-normal textGrayColor ">
-              With dual powerful 40mm sound stage drivers,
-              <br /> experience bass that makes the world move.
-            </p>
-            <img className="mx-auto mt-20" src={productToDisplay[0].image3} />
+            <div className="mt-4 px-4 md:px-0">
+              <p className="max-w-30 mx-auto text-white text-sm md:text-lg text-center  weight-normal leading-tight md:leading-normal textGrayColor ">
+                {selectedProduct.descriptionText.text1}
+              </p>
+            </div>
+            <img className="mx-auto mt-20" src={selectedProduct.images.img3} />
             <div className="flex flex-col md:flex-row justify-center items-center mt-20 md:mt-56 md:px-4 lg:px-0">
-              <div className="mr-0 md:mr-40">
+              <div className="pl-0 md:pl-31">
                 <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left pt-20 textGrayColor font-medium px-4 md:px-0">
-                  Cushion earcups that
-                  <br /> never spill
+                  {selectedProduct.descriptions.description2}
                 </h1>
-                <p className="text-white text-sm md:text-lg leading-tight md:leading-normal text-center md:text-left mt-4 weight-normal  textGrayColor px-4 md:px-0">
-                  With dual powerful 40mm sound stage drivers,
-                  <br /> experience bass that makes the world move.
-                </p>
+                <div>
+                  <p className="max-w-30 mx-auto text-white text-sm md:text-lg leading-tight md:leading-normal text-center md:text-left mt-4 weight-normal  textGrayColor px-4 md:px-0">
+                    {selectedProduct.descriptionText.text2}
+                  </p>
+                </div>
               </div>
               <div>
-                <img src={productToDisplay[0].image2} />
+                <img src={selectedProduct.images.img2} />
               </div>
             </div>
             <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center mt-20 md:mt-56 textGrayColor font-medium px-4 md:px-0">
-              Noise isolation for that zen energy{' '}
+              {selectedProduct.descriptions.description3}
             </h1>
-            <p className="text-white text-sm md:text-lg leading-tight md:leading-normal text-center mt-4 weight-normal  textGrayColor px-4 md:px-0">
-              Passive noise cancelling headphones make for truly
-              <br /> living in the moment with other sounds blocked up.
+            <p className="max-w-30 mx-auto text-white text-sm md:text-lg leading-tight md:leading-normal text-center mt-4 weight-normal  textGrayColor px-4 md:px-0">
+              {selectedProduct.descriptionText.text3}
             </p>
-            <img className="mx-auto mt-4" src={productToDisplay[0].image4} />
+            <img className="mx-auto mt-4" src={selectedProduct.images.img4} />
             <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-20 md:mt-64 pb-12 md:pb-24">
               <div className="mr-0 md:mr-64">
-                <img src={productToDisplay[0].image5} />
+                <img src={selectedProduct.images.img5} />
               </div>
               <div>
                 <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left pt-20 textGrayColor font-medium px-4 md:px-0">
-                  Microphone monsieur
+                  {selectedProduct.descriptions.description4}
                 </h1>
-                <p className="text-white text-sm md:text-lg leading-tight md:leading-normal text-center md:text-left mt-4 weight-normal textGrayColor px-4 md:px-0">
-                  Bluetooth headphones come with built-in
-                  <br /> microphone for hands-free calling.
+                <p className=" max-w-30 text-white text-sm md:text-lg leading-tight md:leading-normal text-center md:text-left mt-4 weight-normal textGrayColor px-4 md:px-0">
+                  {selectedProduct.descriptionText.text4}
                 </p>
               </div>
             </div>
           </div>
           <div className="bg-black">
             <div className="flex flex-col md:flex-row justify-center items-center py-20 md:py-56 md:px-4 lg:px-0">
-              <div className="mr-0 md:mr-40">
-                <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left textGrayColor font-medium px-4 md:px-0">
-                  Adjustable anatomy
+              <div className="pl-0 md:pl-24">
+                <h1 className="max-w-30 text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left textGrayColor font-medium px-4 md:px-0">
+                  {selectedProduct.descriptions.description5}
                 </h1>
-                <p className="text-white  text-sm md:text-lg leading-tight md:leading-normal text-center md:text-left mt-4 weight-normal textGrayColor px-4 md:px-0">
-                  Snug fit, foldable and adjustable
-                  <br /> headphones with comfort over 200 mah
-                  <br /> make sure you experience the comfort of
-                  <br /> luxury.
+                <p className="max-w-30 text-white  text-sm md:text-lg leading-tight md:leading-normal text-center md:text-left mt-4 weight-normal textGrayColor px-4 md:px-0">
+                  {selectedProduct.descriptionText.text5}
                 </p>
               </div>
-              <div className="px-2 md:px-0">
-                <img src={productToDisplay[0].image6} />
+              <div className="px-2 md:px-0 max-w-850">
+                <img src={selectedProduct.images.img1} />
               </div>
             </div>
           </div>
           <div className={classNames(style.specsContainerBg, 'pr-4 md:pr-0')}>
             <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 font-medium leading-10 mb-12 md:mb-24 pt-10 md:pt-40 ml-8 md:ml-24">
-              Specs - Thar GT
+              {`Specs - ${selectedProduct.name}`}
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 pb-12 md:pb-32 ml-8 md:ml-24">
               <div className="flex flex-col justify-start">
-                <img className="w-8 h-6" src={specs.dimensions.image} />
+                <img className="w-8 h-6" src="/products/specs1.png" />
                 <p className="text-white mt-8 md:mt-20 font-normal text-xs md:text-base leading-4 md:leading-7 mb-4 md:mb-12">
-                  {specs.dimensions.title}
+                  DIMENSIONS
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.dimensions.style}
+                  {selectedProduct.dimensions.type}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.dimensions.size}
+                  {selectedProduct.dimensions.dimension}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.dimensions.weight}
+                  {selectedProduct.dimensions.weight}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.dimensions.material}
+                  {selectedProduct.dimensions.material}
                 </p>
               </div>
               <div className="flex flex-col justify-start whitespace-pre-wrap">
-                <img className="w-10 h-6" src={specs.Battery.image} />
+                <img className="w-10 h-6" src="/products/specs2.png" />
                 <p className="text-white mt-8 md:mt-20 font-normal text-xs md:text-base leading-4 md:leading-7 mb-4 md:mb-12">
-                  {specs.Battery.title}
+                  BATTERY
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.Battery.Battery}
+                  {selectedProduct.battery.type}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.Battery.charging}
+                  {selectedProduct.battery.time}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.Battery.batterLife}
+                  {selectedProduct.battery.batterLife}
                 </p>
               </div>
               <div className="flex flex-col justify-start whitespace-pre-wrap">
-                <img className="w-8 h-6" src={specs.features.image} />
+                <img className="w-8 h-6" src="/products/specs3.png" />
                 <p className="text-white mt-8 md:mt-20 font-normal text-xs md:text-base leading-4 md:leading-7 mb-4 md:mb-12">
-                  {specs.features.title}
+                  FEATURES
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.features.bluetooth}
+                  {selectedProduct.features.feature1}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.features.stereo}
+                  {selectedProduct.features.feature2}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.features.quality}
+                  {selectedProduct.features.feature3}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.features.microphone}
+                  {selectedProduct.features.feature4}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.features.comfortable}
+                  {selectedProduct.features.feature5}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.features.colors}
+                  {selectedProduct.features.feature6}
                 </p>
               </div>
               <div className="flex flex-col justify-start whitespace-pre-wrap">
-                <img className="w-6 h-6" src={specs.Box.image} />
+                <img className="w-6 h-6" src="/products/specs4.png" />
                 <p className="text-white mt-8 md:mt-20 font-normal text-xs md:text-base leading-4 md:leading-7 mb-4 md:mb-12">
-                  {specs.Box.title}
+                  WHAT'S IN THE BOX
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.Box.headphones}
+                  {selectedProduct.whatsInTheBox.item1}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.Box.cable}
+                  {selectedProduct.whatsInTheBox.item2}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.Box.case}
+                  {selectedProduct.whatsInTheBox.item3}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.Box.guide}
+                  {selectedProduct.whatsInTheBox.item4}
                 </p>
                 <p className="text-white font-normal text-sm md:text-base leading-5 md:leading-7 mb-5">
-                  {specs.Box.card}
+                  {selectedProduct.whatsInTheBox.item5}
                 </p>
               </div>
             </div>

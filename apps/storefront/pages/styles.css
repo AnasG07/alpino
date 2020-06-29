@@ -479,7 +479,9 @@ button:focus {
 .max-w-30 {
   max-width: 480px;
 }
-
+.max-w-28 {
+  max-width: 360px;
+}
 .max-w-45 {
   max-width: 720px;
 }
@@ -702,4 +704,7 @@ button:focus {
 }
 .font-semi-imp {
   font-weight: 600 !important;
+}
+.max-w-850 {
+  max-width: 850px;
 }

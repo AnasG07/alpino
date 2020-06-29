@@ -13,7 +13,7 @@ export async function getServerSideProps({ params }) {
       tag: params.tag,
       productCard: [
         {
-          slug: 'rock',
+          slug: 'alpino-rock',
           image: '/Thar05.png',
           name: 'Rock',
           type: 'Bluetooth Speaker',
@@ -22,7 +22,7 @@ export async function getServerSideProps({ params }) {
           buttonText: 'Buy',
         },
         {
-          slug: 'bluetooth-headphone',
+          slug: 'alpino-thar-gt',
           image: '/Thar031.png',
           name: 'Thar GT',
           type: 'Bluetooth Headphone',
@@ -31,7 +31,7 @@ export async function getServerSideProps({ params }) {
           buttonText: 'Buy',
         },
         {
-          slug: 'town-flex',
+          slug: 'alpino-trip-flex',
           image: '/Thar041.png',
           name: 'Town Flex',
           type: 'Wireless Neckband',
@@ -40,7 +40,7 @@ export async function getServerSideProps({ params }) {
           buttonText: 'Buy',
         },
         {
-          slug: 'rock',
+          slug: 'alpino-rock',
           image: '/rock-bluetooth.svg',
           name: 'Rock',
           type: 'Blutetooth Speaker',
@@ -49,7 +49,7 @@ export async function getServerSideProps({ params }) {
           buttonText: 'Buy',
         },
         {
-          slug: 'thar-gt',
+          slug: 'alpino-thar-gt',
           image: '/thar-bluetooth.svg',
           name: 'Thar GT',
           type: 'Bluetooth Headphone',
@@ -58,7 +58,7 @@ export async function getServerSideProps({ params }) {
           buttonText: 'Buy',
         },
         {
-          slug: 'town-flex',
+          slug: 'alpino-trip-flex',
           image: '/trip-flex.svg',
           name: 'Town Flex',
           type: ' Wireless Neckband',
