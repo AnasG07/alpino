@@ -65,26 +65,26 @@ export default function Footer() {
                 <a className="footer-font leading-6">Become a distributor </a>
               </Link>
             </div>
-            <div>
-              <Link href="/">
-                <a className="footer-font leading-6">Affiliate </a>
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="/">*/}
+            {/*    <a className="footer-font leading-6">Affiliate </a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
             <div>
               <Link href="/corporate-enquiries">
                 <a className="footer-font leading-6">Corporate enquiries </a>
               </Link>
             </div>
-            <div>
-              <Link href="/blog">
-                <a className="footer-font leading-6"> Press</a>
-              </Link>
-            </div>
-            <div>
-              <Link href="/blogs">
-                <a className="footer-font leading-6"> Blogs</a>
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="/blog">*/}
+            {/*    <a className="footer-font leading-6"> Press</a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
+            {/*<div>*/}
+            {/*  <Link href="/blogs">*/}
+            {/*    <a className="footer-font leading-6"> Blogs</a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
             <div>
               <Link href="/neev">
                 <a className="footer-font leading-6"> Neev</a>
@@ -110,11 +110,11 @@ export default function Footer() {
                 <a className="footer-font leading-6"> Headphones</a>
               </Link>
             </div>
-            <div>
-              <Link href="/collections/[tag]" as="/collections/power-banks">
-                <a className="footer-font leading-6"> Power Banks</a>
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="/collections/[tag]" as="/collections/power-banks">*/}
+            {/*    <a className="footer-font leading-6"> Power Banks</a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
             <div>
               <Link href="/collections/[tag]" as="/collections/earphones">
                 <a className="footer-font leading-6"> Earphones</a>
@@ -125,11 +125,11 @@ export default function Footer() {
                 <a className="footer-font leading-6"> Neckbands</a>
               </Link>
             </div>
-            <div>
-              <Link href="/collections/[tag]" as="/collections/cables">
-                <a className="footer-font leading-6"> Cables</a>
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="/collections/[tag]" as="/collections/cables">*/}
+            {/*    <a className="footer-font leading-6"> Cables</a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
           </div>
         </div>
         <div className="flex-grow">

@@ -21,7 +21,7 @@ export default function Tag({ tag, productCard }) {
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
-        <Header invert={false} />
+        <Header />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
@@ -50,7 +50,7 @@ export default function Tag({ tag, productCard }) {
                 <button className="flex flex-row justify-center items-center relative leading-5 rounded-full text-base py-3 px-8 outline border bg-transparent w-full">
                   <h1 className="test-sm md:text-lg mr-2">Popularity</h1>
                   <div className="flex justify-center items-center rounded-full p-2 border-solid border-white border-2">
-                    <img className="absolute h-2" src="/down-arrow.png"></img>
+                    <img className="absolute h-2" src="/down-arrow.png" />
                   </div>
                 </button>
               </div>
