@@ -2,6 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 
+interface Props {
+  data: any;
+}
+
 const images = [
   '/animation/Speaker01_0001.png',
   '/animation/Speaker01_0002.png',
@@ -50,7 +54,7 @@ const images = [
   '/animation/Speaker01_0045.png',
 ];
 
-export default class ProductFeature extends React.Component {
+export default class ProductFeature extends React.Component<Props> {
   scrollController: any;
   scrollScene: any;
 

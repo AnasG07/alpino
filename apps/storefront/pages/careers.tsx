@@ -112,18 +112,18 @@ export default function Careers({ job }) {
           <div className="rounded-large bg-grey-darker w-full lg:w-2/4 w-full">
             <div className="px-10 md:px-12 lg:px-16 py-10 md:py-16 lg:py-31">
               <div>
-                <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
+                <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
               </div>
               <div className="pt-8">
-                <input placeholder="Email ID" className={classNames(styles['input-style'], 'text-content')} />
+                <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />
               </div>
               <div className="pt-8">
-                <input placeholder="Phone Number" className={classNames(styles['input-style'], 'text-content')} />
+                <input placeholder="Phone Number" className={classNames(styles['input-styles'], 'text-content')} />
               </div>
               <div className="pt-8">
-                <input placeholder="Profile" className={classNames(styles['input-style'], 'text-content')} />
+                <input placeholder="Profile" className={classNames(styles['input-styles'], 'text-content')} />
               </div>
-              <input className={classNames(styles['input-style'], 'text-content hidden')} type="file" id="resume" />
+              <input className={classNames(styles['input-styles'], 'text-content hidden')} type="file" id="resume" />
               <div className="pt-8 border-b pb-2 w-full border-grey-border flex flex-row justify-between">
                 <p className="text-content">Resume / Portfolio</p>
                 <button className="button-transparent py-2 px-4 font-semi-imp" onClick={() => fileUpload()}>

@@ -59,6 +59,9 @@ module.exports = {
       borderRadius: {
         super: '30px',
       },
+      margin: {
+        '344': '344px',
+      },
     },
   },
 };

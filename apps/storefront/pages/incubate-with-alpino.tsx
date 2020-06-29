@@ -150,24 +150,24 @@ export default function IncubateALpino() {
               </div>
               <form className={styles['pt-35']}>
                 <div>
-                  <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="College / Organization"
-                    className={classNames(styles['input-style'], 'text-content')}
+                    className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-20">
                   <input
                     placeholder="What problem are you passionate about solving?"
-                    className={classNames(styles['input-style'], 'text-content')}
+                    className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="What would you bring to the table?"
-                    className={classNames(styles['input-style'], 'text-content')}
+                    className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-30">

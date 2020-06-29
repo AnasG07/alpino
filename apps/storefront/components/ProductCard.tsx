@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 interface ProductCardProps {
   data: any;
   comingSoon?: boolean;
+  noround?: boolean;
+  className?: string;
 }
 
 export default function ProductCard({
   data: { slug, image, name, price, description, launch, type, buttonText },
   comingSoon,
   noround,
+  className,
 }: ProductCardProps) {
+  const imageBox = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    imageBox.current.setAttribute('style', `height: ${imageBox.current.offsetWidth}px`);
+  }, [imageBox]);
   return (
-    <div className="relative h-full">
+    <div className={classNames('relative h-full', className)} style={{ maxWidth: '25rem' }}>
       <span
         className={`flex flex-col p-8 min-height-35 mr-0 md:mr-8  ${
           noround ? 'rounded-none' : 'rounded-super'
         } md:rounded-super bg-grey-card lg:bg-black bg-greyCard hover-main`}>
-        <img src={image} alt="Rock bluetooth" />
+        <div className={classNames('flex items-center justify-center')} ref={imageBox}>
+          <img src={image} alt={name} className="w-full" />
+        </div>
         <div className="flex flex-row items-center  justify-between">
           <div>
             <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{name}</h3>

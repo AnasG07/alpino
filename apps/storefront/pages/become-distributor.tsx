@@ -70,39 +70,39 @@ export default function becomeDistributor() {
               </div>
               <form className={styles['pt-35']}>
                 <div>
-                  <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
-                  <input placeholder="Company Name" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Company Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20">
-                  <input placeholder="Contact Number" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Contact Number" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
-                  <input placeholder="Email ID" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="What districts would you want to launch Alpino in?"
-                    className={classNames(styles['input-style'], 'text-content')}
+                    className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="Are you already working with existing consumer tech companies?If yes, please name them."
-                    className={classNames(styles['input-style'], 'text-content')}
+                    className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="What are the monthly sales projections that you would want to achieve with Alpino?"
-                    className={classNames(styles['input-style'], 'text-content')}
+                    className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="How do you want us to support you?"
-                    className={classNames(styles['input-style'], 'text-content')}
+                    className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-12 flex justify-start md:justify-end">

@@ -63,16 +63,16 @@ export default function Contact() {
               </div>
               <form className={styles['pt-35']}>
                 <div>
-                  <input placeholder="Name" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
-                  <input placeholder="Email ID" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20">
-                  <input placeholder="Message" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Message" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
-                  <input placeholder="Contact Number" className={classNames(styles['input-style'], 'text-content')} />
+                  <input placeholder="Contact Number" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-12 md:pt-30 flex justify-start md:justify-end">
                   <button className="leading-5 rounded-full text-sm md:text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center text-right">

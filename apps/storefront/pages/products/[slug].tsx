@@ -6,9 +6,8 @@ import { startCase } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
-import RatingStars from '../../components/RatingStars';
 import style from './product.module.css';
-import dataFetch from '../../data/functions.ts';
+import dataFetch, { getSimilarProducts } from '../../data/functions.ts';
 
 export async function getServerSideProps({ params: { slug } }) {
   console.log(slug);
@@ -16,32 +15,7 @@ export async function getServerSideProps({ params: { slug } }) {
   return {
     props: {
       selectedProduct: selectedProduct,
-      productCard: [
-        {
-          image: '/rock-bluetooth.svg',
-          name: 'Rock',
-          type: 'Blutetooth Speaker',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
-          buttonText: 'Buy',
-        },
-        {
-          image: '/thar-bluetooth.svg',
-          name: 'Thar GT',
-          type: 'Bluetooth Headphone',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
-          buttonText: 'Buy',
-        },
-        {
-          image: '/trip-flex.svg',
-          name: 'Town Flex',
-          type: ' Wireless Neckband',
-          price: '799',
-          description: 'Comfortable and secure fit, magnetic design with pure stereo sound. Playback time: 4.5 hours',
-          buttonText: 'Buy',
-        },
-      ],
+      productCard: getSimilarProducts(selectedProduct.tags[0], slug),
     },
   };
 }
@@ -97,7 +71,7 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
               <img src="/products/downArrow.png" />
             </button>
           </div>
-          <div className={classNames(style.lightBlackBgColor)}>
+          <div className={classNames(style.lightBlackBgColor, 'mt:0 md:mt-344')}>
             <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center pt-20 textGrayColor font-medium px-4 md:px-0">
               {selectedProduct.descriptions.description1}
             </h1>
@@ -106,7 +80,7 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                 {selectedProduct.descriptionText.text1}
               </p>
             </div>
-            <img className="mx-auto mt-20" src={selectedProduct.images.img3} />
+            <img className="mx-auto mt-20" src={selectedProduct.images.img1} />
             <div className="flex flex-col md:flex-row justify-center items-center mt-20 md:mt-56 md:px-4 lg:px-0">
               <div className="pl-0 md:pl-31">
                 <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left pt-20 textGrayColor font-medium px-4 md:px-0">
@@ -128,10 +102,10 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
             <p className="max-w-30 mx-auto text-white text-sm md:text-lg leading-tight md:leading-normal text-center mt-4 weight-normal  textGrayColor px-4 md:px-0">
               {selectedProduct.descriptionText.text3}
             </p>
-            <img className="mx-auto mt-4" src={selectedProduct.images.img4} />
+            <img className="mx-auto mt-4" src={selectedProduct.images.img3} />
             <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-20 md:mt-64 pb-12 md:pb-24">
               <div className="mr-0 md:mr-64">
-                <img src={selectedProduct.images.img5} />
+                <img src={selectedProduct.images.img4} />
               </div>
               <div>
                 <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left pt-20 textGrayColor font-medium px-4 md:px-0">
@@ -154,7 +128,7 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                 </p>
               </div>
               <div className="px-2 md:px-0 max-w-850">
-                <img src={selectedProduct.images.img1} />
+                <img src={selectedProduct.images.img5} />
               </div>
             </div>
           </div>
@@ -253,13 +227,11 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
               <p className="text-white text-xs md:text-lg font-normal mb-10 mt-2">Best always deserves better</p>
             </div>
             <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
-              <div className="flex flex-row">
-                {productCard.map((i, index) => (
-                  <div className={`${index !== 0 && 'hidden'} lg:block`}>
-                    <ProductCard data={i} key={index} />
-                  </div>
-                ))}
-              </div>
+              {productCard.map((i, index) => (
+                <div className={`${index !== 0 && 'hidden'} lg:block`}>
+                  <ProductCard data={i} key={index} />
+                </div>
+              ))}
             </div>
           </div>
         </main>

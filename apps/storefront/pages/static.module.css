@@ -162,7 +162,7 @@
     padding-right: 2rem;
   }
 }
-.input-style {
+.input-styles {
   @apply bg-transparent border-b pb-2 w-full border-grey-border;
 }
 .img-height {

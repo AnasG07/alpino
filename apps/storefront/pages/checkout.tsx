@@ -38,7 +38,7 @@ export default function Checkout({ items }) {
   return (
     <div className="overflow-x-hidden">
       <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-24')}>
-        <Header openModal={false} invert={true}></Header>
+        <Header invert />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
@@ -50,7 +50,7 @@ export default function Checkout({ items }) {
                 <p className="text-white flex justify-center items-center text-md font-normal">1</p>
               </div>
               <h1 className="text-base text-black font-normal we ml-1">Information</h1>
-              <div className={classNames(style.greenBorder, 'mt-1 ml-1')}></div>
+              <div className={classNames(style.greenBorder, 'mt-1 ml-1')} />
             </div>
 
             <div className="flex items-center h-full ml-3">
@@ -58,7 +58,7 @@ export default function Checkout({ items }) {
                 <p className="text-white flex justify-center items-center text-md font-normal">2</p>
               </div>
               <h1 className="text-base text-black font-normal ml-3">Shipping</h1>
-              <div className={classNames(style.grayBorder, 'mt-1 ml-3')}></div>
+              <div className={classNames(style.grayBorder, 'mt-1 ml-3')} />
             </div>
 
             <div className="flex items-center h-full ml-3">
@@ -72,34 +72,32 @@ export default function Checkout({ items }) {
         <div className="mt-10 min-h-screen flex flex-col items-center px-6 pb-24 lg:flex-row justify-around">
           <div className={classNames(style.card, 'px-8 mb-8 lg:mb-0 mx-6 lg:mx-0')}>
             <h1 className="text-xl font-medium mt-6">Contact Information</h1>
-            <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2" placeholder="Email ID"></input>
+            <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2" placeholder="Email ID" />
             <h1 className="text-xl font-medium mt-6">Shipping Address</h1>
             <h1 className={classNames(style.labelColor, 'text-base font-normal mt-2 mb-2')}>Full Name</h1>
-            <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2" placeholder="Email ID"></input>
+            <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2" placeholder="Email ID" />
             <h1 className={classNames(style.labelColor, 'text-base font-normal mt-4 mb-2')}>Address</h1>
-            <input
-              className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2"
-              placeholder="Address line 1"></input>
-            <input
-              className="grayBackGroundColor text-black p-4 w-full rounded-md mt-6"
-              placeholder="Address line 2"></input>
+            <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-2" placeholder="Address line 1" />
+            <input className="grayBackGroundColor text-black p-4 w-full rounded-md mt-6" placeholder="Address line 2" />
             <div className="flex flex-row flex-wrap justify-between items-center">
               <input
                 className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
-                placeholder="City"></input>
+                placeholder="City"
+              />
               <input
                 className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
-                placeholder="State"></input>
+                placeholder="State"
+              />
               <input
                 className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
-                placeholder="Pincode"></input>
+                placeholder="Pincode"
+              />
               <input
                 className={classNames(style.halfInput, 'grayBackGroundColor text-black p-4 rounded-md mt-6')}
-                placeholder="Country"></input>
+                placeholder="Country"
+              />
             </div>
-            <input
-              className="grayBackGroundColor text-black w-full p-4 rounded-md mt-6"
-              placeholder="Mobile Number"></input>
+            <input className="grayBackGroundColor text-black w-full p-4 rounded-md mt-6" placeholder="Mobile Number" />
             <h1 className={classNames(style.labelColor, 'text-base font-normal mt-8 mb-2')}>Address Type</h1>
             <Dropdown
               options={options}
@@ -108,14 +106,14 @@ export default function Checkout({ items }) {
               placeholder="Select an option"
             />
             <div className="flex items-center">
-              <img className="w-2 h-2 mr-2 mt-2" src="/cart/checkbox.png"></img>
+              <img className="w-2 h-2 mr-2 mt-2" src="/cart/checkbox.png" />
               <p className={classNames(style.labelColor, 'text-sm font-light tracking-wider mt-2')}>
                 Save this information for next time
               </p>
             </div>
             <div className="flex flex-row w-full justify-center items-center mt-4">
-              <img className="mr-2" src="/cart/leftarrow.png"></img>
-              <h1 classNames={classNames(style.keepShoppingText, 'text-base font-normal tracking-wider')}>
+              <img className="mr-2" src="/cart/leftarrow.png" />
+              <h1 className={classNames(style.keepShoppingText, 'text-base font-normal tracking-wider')}>
                 Keep Shopping
               </h1>
             </div>
@@ -125,20 +123,20 @@ export default function Checkout({ items }) {
               <div className="flex flex-row items-center justify-between">
                 <h1 className="text-xl font-medium tracking-wide mt-6 mb-6">Cart Summary</h1>
                 <div className="flex flex-row justify-center items-center mr-4">
-                  <img src="/cart/edit.png"></img>
+                  <img src="/cart/edit.png" />
                   <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
                 </div>
               </div>
               <div className={classNames(style.itemCards, 'flex flex-row h-32 mb-8')}>
                 <div className={classNames(style.imagesBorderRadius, 'bg-black w-24 h-42 md:w-56 flex')}>
-                  <img className="mx-auto my-auto" src="/cart/cart1.png"></img>
+                  <img className="mx-auto my-auto" src="/cart/cart1.png" />
                 </div>
                 <div className="flex flex-col w-full justify-around items-start">
                   <div className="flex justify-between px-4 w-full">
                     <div>
                       <h1 className={classNames(style.titleFontColor, 'text-2xl font-medium')}>Thar GT</h1>
                       <div className="flex justify-start items-center">
-                        <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')}></div>
+                        <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')} />
                         <span className={classNames(style.titleFontColor, 'text-xs font-light')}>Black</span>
                       </div>
                     </div>
@@ -146,8 +144,8 @@ export default function Checkout({ items }) {
                   </div>
                   <div className="flex flex-row w-full items-center justify-between px-5">
                     <button className="flex flex-col border-none outline-none">
-                      <img className={classNames(style.marginBottom)} src="/cart/deletetop.png"></img>
-                      <img src="/cart/deletebottom.png"></img>
+                      <img className={classNames(style.marginBottom)} src="/cart/deletetop.png" />
+                      <img src="/cart/deletebottom.png" />
                     </button>
                     <h1 className={(style.smallCard, 'text-xs font-normal')}>1 Pcs</h1>
                   </div>
@@ -156,14 +154,14 @@ export default function Checkout({ items }) {
 
               <div className={classNames(style.itemCards, 'flex flex-row h-32 mb-8')}>
                 <div className={classNames(style.imagesBorderRadius, 'bg-black w-24 h-42 md:w-56 flex')}>
-                  <img className="mx-auto my-auto" src="/cart/cart2.png"></img>
+                  <img className="mx-auto my-auto" src="/cart/cart2.png" />
                 </div>
                 <div className="flex flex-col w-full justify-around items-start">
                   <div className="flex justify-between px-4 w-full">
                     <div>
                       <h1 className={classNames(style.titleFontColor, 'text-2xl font-medium')}>Flex Pro</h1>
                       <div className="flex justify-start items-center">
-                        <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')}></div>
+                        <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')} />
                         <span className={classNames(style.titleFontColor, 'text-xs font-light')}>Black</span>
                       </div>
                     </div>
@@ -171,10 +169,10 @@ export default function Checkout({ items }) {
                   </div>
                   <div className="flex flex-row w-full items-center justify-between px-5">
                     <button className="flex flex-col border-none outline-none">
-                      <img className={classNames(style.marginBottom)} src="/cart/deletetop.png"></img>
-                      <img src="/cart/deletebottom.png"></img>
+                      <img className={classNames(style.marginBottom)} src="/cart/deletetop.png" />
+                      <img src="/cart/deletebottom.png" />
                     </button>
-                    <h1 className={(style.smallCard, 'text-xs font-normal')}>2 Pcs</h1>
+                    <h1 className={classNames(style.smallCard, 'text-xs font-normal')}>2 Pcs</h1>
                   </div>
                 </div>
               </div>
