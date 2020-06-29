@@ -4,7 +4,7 @@ import ProductFeature from '../components/ProductFeature';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Cart from './cart';
+import Cart from '../components/cart';
 import Link from 'next/link';
 
 export async function getServerSideProps(context) {

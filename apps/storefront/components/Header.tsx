@@ -4,9 +4,11 @@ import Link from 'next/link';
 interface HeaderProps {
   invert?: boolean;
   transparent?: boolean;
-  openModal(): void;
   opacity?: boolean;
   unfixed?: boolean;
+  black?: boolean;
+
+  openModal?(): void;
 }
 
 export default function Header({ invert, openModal, transparent, unfixed, opacity, black }: HeaderProps) {

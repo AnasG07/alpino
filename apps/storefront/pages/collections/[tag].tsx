@@ -57,8 +57,8 @@ export default function Tag({ tag, productCard }) {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-32 justify-between pl-0 pr-0 md:pl-40 md:pr-40 lg:pl-31 lg:pr-10 pb-24 items-center">
-            {productCard.map((i) => (
-              <ProductCard className={styles.card} data={i} showStars noround />
+            {productCard.map((i, index) => (
+              <ProductCard key={index} className={styles.card} data={i} noround />
             ))}
           </div>
         </main>
