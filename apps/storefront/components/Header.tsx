@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 interface HeaderProps {
   invert?: boolean;
@@ -24,13 +25,16 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
 
   return (
     <div
-      className={`flex flex-row justify-between padding-30 z-10 items-center fixed w-full top-0  ${
-        scroll ? 'bg-black' : opacity ? 'bg-header-opacity' : invert || transparent ? 'bg-transparent' : 'bg-black'
-      }`}>
+      className={classNames('flex flex-row justify-between padding-30 z-10 items-center fixed w-full top-0', {
+        'bg-black': scroll || (!invert && !transparent),
+        'bg-transparent': !scroll && !opacity && (invert || transparent),
+        'bg-header-opacity': !scroll && opacity,
+      })}>
       <div
-        className={`lg:hidden  hover-toggle ${invert && !scroll && 'filter-invert'} ${
-          black && !scroll && 'filter-invert-temp'
-        }`}>
+        className={classNames('lg:hidden  hover-toggle', {
+          'filter-invert': invert && !scroll,
+          'filter-invert-temp': black && !scroll,
+        })}>
         <button className="border-none" onClick={() => updateToggle(!toggle)}>
           <img src="/collapse.svg" alt="none" />
         </button>
@@ -40,17 +44,19 @@ export default function Header({ invert, openModal, transparent, unfixed, opacit
           <img
             src="/logo.svg"
             alt="Alipno Logo"
-            className={`logo ${invert && !scroll && 'filter-invert'} ${
-              black && !scroll && 'filter-invert-temp'
-            } pl-24 lg:pl-0`}
+            className={classNames('logo pl-12 lg:pl-0', {
+              'filter-invert': invert && !scroll,
+              'filter-invert-temp': black && !scroll,
+            })}
           />
         </a>
       </Link>
 
       <div
-        className={`lg:flex  ${scroll && 'bg-black'} ${
-          toggle ? 'flex header-position ' : 'hidden'
-        } hover-toggle-content  flex-col lg:flex-row items-start lg:items-center pl-0 lg:pl-136`}>
+        className={classNames(
+          ' over-toggle-content flex-col items-start pl-0 lg:flex lg:pl-136 lg:flex-row lg:items-center lg:ml-auto',
+          { 'bg-black': scroll, hidden: !toggle, 'flex header-position': toggle },
+        )}>
         <div className="subnav">
           <Link href="/[category]" as="/earphones">
             <a
