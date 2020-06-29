@@ -116,6 +116,14 @@ export default class ProductFeature extends React.Component<Props> {
         <div className="flex-grow">
           <img id="myImg" src={image} />
         </div>
+
+        {animation && (
+          <div className="hidden">
+            {images.map((i) => (
+              <img key={i} src={i} alt="frame" />
+            ))}
+          </div>
+        )}
       </div>
     );
   }

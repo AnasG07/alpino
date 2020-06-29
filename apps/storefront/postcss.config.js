@@ -8,6 +8,8 @@ module.exports = {
             {
               content: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
               whitelist: ['html', 'body', 'path', 'svg'],
+              whitelistPatterns: [/alice-carousel/],
+              whitelistPatternsChildren: [/alice-carousel/],
               defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
             },
           ],

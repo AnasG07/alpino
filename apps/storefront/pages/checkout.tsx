@@ -119,63 +119,34 @@ export default function Checkout({ items }) {
             </div>
           </div>
           <div className={classNames(style.card1, 'px-8 flex flex-col items-center justify-around lg:justify-between')}>
-            <div className={classNames(style.smallCard, 'flex flex-col items-center justify-around px-6')}>
-              <div className="flex flex-row items-center justify-between">
+            <div className={classNames(style.smallCard, 'flex flex-col items-center justify-around px-8')}>
+              <div className="flex flex-row items-center justify-between w-full">
                 <h1 className="text-xl font-medium tracking-wide mt-6 mb-6">Cart Summary</h1>
-                <div className="flex flex-row justify-center items-center mr-4">
-                  <img src="/cart/edit.png" />
-                  <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
-                </div>
               </div>
-              <div className={classNames(style.itemCards, 'flex flex-row h-32 mb-8')}>
-                <div className={classNames(style.imagesBorderRadius, 'bg-black w-24 h-42 md:w-56 flex')}>
-                  <img className="mx-auto my-auto" src="/cart/cart1.png" />
-                </div>
-                <div className="flex flex-col w-full justify-around items-start">
-                  <div className="flex justify-between px-4 w-full">
-                    <div>
+              {items.map((item) => (
+                <div className={classNames(style.itemCards, 'flex flex-row mb-8 w-full')}>
+                  <div className={classNames(style.imagesBorderRadius, 'bg-black w-24 md:w-56 flex')}>
+                    <img className="mx-auto my-auto" src="/cart/cart1.png" />
+                  </div>
+                  <div className="flex flex-col w-full justify-between items-start">
+                    <div className="flex justify-between px-4 w-full">
                       <h1 className={classNames(style.titleFontColor, 'text-2xl font-medium')}>Thar GT</h1>
-                      <div className="flex justify-start items-center">
-                        <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')} />
-                        <span className={classNames(style.titleFontColor, 'text-xs font-light')}>Black</span>
-                      </div>
+                      <p className={classNames(style.titleFontColor, 'text-xs font-light mt-3')}>₹ 2999</p>
                     </div>
-                    <p className={classNames(style.titleFontColor, 'text-xs font-light mt-3')}>₹ 2999</p>
-                  </div>
-                  <div className="flex flex-row w-full items-center justify-between px-5">
-                    <button className="flex flex-col border-none outline-none">
-                      <img className={classNames(style.marginBottom)} src="/cart/deletetop.png" />
-                      <img src="/cart/deletebottom.png" />
-                    </button>
-                    <h1 className={(style.smallCard, 'text-xs font-normal')}>1 Pcs</h1>
-                  </div>
-                </div>
-              </div>
-
-              <div className={classNames(style.itemCards, 'flex flex-row h-32 mb-8')}>
-                <div className={classNames(style.imagesBorderRadius, 'bg-black w-24 h-42 md:w-56 flex')}>
-                  <img className="mx-auto my-auto" src="/cart/cart2.png" />
-                </div>
-                <div className="flex flex-col w-full justify-around items-start">
-                  <div className="flex justify-between px-4 w-full">
-                    <div>
-                      <h1 className={classNames(style.titleFontColor, 'text-2xl font-medium')}>Flex Pro</h1>
-                      <div className="flex justify-start items-center">
-                        <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')} />
-                        <span className={classNames(style.titleFontColor, 'text-xs font-light')}>Black</span>
-                      </div>
+                    <div className="flex justify-start items-center mt-1 mb-auto px-4">
+                      <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')} />
+                      <span className={classNames(style.titleFontColor, 'text-xs font-light')}>Black</span>
                     </div>
-                    <p className={classNames(style.titleFontColor, 'text-xs font-light mt-3')}>₹ 2499</p>
-                  </div>
-                  <div className="flex flex-row w-full items-center justify-between px-5">
-                    <button className="flex flex-col border-none outline-none">
-                      <img className={classNames(style.marginBottom)} src="/cart/deletetop.png" />
-                      <img src="/cart/deletebottom.png" />
-                    </button>
-                    <h1 className={classNames(style.smallCard, 'text-xs font-normal')}>2 Pcs</h1>
+                    <div className="flex flex-row w-full items-center justify-between px-5 pb-1">
+                      <button className="flex flex-col border-none outline-none">
+                        <img className={classNames(style.marginBottom)} src="/cart/deletetop.png" />
+                        <img src="/cart/deletebottom.png" />
+                      </button>
+                      <h1 className={(style.smallCard, 'text-xs font-normal')}>1 Pcs</h1>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
             <div className={classNames(style.smallCard, 'px-6')}>
               <h1 className="text-xl font-medium tracking-wide mt-6">Order Summary</h1>

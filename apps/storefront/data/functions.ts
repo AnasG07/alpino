@@ -25,7 +25,7 @@ export function getProductsByTag(tag) {
 }
 
 export function getSimilarProducts(tag, slug) {
-  const products = data.filter((item) => item.tags.includes(tag) && item.slug !== slug);
+  const products = data.filter((item) => item.tags?.includes(tag) && item.slug !== slug);
   return shuffle(products).slice(0, 3).map(formatProductForCategory);
 }
 

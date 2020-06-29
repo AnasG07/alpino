@@ -10,11 +10,11 @@ const customStyles = {
   content: {
     height: '960px',
     width: '420px',
-    position: 'absolute',
+    left: 'auto',
     top: '0px',
-    left: '77.5%',
+    right: 0,
     background: '#F9F9F9',
-    borderRadius: '20px 0px 0px 0px',
+    borderRadius: 0,
     padding: 0,
     border: 'none',
   },
@@ -27,10 +27,6 @@ const customStyles = {
 export default function Cart({ modalIsOpen, closeModal, items }) {
   return (
     <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}>
-      <Head>
-        <title>Alpino</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className="bg-black flex flex-row justify-between py-6 px-6">
         <div>
           <h1 className={classNames(style.headingColor, 'text-4xl font-semibold')}>My Cart</h1>
@@ -39,7 +35,7 @@ export default function Cart({ modalIsOpen, closeModal, items }) {
           </p>
         </div>
         <button onClick={closeModal} className="border-none outline-none">
-          <img className={classNames(style.Icon)} src="/cart/cancel.png"></img>
+          <img className={classNames(style.Icon)} src="/cart/cancel.png" />
         </button>
       </div>
 
@@ -51,13 +47,9 @@ export default function Cart({ modalIsOpen, closeModal, items }) {
         ))}
       </div>
       <Link href="/checkout">
-        <div
-          className={classNames(
-            style.checkoutButton,
-            'bg-black h-10 w-64 cursor-pointer mx-auto flex justify-center items-center mt-40',
-          )}>
-          <h1 className={classNames(style.headingColor, 'text-xl font-medium')}>Checkout</h1>
-        </div>
+        <a className={classNames('bg-black cursor-pointer mx-6 text-center mt-40 rounded-full block')}>
+          <span className={classNames(style.checkoutButton, 'font-medium')}>Checkout</span>
+        </a>
       </Link>
     </Modal>
   );
