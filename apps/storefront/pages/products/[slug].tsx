@@ -11,65 +11,11 @@ import style from './product.module.css';
 import dataFetch from '../../data/functions.ts';
 
 export async function getServerSideProps({ params: { slug } }) {
+  console.log(slug);
   const selectedProduct = dataFetch(slug);
   return {
     props: {
       selectedProduct: selectedProduct,
-      productToDisplay: [
-        {
-          slug,
-          title: startCase(slug),
-          image1: '/products/Thar01.png',
-          image2: '/products/thargt5.png',
-          image3: '/products/thargt1.png',
-          image4: '/products/thargt2.png',
-          image5: '/products/thargt3.png',
-          image6: '/products/thargt4.png',
-          description:
-            'Headphones take you even deeper into silence with further improvements to our industry-leading nose cancellation, and smart listening that adjusts to your situation. ',
-          Mrp: '1099',
-          specs: {
-            dimensions: {
-              title: 'DIMENSIONS',
-              image: '/products/specs1.png',
-              style: 'Over-ear Headphones',
-              size: '7 cm x 18 cm',
-              weight: '249 g',
-              material: 'Plastic',
-            },
-            Battery: {
-              image: '/products/specs2.png',
-              title: 'BATTERY',
-              Battery: 'Rechargeable lithium-ion\nBattery(included)',
-              charging: 'Charging time: 2 hours',
-              batterLife: 'Battery life: 6 hours per full\ncharge',
-            },
-            features: {
-              image: '/products/specs3.png',
-              title: 'FEATURES',
-
-              bluetooth:
-                'Bluetooth 3.1\ncompatible with Mobile\nDevices, Laptops, Tabs,\nPCs, Other devices\nconnecting to bluetooth',
-
-              stereo: 'Super Bass Stereo',
-
-              quality: 'High Quality',
-              microphone: 'Built-in microphone',
-              comfortable: 'Super Comfortable',
-              colors: 'Matte Colors',
-            },
-            Box: {
-              image: '/products/specs4.png',
-              title: "WHAT'S IN THE BOX",
-              headphones: 'Alpino Thar GT\nheadphones',
-              cable: 'USB charging cable',
-              case: 'Carrying case',
-              guide: 'Quick setup guide',
-              card: 'Warranty card',
-            },
-          },
-        },
-      ],
       productCard: [
         {
           image: '/rock-bluetooth.svg',
@@ -101,9 +47,7 @@ export async function getServerSideProps({ params: { slug } }) {
 }
 
 export default function Slug({ productToDisplay, productCard, selectedProduct }) {
-  console.log(selectedProduct);
   const handleOnDragStart = (e) => e.preventDefault();
-  const { specs } = productToDisplay[0];
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
@@ -116,10 +60,8 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
           <div className="h-screen pb-1400 md:pb-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40">
               <AliceCarousel buttonsDisabled>
-                <img src={selectedProduct.images.img1} onDragStart={handleOnDragStart} />
-                <img src={selectedProduct.images.img2} onDragStart={handleOnDragStart} />
-                <img src={selectedProduct.images.img3} onDragStart={handleOnDragStart} />
-                <img src={selectedProduct.images.img4} onDragStart={handleOnDragStart} />
+                {selectedProduct &&
+                  selectedProduct.imagesCarousel.map((i) => <img src={i} onDragStart={handleOnDragStart} />)}
               </AliceCarousel>
               <div className="flex flex-col justify-center px-12 md:pr-4 md:px-0 lg:pr-0">
                 <h1 className="text-white md:text-2xl leading-8 font-medium  md:text-5xl md:leading-12 ">

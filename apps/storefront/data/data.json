@@ -7,12 +7,18 @@
     "mainDescription": "Take a ride into music with bass so supersonic it cannot be contained even by our cushioned earcups.",
     "availableInColors": { "black": "#000000", "white": "#f2f2f2" },
     "cost": 2999,
+    "imagesCarousel": [
+      "/allProducts/tharGT2.png",
+      "/allProducts/tharGT3.png",
+      "/allProducts/tharGT4.png",
+      "/allProducts/tharGT5.png"
+    ],
     "images": {
       "mainImage": "/allProducts/tharGT1.png",
-      "img1": "/allProducts/tharGT2.png",
-      "img2": "/allProducts/tharGT3.png",
-      "img3": "/allProducts/tharGT4.png",
-      "img4": "/allProducts/tharGT5.png",
+      "img1": "/allProducts/tharGT2.svg",
+      "img2": "/allProducts/tharGT3.svg",
+      "img3": "/allProducts/tharGT4.svg",
+      "img4": "/allProducts/tharGT5.svg",
       "img5": "/allProducts/tharGT6.png"
     },
     "descriptions": {
@@ -70,13 +76,19 @@
       "white": "#f2f2f2"
     },
     "cost": 2499,
+    "imagesCarousel": [
+      "/allProducts/flexPro1.png",
+      "/allProducts/flexPro5.png",
+      "/allProducts/flexPro2.png",
+      "/allProducts/flexPro4.png"
+    ],
     "images": {
       "mainImage": "/allProducts/flexPro1.png",
-      "img1": "/allProducts/flexPro2.png",
-      "img2": "/allProducts/flexPro2.png",
-      "img3": "/allProducts/flexPro3.png",
+      "img1": "/allProducts/flexPro1.png",
+      "img2": "/allProducts/flexPro5.svg",
+      "img3": "/allProducts/flexPro2.svg",
       "img4": "/allProducts/flexPro4.png",
-      "img5": "/allProducts/flexPro5.png",
+      "img5": "/allProducts/flexPro6.svg",
       "img5.1": "/allProducts/flexPro5.1.png",
       "img5.2": "/allProducts/flexPro5.2.png"
     },
@@ -134,6 +146,12 @@
       "white": "#f2f2f2"
     },
     "cost": 2499,
+    "imagesCarousel": [
+      "/allProducts/powerFlex2.png",
+      "/allProducts/powerFlex3.png",
+      "/allProducts/powerFlex4.png",
+      "/allProducts/powerFlex5.png"
+    ],
     "images": {
       "mainImage": "/allProducts/powerFlex1.png",
       "img1": "/allProducts/powerFlex2.png",
