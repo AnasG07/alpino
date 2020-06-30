@@ -11,19 +11,69 @@ export async function getStaticProps() {
     props: {
       job: [
         {
-          title: 'Communication Design',
+          title: 'Communication Designer',
           role:
             'A key strategic position for any organization, a Communication Designer would be required to help scale our brand to the next level. Working closely with our Design and Marketing teams, the Communication Designer would be regularly revamping our brand recognition programs and brand strategies.',
         },
         {
-          title: 'Graphic Designer',
+          title: 'Product Designer',
           role:
-            'A key strategic position for any organization, a Communication Designer would be required to help scale our brand to the next level. Working closely with our Design and Marketing teams, the Communication Designer would be regularly revamping our brand recognition programs and brand strategies.',
+            ' As a company that takes great pride in its refreshing designs, our Product Designer would not just be working on making our products reach a greater audience, but also work on analyzing how to make use of the best technologies.',
         },
         {
-          title: 'Developer',
+          title: 'Storytellers',
           role:
-            'A key strategic position for any organization, a Communication Designer would be required to help scale our brand to the next level. Working closely with our Design and Marketing teams, the Communication Designer would be regularly revamping our brand recognition programs and brand strategies.',
+            'At the core of our company are stories – from the executive desk to the employee rushing to meet client deadlines. A story teller would not only be required to get these stories to our audience, but also create stories that engage them and make them a permanent part of our family.',
+        },
+        {
+          title: 'Editors',
+          role:
+            'In a world that relies on data, we rely on knowledge. An Editor at Alpino would not just plan, revise and coordinate material that reached the world and beyond, but be the microphone that amplifies the right voices to represent our brand.',
+        },
+        {
+          title: 'Sales and Business Development',
+          role:
+            'As a company reaching a new Pincode in __ days, we need salespeople and business developers who can not just engage potential clientele but also retain members of our ever-growing family.',
+        },
+        {
+          title: 'E-commerce',
+          role:
+            'As a leader in consumer tech, our presence in the E-commerce space is vital to our business. We not only need to engage external sources of E-commerce but also work on establishing self-reliant sources of E-Business.',
+        },
+        {
+          title: 'Strategists',
+          role:
+            'We’re known for our re-order percentage of 65%, but more than that, we’re also known for achieving our business targets. A strategist would be required to not just refine those targets but ensure we meet the bull’s eye every time.',
+        },
+        {
+          title: 'Finance',
+          role:
+            ' As a key metric to our performance, Finance would mean more than just creating financial reports. Responding to financial enquiries, generating and analysing financial data and applying financial policies are some of the responsibilities that are par t of this job.',
+        },
+        {
+          title: 'Human Resources',
+          role:
+            'As an organization that values its employees as members of its family, we go the extra mile in making sure our most important resource is valued and at its greatest efficiency.',
+        },
+        {
+          title: 'Customer Services',
+          role:
+            'Our customers, distributors and other strategic partners are our priority at all times. We support our customers and retailers with expert knowledge, improving their experience with the products, our company and our brand.',
+        },
+        {
+          title: 'Engineering and acoustics',
+          role:
+            'As a force that believes in using technology to stimulate people’s lives, it is important to ensure our audio experiences are world-class. Hence, we regularly look for new ideas and foster innovation in this regard.',
+        },
+        {
+          title: 'IT , Digital and Software',
+          role:
+            'IT, Digital and Software encompasses analytics and IT management, but it also builds the foundation and structures that let us work with our core competencies. It simplifies and provides agility in our processes, that ensure we meet our customers’ and our own expectations. ',
+        },
+        {
+          title: 'Logistics',
+          role:
+            'This profile includes many different professions responsible for operation, inspection, maintenance and logistics of our products and services. Being in the fast-paced tech industry, we are always on the look-out to make our value chain, and supply chain more efficient.',
         },
       ],
     },

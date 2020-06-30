@@ -36,7 +36,7 @@ const items = [
 
 export default function Header({ invert, transparent, opacity, black }: HeaderProps) {
   const [cartVisible, updateCartVisible] = useState(false);
-
+  const [subnav, updateSubnav] = useState(false);
   const [scroll, updateScroll] = useState(false);
   const [toggle, updateToggle] = useState(false);
 
@@ -51,11 +51,16 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
   return (
     <>
       <div
-        className={classNames('flex flex-row justify-between padding-30 z-10 items-center fixed w-full top-0', {
-          'bg-black': scroll || (!invert && !transparent),
-          'bg-transparent': !scroll && !opacity && (invert || transparent),
-          'bg-header-opacity': !scroll && opacity,
-        })}>
+        className={classNames(
+          `flex flex-row ${
+            subnav ? 'pb-302 p-30px' : toggle ? 'pb-174 p-30px' : 'pb-30px p-30px'
+          } justify-between lg:p-30px  z-10 items-center fixed w-full top-0`,
+          {
+            'bg-black': scroll || (!invert && !transparent),
+            'bg-transparent': !scroll && !opacity && (invert || transparent),
+            'bg-header-opacity': !scroll && opacity,
+          },
+        )}>
         <div
           className={classNames('lg:hidden  hover-toggle', {
             'filter-invert': invert && !scroll,
@@ -85,21 +90,27 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
           )}>
           <div className="subnav">
             <Link href="/[category]" as="/earphones">
-              <a
-                className={` flex lg:flex-row  items-center header-link px-8 lg:px-4 text-right leading-8 ${
-                  black && !scroll ? 'text-black' : 'text-white'
-                } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
-                Earphones
-                <img
-                  src="/down-arrow.png"
-                  alt="arrow"
-                  className={`inline-block h-3 px-2 ${invert && !scroll && 'filter-invert'} ${
-                    black && !scroll && 'filter-invert-temp'
-                  }`}
-                />
-              </a>
+              <button
+                className="border-none"
+                onMouseOver={() => updateSubnav(true)}
+                onMouseOut={() => updateSubnav(false)}>
+                <a
+                  className={` flex lg:flex-row  items-center header-link px-8 lg:px-4 text-right leading-8 ${
+                    black && !scroll ? 'text-black' : 'text-white'
+                  } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+                  Earphones
+                  <img
+                    src="/down-arrow.png"
+                    alt="arrow"
+                    className={`inline-block h-3 px-2 ${invert && !scroll && 'filter-invert'} ${
+                      black && !scroll && 'filter-invert-temp'
+                    }`}
+                  />
+                </a>
+              </button>
             </Link>
-            <div className="subnav-content">
+
+            <div className={`${subnav ? 'block' : 'hidden'} subnav-content`}>
               <Link href="/collections/[tag]" as="/collections/neckbands">
                 <a
                   className={`header-link px-12 lg:px-4 block text-left leading-8 ${
