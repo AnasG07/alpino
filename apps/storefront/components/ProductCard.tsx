@@ -21,9 +21,9 @@ export default function ProductCard({
     imageBox.current.setAttribute('style', `height: ${imageBox.current.offsetWidth}px`);
   }, [imageBox]);
   return (
-    <div className={classNames('relative h-full', className)} style={{ maxWidth: '25rem' }}>
+    <div className={classNames('relative h-full mx-auto mb-8', className)} style={{ maxWidth: '25rem' }}>
       <span
-        className={`flex flex-col p-8 min-height-35 mr-0 md:mr-8  ${
+        className={`flex flex-col p-8 min-height-35 lg:mr-8  ${
           noround ? 'rounded-none' : 'rounded-super'
         } md:rounded-super bg-grey-card lg:bg-black bg-greyCard hover-main`}>
         <div className={classNames('flex items-center justify-center')} ref={imageBox}>

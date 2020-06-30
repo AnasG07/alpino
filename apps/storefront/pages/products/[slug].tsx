@@ -57,8 +57,10 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                   MRP Rs. {selectedProduct.cost}
                 </p>
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
-                  <button className="rounded-full py-3 px-10 outline-none border-none bg-white flex justify-center">
-                    <p className="font-semibold text-black text-base md:text-lg leading-tight md:leading-6 ">Buy now</p>
+                  <button className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center">
+                    <span className="font-semibold text-black text-base md:text-lg leading-tight md:leading-6 ">
+                      Buy now
+                    </span>
                   </button>
                   <button className="rounded-full py-3 px-10 border-2 bg-transparent flex justify-center">
                     <p className="font-semibold text-white  text-base md:text-lg leading-tight md:leading-5">
