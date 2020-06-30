@@ -2,7 +2,7 @@
   {
     "id": 1,
     "slug": "alpino-thar-gt",
-    "tags": ["headphones", "earphones"],
+    "tags": ["headphones", "earphones", "best-seller", "sneak-peek"],
     "name": "Alpino thar GT",
     "type": "Bluetooth Headphone",
     "mainDescription": "Take a ride into music with bass so supersonic it cannot be contained even by our cushioned earcups.",
@@ -472,66 +472,9 @@
     }
   },
   {
-    "id": 8,
-    "slug": "alpino-thar-drift-2",
-    "tags": ["speakers"],
-    "name": "Alpino Thar Drift",
-    "type": "Bluetooth Speaker",
-    "mainDescription": "Never put your feet off the gas, with beats that are stronger, power that lasts longer and connectivity that takes you farther.",
-    "availableInColors": {
-      "black": "#000000"
-    },
-    "cost": 2999,
-    "images": {
-      "mainImage": "/allProducts/tharDrift1.png",
-      "img1": "/allProducts/tharDrift2.png",
-      "img2": "/allProducts/tharDrift3.png",
-      "img3": "/allProducts/tharDrift4.png",
-      "img4": "/allProducts/tharDrift5.png"
-    },
-    "descriptions": {
-      "description1": "Power packed performer",
-      "description2": "Truly together",
-      "description3": "Filled with features",
-      "description4": "Wireless winning"
-    },
-    "descriptionText": {
-      "text1": "1200 mAh rechargeable battery means your music can live upto your energy levels for 6 hours straight and you can enjoy 160 hours of standby time.",
-      "text2": "Bluetooth 5.0 with a 10m range of connectivity means your music never leaves your side.",
-      "text3": "USB, FM radio, SD card, Aux-in port, microphone, holding strap, are just some of the features that you can drive with on the Thar Drift.",
-      "text4": "Our wireless speaker gives you the adventures of a lifetime with the mobility you deserve."
-    },
-    "dimensions": {
-      "type": "Over-ear Headphones",
-      "dimension": "24.6 cm x 11.9 cm x 13.5 cm",
-      "weight": "249 g",
-      "material": "Plastic"
-    },
-    "battery": {
-      "type": "Rechargeable 1200mah lithium-ion battery(included)",
-      "time": "Charging time: 1-2 hours",
-      "batteryLife": "Battery life: 6 hours per full charge"
-    },
-    "features": {
-      "feature1": "Bluetooth 5.0 compatible with Mobile Devices, Laptops, Tabs, PCs, Other devices connecting to bluetooth",
-      "feature2": "Super Bass Stereo",
-      "feature3": "High Quality",
-      "feature4": "Built-in microphone",
-      "feature5": "Super Comfortable",
-      "feature6": "Matte Colors"
-    },
-    "whatsInTheBox": {
-      "item1": "Alpino Thar Drift",
-      "item2": "USB charging cable",
-      "item3": "Carrying case",
-      "item4": "Quick setup guide",
-      "item5": "Warranty card"
-    }
-  },
-  {
     "id": 9,
     "slug": "alpino-rock",
-    "tags": ["speakers"],
+    "tags": ["speakers", "best-seller", "sneak-peek"],
     "name": "Alpino Rock",
     "type": "Bluetooth Speaker",
     "mainDescription": "Go back in time with a look inspired by the good ol’ age of music, but take a leap into the future with features that are centuries ahead.",
@@ -1179,7 +1122,7 @@
     "slug": "alpino-flex",
     "name": "Alpino Flex",
     "type": "Bluetooth Speaker",
-    "tags": ["speaker"],
+    "tags": ["speaker", "best-seller", "sneak-peek"],
     "mainDescription": "With a 30 hour battery life on this magnetic in-ear neckband, enjoy music upto 20,000hz and immerse your day into the world of sound and bass.",
     "availableInColors": {
       "black": "#000000",

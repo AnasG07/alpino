@@ -93,6 +93,7 @@ body {
 .alice-carousel__stage-item * {
   line-height: initial;
   margin: 0 auto;
+  max-height: 50vh;
 }
 
 .alice-carousel__stage-item.__cloned {
