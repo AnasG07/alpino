@@ -4,7 +4,7 @@ module.exports = {
     ignoreBuildErrors: true,
   },
   poweredByHeader: false,
-  generateBuildId: async () => {
-    return process.env.npm_package_version;
-  },
+  // generateBuildId: async () => {
+  //   return process.env.npm_package_version;
+  // },
 };
