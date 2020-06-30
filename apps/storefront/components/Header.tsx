@@ -10,30 +10,6 @@ interface HeaderProps {
   black?: boolean;
 }
 
-const items = [
-  {
-    image: '/cart/cart1.png',
-    title: 'Thar GT',
-    cost: '₹ 2999',
-    color: 'Black',
-    quantity: '1',
-  },
-  {
-    image: '/cart/cart2.png',
-    title: 'Flex Pro',
-    cost: '₹ 2499',
-    color: 'Black',
-    quantity: '2',
-  },
-  {
-    image: '/cart/cart3.png',
-    title: 'Thar Blaze',
-    cost: '₹ 1999',
-    color: 'Black',
-    quantity: '1',
-  },
-];
-
 export default function Header({ invert, transparent, opacity, black }: HeaderProps) {
   const [cartVisible, updateCartVisible] = useState(false);
 
@@ -47,6 +23,30 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
       } else updateScroll(true);
     });
   }
+
+  const items = [
+    {
+      image: '/cart/cart1.png',
+      title: 'Thar GT',
+      cost: '₹ 2999',
+      color: 'Black',
+      quantity: '1',
+    },
+    {
+      image: '/cart/cart2.png',
+      title: 'Flex Pro',
+      cost: '₹ 2499',
+      color: 'Black',
+      quantity: '2',
+    },
+    {
+      image: '/cart/cart3.png',
+      title: 'Thar Blaze',
+      cost: '₹ 1999',
+      color: 'Black',
+      quantity: '1',
+    },
+  ];
 
   return (
     <>

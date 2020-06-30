@@ -1,6 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import Head from 'next/head';
 import style from './cart.module.css';
 import Link from 'next/link';
 import classNames from 'classnames';
