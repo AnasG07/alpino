@@ -141,7 +141,7 @@ export default function Footer() {
             </div>
             <h6 className="footer-font footer-text-color pt-2 lg:pt-8"> Even Trump can’t call this news fake</h6>
             <span className="row justify-center lg:justify-start pt-6">
-              <input placeholder="Enter your email address" className="pl-4 input-footer-color input w-2/4 lg:w-full" />
+              <input placeholder="Enter your email address" className="pl-4 input-footer-color input w-3/4 lg:w-full" />
               <button className="padding-notify-button">Join</button>
             </span>
             <div className="pt-10 lg:pt-16 flex lg:justify-start justify-center">
