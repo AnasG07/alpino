@@ -9,12 +9,11 @@ import style from './product.module.css';
 import dataFetch, { getSimilarProducts } from '../../data/functions';
 
 export async function getServerSideProps({ params: { slug } }) {
-  console.log(slug);
   const selectedProduct = dataFetch(slug);
   return {
     props: {
       selectedProduct: selectedProduct,
-      productCard: getSimilarProducts(selectedProduct.tags[0], slug),
+      productCard: getSimilarProducts(selectedProduct?.tags[0], slug),
     },
   };
 }
