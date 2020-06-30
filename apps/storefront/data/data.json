@@ -2,7 +2,7 @@
   {
     "id": 1,
     "slug": "alpino-thar-gt",
-    "tags": ["headphones", "earphones"],
+    "tags": ["headphones", "earphones", "best-seller", "sneak-peek"],
     "name": "Alpino thar GT",
     "type": "Bluetooth Headphone",
     "mainDescription": "Take a ride into music with bass so supersonic it cannot be contained even by our cushioned earcups.",
@@ -531,7 +531,7 @@
   {
     "id": 9,
     "slug": "alpino-rock",
-    "tags": ["speakers"],
+    "tags": ["speakers", "best-seller", "sneak-peek"],
     "name": "Alpino Rock",
     "type": "Bluetooth Speaker",
     "mainDescription": "Go back in time with a look inspired by the good ol’ age of music, but take a leap into the future with features that are centuries ahead.",
@@ -1179,7 +1179,7 @@
     "slug": "alpino-flex",
     "name": "Alpino Flex",
     "type": "Bluetooth Speaker",
-    "tags": ["speaker"],
+    "tags": ["speaker", "best-seller", "sneak-peek"],
     "mainDescription": "With a 30 hour battery life on this magnetic in-ear neckband, enjoy music upto 20,000hz and immerse your day into the world of sound and bass.",
     "availableInColors": {
       "black": "#000000",

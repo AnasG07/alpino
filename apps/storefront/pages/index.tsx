@@ -5,6 +5,7 @@ import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import { getProductsByTag } from '../data/functions';
 
 export async function getServerSideProps(context) {
   return {
@@ -36,38 +37,8 @@ export async function getServerSideProps(context) {
           link: '/collections/earphones',
         },
       ],
-      productCard: [
-        {
-          slug: 'bluetooth Speaker',
-          image: '/rock-bluetooth.svg',
-          name: 'Rock',
-          type: 'Blutetooth Speaker',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
-          launch: 'Estimated launch: 2 Months',
-          buttonText: 'Buy',
-        },
-        {
-          slug: 'thar-gt',
-          image: '/thar-bluetooth.svg',
-          name: 'Thar GT',
-          type: 'Bluetooth Headphone',
-          price: '1299',
-          description: 'Compact, smart headphone with noise CANCELLING and super bass stereo.Playback time: 6 hours',
-          launch: 'Estimated launch: 2 Months',
-          buttonText: 'Buy',
-        },
-        {
-          slug: 'town-flex',
-          image: '/trip-flex.svg',
-          name: 'Town Flex',
-          type: ' Wireless Neckband',
-          price: '799',
-          description: 'Comfortable and secure fit, magnetic design with pure stereo sound. Playback time: 4.5 hours',
-          launch: 'Estimated launch: 2 Months',
-          buttonText: 'Buy',
-        },
-      ],
+      bestSellers: getProductsByTag('best-seller'),
+      sneakPeek: getProductsByTag('sneak-peek'),
     },
   };
 }
@@ -82,7 +53,7 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const { productFeature, productCard } = this.props;
+    const { productFeature, bestSellers, sneakPeek } = this.props;
     return (
       <div className="overflow-x-hidden">
         <div className="min-h-screen bg-black pt-20">
@@ -127,7 +98,7 @@ export default class Home extends React.Component {
               </div>
               <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
                 <div className="flex flex-row flex-grow justify-between">
-                  {productCard.map((i, index) => (
+                  {bestSellers.map((i, index) => (
                     <div className={`${index !== 0 && 'hidden'} lg:block`}>
                       <ProductCard data={i} key={index} />
                     </div>
@@ -172,7 +143,7 @@ export default class Home extends React.Component {
               </div>
               <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
                 <div className="flex flex-row flex-grow justify-between">
-                  {productCard.map((i, index) => (
+                  {sneakPeek.map((i, index) => (
                     <div className={`${index !== 0 && 'hidden'} lg:block`}>
                       <ProductCard data={i} key={index} comingSoon />
                     </div>
