@@ -29,7 +29,7 @@ export default function Tag({ tag, productCard }) {
         <main>
           <div
             className="flex flex-col items-center justify-center mt-20 md:mt-30 bg-cover bg-center"
-            style={{ backgroundImage: 'url(/earphones.png)', height: '40vh' }}>
+            style={{ backgroundImage: 'url(/earphones.png)', height: '50vh' }}>
             <h1 className="text-center text-2xl leading-loose md:leading-12 md:text-5xl text-white font-medium md:font-semibold">
               {startCase(tag)}
             </h1>
@@ -37,7 +37,7 @@ export default function Tag({ tag, productCard }) {
               Tune in and you’d never want to pull the plug
             </p>
           </div>
-          <div className="flex flex-row justify-between items-center py-16 px-4 md:px-30">
+          <div className="flex flex-row justify-between items-center py-16 px-4 md:px-16 lg:py-24 lg:mb-12">
             <button className="leading-5 rounded-full text-base py-3 px-8 outline border bg-transparent max-w-8 w-full flex justify-center">
               <h1 className="text-sm md:text-lg">Filter</h1>
             </button>
