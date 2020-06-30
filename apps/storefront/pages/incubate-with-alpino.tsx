@@ -37,7 +37,7 @@ export default function IncubateALpino() {
           <img src="/comp.png" alt="comp" className="w-full md:w-2/4" />
         </div>
         <div className="flex flex-col-reverse md:flex-row">
-          <img src="incubate-headphone.jpg" alt="headphone" className=" w-full md:w-2/4" />
+          <img src="compo.png" alt="headphone" className=" w-full md:w-2/4" />
           <div className="bg-black  w-full md:w-2/4">
             <div className="p-8 md:p-31">
               <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
@@ -123,7 +123,7 @@ export default function IncubateALpino() {
             </div>
           </div>
           <div className="w-full lg:w-2/4  ">
-            <img src="/background-incubate.jpg" alt="comfinal" className="w-full lg:min-h-40" />
+            <img src="/compo1.png" alt="comfinal" className="w-full lg:min-h-40" />
           </div>
         </div>
         <div className="flex flex-col lg:flex-row bg-maximum-red">

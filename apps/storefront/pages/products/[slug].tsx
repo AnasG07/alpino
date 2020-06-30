@@ -231,7 +231,7 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
               </h1>
               <p className="text-white text-xs md:text-lg font-normal mb-10 mt-2">Best always deserves better</p>
             </div>
-            <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
+            <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-4 md:pl-31 pr-4 md:pr-10 items-center">
               {productCard.map((i, index) => (
                 <div className={`${index !== 0 && 'hidden'} lg:block`}>
                   <ProductCard data={i} key={index} />

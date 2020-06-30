@@ -572,22 +572,19 @@ button:focus {
 
 .subnav-content {
   position: absolute;
-  display: none;
-}
-
-.subnav:hover .subnav-content {
-  display: block;
 }
 
 @media (max-width: 1024px) {
   .subnav-content {
     position: relative;
   }
+  /*
   .subnav:hover .subnav-content {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
   }
+  */
 }
 
 .subnav:hover img {
