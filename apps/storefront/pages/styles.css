@@ -726,3 +726,6 @@ button:focus {
 .checkbox-round:checked {
   background-color: gray;
 }
+.height-978 {
+  height: 978px;
+}

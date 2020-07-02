@@ -27,6 +27,7 @@ module.exports = {
         'grey-card': '#262626',
         'login-font': '#EFEFEF',
         'login-b': '#737373',
+        'login-background': 'rgb(3,3,3)',
       },
       lineHeight: {
         16: '4rem',

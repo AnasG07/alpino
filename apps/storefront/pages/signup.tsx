@@ -6,12 +6,12 @@ import LoginContainer from '../components/login-container';
 
 export default function Signup() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden ">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-black">
+      <main className="bg-login-background">
         <Header transparent />
         <div className="flex flex-row w-full">
           <div className="w-full lg:w-2/4 pt-12 md:pt-16 lg:pt-149 px-8  md:px-16 pb-20">
