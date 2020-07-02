@@ -1,0 +1,8 @@
+.input-styles {
+  @apply bg-transparent border-b pb-8 w-full border-login-b;
+}
+@media (max-width: 768px) {
+  .input-styles {
+    @apply bg-transparent border-b pb-4 w-full border-login-b;
+  }
+}

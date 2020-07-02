@@ -13,7 +13,14 @@ export default function Login() {
       </Head>
       <main className="bg-black">
         <Header transparent />
-        <LoginContainer />
+        <div className="flex flex-row w-full">
+          <div className="w-full lg:w-2/4 pt-12 md:pt-16 lg:pt-149 px-8  md:px-16 pb-20">
+            <LoginContainer type="login" />
+          </div>
+          <div className="hidden lg:block lg:w-2/4">
+            <img src="/login.jpeg" alt="login" className="lg:min-h-1160" />
+          </div>
+        </div>
       </main>
       <Footer />
     </div>
