@@ -165,6 +165,7 @@ button:focus {
 /* input::placeholder {
   @apply text-white;
 } */
+
 .input {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 30px 0px 0px 30px;
@@ -187,7 +188,9 @@ button:focus {
 .text-content {
   @apply text-lg text-white-light font-medium leading-normal;
 }
-
+.text-login {
+  @apply text-xl leading-8 text-white-light font-medium;
+}
 @media (max-width: 768px) {
   .text-content {
     @apply text-sm text-white-light font-light leading-tight;
@@ -706,4 +709,23 @@ button:focus {
 }
 .max-w-850 {
   max-width: 850px;
+}
+
+.checkbox-round {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: gray;
+}
+.height-978 {
+  height: 978px;
 }

@@ -101,7 +101,7 @@ export default function Careers({ job }) {
             </button>
           </div>
         </div>
-        <div className="pb-8 md:pb-20 lg:pb-0 md:min-h-30 bg-grey-darker flex flex-col items-center lg:items-start lg:flex-row justify-between items-start pt-8 md:pt-20 lg:pt-40 px-4 md:px-16 lg:px-31">
+        <div className="pb-8 md:pb-20 lg:pb-0 md:min-h-30 bg-grey-darker flex flex-col items-center lg:items-start lg:flex-row justify-between items-start pt-8 md:pt-20 lg:pt-40 px-6 md:px-16 lg:px-31">
           <p className="text-white-light leading-tight md:leading-8 text-base md:text-lg max-w-30 pr-0 lg:pr-4 xl:pr-0">
             As a self-funded fast-paced lifestyle brand with more than 300 SKUs, boasting of an offline distribution
             network in 10 states with a repeat order percentage of 65%, we’re constantly looking for individuals who can
@@ -123,14 +123,14 @@ export default function Careers({ job }) {
               <JobCard data={i} key={index} />
             ))}
 
-            <span className="text-white leading-10 text-4xl p-15 w-full lg:w-2/4 w-full font-light">
+            <span className="text-white leading-10 text-4xl p-6 lg:p-15 w-full lg:w-2/4 w-full font-light">
               Even when we are not actively hiring, we’re constantly looking for Designers, Bloggers, Content Creators,
               Consultants, Engineers and so on, and we welcome connecting with freelancers.
             </span>
           </div>
         </div>
         <div className="bg-grey-darker p-6 md:p-20 lg:p-31 flex flex-col-reverse  lg:flex-row">
-          <div className="flex flex-col justify-between pr-30 w-full lg:w-2/4">
+          <div className="flex flex-col justify-between pr-0 lg:pr-30 w-full lg:w-2/4">
             <h2 className="text-2xl lg:text-4xl leading-loose  lg:leading-10 text-white-light pt-4 lg:pt-0 font-light md:font-normal">
               “Every time I’ve come to a point in my career where I felt no longer challenged, Alpino has always given
               me the opportunity to try something new.”
@@ -143,7 +143,7 @@ export default function Careers({ job }) {
           </div>
           <img src="/johndoe.jpeg" alt="none" className="w-full lg:w-2/4 rounded-super lg:rounded-none" />
         </div>
-        <div className="bg-black lg:min-h-60 p-8 md:p-16 lg:p-31 flex flex-col lg:flex-row lg:justify-between">
+        <div className="bg-black lg:min-h-60 p-6 md:p-16 lg:p-31 flex flex-col lg:flex-row lg:justify-between">
           <div className={classNames('flex flex-col justify-between pr-0 lg:pr-16 xl:pr-30')}>
             <p className="text-white-light leading-tight md:leading-8 text-sm md:text-lg max-w-30">
               Joining us would mean more than just joining a team. It would mean adding value to your life and the life

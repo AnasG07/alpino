@@ -25,6 +25,9 @@ module.exports = {
         'black-distributor': '#1B1B1B',
         'border-respon': '#3D3D3D',
         'grey-card': '#262626',
+        'login-font': '#EFEFEF',
+        'login-b': '#737373',
+        'login-background': 'rgb(3,3,3)',
       },
       lineHeight: {
         16: '4rem',
@@ -34,6 +37,7 @@ module.exports = {
       fontSize: {
         '7xl': '4.5rem',
         '4.5xl': '3.5rem',
+        xxs: '10px',
       },
       minHeight: {
         '20': '20rem',
@@ -43,6 +47,7 @@ module.exports = {
         '50': '50rem',
         '60': '60rem',
         '55': '54.375rem',
+        '1090': '1090px',
       },
       flexGrow: {
         '7': '7',
@@ -50,8 +55,12 @@ module.exports = {
       maxHeight: {
         '700': '700px',
       },
+      maxWidth: {
+        '400': '400px',
+      },
       padding: {
         '31': '7.5rem',
+        '52': '17rem',
         '17': '3.75rem',
         '75': '18.75rem',
         '1400': '1400px',
@@ -59,9 +68,11 @@ module.exports = {
         '174': '174px',
         '30px': '30px',
         '302': '302px',
+        '149': '149px',
       },
       borderRadius: {
         super: '30px',
+        login: '88px',
       },
       margin: {
         '344': '344px',
