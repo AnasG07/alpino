@@ -52,7 +52,7 @@ export default function LoginContainer({ type }) {
             <h1 className="text-base md:text-2xl text-login-font leading-8 font-bold text-center">Or</h1>
             <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Sign up with</p>
           </div>
-          <div className="px-8 md:px-12 lg:px-24 flex justify-between pt-24">
+          <div className="px-8 md:px-12 lg:px-24 flex justify-between pt-12">
             <div className="flex flex-col justify-center">
               <img src="/google.svg" alt="google" />
               <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Google</p>

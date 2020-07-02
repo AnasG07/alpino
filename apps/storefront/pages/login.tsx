@@ -18,7 +18,7 @@ export default function Login() {
             <LoginContainer type="login" />
           </div>
           <div className="hidden lg:block lg:w-2/4">
-            <img src="/login.jpeg" alt="login" className="lg:min-h-1160" />
+            <img src="/login.jpeg" alt="login" />
           </div>
         </div>
       </main>
