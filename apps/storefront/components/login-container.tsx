@@ -53,16 +53,16 @@ export default function LoginContainer({ type }) {
             <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Sign up with</p>
           </div>
           <div className="px-8 md:px-12 lg:px-24 flex justify-between pt-12">
-            <div className="flex flex-col justify-center">
-              <img src="/google.svg" alt="google" />
+            <div className="flex flex-col justify-center items-center ">
+              <img src="/google.svg" alt="google" className="height-22" />
               <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Google</p>
             </div>
             <div className="flex flex-col justify-center">
-              <img src="/fbLogin.svg" alt="Facebook" />
+              <img src="/fbLogin.svg" alt="Facebook" className="height-22" />
               <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Facebook</p>
             </div>
             <div className="flex flex-col justify-center">
-              <img src="/twitterLogin.svg" alt="Twitter" />
+              <img src="/twitterLogin.svg" alt="Twitter" className="height-22" />
               <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Twitter</p>
             </div>
           </div>
