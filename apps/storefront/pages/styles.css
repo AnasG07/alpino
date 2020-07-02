@@ -729,3 +729,8 @@ button:focus {
 .height-978 {
   height: 978px;
 }
+@media (max-width: 768px) {
+  .height-22 {
+    height: 22px;
+  }
+}
