@@ -28,6 +28,7 @@ module.exports = {
         'login-font': '#EFEFEF',
         'login-b': '#737373',
         'login-background': 'rgb(3,3,3)',
+        'form-color': 'rgb(158,173,194)',
       },
       lineHeight: {
         16: '4rem',
@@ -57,9 +58,12 @@ module.exports = {
       },
       maxWidth: {
         '400': '400px',
+        '1280': '1280px',
+        '58': '58%',
       },
       padding: {
         '31': '7.5rem',
+        '35': '8.75rem',
         '52': '17rem',
         '17': '3.75rem',
         '75': '18.75rem',
@@ -67,8 +71,11 @@ module.exports = {
         '136': '33.75rem',
         '174': '174px',
         '30px': '30px',
-        '302': '302px',
+        '302': '322px',
+        '28': '112px',
         '149': '149px',
+        '8.5': '33px',
+        '3.5': '9px',
       },
       borderRadius: {
         super: '30px',
@@ -76,6 +83,11 @@ module.exports = {
       },
       margin: {
         '344': '344px',
+      },
+      width: {
+        '120': '120px',
+        '130': '130px',
+        '150': '170px',
       },
     },
   },

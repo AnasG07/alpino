@@ -152,6 +152,9 @@ export default function IncubateALpino() {
                 <div>
                   <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
+                <div className="pt-20">
+                  <input placeholder="Email" className={classNames(styles['input-styles'], 'text-content')} />
+                </div>
                 <div className="pt-20 ">
                   <input
                     placeholder="College / Organization"

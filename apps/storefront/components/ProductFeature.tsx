@@ -109,7 +109,7 @@ export default class ProductFeature extends React.Component<Props> {
           </h1>
           <div className="pt-4 md:pt-16">
             <Link href="/collections/[tag]" as={link}>
-              <a className="button button-transparent py-2 px-4 outline-none">{buttonText}</a>
+              <a className="button button-transparent py-2 px-4 outline-none button-hover">{buttonText}</a>
             </Link>
           </div>
         </div>

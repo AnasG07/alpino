@@ -15,7 +15,7 @@ export default function becomeDistributor() {
       <main>
         <div className={classNames(styles['background-distributor'], 'md:min-h-60')}>
           <Header opacity />
-          <div className="md:min-height-55 md:hidden py-20">
+          <div className="md:min-height-55 md:hidden py-20 px-6 md:px-0">
             <h1 className="font-medium pt-16 text-white leading-8 text-2xl text-center md:hidden">
               Become a Distributor
             </h1>
@@ -59,14 +59,14 @@ export default function becomeDistributor() {
           <h1 className="py-12 text-black leading-loose md:leading-14 text-2xl md:text-4.5xl text-center font-semibold">
             Become a Distributor
           </h1>
-          <div className={classNames(styles['px-35'], 'pb-16')}>
-            <div className={classNames(styles['p-15'], 'form-card')}>
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+          <div className={classNames('px-6 md:px-20 lg:px-35 pb-16')}>
+            <div className={classNames(' p-6 md:p-17 form-card')}>
+              <div className="flex flex-row justify-between items-start sm:items-center">
                 <div className="flex flex-row">
                   <img src="/logo-only.svg" alt="logo" />
                   <p className={classNames(styles['text-2xl-semibold'], 'text-content pl-2')}>Distributor</p>
                 </div>
-                <p className="text-content pt-4 sm:pt-0">Registration Form</p>
+                <p className="text-content">Registration Form</p>
               </div>
               <form className={styles['pt-35']}>
                 <div>

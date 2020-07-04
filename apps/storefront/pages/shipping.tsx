@@ -15,7 +15,7 @@ export default function Checkout({ items }) {
   return (
     <div className="overflow-x-hidden">
       <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-24')}>
-        <Header openModal={false} invert={true}></Header>
+        <Header openModal={false}></Header>
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />

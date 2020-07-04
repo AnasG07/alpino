@@ -184,7 +184,7 @@ export default function Warranty({ faq }) {
             </div>
           </div>
         </div>
-        <div className="pt-16 px-8 md:px-32 bg-black">
+        <div className="pt-16 px-8 md:px-32 bg-white">
           <h1 className="text-white text-left md:leading-16  text-2xl md:text-5xl  font-semibold leading-8">
             Frequently Asked Questions
           </h1>
