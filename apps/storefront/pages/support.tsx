@@ -50,7 +50,7 @@ export async function getStaticProps() {
 
 export default function Support({ faq }) {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -92,7 +92,7 @@ export default function Support({ faq }) {
           </div>
           <img src="./window.jpg" alt="window" className="md:w-2/4 w-full" />
         </div>
-        <div className="pt-8 md:pt-16 px-12 md:px-32 bg-white">
+        <div className="bg-white pt-8 md:pt-16 px-12 md:px-32">
           <h1 className="text-black text-left leading-8 md:leading-16 font-semibold text-2xl md:text-5xl">
             Frequently Asked Questions
           </h1>
