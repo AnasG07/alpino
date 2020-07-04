@@ -15,7 +15,7 @@ export default function Careers() {
       <main className="bg-black">
         <div className={classNames(styles['background-glass'], 'min-h-25 md:min-h-60')}>
           <Header invert unfixed black />
-          <div className={classNames(styles['pt-86'], 'flex justify-center flex-col items-center ')}>
+          <div className={classNames(styles['pt-86'], 'flex justify-center flex-col items-center px-6 md:px-0')}>
             <h1 className="text-center leading-loose text-2xl  md:leading-12 md:text-black font-medium md:text-7xl">
               Corporate Enquiries
             </h1>
@@ -26,7 +26,7 @@ export default function Careers() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row">
-          <div className="bg-black lg:min-h-60 w-full  lg:w-2/4  p-30 justify-between items-center flex flex-col">
+          <div className="bg-black lg:min-h-60 w-full  lg:w-2/4  p-6 md:p-12 lg:p-31 justify-between items-center flex flex-col">
             <h1 className="leading-loose md:leading-12 text-white font-medium md:font-normal text-xl md:text-5xl pb-12 lg:pb-0">
               We value the individuality of each of our customers and hence offer customization in our products
               according to your organisation’s needs. The option of co-branding is also available.
@@ -39,14 +39,14 @@ export default function Careers() {
           <img className="w-full lg:w-2/4 lg:min-h-60" src="./visa.jpg" alt="visa" />
         </div>
         <div className="bg-black flex flex-col-reverse md:flex-col">
-          <h3 className="leading-tight md:leading-normal text-sm md:text-2xl text-white pb-8 md:pb-0 pt-8 md:pt-16  max-width-58 m-auto text-center">
+          <h3 className="leading-tight md:leading-normal text-sm md:text-2xl text-white pb-8 md:pb-0 pt-8 md:pt-16 px-6 md:px-16  lg:px-0 lg:max-w-58  text-center">
             We also offer the advantage of limitless choice. With over 300SKUs to choose from , you have the liberty to
             select the product that suits your organiszation best
           </h3>
           <img src="enquiry.png" alt="enquiry" className="mt-0 md:-mt-20" />
         </div>
         <div className="flex flex-col-reverse lg:flex-row bg-grey-medium">
-          <div className={classNames('lg:min-h-60 w-full lg:w-2/4', styles['p-15'])}>
+          <div className={classNames('lg:min-h-60 w-full lg:w-2/4 p-6 md:p-17')}>
             <div className={classNames(styles['p-15'], 'form-card-darker')}>
               <form className={styles['pt-15']}>
                 <div>
@@ -76,7 +76,7 @@ export default function Careers() {
             </div>
           </div>
           <div className="min-h-25 lg:min-h-60 w-full lg:w-2/4">
-            <div className="p-12 md:p-31 flex flex-col lg:min-h-60 justify-between">
+            <div className="p-6 md:p-12 lg:p-31 flex flex-col lg:min-h-60 justify-between">
               <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl pb-12 lg:pb-0 md:text-5xl">
                 Get the answers to your bulk shopping woes! Fill in the form and we'll get right back to you.
               </h1>

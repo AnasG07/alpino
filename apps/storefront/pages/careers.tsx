@@ -84,6 +84,13 @@ export default function Careers({ job }) {
   const fileUpload = () => {
     document.getElementById('resume').click();
   };
+  const scrollOpening = (id) => {
+    var element = document.querySelector(id);
+    element.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    });
+  };
   return (
     <div className="overflow-x-hidden">
       <Head>
@@ -95,7 +102,9 @@ export default function Careers({ job }) {
           <Header invert black />
           <div className={classNames('flex justify-center flex-col items-center pt-48')}>
             <h1 className="leading-loose md:leading-12 text-black text-2xl md:text-7xl">Work at Alpino</h1>
-            <button className="mt-2 md:mt-8 button-transparent py-1 md:py-2 px-2 md:px-4 outline-none text-black border-black font-medium md:font-semibold">
+            <button
+              onClick={() => scrollOpening('#openings')}
+              className="mt-2 md:mt-8 button-transparent py-1 md:py-2 px-2 md:px-4 outline-none text-black border-black font-medium md:font-semibold">
               {' '}
               view openings
             </button>
@@ -114,16 +123,16 @@ export default function Careers({ job }) {
             more than just knowledge to the table.{' '}
           </p>
         </div>
-        <div className={classNames('bg-black min-height-60 px-0 lg:px-17')}>
+        <div className={classNames('bg-black min-height-60 px-0 lg:px-17')} id="openings">
           <p className="text-white-light leading-tight md:leading-8 text-sm md:text-lg text-center pt-24 w-full pb-16 font-semibold">
             Some of the portfolios, we’re looking at include
           </p>
           <div className={'flex flex-row flex-wrap justify-between pb-24'}>
             {job.map((i, index) => (
-              <JobCard data={i} key={index} />
+              <JobCard data={i} key={index} scrollOpening={scrollOpening} />
             ))}
 
-            <span className="text-white leading-10 text-4xl p-6 lg:p-15 w-full lg:w-2/4 w-full font-light">
+            <span className="text-white leading-10 text-4xl p-6 md:p-10 lg:p-15  w-full lg:w-2/4 w-full font-light">
               Even when we are not actively hiring, we’re constantly looking for Designers, Bloggers, Content Creators,
               Consultants, Engineers and so on, and we welcome connecting with freelancers.
             </span>
@@ -143,7 +152,9 @@ export default function Careers({ job }) {
           </div>
           <img src="/johndoe.jpeg" alt="none" className="w-full lg:w-2/4 rounded-super lg:rounded-none" />
         </div>
-        <div className="bg-black lg:min-h-60 p-6 md:p-16 lg:p-31 flex flex-col lg:flex-row lg:justify-between">
+        <div
+          id="apply"
+          className="bg-black lg:min-h-60 p-6 md:p-16 lg:p-31 flex flex-col lg:flex-row lg:justify-between">
           <div className={classNames('flex flex-col justify-between pr-0 lg:pr-16 xl:pr-30')}>
             <p className="text-white-light leading-tight md:leading-8 text-sm md:text-lg max-w-30">
               Joining us would mean more than just joining a team. It would mean adding value to your life and the life
@@ -175,7 +186,7 @@ export default function Careers({ job }) {
               </div>
               <input className={classNames(styles['input-styles'], 'text-content hidden')} type="file" id="resume" />
               <div className="pt-8 border-b pb-2 w-full border-grey-border flex flex-row justify-between">
-                <p className="text-content">Resume / Portfolio</p>
+                <p className="text-content-file">Resume / Portfolio</p>
                 <button className="button-transparent py-2 px-4 font-semi-imp" onClick={() => fileUpload()}>
                   Upload
                 </button>

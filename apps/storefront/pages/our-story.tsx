@@ -15,12 +15,11 @@ export default function OurStory() {
       <main className="bg-black">
         <div className={classNames(styles['background-story'], 'md:min-h-60 pb-12 md:pb-0')}>
           <Header invert />
-          <div className="pt-40 flex justify-center flex-col items-center md:px-0 px-4">
+          <div className="pt-40 flex justify-center flex-col items-center px-8 md:px-0 ">
             <h1 className={classNames(styles['text-heading-black-new'], 'text-center')}>Our Story</h1>
             <h3
               className={classNames(
-                styles['text-color-warranty'],
-                'text-center leading-normal text-center pt-2',
+                'text-sm md:text-2xl text-white md:text-black font-normal leading-5 md:leading-tight text-center pt-2',
                 styles['max-width-33'],
               )}>
               We put more than just our heart and soul into each product, so it is more than technology for you
@@ -41,7 +40,9 @@ export default function OurStory() {
         </div>
         <div className={classNames(styles['min-height-39'], 'bg-black-about flex justify-center items-center')}>
           <div className="max-w-screen-lg p-8 md:p-0 leading-7 md:leading-8">
-            <p className="text-white leading-loose text-xl text-left md:text-center">Innovation further and forward.</p>
+            <p className="text-white leading-loose text-sm md:text-2xl text-left md:text-center">
+              Innovation further and forward.
+            </p>
             <p className=" text-sm md:text-2xl text-white text-left md:text-center">
               We refuse to conform to the idea of being just a consumer electronics brand, and instead believe we’re a
               lifestyle brand. As a fast-paced company, we make sure our products help you listen to the voice of
@@ -59,7 +60,7 @@ export default function OurStory() {
         </div>
         <div className="md:min-h-60 bg-black flex flex-col md:flex-row">
           <img src="/eye.jpeg" className={classNames('w-full md:w-2/4  md:min-h-60')} />
-          <div className="md:pl-31 md:py-20 md:pr-24 py-12 pl-12 pr-12 flex flex-col justify-between md:w-2/4 w-full">
+          <div className="md:pl-31 md:py-20 md:pr-24 py-12 pl-8 pr-8 flex flex-col justify-between md:w-2/4 w-full">
             <h1 className="text-xl md:text-5xl text-white leading-loose md:leading-16 font-medium md:font-semibold text-left md:text-right">
               Vision
             </h1>
@@ -70,13 +71,13 @@ export default function OurStory() {
           </div>
         </div>
         <div className={classNames(styles['min-height-39'], 'bg-black-about  flex justify-center items-center')}>
-          <div className="max-w-screen-lg p-8 md:p-0 leading-7 md:leading-8">
-            <p className="text-sm md:text-2xl text-white text-left md:text-center">
+          <div className="max-w-screen-lg p-8 md:p-0">
+            <p className="text-sm md:text-2xl text-white text-left md:text-center  leading-7 md:leading-8">
               We push ourselves every day to innovate and create products that don’t just act as accessories, but solve
               real life problems and create experiences. Right from the inception of Alpino, our motive has never been
               sales, profits or cashflows, but revolutionizing technology.
             </p>
-            <p className="text-sm md:text-2xl text-white text-left md:text-center pt-2">
+            <p className="text-sm md:text-2xl text-white text-left md:text-center pt-2  leading-7 md:leading-8">
               As a fast-paced company in an ever-changing industry, we have a dynamic start-up like feel, despite being
               self-funded. We keep adding new products to our line and strive for constant innovation in all aspects of
               our business.After successfully aiding to the lives of our consumers, we wish to be involved in the

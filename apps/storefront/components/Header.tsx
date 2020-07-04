@@ -49,21 +49,19 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
   ];
 
   return (
-    <>
+    <div>
       <div
         className={classNames(
-          `flex flex-row ${
-            subnav ? 'pb-302 p-30px' : toggle ? 'pb-174 p-30px' : 'pb-30px p-30px'
-          } justify-between lg:p-30px  z-10 items-center fixed w-full top-0`,
+          `flex flex-row pb-30px p-30px justify-between lg:p-30px  z-10 items-center fixed w-full top-0`,
           {
-            'bg-black': scroll || (!invert && !transparent),
+            'bg-black': toggle || scroll || (!invert && !transparent),
             'bg-transparent': !scroll && !opacity && (invert || transparent),
             'bg-header-opacity': !scroll && opacity,
           },
         )}>
         <div
           className={classNames('lg:hidden  hover-toggle', {
-            'filter-invert': invert && !scroll,
+            'filter-invert': invert && !scroll && !toggle,
             'filter-invert-temp': black && !scroll,
           })}>
           <button className="border-none" onClick={() => updateToggle(!toggle)}>
@@ -76,7 +74,7 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
               src="/logo.svg"
               alt="Alipno Logo"
               className={classNames('logo pl-12 lg:pl-0', {
-                'filter-invert': invert && !scroll,
+                'filter-invert': invert && !scroll && !toggle,
                 'filter-invert-temp': black && !scroll,
               })}
             />
@@ -84,62 +82,58 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
         </Link>
 
         <div
-          className={classNames(
-            ' over-toggle-content flex-col items-start pl-0 lg:flex lg:pl-136 lg:flex-row lg:items-center lg:ml-auto',
-            { 'bg-black': scroll, hidden: !toggle, 'flex header-position': toggle },
-          )}>
-          <div className="subnav">
+          className={classNames(' flex-col items-start pl-0 lg:flex lg:pl-136 lg:flex-row lg:items-center lg:ml-auto', {
+            'bg-black': scroll,
+            hidden: !toggle,
+            'flex header-position header-background': toggle,
+          })}>
+          <div className="subnav" onMouseOver={() => updateSubnav(true)} onMouseOut={() => updateSubnav(false)}>
             <Link href="/[category]" as="/earphones">
-              <button
-                className="border-none"
-                onMouseOver={() => updateSubnav(true)}
-                onMouseOut={() => updateSubnav(false)}>
-                <a
-                  className={` flex lg:flex-row  items-center header-link px-8 lg:px-4 text-right leading-8 ${
-                    black && !scroll ? 'text-black' : 'text-white'
-                  } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
-                  Earphones
-                  <img
-                    src="/down-arrow.png"
-                    alt="arrow"
-                    className={`inline-block h-3 px-2 ${invert && !scroll && 'filter-invert'} ${
-                      black && !scroll && 'filter-invert-temp'
-                    }`}
-                  />
-                </a>
-              </button>
+              <a
+                className={`flex lg:flex-row  items-center header-link px-8 lg:px-4 text-right leading-8 ${
+                  toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+                } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
+                Earphones
+                <img
+                  src="/down-arrow.png"
+                  alt="arrow"
+                  className={`inline-block h-3 px-2 ${!toggle && invert && !scroll && 'filter-invert'} ${
+                    black && !scroll && 'filter-invert-temp'
+                  }`}
+                />
+              </a>
             </Link>
 
             <div className={`${subnav ? 'block' : 'hidden'} subnav-content`}>
               <Link href="/collections/[tag]" as="/collections/neckbands">
                 <a
-                  className={`header-link px-12 lg:px-4 block text-left leading-8 ${
-                    black && !scroll ? 'text-black' : 'text-white'
-                  } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+                  className={`lg:w-120 header-link px-12 lg:px-4 block text-left leading-8 ${
+                    toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+                  } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
                   Neckbands
                 </a>
               </Link>
               <Link href="/collections/[tag]" as="/collections/headphones">
                 <a
-                  className={`header-link px-12 lg:px-4 block text-left leading-8 ${
-                    black && !scroll ? 'text-black' : 'text-white'
-                  } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+                  className={`lg:w-130 header-link px-12 lg:px-4 block text-left leading-8 ${
+                    toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+                  } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
                   Headphones
                 </a>
               </Link>
               <Link href="/collections/[tag]" as="/collections/headsets-single-ear">
                 <a
                   className={`header-link px-12 lg:px-4 block text-left leading-8 ${
-                    black && !scroll ? 'text-black' : 'text-white'
-                  } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+                    toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+                  } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
                   Headsets - Single Ear
                 </a>
               </Link>
               <Link href="/collections/[tag]" as="/collections/wired-earphones">
                 <a
-                  className={`header-link px-12 lg:px-4 block text-left leading-8 ${
-                    black && !scroll ? 'text-black' : 'text-white'
-                  } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+                  className={`lg:w-150 header-link px-12 lg:px-4 block text-left leading-8 ${
+                    toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+                  } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
                   Wired earphones
                 </a>
               </Link>
@@ -148,32 +142,32 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
           <Link href="/collections/[tag]" as="/collections/speakers">
             <a
               className={`header-link px-8 lg:px-4 text-right leading-8 ${
-                black && !scroll ? 'text-black' : 'text-white'
-              } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+                toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+              } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
               Speakers
             </a>
           </Link>
           <Link href="/support">
             <a
               className={` header-link px-8 lg:px-4 text-right leading-8 ${
-                black && !scroll ? 'text-black' : 'text-white'
-              } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+                toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+              } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
               Support
             </a>
           </Link>
           <Link href="/incubate-with-alpino">
             <a
               className={`header-link px-8 lg:px-4 text-right leading-8 ${
-                black && !scroll ? 'text-black' : 'text-white'
-              } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+                toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+              } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
               Incubate with Alpino
             </a>
           </Link>
           <Link href="/careers">
             <a
-              className={`header-link px-8 lg:px-4 text-right leading-8 ${
-                black && !scroll ? 'text-black' : 'text-white'
-              } md:${invert && !scroll ? 'text-black' : 'text-white'}`}>
+              className={`hover-line header-link px-8 lg:px-4 text-right leading-8 ${
+                toggle ? 'text-white' : black && !scroll ? 'text-black' : 'text-white'
+              } lg:${invert && !scroll ? 'text-black hover-line-black' : 'text-white hover-line-white'}`}>
               Careers
             </a>
           </Link>
@@ -182,7 +176,7 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
           <Link href="/user">
             <a
               className={`header-link px-2  lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
-                invert && !scroll && 'filter-invert'
+                !toggle && invert && !scroll && 'filter-invert'
               }`}>
               <img src="/user.svg" />
             </a>
@@ -191,7 +185,7 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
             <a
               onClick={() => updateCartVisible(!cartVisible)}
               className={`header-link pl-2 pr-0 lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
-                invert && !scroll && 'filter-invert'
+                !toggle && invert && !scroll && 'filter-invert'
               }`}>
               <img src="/cart.svg" />
             </a>
@@ -199,6 +193,6 @@ export default function Header({ invert, transparent, opacity, black }: HeaderPr
         </div>
       </div>
       <Cart items={items} modalIsOpen={cartVisible} closeModal={() => updateCartVisible(false)} />
-    </>
+    </div>
   );
 }

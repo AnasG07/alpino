@@ -36,9 +36,9 @@ export async function getServerSideProps(context) {
 
 export default function Checkout({ items }) {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden ">
       <div className={classNames(style.backgroundColor, 'min-h-screen bg- w-full pt-24')}>
-        <Header invert />
+        <Header />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
@@ -49,7 +49,7 @@ export default function Checkout({ items }) {
               <div className={classNames(style.greenDot)}>
                 <p className="text-white flex justify-center items-center text-md font-normal">1</p>
               </div>
-              <h1 className="text-base text-black font-normal we ml-1">Information</h1>
+              <h1 className="text-base text-white-light font-normal we ml-1">Information</h1>
               <div className={classNames(style.greenBorder, 'mt-1 ml-1')} />
             </div>
 
@@ -57,7 +57,7 @@ export default function Checkout({ items }) {
               <div className={classNames(style.blackDot)}>
                 <p className="text-white flex justify-center items-center text-md font-normal">2</p>
               </div>
-              <h1 className="text-base text-black font-normal ml-3">Shipping</h1>
+              <h1 className="text-base text-white-light font-normal ml-3">Shipping</h1>
               <div className={classNames(style.grayBorder, 'mt-1 ml-3')} />
             </div>
 
@@ -65,7 +65,7 @@ export default function Checkout({ items }) {
               <div className={classNames(style.blackDot)}>
                 <p className="text-white flex justify-center items-center text-md font-normal">3</p>
               </div>
-              <h1 className="text-base text-black font-normal ml-3">Payment</h1>
+              <h1 className="text-base text-white-light font-normal ml-3">Payment</h1>
             </div>
           </div>
         </div>

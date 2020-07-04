@@ -79,7 +79,7 @@ export default class Home extends React.Component {
                   </h1>
                   <div className="lg:pt-64 pt-8 leading-10">
                     <Link href="/incubate-with-alpino">
-                      <a className="button-transparent py-4 px-8 border-none bg-black outline-none text-white">
+                      <a className="button-transparent  py-4 px-8 border-none bg-black outline-none text-white button-hover-invert">
                         Incubate with Alpino
                       </a>
                     </Link>
@@ -119,14 +119,14 @@ export default class Home extends React.Component {
                   </h1>
                 </div>
                 <div className="flex-grow flex flex-col justify-center md:w-2/4 w-full md:pt-0 pt-8">
-                  <h3 className="text-left text-xs md:text-xl text-white font-normal leading-3 md:leading-tight max-w-45">
+                  <h3 className="text-left text-xs md:text-xl text-white font-normal leading-3 md:leading-tight max-w-45 pb-12 md:pb-32 ">
                     We refuse to conform to the idea of being just a consumer electronics brand, and instead believe
                     we’re a lifestyle brand. As a fast-paced company, we make sure our products help you listen to the
                     voice of righteousness and block out the noise of negativity.
                   </h3>
-                  <div className="pt-12 md:pt-32 flex md:justify-start justify-center">
+                  <div className="flex md:justify-start justify-center ">
                     <Link href="/our-story">
-                      <a className="button button-transparent py-2 px-8 outline-none">Learn More</a>
+                      <a className="button button-transparent py-2 px-8 outline-none button-hover">Learn More</a>
                     </Link>
                   </div>
                 </div>
