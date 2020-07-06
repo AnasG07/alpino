@@ -76,6 +76,7 @@ module.exports = {
         '149': '149px',
         '8.5': '33px',
         '3.5': '9px',
+        '13.5': '54px',
       },
       borderRadius: {
         super: '30px',
