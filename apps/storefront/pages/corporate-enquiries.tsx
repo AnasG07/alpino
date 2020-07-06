@@ -38,7 +38,7 @@ export default function Careers() {
           </div>
           <img className="w-full lg:w-2/4 lg:min-h-60" src="./visa.jpg" alt="visa" />
         </div>
-        <div className="bg-black flex flex-col-reverse md:flex-col">
+        <div className="bg-black flex flex-col-reverse md:flex-col items-center">
           <h3 className="leading-tight md:leading-normal text-sm md:text-2xl text-white pb-8 md:pb-0 pt-8 md:pt-16 px-6 md:px-16  lg:px-0 lg:max-w-58  text-center">
             We also offer the advantage of limitless choice. With over 300SKUs to choose from , you have the liberty to
             select the product that suits your organiszation best
@@ -68,7 +68,7 @@ export default function Careers() {
                   />
                 </div>
                 <div className="pt-30">
-                  <button className="leading-5 rounded-full font-semibold text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center">
+                  <button className="leading-5 rounded-full font-semibold text-base py-3 px-8 outline-none bg-white text-black  max-w-8 w-full flex justify-center hover-transparent border-2 border-white border-solid">
                     Submit
                   </button>
                 </div>

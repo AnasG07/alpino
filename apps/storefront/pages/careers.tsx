@@ -104,7 +104,7 @@ export default function Careers({ job }) {
             <h1 className="leading-loose md:leading-12 text-black text-2xl md:text-7xl">Work at Alpino</h1>
             <button
               onClick={() => scrollOpening('#openings')}
-              className="mt-2 md:mt-8 button-transparent py-1 md:py-2 px-2 md:px-4 outline-none text-black border-black font-medium md:font-semibold">
+              className="hover-opening mt-2 md:mt-8 button-transparent py-1 md:py-2 px-2 md:px-4 outline-none text-black border-black font-medium md:font-semibold">
               {' '}
               view openings
             </button>
@@ -192,7 +192,7 @@ export default function Careers({ job }) {
                 </button>
               </div>
               <div className="pt-10 md:pt-16 lg:pt-24 flex justify-start">
-                <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center text-right font-semibold">
+                <button className="leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center text-right font-semibold hover-transparent border-2 border-white border-solid">
                   Apply
                 </button>
               </div>

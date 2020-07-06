@@ -23,16 +23,14 @@ export default function IncubateALpino() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row bg-black">
-          <div className="bg-black  w-full md:w-2/4">
-            <div className="p-8 md:p-31 flex flex-col  justify-between">
-              <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
-                Incubating Ideas
-              </h1>
-              <p className="text-base md:text-lg text-white-light font-normal leading-tight pt-8 md:pt-18.75">
-                At Alpino, we recognize that ideas represent the gap between idle and ideal. At the same time, we also
-                recognize that without the right platform and support, ideas may never be realized
-              </p>
-            </div>
+          <div className="bg-black  w-full md:w-2/4 p-8 md:p-31 flex flex-col  justify-between">
+            <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
+              Incubating Ideas
+            </h1>
+            <p className="text-base md:text-lg text-white-light font-normal leading-tight pt-8 md:pt-18.75">
+              At Alpino, we recognize that ideas represent the gap between idle and ideal. At the same time, we also
+              recognize that without the right platform and support, ideas may never be realized
+            </p>
           </div>
           <img src="/comp.png" alt="comp" className="w-full md:w-2/4" />
         </div>
@@ -59,7 +57,7 @@ export default function IncubateALpino() {
         </div>
         <div className="bg-black">
           <div className="bg-black md:bg-grey-medium w-full flex flex-row justify-center items-center md:min-h-30 py-20 px-8 md:py-0 md:px-0">
-            <p className="max-w-30 text-content">
+            <p className="max-w-30 text-content text-center">
               The first edition of our incubation process happened in collaboration with Yuva, The Entrepreneurship Cell
               of Shaheed Sukhdev College of Business Studies and the glimpse of the same is available here.
             </p>
@@ -174,7 +172,7 @@ export default function IncubateALpino() {
                   />
                 </div>
                 <div className="pt-30">
-                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center font-semibold">
+                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center font-semibold hover-transparent border-2 border-white border-solid">
                     Submit
                   </button>
                 </div>

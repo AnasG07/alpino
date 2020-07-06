@@ -70,7 +70,7 @@ export default function Warranty({ faq }) {
   ];
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden ">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -176,7 +176,7 @@ export default function Warranty({ faq }) {
                   </div>
                 </div>
                 <div className="pt-30 flex justify-end">
-                  <button className="font-semibold leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-center text-right">
+                  <button className="font-semibold leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center text-right hover-transparent border-2 border-white border-solid">
                     Submit
                   </button>
                 </div>
@@ -184,7 +184,7 @@ export default function Warranty({ faq }) {
             </div>
           </div>
         </div>
-        <div className="pt-16 px-8 md:px-32 bg-white">
+        <div className="pt-16 px-8 md:px-32 bg-black">
           <h1 className="text-white text-left md:leading-16  text-2xl md:text-5xl  font-semibold leading-8">
             Frequently Asked Questions
           </h1>

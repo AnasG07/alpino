@@ -611,6 +611,9 @@ button:focus {
     filter: invert(0);
   }
 }
+.button-hover:hover .tag-hover {
+  border-color: black;
+}
 
 .min-height-60 {
   min-height: 60rem;
@@ -778,4 +781,10 @@ button:focus {
 }
 .button-hover-invert:hover {
   @apply text-black bg-white border border-solid border-white;
+}
+.hover-transparent:hover {
+  @apply border-white bg-transparent text-white border-2 border-solid;
+}
+.hover-opening:hover {
+  @apply bg-black text-white;
 }

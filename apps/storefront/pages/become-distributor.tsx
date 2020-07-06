@@ -106,7 +106,7 @@ export default function becomeDistributor() {
                   />
                 </div>
                 <div className="pt-12 flex justify-start md:justify-end">
-                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none border-none bg-white text-black  max-w-8 w-full flex justify-end font-semibold">
+                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-end font-semibold hover-transparent border-2 border-white border-solid">
                     Submit
                   </button>
                 </div>

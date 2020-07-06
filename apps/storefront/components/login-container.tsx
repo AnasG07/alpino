@@ -33,7 +33,7 @@ export default function LoginContainer({ type }) {
             </span>
           </div>
           <div className="flex justify-center pt-10 md:pt-8">
-            <button className="leading-5 rounded-full text-base py-3 px:24  md:px-32 lg:px-40 outline-none border-none bg-white text-black  max-w-400 w-full flex justify-center text-right font-semibold">
+            <button className="leading-5 rounded-full text-base py-3 px:24  md:px-32 lg:px-40 outline-none  bg-white text-black  max-w-400 w-full flex justify-center text-right font-semibold hover-transparent border-2 border-white border-solid">
               {type === 'login' ? 'Login' : 'Sign Up'}
             </button>
           </div>
