@@ -79,7 +79,14 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                 {selectedProduct.descriptionText.text1}
               </p>
             </div>
-            <img className="mx-auto mt-20" src={selectedProduct.images.img1} />
+            <div
+              className={`${selectedProduct.clock ? 'bg-left' : 'bg-center'} bg-no-repeat`}
+              style={{
+                'background-image': selectedProduct.animations.img1,
+                'background-size': selectedProduct.clock && '313px',
+              }}>
+              <img className="mx-auto mt-20" src={selectedProduct.images.img1} />
+            </div>
             <div className="flex flex-col md:flex-row justify-center items-center mt-20 md:mt-56 md:px-4 lg:px-0">
               <div className="pl-0 md:pl-31">
                 <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left pt-20 md:pt-0 textGrayColor font-medium px-4 md:px-0">
@@ -91,7 +98,7 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                   </p>
                 </div>
               </div>
-              <div>
+              <div className="bg-left bg-no-repeat" style={{ 'background-image': selectedProduct.animations.img2 }}>
                 <img src={selectedProduct.images.img2} />
               </div>
             </div>
@@ -101,9 +108,13 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
             <p className="max-w-30 mx-auto text-white text-sm md:text-lg leading-tight md:leading-normal text-center mt-4 weight-normal  textGrayColor px-4 md:px-0">
               {selectedProduct.descriptionText.text3}
             </p>
-            <img className="mx-auto mt-4" src={selectedProduct.images.img3} />
+            <div className="bg-center bg-no-repeat" style={{ 'background-image': selectedProduct.animations.img3 }}>
+              <img className="mx-auto mt-4" src={selectedProduct.images.img3} />
+            </div>
             <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-20 md:mt-64 pb-12 md:pb-24 md:px-31">
-              <div className="mr-0 md:mr-64">
+              <div
+                className="mr-0 md:mr-64 bg-left bg-no-repeat"
+                style={{ 'background-image': selectedProduct.animations.img4 }}>
                 <img src={selectedProduct.images.img4} />
               </div>
               <div>
@@ -127,7 +138,9 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                     {selectedProduct.descriptionText.text5}
                   </p>
                 </div>
-                <div className="px-2 md:px-0 max-w-850">
+                <div
+                  className="px-2 md:px-0 max-w-850 bg-left bg-no-repeat"
+                  style={{ 'background-image': selectedProduct.animations.img5 }}>
                   <img src={selectedProduct.images.img5} />
                 </div>
               </div>

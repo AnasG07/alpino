@@ -14,12 +14,17 @@
       "/allProducts/tharGT4.png",
       "/allProducts/tharGT5.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/AnimatedWave.svg')",
+      "img2": "url('/backGroundAnimation/pattern3.svg')",
+      "img4": "url('/backGroundAnimation/circle.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/tharGT1.png",
-      "img1": "/allProducts/tharGT2.svg",
-      "img2": "/allProducts/tharGT3.svg",
+      "img1": "/allProducts/tharGT2.png",
+      "img2": "/allProducts/tharGT3.png",
       "img3": "/allProducts/tharGT4.svg",
-      "img4": "/allProducts/tharGT5.svg",
+      "img4": "/allProducts/tharGT5.png",
       "img5": "/allProducts/tharGT6.png"
     },
     "descriptions": {
@@ -84,13 +89,20 @@
       "/allProducts/flexPro2.png",
       "/allProducts/flexPro4.png"
     ],
+    "clock": true,
+    "animations": {
+      "img1": "url('/backGroundAnimation/clock.svg')",
+      "img2": "url('/backGroundAnimation/pattern3.svg')",
+      "img4": "url('/backGroundAnimation/circle.svg')",
+      "img5": "url('/backGroundAnimation/magnets.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/flexPro1.png",
-      "img1": "/allProducts/flexPro2.svg",
-      "img2": "/allProducts/flexPro5.svg",
+      "img1": "/allProducts/flexPro2.png",
+      "img2": "/allProducts/flexPro5.png",
       "img3": "/allProducts/flexPro4.png",
       "img4": "/allProducts/flexPro4.png",
-      "img5": "/allProducts/flexPro6.svg",
+      "img5": "/allProducts/flexPro6.png",
       "img5.1": "/allProducts/flexPro5.1.png",
       "img5.2": "/allProducts/flexPro5.2.png"
     },
@@ -155,12 +167,18 @@
       "/allProducts/powerFlex4.png",
       "/allProducts/powerFlex5.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/pattern3.svg')",
+      "img3": "url('/backGroundAnimation/circle.svg')",
+      "img4": "url('/backGroundAnimation/battery.svg')",
+      "img5": "url('/backGroundAnimation/magnets.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/powerFlex1.png",
-      "img1": "/allProducts/powerFlex4.svg",
+      "img1": "/allProducts/powerFlex1.png",
       "img2": "/allProducts/powerFlex3.png",
-      "img3": "/allProducts/powerFlex3.svg",
-      "img4": "/allProducts/powerFlex6.svg",
+      "img3": "/allProducts/powerFlex4.png",
+      "img4": "/allProducts/powerFlex5.png",
       "img4.1": "/allProducts/powerFlex4.2.png",
       "img4.2": "/allProducts/powerFlex5.png",
       "img5": "/allProducts/powerFlex6.png"
@@ -225,12 +243,17 @@
       "/allProducts/tripFlex4.png",
       "/allProducts/tripFlex5.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/pattern3.svg')",
+      "img3": "url('/backGroundAnimation/battery.svg')",
+      "img4": "url('/backGroundAnimation/circle.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/tripFlex1.png",
-      "img1": "/allProducts/tripFlex1.svg",
-      "img2": "/allProducts/tripFlex3.png",
-      "img3": "/allProducts/tripFlex4.svg",
-      "img4": "/allProducts/tripFlex3.svg",
+      "img1": "/allProducts/tripFlex2.png",
+      "img2": "/allProducts/tripFlex4.png",
+      "img3": "/allProducts/tripFlex4.png",
+      "img4": "/allProducts/tripFlex5.png",
       "img4.1": "/allProducts/powerFlex5.1.png",
       "img4.2": "/allProducts/powerFlex5.2.png",
       "img5": "/allProducts/tripFlex6.png"
@@ -295,13 +318,18 @@
       "/allProducts/tharFit4.png",
       "/allProducts/tharFit5.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/circle.svg')",
+      "img4": "url('/backGroundAnimation/battery.svg')",
+      "img5": "url('/backGroundAnimation/vector.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/tharFit1.png",
-      "img1": "/allProducts/tharFit1.svg",
+      "img1": "/allProducts/tharFit7.png",
       "img2": "/allProducts/tharFit3.png",
       "img3": "/allProducts/tharFit4.png",
-      "img4": "/allProducts/tharFit2.svg",
-      "img5": "/allProducts/tharFit7.png",
+      "img4": "/allProducts/tharFit6.png",
+      "img5": "/allProducts/tharFit5.png",
       "img6": "/allProducts/tharFit71.png"
     },
     "descriptions": {
@@ -367,9 +395,13 @@
     "imagesCarousel": ["/allProducts/townSquare1.png", "/allProducts/townSquare2.png", "/allProducts/townSquare3.png"],
     "images": {
       "mainImage": "/allProducts/townSquare1.png",
-      "img1": "/allProducts/townMini1.svg",
-      "img2": "/allProducts/townMini2.svg",
+      "img1": "/allProducts/townSquare2.png",
+      "img2": "/allProducts/townSquare3.png",
       "img3": "/allProducts/townSquare4.png"
+    },
+    "animations": {
+      "img1": "url('/backGroundAnimation/battery.svg')",
+      "img2": "url('/backGroundAnimation/circle.svg')"
     },
     "descriptions": {
       "description1": "Mega power in mini",
@@ -427,10 +459,14 @@
     ],
     "images": {
       "mainImage": "/allProducts/tharDrift1.png",
-      "img1": "/allProducts/tharDrift.svg",
-      "img2": "/allProducts/tharDrift2.svg",
+      "img1": "/allProducts/tharDrift2.png",
+      "img2": "/allProducts/tharDrift3.png",
       "img3": "/allProducts/tharDrift5.png",
       "img4": "/allProducts/tharDrift2.png"
+    },
+    "animations": {
+      "img1": "url('/backGroundAnimation/battery.svg')",
+      "img2": "url('/backGroundAnimation/circle.svg')"
     },
     "descriptions": {
       "description1": "Power packed performer",
@@ -492,12 +528,17 @@
       "/allProducts/rock4.png",
       "/allProducts/rock5.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/pattern3.svg')",
+      "img3": "url('/backGroundAnimation/circle.svg')",
+      "img4": "url('/backGroundAnimation/battery.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/rock1.png",
-      "img1": "/allProducts/rock1.svg",
-      "img2": "/allProducts/rock3.png",
-      "img3": "/allProducts/rock3.svg",
-      "img4": "/allProducts/rock4.svg",
+      "img1": "/allProducts/rock1.png",
+      "img2": "/allProducts/rock2.png",
+      "img3": "/allProducts/rock3.png",
+      "img4": "/allProducts/rock4.png",
       "img5": "/allProducts/rock6.png"
     },
     "descriptions": {
@@ -560,10 +601,14 @@
       "/allProducts/tharWave4.png",
       "/allProducts/tharWave5.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/battery.svg')",
+      "img2": "url('/backGroundAnimation/circle.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/tharWave1.png",
-      "img1": "/allProducts/tharWave1.svg",
-      "img2": "/allProducts/tharWave2.svg",
+      "img1": "/allProducts/tharWave2.png",
+      "img2": "/allProducts/tharWave3.png",
       "img3": "/allProducts/tharWave4.png",
       "img4": "/allProducts/tharWave5.png"
     },
@@ -624,10 +669,13 @@
       "/allProducts/tripExtra3.png",
       "/allProducts/tripExtra4.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/circle.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/tharWave1.png",
-      "img1": "/allProducts/tripExtra1.svg",
-      "img2": "/allProducts/tripExtra2.png",
+      "img1": "/allProducts/tripExtra2.png",
+      "img2": "/allProducts/tripExtra3.png",
       "img3": "/allProducts/tripExtra3.svg",
       "img4": "/allProducts/tripExtra5.png"
     },
@@ -687,10 +735,13 @@
       "/allProducts/blaze4.png",
       "/allProducts/blaze5.png"
     ],
+    "animations": {
+      "img2": "url('/backGroundAnimation/circle.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/blaze1.png",
       "img1": "/allProducts/blaze2.png",
-      "img2": "/allProducts/blaze1.svg",
+      "img2": "/allProducts/blaze3.png",
       "img3": "/allProducts/blaze4.png",
       "img4": "/allProducts/blaze5.png",
       "img5": "/allProducts/blaze6.png"
@@ -753,10 +804,14 @@
       "/allProducts/twist4.png",
       "/allProducts/twist5.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/circle.svg')",
+      "img2": "url('/backGroundAnimation/circle.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/twist1.png",
-      "img1": "/allProducts/twist1.svg",
-      "img2": "/allProducts/twist2.svg",
+      "img1": "/allProducts/twist2.png",
+      "img2": "/allProducts/twist3.png",
       "img3": "/allProducts/twist4.png",
       "img4": "/allProducts/twist5.png",
       "img5": "/allProducts/twist6.png"
@@ -819,10 +874,13 @@
       "/allProducts/flash4.png",
       "/allProducts/flash5.png"
     ],
+    "animations": {
+      "img2": "url('/backGroundAnimation/circle.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/flash1.png",
       "img1": "/allProducts/flash1.svg",
-      "img2": "/allProducts/flash2.svg",
+      "img2": "/allProducts/flash3.png",
       "img3": "/allProducts/flash4.png",
       "img4": "/allProducts/flash5.png",
       "img5": "/allProducts/flash6.png",
@@ -888,9 +946,12 @@
       "/allProducts/trip3.png",
       "/allProducts/trip4.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/circle.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/trip1.png",
-      "img1": "/allProducts/tripEscape1.svg",
+      "img1": "/allProducts/trip2.png",
       "img2": "/allProducts/trip3.png",
       "img3": "/allProducts/trip4.png",
       "img4": "/allProducts/trip5.png"
@@ -946,11 +1007,15 @@
     "imagesCarousel": ["/allProducts/jp226.png", "/allProducts/jp221.png", "/allProducts/jp223.png"],
     "images": {
       "mainImage": "/allProducts/jp221.png",
-      "img1": "/allProducts/jp1.svg",
-      "img2": "/allProducts/jp2.svg",
+      "img1": "/allProducts/jp222.png",
+      "img2": "/allProducts/jp223.png",
       "img3": "/allProducts/jp224.png",
       "img4": "/allProducts/jp225.png",
       "img5": "/allProducts/jp226.png"
+    },
+    "animations": {
+      "img1": "url('/backGroundAnimation/battery.svg')",
+      "img2": "url('/backGroundAnimation/circle.svg')"
     },
     "descriptions": {
       "description1": "Power behind every Throne play",
@@ -1011,10 +1076,13 @@
     ],
     "images": {
       "mainImage": "/allProducts/beast1.png",
-      "img1": "/allProducts/tharBeast.svg",
+      "img1": "/allProducts/beast2.png",
       "img2": "/allProducts/beast3.png",
       "img3": "/allProducts/beast4.png",
       "img4": "/allProducts/beast5.png"
+    },
+    "animations": {
+      "img1": "url('/backGroundAnimation/circle.svg')"
     },
     "descriptions": {
       "description1": "Jungle Bass",
@@ -1071,9 +1139,13 @@
       "/allProducts/kick2.png",
       "/allProducts/kick3.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/circle.svg')",
+      "img2": "url('/backGroundAnimation/battery.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/kick1.png",
-      "img1": "/allProducts/kickStart.svg",
+      "img1": "/allProducts/kick2.png",
       "img2": "/allProducts/kick1.png",
       "img3": "/allProducts/kick4.png",
       "img4": "/allProducts/kick5.png"
@@ -1136,12 +1208,16 @@
       "/allProducts/flex2.png",
       "/allProducts/flex6.png"
     ],
+    "animations": {
+      "img1": "url('/backGroundAnimation/circle.svg')",
+      "img2": "url('/backGroundAnimation/battery.svg')"
+    },
     "images": {
       "mainImage": "/allProducts/kick1.png",
-      "img1": "/allProducts/flex1.svg",
-      "img2": "/allProducts/flex2.svg",
-      "img3": "/allProducts/flex3.png",
-      "img4": "/allProducts/flex6.png"
+      "img1": "/allProducts/flex2.png",
+      "img2": "/allProducts/flex3.png",
+      "img3": "/allProducts/flex6.png",
+      "img4": "/allProducts/flex7.png"
     },
     "descriptions": {
       "description1": "Kickin’ all day",
