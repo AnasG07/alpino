@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
 import AliceCarousel from 'react-alice-carousel';
@@ -20,12 +20,19 @@ export async function getServerSideProps({ params: { slug } }) {
 
 export default function Slug({ productToDisplay, productCard, selectedProduct }) {
   const handleOnDragStart = (e) => e.preventDefault();
-  let stickyHeight;
-  if (process.browser) {
-    stickyHeight =
-      window.scrollY + document.getElementById('buttonId') &&
-      document.getElementById('buttonId').getBoundingClientRect().top;
-  }
+  const buyRef = useRef(null);
+
+  const [stickyHeight, setStickyHeight] = useState(0);
+  useEffect(() => {
+    if (!buyRef || !buyRef.current) {
+      return;
+    }
+    if (stickyHeight) {
+      return;
+    }
+    setStickyHeight(window.scrollY + buyRef.current.getBoundingClientRect().top);
+  }, [buyRef, buyRef.current]);
+
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
@@ -71,6 +78,7 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
                   <button
                     id="buttonId"
+                    ref={buyRef}
                     className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center text-black hover-transparent">
                     Buy now
                   </button>
@@ -97,7 +105,7 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
               className={`${selectedProduct.clock ? 'bg-left' : 'bg-center'} bg-no-repeat`}
               style={{
                 backgroundImage: selectedProduct.animations.img1,
-                backgroundSize: selectedProduct.clock && selectedProduct.pattern && '25%',
+                backgroundSize: selectedProduct.clock && '313px',
                 marginLeft: selectedProduct.clock && '20px',
               }}>
               <img className="mx-auto mt-20" src={selectedProduct.images.img1} />
@@ -117,7 +125,6 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                 className="bg-left bg-no-repeat"
                 style={{
                   backgroundImage: selectedProduct.animations.img2,
-                  backgroundSize: selectedProduct.pattern && '50%',
                 }}>
                 <img src={selectedProduct.images.img2} />
               </div>
@@ -132,7 +139,6 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
               className="bg-center bg-no-repeat"
               style={{
                 backgroundImage: selectedProduct.animations.img3,
-                backgroundSize: selectedProduct.pattern && '25%',
               }}>
               <img className="mx-auto mt-4" src={selectedProduct.images.img3} />
             </div>
@@ -141,7 +147,6 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                 className="mr-0 md:mr-64 bg-left bg-no-repeat"
                 style={{
                   backgroundImage: selectedProduct.animations.img4,
-                  backgroundSize: selectedProduct.pattern && '50%',
                 }}>
                 <img src={selectedProduct.images.img4} />
               </div>
@@ -170,7 +175,6 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                   className="px-2 md:px-0 max-w-850 bg-left bg-no-repeat"
                   style={{
                     backgroundImage: selectedProduct.animations.img5,
-                    backgroundSize: selectedProduct.pattern && '50%',
                   }}>
                   <img src={selectedProduct.images.img5} />
                 </div>

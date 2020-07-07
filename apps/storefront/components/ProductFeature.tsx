@@ -55,13 +55,31 @@ const images = [
 ];
 
 export default class ProductFeature extends React.Component<Props> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      positionValue: false,
+    };
+  }
   scrollController: any;
   scrollScene: any;
-
   componentDidMount() {
     if (!this.props.data.animation) {
       return;
     }
+
+    if (process.browser) {
+      const scrollHeight =
+        document.getElementById('divId') && document.getElementById('divId').getBoundingClientRect().bottom;
+      window.addEventListener('scroll', () => {
+        if (scrollY > scrollHeight) {
+          this.setState({ positionValue: true });
+        } else {
+          this.setState({ positionValue: false });
+        }
+      });
+    }
+
     const { TweenMax, TimelineMax } = require('gsap');
     const ScrollMagic = require('scrollmagic');
     const { ScrollMagicPluginGsap } = require('scrollmagic-plugin-gsap');
@@ -83,7 +101,7 @@ export default class ProductFeature extends React.Component<Props> {
 
     this.scrollScene = new ScrollMagic.Scene({
       triggerElement: '#trigger',
-      duration: 2000,
+      duration: 1600,
     })
       .setTween(tween)
       .addTo(this.scrollController);
@@ -101,10 +119,12 @@ export default class ProductFeature extends React.Component<Props> {
     const {
       data: { description, buttonText, image, animation, link },
     } = this.props;
+    const { positionValue } = this.state;
+
     return (
-      <div className={classNames('flex product-alignment p-16')} id={animation ? 'trigger' : ''}>
-        <div className="flex-grow flex flex-col justify-center pl-0 md:pl-32 md:items-start items-center leading-12">
-          <h1 className="max-w-30 text-center md:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
+      <div className={classNames('product-alignment p-16', { flex: !animation })} id={animation ? 'trigger ' : ''}>
+        <div className="flex-grow flex flex-col justify-center pl-0 lg:pl-32 lg:items-start items-center leading-12">
+          <h1 className="max-w-30 text-center lg:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
             {description}
           </h1>
           <div className="pt-4 md:pt-16">
@@ -113,8 +133,10 @@ export default class ProductFeature extends React.Component<Props> {
             </Link>
           </div>
         </div>
-        <div className="flex-grow">
-          <img id="myImg" src={image} />
+        <div
+          id={animation ? 'divId' : ''}
+          className={`${animation ? (positionValue ? 'absolute-feature' : 'fixed-feature') : ''} flex-grow w-full`}>
+          <img id="myImg" src={image} className="block mx-auto" />
         </div>
 
         {animation && (
