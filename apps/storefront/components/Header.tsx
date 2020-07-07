@@ -207,7 +207,7 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
         </div>
         <Cart items={items} modalIsOpen={cartVisible} closeModal={() => updateCartVisible(false)} />
         {sticky && stickyToggle && scrollTest && (
-          <div className="fixed w-full z-1 p-30px top-57 flex flex-row bg-black justify-center items-center">
+          <div className="fixed w-full z-1 p-30px top-65 flex flex-row bg-black justify-center items-center">
             <div className="flex flex-col pr-8 md:pr-16 lg:pr-31">
               <p className="font-medium leading-5 md:leading-7 text-sm md:text-lg text-white">{name}</p>
               <p className="leading-5 md:leading-7 text-xs md:text-base text-white">Mrp rs {cost}</p>
