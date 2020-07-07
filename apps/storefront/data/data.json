@@ -14,6 +14,7 @@
       "/allProducts/tharGT4.png",
       "/allProducts/tharGT5.png"
     ],
+    "pattern": true,
     "animations": {
       "img1": "url('/backGroundAnimation/AnimatedWave.svg')",
       "img2": "url('/backGroundAnimation/pattern3.svg')",
@@ -90,6 +91,7 @@
       "/allProducts/flexPro4.png"
     ],
     "clock": true,
+    "pattern": true,
     "animations": {
       "img1": "url('/backGroundAnimation/clock.svg')",
       "img2": "url('/backGroundAnimation/pattern3.svg')",
@@ -167,6 +169,7 @@
       "/allProducts/powerFlex4.png",
       "/allProducts/powerFlex5.png"
     ],
+    "pattern": true,
     "animations": {
       "img1": "url('/backGroundAnimation/pattern3.svg')",
       "img3": "url('/backGroundAnimation/circle.svg')",
@@ -243,6 +246,7 @@
       "/allProducts/tripFlex4.png",
       "/allProducts/tripFlex5.png"
     ],
+    "pattern": true,
     "animations": {
       "img1": "url('/backGroundAnimation/pattern3.svg')",
       "img3": "url('/backGroundAnimation/battery.svg')",
@@ -528,6 +532,7 @@
       "/allProducts/rock4.png",
       "/allProducts/rock5.png"
     ],
+    "pattern": true,
     "animations": {
       "img1": "url('/backGroundAnimation/pattern3.svg')",
       "img3": "url('/backGroundAnimation/circle.svg')",
