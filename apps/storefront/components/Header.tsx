@@ -23,10 +23,7 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
       if (document.body.offsetWidth > 1024 && scrollY < 90) {
         updateScroll(false);
       } else updateScroll(true);
-      if (document.body.offsetWidth > 1024 && scrollY < 200) {
-        updateScrollTest(false);
-      } else updateScrollTest(true);
-
+      console.log(scrollY, stickyHeight);
       if (scrollY < stickyHeight) {
         updateStickyToggle(false);
       } else updateStickyToggle(true);
@@ -206,13 +203,13 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
           </div>
         </div>
         <Cart items={items} modalIsOpen={cartVisible} closeModal={() => updateCartVisible(false)} />
-        {sticky && stickyToggle && scrollTest && (
-          <div className="fixed w-full z-10 p-30px top-65 flex flex-row bg-black justify-center items-center">
-            <div className="flex flex-col pr-8 md:pr-16 lg:pr-31">
+        {sticky && stickyToggle && (
+          <div className="fixed w-full z-10 p-30px top-65 flex flex-row bg-black justify-between items-center">
+            <div className="flex flex-col pr-8 md:pr-0">
               <p className="font-medium leading-5 md:leading-7 text-sm md:text-lg text-white">{name}</p>
               <p className="leading-5 md:leading-7 text-xs md:text-base text-white">Mrp rs {cost}</p>
             </div>
-            <button className="rounded-full py-3 px-8 md:px-10 outline-none border-2 bg-white flex justify-center text-black hover-transparent">
+            <button className="mr-4 rounded-full py-3 px-8 md:px-10 outline-none border-2 bg-white flex justify-center text-black hover-transparent">
               Buy now
             </button>
           </div>
