@@ -20,10 +20,22 @@ export async function getServerSideProps({ params: { slug } }) {
 
 export default function Slug({ productToDisplay, productCard, selectedProduct }) {
   const handleOnDragStart = (e) => e.preventDefault();
+  let stickyHeight;
+  if (process.browser) {
+    stickyHeight =
+      window.scrollY + document.getElementById('buttonId') &&
+      document.getElementById('buttonId').getBoundingClientRect().top;
+  }
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
-        <Header invert={false} />
+        <Header
+          invert={false}
+          sticky
+          stickyHeight={stickyHeight}
+          cost={selectedProduct.cost}
+          name={selectedProduct.name}
+        />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
@@ -53,11 +65,13 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                   <div className={classNames(style.pinkBgColor, 'h-5 w-5 rounded-full mr-5')} />
                   <div className={classNames(style.greenBgColor, 'h-5 w-5 rounded-full mr-5')} />
                 </div>
-                <p className="text-white text-sm md:text-lg font-medium leadnig-tight md:leading-normal textGrayColor mt-8">
+                <p className="text-white text-sm md:text-lg font-medium leading-tight md:leading-normal textGrayColor mt-8">
                   MRP Rs. {selectedProduct.cost}
                 </p>
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
-                  <button className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center text-black hover-transparent">
+                  <button
+                    id="buttonId"
+                    className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center text-black hover-transparent">
                     Buy now
                   </button>
                   <button className="rounded-full py-3 px-10 border-2 bg-transparent flex justify-center button-hover">
@@ -82,8 +96,9 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
             <div
               className={`${selectedProduct.clock ? 'bg-left' : 'bg-center'} bg-no-repeat`}
               style={{
-                'background-image': selectedProduct.animations.img1,
-                'background-size': selectedProduct.clock && '313px',
+                backgroundImage: selectedProduct.animations.img1,
+                backgroundSize: selectedProduct.clock && selectedProduct.pattern && '25%',
+                marginLeft: selectedProduct.clock && '20px',
               }}>
               <img className="mx-auto mt-20" src={selectedProduct.images.img1} />
             </div>
@@ -98,7 +113,12 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                   </p>
                 </div>
               </div>
-              <div className="bg-left bg-no-repeat" style={{ 'background-image': selectedProduct.animations.img2 }}>
+              <div
+                className="bg-left bg-no-repeat"
+                style={{
+                  backgroundImage: selectedProduct.animations.img2,
+                  backgroundSize: selectedProduct.pattern && '50%',
+                }}>
                 <img src={selectedProduct.images.img2} />
               </div>
             </div>
@@ -108,13 +128,21 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
             <p className="max-w-30 mx-auto text-white text-sm md:text-lg leading-tight md:leading-normal text-center mt-4 weight-normal  textGrayColor px-4 md:px-0">
               {selectedProduct.descriptionText.text3}
             </p>
-            <div className="bg-center bg-no-repeat" style={{ 'background-image': selectedProduct.animations.img3 }}>
+            <div
+              className="bg-center bg-no-repeat"
+              style={{
+                backgroundImage: selectedProduct.animations.img3,
+                backgroundSize: selectedProduct.pattern && '25%',
+              }}>
               <img className="mx-auto mt-4" src={selectedProduct.images.img3} />
             </div>
             <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-20 md:mt-64 pb-12 md:pb-24 md:px-31">
               <div
                 className="mr-0 md:mr-64 bg-left bg-no-repeat"
-                style={{ 'background-image': selectedProduct.animations.img4 }}>
+                style={{
+                  backgroundImage: selectedProduct.animations.img4,
+                  backgroundSize: selectedProduct.pattern && '50%',
+                }}>
                 <img src={selectedProduct.images.img4} />
               </div>
               <div>
@@ -140,7 +168,10 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                 </div>
                 <div
                   className="px-2 md:px-0 max-w-850 bg-left bg-no-repeat"
-                  style={{ 'background-image': selectedProduct.animations.img5 }}>
+                  style={{
+                    backgroundImage: selectedProduct.animations.img5,
+                    backgroundSize: selectedProduct.pattern && '50%',
+                  }}>
                   <img src={selectedProduct.images.img5} />
                 </div>
               </div>
