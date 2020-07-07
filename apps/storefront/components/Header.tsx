@@ -62,7 +62,7 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
       <div>
         <div
           className={classNames(
-            `flex flex-row pb-30px p-30px justify-between lg:p-30px  z-10 items-center fixed  w-full top-0`,
+            `flex flex-row pb-30px p-30px justify-between lg:p-30px  z-20 items-center fixed  w-full top-0`,
             {
               'bg-black': toggle || scroll || (!invert && !transparent),
               'bg-transparent': !scroll && !opacity && (invert || transparent),
@@ -207,7 +207,7 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
         </div>
         <Cart items={items} modalIsOpen={cartVisible} closeModal={() => updateCartVisible(false)} />
         {sticky && stickyToggle && scrollTest && (
-          <div className="fixed w-full z-1 p-30px top-65 flex flex-row bg-black justify-center items-center">
+          <div className="fixed w-full z-10 p-30px top-65 flex flex-row bg-black justify-center items-center">
             <div className="flex flex-col pr-8 md:pr-16 lg:pr-31">
               <p className="font-medium leading-5 md:leading-7 text-sm md:text-lg text-white">{name}</p>
               <p className="leading-5 md:leading-7 text-xs md:text-base text-white">Mrp rs {cost}</p>
