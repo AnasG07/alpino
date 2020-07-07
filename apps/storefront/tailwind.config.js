@@ -84,6 +84,7 @@ module.exports = {
       },
       margin: {
         '344': '344px',
+        '150': '150px',
       },
       width: {
         '120': '120px',

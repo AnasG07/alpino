@@ -573,7 +573,7 @@ button:focus {
   @apply flex-row;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .product-alignment {
     flex-flow: column-reverse !important;
   }
@@ -787,4 +787,32 @@ button:focus {
 }
 .hover-opening:hover {
   @apply bg-black text-white;
+}
+@media (min-width: 1024px) {
+  .margin-left-150 {
+    margin-left: -150px;
+  }
+}
+
+.absolute-feature {
+  position: absolute;
+  top: 90px;
+}
+.fixed-feature {
+  position: fixed;
+  top: 90px;
+}
+@media (max-width: 1024px) {
+  .absolute-feature,
+  .fixed-feature {
+    top: -101px;
+    left: -75px;
+  }
+}
+@media (max-width: 768px) {
+  .absolute-feature,
+  .fixed-feature {
+    top: -51px;
+    left: -65px;
+  }
 }
