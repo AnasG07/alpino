@@ -51,6 +51,7 @@ const images = [
   '/animation/Speaker01_0042.png',
   '/animation/Speaker01_0043.png',
   '/animation/Speaker01_0044.png',
+  '/animation/Speaker01_0045.png',
 ];
 
 export default class ProductFeature extends React.Component<Props> {
@@ -69,6 +70,7 @@ export default class ProductFeature extends React.Component<Props> {
     if (!this.props.data.animation) {
       return;
     }
+    const mobile = window.screen.availWidth <= 1024 ? true : false;
 
     if (process.browser) {
       const elements = document.getElementsByClassName('product-alignment');
@@ -76,9 +78,8 @@ export default class ProductFeature extends React.Component<Props> {
         return;
       }
 
-      const factor = window.screen.availWidth <= 1024 ? 3 : 1.5;
       window.addEventListener('scroll', () => {
-        const scrollHeight = elements[2].getBoundingClientRect().top - window.screen.availHeight / factor;
+        const scrollHeight = elements[2].getBoundingClientRect().top - window.screen.availHeight / 100;
         if (scrollY > scrollHeight) {
           this.setState({ positionValue: true });
         } else {
@@ -114,7 +115,7 @@ export default class ProductFeature extends React.Component<Props> {
 
     this.scrollScene = new ScrollMagic.Scene({
       triggerElement: '#trigger',
-      duration: 3600,
+      duration: mobile ? 3200 : 3700,
     })
       .setTween(tween)
       .addTo(this.scrollController);
