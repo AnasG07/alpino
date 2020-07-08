@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
 import AliceCarousel from 'react-alice-carousel';
@@ -7,7 +7,6 @@ import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
 import style from './product.module.css';
 import dataFetch, { getSimilarProducts } from '../../data/functions';
-import useCart from '../../hooks/cart/useCart';
 import { withApollo } from '../../lib/apollo/withApollo';
 import fetchPrimaryShop from '../../staticUtils/shop/fetchPrimaryShop';
 import fetchCatalogProduct from '../../staticUtils/catalog/fetchCatalogProduct';
@@ -27,7 +26,7 @@ export async function getServerSideProps({ params: { slug } }) {
   };
 }
 
-export default function Slug({ productToDisplay, productCard, selectedProduct }) {
+function Slug({ productToDisplay, productCard, selectedProduct }) {
   const handleOnDragStart = (e) => e.preventDefault();
   const buyRef = useRef(null);
 
