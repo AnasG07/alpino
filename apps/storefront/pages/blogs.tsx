@@ -39,7 +39,7 @@ export async function getStaticProps() {
 
 export default function Blog({ blogs }) {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />

@@ -74,6 +74,7 @@ export default class ProductFeature extends React.Component<Props> {
 
     if (process.browser) {
       const elements = document.getElementsByClassName('product-alignment');
+      console.log(elements);
       if (!elements || !elements.length) {
         return;
       }

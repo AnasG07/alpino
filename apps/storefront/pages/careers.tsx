@@ -92,7 +92,7 @@ export default function Careers({ job }) {
     });
   };
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
