@@ -63,7 +63,6 @@ export default class Home extends React.Component {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <main>
-            <div className="pt-30" />
             <div className="pb-56">
               {productFeature.map((i, index) => (
                 <ProductFeature data={i} key={index} />

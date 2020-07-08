@@ -51,7 +51,6 @@ const images = [
   '/animation/Speaker01_0042.png',
   '/animation/Speaker01_0043.png',
   '/animation/Speaker01_0044.png',
-  '/animation/Speaker01_0045.png',
 ];
 
 export default class ProductFeature extends React.Component<Props> {
@@ -61,17 +60,24 @@ export default class ProductFeature extends React.Component<Props> {
       positionValue: false,
     };
   }
+
   scrollController: any;
   scrollScene: any;
+
   componentDidMount() {
     if (!this.props.data.animation) {
       return;
     }
 
     if (process.browser) {
-      const scrollHeight =
-        document.getElementById('divId') && document.getElementById('divId').getBoundingClientRect().bottom;
+      const elements = document.getElementsByClassName('product-alignment');
+      if (!elements || !elements.length) {
+        return;
+      }
+
+      const factor = window.screen.availWidth <= 1024 ? 3 : 1.5;
       window.addEventListener('scroll', () => {
+        const scrollHeight = elements[2].getBoundingClientRect().top - window.screen.availHeight / factor;
         if (scrollY > scrollHeight) {
           this.setState({ positionValue: true });
         } else {
@@ -101,7 +107,7 @@ export default class ProductFeature extends React.Component<Props> {
 
     this.scrollScene = new ScrollMagic.Scene({
       triggerElement: '#trigger',
-      duration: 1600,
+      duration: 3600,
     })
       .setTween(tween)
       .addTo(this.scrollController);
@@ -122,7 +128,7 @@ export default class ProductFeature extends React.Component<Props> {
     const { positionValue } = this.state;
 
     return (
-      <div className={classNames('product-alignment p-16', { flex: !animation })} id={animation ? 'trigger ' : ''}>
+      <div className={classNames('product-alignment p-16', { flex: !animation })} id={animation ? 'trigger' : ''}>
         <div className="flex-grow flex flex-col justify-center pl-0 lg:pl-32 lg:items-start items-center leading-12">
           <h1 className="max-w-30 text-center lg:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
             {description}
@@ -135,7 +141,10 @@ export default class ProductFeature extends React.Component<Props> {
         </div>
         <div
           id={animation ? 'divId' : ''}
-          className={`${animation ? (positionValue ? 'absolute-feature' : 'fixed-feature') : ''} flex-grow w-full`}>
+          className={classNames('w-full', {
+            'absolute-feature': animation && positionValue,
+            'fixed-feature': animation && !positionValue,
+          })}>
           <img id="myImg" src={image} className="block mx-auto" />
         </div>
 
