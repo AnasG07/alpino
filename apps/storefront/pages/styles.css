@@ -829,6 +829,15 @@ button:focus {
   padding-bottom: 100vh;
 }
 
+#animation-content {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+#animation-content.fade {
+  opacity: 0.01;
+}
+
 .absolute-feature {
   position: absolute;
   bottom: 0;
@@ -845,6 +854,7 @@ button:focus {
   #trigger {
     padding-top: 60vh;
   }
+
   .fixed-feature {
     top: 30vh;
   }

@@ -58,6 +58,7 @@ export default class ProductFeature extends React.Component<Props> {
     super(props);
     this.state = {
       positionValue: false,
+      fade: false,
     };
   }
 
@@ -82,6 +83,12 @@ export default class ProductFeature extends React.Component<Props> {
           this.setState({ positionValue: true });
         } else {
           this.setState({ positionValue: false });
+        }
+
+        if (scrollY > 20) {
+          this.setState({ fade: true });
+        } else {
+          this.setState({ fade: false });
         }
       });
     }
@@ -125,11 +132,16 @@ export default class ProductFeature extends React.Component<Props> {
     const {
       data: { description, buttonText, image, animation, link },
     } = this.props;
-    const { positionValue } = this.state;
+    const { positionValue, fade } = this.state;
 
     return (
       <div className={classNames('product-alignment p-16', { flex: !animation })} id={animation ? 'trigger' : ''}>
-        <div className="flex-grow flex flex-col justify-center pl-0 lg:pl-32 lg:items-start items-center leading-12">
+        <div
+          className={classNames(
+            'flex-grow flex flex-col justify-center pl-0 lg:pl-32 lg:items-start items-center leading-12',
+            { fade },
+          )}
+          id={animation ? 'animation-content' : ''}>
           <h1 className="max-w-30 text-center lg:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
             {description}
           </h1>
