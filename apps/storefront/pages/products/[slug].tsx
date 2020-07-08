@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
 import AliceCarousel from 'react-alice-carousel';
@@ -7,18 +7,26 @@ import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
 import style from './product.module.css';
 import dataFetch, { getSimilarProducts } from '../../data/functions';
+import { withApollo } from '../../lib/apollo/withApollo';
+import fetchPrimaryShop from '../../staticUtils/shop/fetchPrimaryShop';
+import fetchCatalogProduct from '../../staticUtils/catalog/fetchCatalogProduct';
 
 export async function getServerSideProps({ params: { slug } }) {
   const selectedProduct = dataFetch(slug);
+  const [{ shop }, { product }] = await Promise.all([fetchPrimaryShop('en'), fetchCatalogProduct(slug)]);
+
+  console.log(product.variants[0]);
   return {
     props: {
+      shop,
+      product,
       selectedProduct: selectedProduct,
       productCard: getSimilarProducts(selectedProduct?.tags[0], slug),
     },
   };
 }
 
-export default function Slug({ productToDisplay, productCard, selectedProduct }) {
+function Slug({ productToDisplay, productCard, selectedProduct }) {
   const handleOnDragStart = (e) => e.preventDefault();
   const buyRef = useRef(null);
 
@@ -76,11 +84,10 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
                   MRP Rs. {selectedProduct.cost}
                 </p>
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
-                  <button
-                    id="buttonId"
-                    ref={buyRef}
-                    className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center text-black hover-transparent">
-                    Buy now
+                  <button className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center">
+                    <span className="font-semibold text-black text-base md:text-lg leading-tight md:leading-6 ">
+                      Buy now
+                    </span>
                   </button>
                   <button className="rounded-full py-3 px-10 border-2 bg-transparent flex justify-center button-hover">
                     View Details
@@ -289,3 +296,5 @@ export default function Slug({ productToDisplay, productCard, selectedProduct })
     </div>
   );
 }
+
+export default withApollo()(Slug);

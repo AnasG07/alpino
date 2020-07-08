@@ -191,16 +191,20 @@ button:focus {
 .text-content {
   @apply text-lg text-white-light font-medium leading-normal;
 }
+
 .text-content-file {
   @apply text-lg text-form-color font-medium leading-normal;
 }
+
 .text-login {
   @apply text-xl leading-8 text-white-light font-medium;
 }
+
 @media (max-width: 768px) {
   .text-content {
     @apply text-sm text-white-light font-light leading-tight;
   }
+
   .text-content-file {
     @apply text-sm text-form-color font-light leading-tight;
   }
@@ -332,12 +336,14 @@ button:focus {
 .min-height-31 {
   min-height: 31.25rem;
 }
+
 @media (max-width: 768px) {
   .min-height-31,
   .min-height-47 {
     min-height: auto;
   }
 }
+
 .min-height-560 {
   min-height: 560px;
 }
@@ -367,12 +373,14 @@ button:focus {
 .min-height-38 {
   min-height: 37.5rem;
 }
+
 @media (max-width: 768px) {
   .min-height-38,
   .min-height-35 {
     min-height: auto;
   }
 }
+
 .row {
   display: flex;
   flex-flow: row;
@@ -472,6 +480,7 @@ button:focus {
 .button-transparent {
   @apply inline-block leading-tight font-semibold text-lg rounded-full;
 }
+
 @media (max-width: 768px) {
   .button-transparent {
     @apply inline-block leading-tight font-medium text-base rounded-full;
@@ -493,9 +502,11 @@ button:focus {
 .max-w-30 {
   max-width: 480px;
 }
+
 .max-w-28 {
   max-width: 360px;
 }
+
 .max-w-45 {
   max-width: 720px;
 }
@@ -590,6 +601,7 @@ button:focus {
   .subnav-content {
     position: relative;
   }
+
   /*
   .subnav:hover .subnav-content {
     display: flex;
@@ -606,14 +618,17 @@ button:focus {
 .filter-invert {
   filter: invert(1);
 }
+
 .filter-invert-temp {
   filter: invert(1) !important;
 }
+
 @media (max-width: 768px) {
   .filter-invert {
     filter: invert(0);
   }
 }
+
 .button-hover:hover .tag-hover {
   border-color: black;
 }
@@ -708,6 +723,7 @@ button:focus {
     width: 17px;
   }
 }
+
 .header-position {
   position: absolute;
   top: 79px;
@@ -715,12 +731,15 @@ button:focus {
   min-height: 100vh;
   height: 100%;
 }
+
 .font-bold-imp {
   font-weight: 700 !important;
 }
+
 .font-semi-imp {
   font-weight: 600 !important;
 }
+
 .max-w-850 {
   max-width: 850px;
 }
@@ -740,9 +759,11 @@ button:focus {
 .checkbox-round:checked {
   background-color: gray;
 }
+
 .height-978 {
   height: 978px;
 }
+
 @media (max-width: 768px) {
   .height-22 {
     height: 22px;
@@ -757,6 +778,7 @@ button:focus {
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
   }
+
   .hover-line-white:hover:after {
     transform: scaleX(1);
     transform-origin: 0% 50%;
@@ -769,53 +791,74 @@ button:focus {
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
   }
+
   .hover-line-black:hover:after {
     transform: scaleX(1);
     transform-origin: 0% 50%;
   }
 }
+
 .header-background {
   min-height: 100vh;
   height: 100%;
   background-color: black;
 }
+
 .button-hover:hover {
-  @apply bg-white  text-black;
+  @apply bg-white text-black;
 }
+
 .button-hover-invert:hover {
   @apply text-black bg-white border border-solid border-white;
 }
+
 .hover-transparent:hover {
   @apply border-white bg-transparent text-white border-2 border-solid;
 }
+
 .hover-opening:hover {
   @apply bg-black text-white;
 }
+
 @media (min-width: 1024px) {
   .margin-left-150 {
     margin-left: -150px;
   }
 }
 
+#trigger {
+  position: relative;
+  padding-top: 30vh;
+  padding-bottom: 100vh;
+}
+
+#animation-content {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+#animation-content.fade {
+  opacity: 0.01;
+}
+
 .absolute-feature {
   position: absolute;
-  top: 90px;
+  bottom: 0;
+  left: 0;
 }
+
 .fixed-feature {
   position: fixed;
-  top: 90px;
+  top: 20vh;
+  left: 0;
 }
-@media (max-width: 1024px) {
-  .absolute-feature,
-  .fixed-feature {
-    top: -101px;
-    left: -75px;
-  }
-}
+
 @media (max-width: 768px) {
-  .absolute-feature,
+  #trigger {
+    padding-top: 60vh;
+  }
+
   .fixed-feature {
-    top: -51px;
-    left: -65px;
+    top: 30vh;
   }
 }
