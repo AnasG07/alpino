@@ -57,7 +57,7 @@ export default function Blog({ blogs }) {
           </div>
         </div>
         <div className="bg-white min-height-60">
-          <div className="py-30 px-16 flex flex-row flex-wrap">
+          <div className="py-30 px-8 md:px-16 flex flex-row flex-wrap">
             {blogs.map((i, index) => (
               <div className="w-full md:w-2/4 lg:w-2/6 px-4 pt-12" key={index}>
                 <BlogCard data={i} />
