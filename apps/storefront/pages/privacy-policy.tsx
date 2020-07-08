@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
           </div>
         </div>
         <div className="flex flex-col-reverse lg:flex-row">
-          <div className="bg-black  w-full lg:w-2/4 px-12 md:px-31  py-15 justify-between items-center flex flex-col">
+          <div className="bg-black  w-full lg:w-2/4 px-6 md:px-31  py-15 justify-between items-center flex flex-col">
             <p className="text-sm md:text-xl leading-7 md:leading-loose text-white">
               At Alpino, we respect your privacy and recognise the need to protect personally identifiable information
               (any information by which you can be identified, such as but not limited to name, address, and telephone
@@ -49,14 +49,14 @@ export default function PrivacyPolicy() {
           </div>
           <img src="./workplace.jpg" alt="workplace" className={classNames(' w-full lg:w-2/4 mb-0 md:mb-12')} />
         </div>
-        <div className="min-height-31 bg-white flex flex-col md:px-0 px-4">
+        <div className="min-height-31 bg-white flex flex-col pb-10 md:pb-0 md:px-31 lg:px-0 px-6">
           <h1 className="pt-12 md:pt-31 text-center  font-semibold text-2xl md:text-4xl leading-loose md:leading-12 text-black">
             ALPINO PRIVACY GUARANTEE
           </h1>
           <p
             className={classNames(
               styles['max-width-1000'],
-              'text-sm md:text-xl leading-7 md:leading-loose text-black text-center pt-6 md:pt-12 mx-auto',
+              'text-sm md:text-xl leading-7 md:leading-loose text-black text-left md:text-center pt-6 md:pt-12 mx-auto',
             )}>
             Alpino promises that it will not sell or rent your personal information to third parties for their marketing
             purposes without your explicit consent. From time to time we may reveal general statistical information
@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <div className="flex flex-col lg:flex-row bg-black lg:min-h-60 py-8 md:py-16">
-          <div className="bg-maximum-red w-full lg:w-2/4   px-12 md:px-31  py-15  items-center flex flex-col ">
+          <div className="bg-maximum-red w-full lg:w-2/4   px-6 md:px-31  py-15  items-center flex flex-col ">
             <h1 className="text-2xl md:text-4xl leading-loose md:leading-12 text-white font-semibold">
               {' '}
               INFORMATION WE COLLECT

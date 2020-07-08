@@ -30,7 +30,7 @@ export default function Contact() {
         </div>
         <div className="flex flex-col lg:flex-row bg-white">
           <div className="lg:min-h-60 w-full lg:w-2/4">
-            <div className="px-16 lg:pl-28 lg:pr-20 pt-12 lg:pt-24 pb-8 lg:pb-16 flex flex-col lg:min-h-60 justify-between">
+            <div className="px-6 md:px-16 lg:pl-28 lg:pr-20 pt-12 lg:pt-24 pb-8 lg:pb-16 flex flex-col lg:min-h-60 justify-between">
               <h1 className={classNames(styles['text-color-black-h1'], 'md:text-4.5xl text-2xl font-semi-imp')}>
                 Contact Us
               </h1>
@@ -47,7 +47,7 @@ export default function Contact() {
               </p>
             </div>
           </div>
-          <div className={classNames('lg:min-h-60 w-full lg:w-2/4 ', styles['p-15'])}>
+          <div className={classNames('lg:min-h-60 w-full lg:w-2/4 px-6 pb-10 md:p-17')}>
             <div className={classNames(styles['p-15'], 'form-card ')}>
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row">
