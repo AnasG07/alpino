@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export default function PrivacyPolicy() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />

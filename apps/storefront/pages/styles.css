@@ -7,7 +7,10 @@ body {
   overflow-x: hidden;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu;
 }
-
+main {
+  max-width: 1400px;
+  margin: 0px auto;
+}
 .alice-carousel {
   position: relative;
   box-sizing: border-box;
