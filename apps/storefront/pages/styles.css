@@ -583,6 +583,10 @@ button:focus {
   @apply flex-row-reverse;
 }
 
+#myImg {
+  transition: opacity 0.2s ease;
+}
+
 .product-alignment:nth-child(2) {
   padding-top: 100vh;
 }
@@ -864,5 +868,9 @@ button:focus {
 
   .fixed-feature {
     top: 30vh;
+  }
+
+  .product-alignment:nth-child(2) {
+    padding-top: 80vh;
   }
 }
