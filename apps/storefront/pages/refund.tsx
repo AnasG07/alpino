@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export default function Refund() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -41,9 +41,9 @@ export default function Refund() {
             </h3>
           </div>
         </div>
-        <div className="bg-black flex flex-col-reverse md:flex-row pt-16 justify-between">
-          <div className="px-8 md:pl-31 md:border-none">
-            <h3 className="font-medium md:font-semibold leading-loose md:leading-12 text-base md:text-2xl text-white max-width-686 pt-8 md:pt-0">
+        <div className="bg-black flex flex-col-reverse lg:flex-row pt-16 justify-between">
+          <div className="px-8 lg:pl-31 md:border-none">
+            <h3 className="font-medium md:font-semibold leading-loose md:leading-12 text-base md:text-2xl text-white max-width-686 pt-8 lg:pt-0">
               Delayed Delivery
             </h3>
             <p className="leading-7 md:leading-12 text-sm md:text-lg font-normal md:font-medium text-white max-width-686 border-b md:border-none border-border-respon ">
@@ -58,15 +58,15 @@ export default function Refund() {
             <img src="/clock.jpeg" alt="clock" className={styles['img-clock']} />
           </div>
         </div>
-        <div className="bg-black flex flex-col md:flex-row pt-16 justify-between">
+        <div className="bg-black flex flex-col lg:flex-row pt-16 justify-between">
           <div className="px-10 flex justify-center">
             <img src="/yellow.jpeg" alt="clock" className={styles['img-clock']} />
           </div>
-          <div className="px-8 md:pr-31 pt-4 md:pt-0">
-            <h3 className="font-medium md:font-semibold leading-loose md:leading-12 text-base md:text-2xl text-white max-width-686  text-left md:text-right">
+          <div className="px-8 lg:pr-31 pt-4 lg:pt-0">
+            <h3 className="font-medium md:font-semibold leading-loose md:leading-12 text-base md:text-2xl text-white max-width-686  text-left lg:text-right">
               Wrong Product received
             </h3>
-            <p className="leading-7 md:leading-12 text-sm md:text-lg font-normal md:font-medium text-white max-width-686 text-left md:text-right border-b md:border-none border-border-respon">
+            <p className="leading-7 md:leading-12 text-sm md:text-lg font-normal md:font-medium text-white max-width-686 text-left lg:text-right border-b md:border-none border-border-respon">
               A customer can ask for a refund if the specifications of the product received are not as per the
               specifications mentioned in the website or if the product replacement takes more than 14 working days. A
               refund will, however, not be initiated, if the customer is unhappy with the look/sound quality of a defect
@@ -74,9 +74,9 @@ export default function Refund() {
             </p>
           </div>
         </div>
-        <div className="bg-black flex flex-col-reverse md:flex-row pt-16 justify-between">
-          <div className="px-8 md:pl-31 pb-8 md:pb-0">
-            <h3 className="font-medium md:font-semibold leading-loose md:leading-12 text-base md:text-2xl text-white max-width-686 pt-4 md:pt-0">
+        <div className="bg-black flex flex-col-reverse lg:flex-row pt-16 justify-between">
+          <div className="px-8 lg:pl-31 pb-8 lg:pb-0">
+            <h3 className="font-medium md:font-semibold leading-loose md:leading-12 text-base md:text-2xl text-white max-width-686 pt-4 lg:pt-0">
               Damaged Product received
             </h3>
             <p className="leading-7 md:leading-12 text-sm md:text-lg font-normal md:font-medium text-white max-width-686">
@@ -97,14 +97,14 @@ export default function Refund() {
             <img src="/broken.jpeg" alt="clock" className={styles['img-clock']} />
           </div>
         </div>
-        <div className="bg-black-privacy md:bg-black flex flex-row justify-center py-20 px-8 md:px-0 ">
+        <div className="bg-black-privacy lg:bg-black flex flex-row justify-center py-20 px-8 lg:px-0 ">
           <div className={styles['max-width-49']}>
-            <p className="leading-7 md:leading-12 text-sm md:text-lg font-normal md:font-medium text-white text-center">
+            <p className="leading-7 md:leading-12 text-sm md:text-lg font-normal md:font-medium text-white lg:text-center">
               The refund/replacement will only be processed upon the receipt and verification of complete product with
               accessories. The cost of any missing items will be debited from the advance payment done and the balance
               amount will be refunded.
             </p>
-            <p className="leading-7 md:leading-12 text-sm md:text-lg font-normal md:font-medium text-white pt-6 text-center">
+            <p className="leading-7 md:leading-12 text-sm md:text-lg font-normal md:font-medium text-white pt-6 lg:text-center">
               Please note that depending on the situation, the amount may be refunded after deducting the bank and
               delivery charges.
             </p>

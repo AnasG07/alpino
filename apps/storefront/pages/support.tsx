@@ -68,7 +68,7 @@ export default function Support({ faq }) {
           </div>
         </div>
         <div className="bg-black flex flex-col-reverse md:flex-row py-20">
-          <div className="flex flex-col p-24">
+          <div className="flex flex-col p-8 md:p-24">
             <span className="text-sm md:text-xl leading-7 md:leading-8 text-white">
               At Alpino, we’re committed to providing our customers the best of products, to help make their life
               better. In keeping with our long-standing belief of superior quality, we leave no stone unturned in
@@ -92,7 +92,7 @@ export default function Support({ faq }) {
           </div>
           <img src="./window.jpg" alt="window" className="md:w-2/4 w-full" />
         </div>
-        <div className="bg-white pt-8 md:pt-16 px-12 md:px-32">
+        <div className="bg-white pt-8 md:pt-16 px-8 md:px-32">
           <h1 className="text-black text-left leading-8 md:leading-16 font-semibold text-2xl md:text-5xl">
             Frequently Asked Questions
           </h1>

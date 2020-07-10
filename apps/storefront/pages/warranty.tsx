@@ -70,7 +70,7 @@ export default function Warranty({ faq }) {
   ];
 
   return (
-    <div className="overflow-x-hidden ">
+    <div className="overflow-x-hidden bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
@@ -90,7 +90,7 @@ export default function Warranty({ faq }) {
           </div>
         </div>
         <div className="flex flex-col-reverse md:flex-row">
-          <div className="bg-black md:min-h-60 w-full md:w-2/4 p-8 md:p-31  items-center flex flex-col">
+          <div className="bg-black md:min-h-60 w-full md:w-2/4 p-8 md:p-31  items-baseline md:items-center flex flex-col">
             <p className="text-sm md:text-3xl leading-7 md:leading-12 font-normal md:font-medium text-white">
               All warranty claims are subject to Alpino Tech’s authorization and occur at our sole discretion only.
             </p>
@@ -197,7 +197,7 @@ export default function Warranty({ faq }) {
         <div
           className={classNames(
             styles['background-gradient'],
-            'min-height-38 flex flex-col pt-4 pb-4 md:pt-20 md:pb-20 px-4 md:px-0',
+            'min-height-38 flex flex-col pt-4 pb-4 md:pt-20 md:pb-20 px-8 md:px-0',
           )}>
           <h1 className="leading-8 md:leading-12 text-2xl md:text-4xl text-white text-center font-semibold">
             Cancellation Policy

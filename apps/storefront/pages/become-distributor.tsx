@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 export default function becomeDistributor() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-black">
       <Head>
         <title>Alpino</title>
         <link rel="icon" href="/favicon.ico" />
