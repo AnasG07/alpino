@@ -22,12 +22,12 @@ export default function Tag({ tag, productCard }) {
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
-        <Header />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
+          <Header />
           <div
             className="flex flex-col items-center justify-center mt-20 md:mt-30 bg-cover bg-center"
             style={{ backgroundImage: 'url(/earphones.png)', height: '50vh' }}>

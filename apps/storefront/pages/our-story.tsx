@@ -26,8 +26,8 @@ export default function OurStory() {
             </h3>
           </div>
         </div>
-        <div className="md:min-h-60 bg-black flex flex-col-reverse md:flex-row">
-          <div className="md:pl-31 md:py-20 p-8 md:pr-24 md:w-2/4 w-full flex flex-col justify-between">
+        <div className="md:min-h-60 bg-black flex flex-col-reverse lg:flex-row">
+          <div className="md:pl-31 md:py-20 p-8 md:pr-24 lg:w-2/4 w-full flex flex-col justify-between">
             <h1 className="text-xl md:text-5xl text-white leading-loose md:leading-16 font-medium md:font-semibold">
               About Us
             </h1>
@@ -36,7 +36,7 @@ export default function OurStory() {
               promise to carry the baton of home-grown
             </h3>
           </div>
-          <img src="/us.jpeg" className={classNames('w-full md:w-2/4  md:min-h-60')} />
+          <img src="/us.jpeg" className={classNames('w-full lg:w-2/4  ')} />
         </div>
         <div className={classNames(styles['min-height-39'], 'bg-black-about flex justify-center items-center')}>
           <div className="max-w-screen-lg p-8 md:p-0 leading-7 md:leading-8">
@@ -58,9 +58,9 @@ export default function OurStory() {
             </p>
           </div>
         </div>
-        <div className="md:min-h-60 bg-black flex flex-col md:flex-row">
-          <img src="/eye.jpeg" className={classNames('w-full md:w-2/4  md:min-h-60')} />
-          <div className="md:pl-31 md:py-20 md:pr-24 py-12 pl-8 pr-8 flex flex-col justify-between md:w-2/4 w-full">
+        <div className="md:min-h-60 bg-black flex flex-col lg:flex-row">
+          <img src="/eye.jpeg" className={classNames('w-full lg:w-2/4  ')} />
+          <div className="md:pl-31 md:py-20 md:pr-24 py-12 pl-8 pr-8 flex flex-col justify-between lg:w-2/4 w-full">
             <h1 className="text-xl md:text-5xl text-white leading-loose md:leading-16 font-medium md:font-semibold text-left md:text-right">
               Vision
             </h1>

@@ -17,18 +17,18 @@ export async function getServerSideProps({ params: { slug } }) {
 
   return {
     props: {
-      shop: shopResult?.shop,
-      product: productResult?.product,
+      shop: shopResult?.shop || null,
+      product: productResult?.product || null,
       selectedProduct: selectedProduct,
       productCard: getSimilarProducts(selectedProduct?.tags[0], slug),
     },
   };
 }
 
-function Slug({ productToDisplay, productCard, selectedProduct }) {
+function Slug({ productToDisplay, productCard, selectedProduct, shop, product }) {
+  console.log('duv', product);
   const handleOnDragStart = (e) => e.preventDefault();
   const buyRef = useRef(null);
-
   const [stickyHeight, setStickyHeight] = useState(0);
   useEffect(() => {
     if (!buyRef || !buyRef.current) {
@@ -43,18 +43,18 @@ function Slug({ productToDisplay, productCard, selectedProduct }) {
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
-        <Header
-          invert={false}
-          sticky
-          stickyHeight={stickyHeight}
-          cost={selectedProduct.cost}
-          name={selectedProduct.name}
-        />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
+          <Header
+            invert={false}
+            sticky
+            stickyHeight={stickyHeight}
+            cost={selectedProduct.cost}
+            name={selectedProduct.name}
+          />
           <div className="h-screen pb-1400 md:pb-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40">
               <AliceCarousel buttonsDisabled>
@@ -83,7 +83,9 @@ function Slug({ productToDisplay, productCard, selectedProduct }) {
                   MRP Rs. {selectedProduct.cost}
                 </p>
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
-                  <button className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center">
+                  <button
+                    ref={buyRef}
+                    className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center">
                     <span className="font-semibold text-black text-base md:text-lg leading-tight md:leading-6 ">
                       Buy now
                     </span>

@@ -89,8 +89,8 @@ export default function Warranty({ faq }) {
             </h3>
           </div>
         </div>
-        <div className="flex flex-col-reverse md:flex-row">
-          <div className="bg-black md:min-h-60 w-full md:w-2/4 p-8 md:p-31  items-baseline md:items-center flex flex-col">
+        <div className="flex flex-col-reverse lg:flex-row">
+          <div className="bg-black md:min-h-60 w-full lg:w-2/4 p-8 md:p-31  items-baseline md:items-center flex flex-col">
             <p className="text-sm md:text-3xl leading-7 md:leading-12 font-normal md:font-medium text-white">
               All warranty claims are subject to Alpino Tech’s authorization and occur at our sole discretion only.
             </p>
@@ -104,7 +104,7 @@ export default function Warranty({ faq }) {
               mandatory, especially if the order has been placed through amazon/flipkart.
             </p>
           </div>
-          <img className="w-full md:w-2/4 md:min-h-60" src="./visa.jpg" alt="visa" />
+          <img className="w-full lg:w-2/4" src="./visa.jpg" alt="visa" />
         </div>
         <div className="flex flex-col lg:flex-row bg-white">
           <div className="w-full lg:w-2/4">

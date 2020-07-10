@@ -43,12 +43,12 @@ export default function Category({ subCategories }) {
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
-        <Header invert={false} />
         <Head>
           <title>Alpino</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
+          <Header invert={false} />
           <div
             className={classNames(
               style.imageContainer,

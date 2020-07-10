@@ -24,31 +24,31 @@ export default function becomeDistributor() {
             </h3>
           </div>
         </div>
-        <div className="flex flex-col-reverse md:flex-row">
-          <div className="bg-black md:bg-white md:min-h-60 w-full md:w-2/4">
-            <div className="px-8 md:px-28  pt-12 md:pt-20 flex flex-col md:min-h-60">
-              <p className="leading-relaxed md:leading-12 text-white md:text-black text-sm md:text-2xl  font-normal md:font-medium">
+        <div className="flex flex-col-reverse lg:flex-row">
+          <div className="bg-black lg:bg-white lg:min-h-60 w-full lg:w-2/4">
+            <div className="px-8 md:px-28  pt-12 md:pt-20 flex flex-col lg:min-h-60">
+              <p className="leading-relaxed md:leading-12 text-white lg:text-black text-sm md:text-2xl  font-normal md:font-medium">
                 As a brand built for the masses, that focuses on essentials, we recognize offline retail as an equally
                 important part of our business as online retail.
               </p>
-              <p className="leading-relaxed md:leading-12 text-white md:text-black text-sm md:text-2xl pt-12 md:pt-20 md:pb-0 pb-16 font-normal md:font-medium">
+              <p className="leading-relaxed md:leading-12 text-white lg:text-black text-sm md:text-2xl pt-12 md:pt-20 lg:pb-0 pb-16 font-normal md:font-medium">
                 We’re already present in 10 states with over 100 retailers in just a matter of one year, and we’ll be
                 more than happy to have you as an addition to the Alpino Family.
               </p>
             </div>
           </div>
-          <img src="/blue-chair.jpeg" alt="blue-chair" className={classNames('w-full md:w-2/4')} />
+          <img src="/blue-chair.jpeg" alt="blue-chair" className={classNames('w-full lg:w-2/4')} />
         </div>
-        <div className="flex flex-col md:flex-row">
-          <img src="/two-people.jpeg" alt="blue-chair" className={classNames('w-full md:w-2/4')} />
-          <div className="bg-black md:bg-black-distributor md:min-h-60 w-full md:w-2/4">
+        <div className="flex flex-col lg:flex-row">
+          <img src="/two-people.jpeg" alt="blue-chair" className={classNames('w-full lg:w-2/4')} />
+          <div className="bg-black lg:bg-black-distributor lg:min-h-60 w-full lg:w-2/4">
             <div className="px-8 md:px-28 pt-12  md:pt-20 pb-16 md:pb-48 flex flex-col md:min-h-60 justify-between">
-              <p className="leading-relaxed md:leading-12 text-white text-sm md:text-2xl text-left md:text-right font-normal md:font-medium">
+              <p className="leading-relaxed md:leading-12 text-white text-sm md:text-2xl text-left lg:text-right font-normal md:font-medium">
                 With exclusive products for our offline market at a dealer’s price, you don’t have to worry about price
                 wars and margins. As a company that adds at least 4 SKUs every 25 days, we recognize the need to keep
                 bringing new offerings to the market.
               </p>
-              <p className="leading-relaxed md:leading-12 text-white text-sm md:text-2xl text-left md:text-right pt-12 md:pt-0 font-normal md:font-medium">
+              <p className="leading-relaxed md:leading-12 text-white text-sm md:text-2xl text-left lg:text-right pt-12 md:pt-0 font-normal md:font-medium">
                 We value you and are ecstatic to welcome you as a part of the Alpino Family. It is fundamental to us to
                 ensure your growth for our growth.
               </p>
