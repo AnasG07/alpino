@@ -13,13 +13,12 @@ import fetchCatalogProduct from '../../staticUtils/catalog/fetchCatalogProduct';
 
 export async function getServerSideProps({ params: { slug } }) {
   const selectedProduct = dataFetch(slug);
-  const [{ shop }, { product }] = await Promise.all([fetchPrimaryShop('en'), fetchCatalogProduct(slug)]);
+  const [shopResult, productResult] = await Promise.all([fetchPrimaryShop('en'), fetchCatalogProduct(slug)]);
 
-  console.log(product.variants[0]);
   return {
     props: {
-      shop,
-      product,
+      shop: shopResult?.shop,
+      product: productResult?.product,
       selectedProduct: selectedProduct,
       productCard: getSimilarProducts(selectedProduct?.tags[0], slug),
     },
