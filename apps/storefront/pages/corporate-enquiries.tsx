@@ -36,7 +36,7 @@ export default function Careers() {
               orders irrespective of your organisation’s size and are ready to deliver orders of any quantity.{' '}
             </h3>
           </div>
-          <img className="w-full lg:w-2/4 lg:min-h-60" src="./visa.jpg" alt="visa" />
+          <img className="w-full lg:w-2/4" src="./visa.jpg" alt="visa" />
         </div>
         <div className="bg-black flex flex-col-reverse md:flex-col items-center">
           <h3 className="leading-tight md:leading-normal text-sm md:text-2xl text-white pb-8 md:pb-0 pt-8 md:pt-16 px-6 md:px-16  lg:px-0 lg:max-w-58  text-center">

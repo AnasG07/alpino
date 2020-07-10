@@ -22,8 +22,8 @@ export default function IncubateALpino() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row bg-black">
-          <div className="bg-black  w-full md:w-2/4 px-6 pb-10 py-20 md:p-31 flex flex-col  justify-between">
+        <div className="flex flex-col lg:flex-row bg-black">
+          <div className="bg-black  w-full lg:w-2/4 px-6 pb-10 py-20 md:p-31 flex flex-col  justify-between">
             <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
               Incubating Ideas
             </h1>
@@ -32,22 +32,22 @@ export default function IncubateALpino() {
               recognize that without the right platform and support, ideas may never be realized
             </p>
           </div>
-          <img src="/comp.png" alt="comp" className="w-full md:w-2/4" />
+          <img src="/comp.png" alt="comp" className="w-full lg:w-2/4" />
         </div>
-        <div className="flex flex-col-reverse md:flex-row">
-          <img src="compo.png" alt="headphone" className=" w-full md:w-2/4" />
-          <div className="bg-black  w-full md:w-2/4">
+        <div className="flex flex-col-reverse lg:flex-row">
+          <img src="compo.png" alt="headphone" className=" w-full lg:w-2/4" />
+          <div className="bg-black  w-full lg:w-2/4">
             <div className="px-6 pb-10 pt-20 md:p-31">
               <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
                 Pioneers of the Nation
               </h1>
               <div className="flex flex-col justify-between min-height-38 pt-10 md:pt-16">
-                <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30">
+                <p className="text-base md:text-lg text-white-light font-normal leading-tight lg:max-w-30">
                   As a leader in consumer electronics, that was once an idea too, Alpino offers the opportunity to
                   students pursuing any level of education, to send in their ideas for a unique and new product that is
                   in tandem with our goals and resonates with our distribution network across India.
                 </p>
-                <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30 pt-4 md:pt-0">
+                <p className="text-base md:text-lg text-white-light font-normal leading-tight lg:max-w-30 pt-4 md:pt-0">
                   As a trailblazer in innovation, we launch at least 4 SKUs every 25 days. To further accelerate our
                   internal innovation, we aim to provide mentorship and launch new products from select ideas.
                 </p>
@@ -73,30 +73,30 @@ export default function IncubateALpino() {
           <img src="/incubate-people.jpg" alt="people" className="lg:min-h-30 w-full lg:w-2/4 mt-20 lg:mt-0" />
           <div className="bg-black w-full lg:w-2/4">
             <div className="px-6 py-10 md:p-31">
-              <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30">
+              <p className="text-base md:text-lg text-white-light font-normal leading-tight lg:max-w-30">
                 “The Alpino Ideation Challenge organized by Yuva, Shaheed Sukhdev College of Business Studies and
                 sponsored by Alpino Tech provided us just the right opportunity to showcase our talent.
               </p>
-              <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30 pt-4 md:pt-8">
+              <p className="text-base md:text-lg text-white-light font-normal leading-tight lg:max-w-30 pt-4 md:pt-8">
                 The challenge which spread over a month, was conducted in two rounds wherein the first round entailed
                 the submission of our idea and in the second round, the top 14 teams from across India had to give the
                 final presentation. In between these rounds, we were given professional mentorship to fine tune our
                 idea. The impressive list of judges for the final round included the Executive Board of Alpino Tech.
               </p>
-              <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30 pt-4 md:pt-8">
+              <p className="text-base md:text-lg text-white-light font-normal leading-tight lg:max-w-30 pt-4 md:pt-8">
                 For us, it was not just an Ideation Challenge, but also an opportunity to put the learnings from our MBA
                 in practice. We also commend the Yuva team for the smooth process and appreciate the agility and
                 genuinity of Alpino Tech as we got the award and the prize money within a month.
               </p>
-              <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30 pt-4 md:pt-8">
+              <p className="text-base md:text-lg text-white-light font-normal leading-tight lg:max-w-30 pt-4 md:pt-8">
                 In the end, we would like to thank Alpino Tech for giving us the chance to implement that idea and make
                 it a reality.”
               </p>
-              <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30 text-left pt-8 md:pt-24">
+              <p className="text-base md:text-lg text-white-light font-normal leading-tight lg:max-w-30 text-left pt-8 md:pt-24">
                 {' '}
                 Team X-Factor
               </p>
-              <p className="text-base md:text-lg text-white-light font-normal leading-tight max-w-30 text-left pt-2 pb-4 md:pb-0">
+              <p className="text-base md:text-lg text-white-light font-normal leading-tight lg:max-w-30 text-left pt-2 pb-4 md:pb-0">
                 {' '}
                 NMIMS Mumbai
               </p>
