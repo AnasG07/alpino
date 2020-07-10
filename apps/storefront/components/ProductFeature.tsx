@@ -46,12 +46,12 @@ const images = [
   '/animation/Speaker01_0037.png',
   '/animation/Speaker01_0038.png',
   '/animation/Speaker01_0039.png',
-  '/animation/Speaker01_0040.png',
-  '/animation/Speaker01_0041.png',
-  '/animation/Speaker01_0042.png',
-  '/animation/Speaker01_0043.png',
-  '/animation/Speaker01_0044.png',
-  '/animation/Speaker01_0045.png',
+  // '/animation/Speaker01_0040.png',
+  // '/animation/Speaker01_0041.png',
+  // '/animation/Speaker01_0042.png',
+  // '/animation/Speaker01_0043.png',
+  // '/animation/Speaker01_0044.png',
+  // '/animation/Speaker01_0045.png',
 ];
 
 export default class ProductFeature extends React.Component<Props> {
@@ -100,6 +100,7 @@ export default class ProductFeature extends React.Component<Props> {
     ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
     const obj = { curImg: 0 };
+    let opacity = 1;
     const tween = TweenMax.to(obj, 0.5, {
       curImg: images.length - 1,
       roundProps: 'curImg',
@@ -108,6 +109,18 @@ export default class ProductFeature extends React.Component<Props> {
       onUpdate: function () {
         const img = document.getElementById('myImg');
         img.setAttribute('src', images[obj.curImg]);
+        if (obj.curImg === 35) {
+          img.style.opacity = '0.7';
+        }
+        if (obj.curImg === 36) {
+          img.style.opacity = '0.3';
+        }
+        if (obj.curImg === 37) {
+          img.style.opacity = '0.1';
+        }
+        if (obj.curImg === 38) {
+          img.style.opacity = '0';
+        }
       },
     });
 
