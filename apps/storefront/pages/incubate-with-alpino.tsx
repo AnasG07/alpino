@@ -13,7 +13,7 @@ export default function IncubateALpino() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-black pb-16">
-        <div className={classNames(styles['background-image'], 'min-h-25 md:min-h-60')}>
+        <div className={classNames(styles['background-image'], 'bg-center min-h-25 md:min-h-60')}>
           <Header transparent />
           <div className="flex px-8 md:px-31 py-100 justify-end items-center">
             <div>
