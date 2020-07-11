@@ -13,7 +13,7 @@ export default function IncubateALpino() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-black pb-16">
-        <div className={classNames(styles['background-image'], 'min-h-25 md:min-h-60')}>
+        <div className={classNames(styles['background-image'], 'bg-center min-h-25 md:min-h-60')}>
           <Header transparent />
           <div className="flex px-8 md:px-31 py-100 justify-end items-center">
             <div>
@@ -32,10 +32,10 @@ export default function IncubateALpino() {
               recognize that without the right platform and support, ideas may never be realized
             </p>
           </div>
-          <img src="/comp.png" alt="comp" className="w-full lg:w-2/4" />
+          <img src="/comp.png" alt="comp" className="w-full lg:w-2/4 object-contain" />
         </div>
         <div className="flex flex-col-reverse lg:flex-row">
-          <img src="compo.png" alt="headphone" className=" w-full lg:w-2/4" />
+          <img src="compo.png" alt="headphone" className=" w-full lg:w-2/4  object-contain" />
           <div className="bg-black  w-full lg:w-2/4">
             <div className="px-6 pb-10 pt-20 md:p-31">
               <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">
@@ -121,7 +121,7 @@ export default function IncubateALpino() {
             </div>
           </div>
           <div className="w-full lg:w-2/4  ">
-            <img src="/compo1.png" alt="comfinal" className="w-full lg:min-h-40" />
+            <img src="/compo1.png" alt="comfinal" className="w-full lg:min-h-40  object-contain" />
           </div>
         </div>
         <div className="flex flex-col lg:flex-row bg-maximum-red">
