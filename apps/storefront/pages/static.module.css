@@ -1,51 +1,53 @@
 .background-image {
-  background-image: url('/incubate-alpino-new.png');
+  background-image: url('/incubate-alpino-new-min.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .background-story {
   background-image: url('/story.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .background-distributor {
   background-image: url('/distributor.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-}
-.background-headphone {
-  background-image: url('/incubate-headphone.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .background-careers {
   background-image: url('/careers.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .background-privacy {
   background-image: url('/privacy.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .background-contact {
   background-image: url('/bench.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .background-warranty {
   background-image: url('/heart.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .background-glass {
   background-image: url('/careers.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (max-width: 768px) {
