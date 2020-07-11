@@ -16,7 +16,6 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
   const [scroll, updateScroll] = useState(false);
   const [toggle, updateToggle] = useState(false);
   const [stickyToggle, updateStickyToggle] = useState(false);
-  const [scrollTest, updateScrollTest] = useState(false);
 
   if (process.browser) {
     useEffect(() => {
@@ -199,7 +198,7 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
             <button className="border-none outline-none">
               <a
                 onClick={() => updateCartVisible(!cartVisible)}
-                className={`header-link pl-2 pr-0 lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
+                className={`header-link pl-2 pr-0 lg:pl-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
                   !toggle && invert && !scroll && 'filter-invert'
                 }`}>
                 <img src="/cart.svg" />

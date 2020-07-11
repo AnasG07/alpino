@@ -650,6 +650,7 @@ button:focus {
   background-image: url('/telephone.svg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (max-width: 768px) {
