@@ -166,9 +166,9 @@ button:focus {
   outline: none;
 }
 
-/* input::placeholder {
-  @apply text-white;
-} */
+input::placeholder {
+  color: #f2f2f2;
+}
 
 .input {
   background: rgba(255, 255, 255, 0.15);
@@ -190,7 +190,7 @@ button:focus {
 }
 
 .text-content {
-  @apply text-lg text-white-light font-medium leading-normal;
+  @apply text-lg text-white-light font-normal leading-normal;
 }
 
 .text-content-file {

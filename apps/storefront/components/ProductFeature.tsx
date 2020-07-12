@@ -150,14 +150,13 @@ export default class ProductFeature extends React.Component<Props> {
     const { positionValue, fade } = this.state;
 
     return (
-      <div className={classNames('product-alignment p-16', { flex: !animation })} id={animation ? 'trigger' : ''}>
+      <div className={classNames('product-alignment', { flex: !animation })} id={animation ? 'trigger' : ''}>
         <div
-          className={classNames(
-            'flex-grow flex flex-col justify-center pl-0 lg:pl-32 lg:items-start items-center leading-12',
-            { fade },
-          )}
+          className={classNames('flex-grow flex flex-col justify-center  lg:items-start items-center leading-12', {
+            fade,
+          })}
           id={animation ? 'animation-content' : ''}>
-          <h1 className="max-w-30 text-center lg:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
+          <h1 className="pt-4 lg:pt-0 max-w-30 text-center lg:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
             {description}
           </h1>
           <div className="pt-4 md:pt-16">

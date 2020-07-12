@@ -63,11 +63,11 @@ export default function IncubateALpino() {
             </p>
           </div>
         </div>
-        <img src="incubate-class.jpg" className="md:min-h-30" />
+        <img src="incubate-class.jpg" className="md:min-h-30 object-cover" />
         <div className="flex flex-row">
-          <img className="max-width-50" src="incubate-work.jpg" alt="work" />
-          <img className="max-width-25" src="incubate-laptop.jpg" alt="work" />
-          <img className="max-width-25" src="incubate-laptoptwo.jpg" alt="laptop" />
+          <img className="max-width-50 object-cover" src="incubate-work.jpg" alt="work" />
+          <img className="max-width-25 object-cover" src="incubate-laptop.jpg" alt="work" />
+          <img className="max-width-25 object-cover" src="incubate-laptoptwo.jpg" alt="laptop" />
         </div>
         <div className="flex flex-col lg:flex-row">
           <img src="/incubate-people.jpg" alt="people" className="lg:min-h-30 w-full lg:w-2/4 mt-20 lg:mt-0" />
@@ -120,22 +120,20 @@ export default function IncubateALpino() {
               </p>
             </div>
           </div>
-          <div className="w-full lg:w-2/4  ">
-            <img src="/compo1_optimized.png" alt="comfinal" className="w-full lg:min-h-40 object-contain" />
+          <div className="w-full lg:w-2/4">
+            <img src="/compo1_optimized.png" alt="comfinal" className="w-full  object-contain" />
           </div>
         </div>
         <div className="flex flex-col lg:flex-row bg-maximum-red">
-          <div className="lg:min-h-60 w-full lg:w-2/4">
-            <div className="px-6 py-10 md:p-31 flex flex-col lg:min-h-60 justify-between">
-              <h1 className="leading-loose md:leading-12 text-black font-medium text-2xl md:text-5xl">
-                Calling all Product Designers{' '}
-              </h1>
-              <p className="text-sm md:text-lg text-black font-normal leading-tight pt-8 lg:pt-0">
-                This is your chance to send in your ideas for new products and new product designs that are in-line with
-                our existing products, and if we like those ideas, you get a chance to earn a portion of the commercial
-                proceeds from their sale, along with the chance to make your ideas come to life!
-              </p>
-            </div>
+          <div className="lg:min-h-60 w-full lg:w-2/4 px-6 py-10 md:p-31 flex flex-col lg:min-h-60 justify-between">
+            <h1 className="leading-loose md:leading-12 text-black font-medium text-2xl md:text-5xl">
+              Calling all Product Designers{' '}
+            </h1>
+            <p className="text-sm md:text-lg text-black font-normal leading-tight pt-8 lg:pt-0">
+              This is your chance to send in your ideas for new products and new product designs that are in-line with
+              our existing products, and if we like those ideas, you get a chance to earn a portion of the commercial
+              proceeds from their sale, along with the chance to make your ideas come to life!
+            </p>
           </div>
           <div className={classNames('lg:min-h-60 w-full lg:w-2/4', styles['p-15'])}>
             <div className={classNames(styles['p-15'], 'form-card')}>
