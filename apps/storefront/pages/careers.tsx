@@ -100,13 +100,13 @@ export default function Careers({ job }) {
       <main className="bg-black">
         <div className={classNames(styles['background-careers'], 'min-h-30 md:min-h-60 ')}>
           <Header invert black />
-          <div className={classNames('flex justify-center flex-col items-center pt-48')}>
+          <div className={classNames('flex justify-center flex-col items-center pt-350')}>
             <h1 className="leading-loose md:leading-12 text-black text-2xl md:text-7xl">Work at Alpino</h1>
             <button
               onClick={() => scrollOpening('#openings')}
-              className="hover-opening mt-2 md:mt-8 button-transparent py-1 md:py-2 px-2 md:px-4 outline-none text-black border-black font-medium md:font-semibold">
+              className="hover-opening mt-2 md:mt-12 button-transparent py-1 md:py-2 px-2 md:px-4 outline-none text-black border-black font-medium md:font-semibold">
               {' '}
-              view openings
+              View Openings
             </button>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function Careers({ job }) {
             more than just knowledge to the table.{' '}
           </p>
         </div>
-        <div className={classNames('bg-black min-height-60 px-0 lg:px-17')} id="openings">
+        <div className={classNames('bg-black min-height-60')} id="openings">
           <p className="text-white-light leading-tight md:leading-8 text-sm md:text-lg text-center pt-24 w-full pb-16 font-semibold">
             Some of the portfolios, we’re looking at include
           </p>
@@ -139,12 +139,12 @@ export default function Careers({ job }) {
           </div>
         </div>
         <div className="bg-grey-darker p-6 md:p-20 lg:p-31 flex flex-col-reverse  lg:flex-row">
-          <div className="flex flex-col justify-between pr-0 lg:pr-30 w-full lg:w-2/4">
-            <h2 className="text-2xl lg:text-4xl leading-loose  lg:leading-10 text-white-light pt-4 lg:pt-0 font-light md:font-normal">
+          <div className="flex flex-col justify-between pr-0 lg:pr-10 w-full lg:w-2/4">
+            <h2 className="text-2xl lg:text-4xl leading-loose  lg:leading-10 text-white-light pt-4 lg:pt-0 font-light md:font-normal max-w-30">
               “Every time I’ve come to a point in my career where I felt no longer challenged, Alpino has always given
               me the opportunity to try something new.”
             </h2>
-            <p className=" text-base lg:text-lg leading-5 text-white-light pt-2 lg:pt-0 font-semibold">
+            <p className=" text-base lg:text-lg leading-5 text-white-light pt-2 lg:pt-0 font-semibold max-w-30">
               John Doe <br />
               Strategy Manager,
               <br /> Brand and Communications
@@ -186,7 +186,7 @@ export default function Careers({ job }) {
               </div>
               <input className={classNames(styles['input-styles'], 'text-content hidden')} type="file" id="resume" />
               <div className="pt-8 border-b pb-2 w-full border-grey-border flex flex-row justify-between">
-                <p className="text-content-file">Resume / Portfolio</p>
+                <p className="text-lg text-white-light font-normal leading-normal">Resume / Portfolio</p>
                 <button className="button-transparent py-2 px-4 font-semi-imp" onClick={() => fileUpload()}>
                   Upload
                 </button>

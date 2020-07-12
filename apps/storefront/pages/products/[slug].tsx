@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
 import AliceCarousel from 'react-alice-carousel';
+import { isEmpty } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
@@ -26,7 +27,6 @@ export async function getServerSideProps({ params: { slug } }) {
 }
 
 function Slug({ productToDisplay, productCard, selectedProduct, shop, product }) {
-  console.log('duv', product);
   const handleOnDragStart = (e) => e.preventDefault();
   const buyRef = useRef(null);
   const [stickyHeight, setStickyHeight] = useState(0);
@@ -100,7 +100,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
               <img src="/products/downArrow.png" />
             </button>
           </div>
-          <div className={classNames(style.lightBlackBgColor, 'mt:0 md:mt-344')}>
+          <div className={classNames(style.lightBlackBgColor, 'mt:0 md:mt-120')}>
             <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center pt-20 textGrayColor font-medium px-4 md:px-0">
               {selectedProduct.descriptions.description1}
             </h1>
@@ -275,22 +275,26 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
             </div>
           </div>
 
-          <div className="pt-8 md:pt-24 pb-8 md:pb-24">
-            <div className="flex flex-col justify-between items-start  px-16 md:px-31">
-              <h1 className="text-white text-2xl leading-loose md:leading-12 md:text-5xl font-medium pt-12 md:pt-40">
-                {' '}
-                Similar from Alpino
-              </h1>
-              <p className="text-white text-xs md:text-lg font-normal mb-10 mt-2">Best always deserves better</p>
+          {!isEmpty(productCard) ? (
+            <div className="pt-8 md:pt-24 pb-8 md:pb-24">
+              <div className="flex flex-col justify-between items-start  px-16 md:px-31">
+                <h1 className="text-white text-2xl leading-loose md:leading-12 md:text-5xl font-medium pt-12 md:pt-40">
+                  {' '}
+                  Similar from Alpino
+                </h1>
+                <p className="text-white text-xs md:text-lg font-normal mb-10 mt-2">Best always deserves better</p>
+              </div>
+              <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-4 md:pl-31 pr-4 md:pr-10 items-center">
+                {productCard.map((i, index) => (
+                  <div className={`${index !== 0 && 'hidden'} lg:block`}>
+                    <ProductCard data={i} key={index} />
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-4 md:pl-31 pr-4 md:pr-10 items-center">
-              {productCard.map((i, index) => (
-                <div className={`${index !== 0 && 'hidden'} lg:block`}>
-                  <ProductCard data={i} key={index} />
-                </div>
-              ))}
-            </div>
-          </div>
+          ) : (
+            <div className="pb-8" />
+          )}
         </main>
       </div>
       <Footer />
