@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
 import AliceCarousel from 'react-alice-carousel';
-import { isEmpty } from 'lodash';
+
+import { Carousel } from 'react-responsive-carousel';
+import { isEmpty, toLowerCase } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
@@ -30,6 +32,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
   const handleOnDragStart = (e) => e.preventDefault();
   const buyRef = useRef(null);
   const [stickyHeight, setStickyHeight] = useState(0);
+  const [imageArray, updateImageArray] = useState([]);
   useEffect(() => {
     if (!buyRef || !buyRef.current) {
       return;
@@ -39,6 +42,24 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
     }
     setStickyHeight(window.scrollY + buyRef.current.getBoundingClientRect().top);
   }, [buyRef, buyRef.current]);
+
+  const selectImage = (id) => {
+    const imageSelect = product?.variants?.find((i) => i.variantId === id);
+    if (imageSelect) {
+      updateImageArray(imageSelect);
+    }
+  };
+
+  useEffect(() => {
+    if (isEmpty(product) || isEmpty(product.variants[0])) {
+      return;
+    }
+    updateImageArray(product.variants[0]);
+  }, []);
+
+  useEffect(() => {}, [imageArray]);
+
+  console.log(product);
 
   return (
     <div className="overflow-x-hidden">
@@ -57,30 +78,41 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
           />
           <div className="h-screen pb-1400 md:pb-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40">
-              <AliceCarousel buttonsDisabled>
-                {selectedProduct?.imagesCarousel?.map((i) => (
-                  <img key={i} src={i} onDragStart={handleOnDragStart} alt={selectedProduct?.name} />
-                ))}
-              </AliceCarousel>
+              <Carousel showThumbs={false}>
+                {!isEmpty(imageArray) &&
+                  imageArray?.media?.map((i, j) => (
+                    <img
+                      key={`${i.variantId}-${j}`}
+                      src={i.URLs.original}
+                      onDragStart={handleOnDragStart}
+                      alt={i.optionTitle}
+                    />
+                  ))}
+              </Carousel>
               <div className="flex flex-col justify-center px-12 md:pr-4 md:px-0 lg:pr-0">
                 <h1 className="text-white text-2xl leading-8 font-medium  md:text-5xl md:leading-12 ">
-                  {selectedProduct.name}
+                  {product.title}
                 </h1>
                 <h3 className="text-white mt-1 text-xl leading-8 font-medium  md:text-2xl md:leading-12 ">
-                  {selectedProduct.type}
+                  {product.pageTitle}
                 </h3>
 
                 <p className="text-white text-sm md:text-lg max-w-md leading-tight md:leading-normal textGrayColor mt-8">
-                  {selectedProduct.mainDescription}
+                  {product.description}
                 </p>
                 <div className="flex flex-row mt-6">
-                  <div className="h-5 bg-transparent border-2 border-white w-5 rounded-full mr-5" />
-                  <div className={classNames(style.grayBgColor, 'h-5 w-5 rounded-full mr-5')} />
-                  <div className={classNames(style.pinkBgColor, 'h-5 w-5 rounded-full mr-5')} />
-                  <div className={classNames(style.greenBgColor, 'h-5 w-5 rounded-full mr-5')} />
+                  {product &&
+                    product.variants.map((i) => (
+                      <button className="border-none" onClick={() => selectImage(i.variantId)}>
+                        <div
+                          style={{ backgroundColor: i.title.toLowerCase() }}
+                          className="h-5 bg-transparent border-2 border-white w-5 rounded-full mr-5"
+                        />
+                      </button>
+                    ))}
                 </div>
                 <p className="text-white text-sm md:text-lg font-medium leading-tight md:leading-normal textGrayColor mt-8">
-                  MRP Rs. {selectedProduct.cost}
+                  MRP {product.pricing[0].displayPrice}
                 </p>
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
                   <button

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ContextProviders } from '../context/ContextProviders';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import '../styles/global.scss';
 import './styles.css';
 
