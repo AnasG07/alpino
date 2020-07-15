@@ -75,7 +75,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
           />
           <div className="h-screen pb-1400 md:pb-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40">
-              <Carousel showThumbs={false} showArrows={false}>
+              <Carousel showThumbs={false} showArrows={false} showStatus={false}>
                 {!isEmpty(imageArray) &&
                   imageArray?.media?.map((i, j) => (
                     <img
