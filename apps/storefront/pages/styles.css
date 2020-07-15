@@ -879,3 +879,7 @@ input::placeholder {
 .button-home-incubate:hover {
   @apply text-black bg-maximum-red border border-solid border-maximum-red;
 }
+
+.carousel .slide img {
+  margin-bottom: 4rem;
+}

@@ -29,6 +29,7 @@ export async function getServerSideProps({ params: { slug } }) {
 
 function Slug({ productToDisplay, productCard, selectedProduct, shop, product }) {
   const handleOnDragStart = (e) => e.preventDefault();
+  console.log(product);
   const buyRef = useRef(null);
   const [stickyHeight, setStickyHeight] = useState(0);
   const [imageArray, updateImageArray] = useState([]);
@@ -74,7 +75,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
             name={selectedProduct.name}
           />
           <div className="h-screen pb-1400 md:pb-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-44">
               <Carousel showThumbs={false} showStatus={false} showArrows={false}>
                 {!isEmpty(imageArray) &&
                   imageArray?.media?.map((i, j) => (
@@ -86,7 +87,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
                     />
                   ))}
               </Carousel>
-              <div className="flex flex-col justify-center px-12 md:pr-4 md:px-0 lg:pr-0">
+              <div className="flex flex-col justify-center px-6 md:pr-4 md:px-0 lg:pr-0">
                 <h1 className="text-white text-2xl leading-8 font-medium  md:text-5xl md:leading-12 ">
                   {product.title}
                 </h1>
@@ -114,12 +115,12 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
                   <button
                     ref={buyRef}
-                    className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center">
+                    className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center whitespace-no-wrap mr-3 md:mr-0">
                     <span className="font-semibold text-black text-base md:text-lg leading-tight md:leading-6 ">
                       Buy now
                     </span>
                   </button>
-                  <button className="rounded-full py-3 px-10 border-2 bg-transparent flex justify-center button-hover">
+                  <button className="rounded-full py-3 px-10 border-2 bg-transparent flex justify-center button-hover whitespace-no-wrap ml-3 md:ml-0">
                     View Details
                   </button>
                 </div>
@@ -148,7 +149,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
               <img className="mx-auto mt-20" src={selectedProduct.images.img1} />
             </div>
             <div className="flex flex-col md:flex-row justify-center items-center mt-20 md:mt-56 md:px-4 lg:px-0">
-              <div className="pl-0 md:pl-31">
+              <div className="pl-0 md:pl-12 lg:pl-31">
                 <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left pt-20 md:pt-0 textGrayColor font-medium px-4 md:px-0">
                   {selectedProduct.descriptions.description2}
                 </h1>
@@ -159,7 +160,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
                 </div>
               </div>
               <div
-                className="bg-left bg-no-repeat"
+                className="bg-center md:bg-left bg-no-repeat"
                 style={{
                   backgroundImage: selectedProduct.animations.img2,
                 }}>
@@ -179,9 +180,9 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
               }}>
               <img className="mx-auto mt-4" src={selectedProduct.images.img3} />
             </div>
-            <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-20 md:mt-64 pb-12 md:pb-24 md:px-31">
+            <div className="flex flex-col-reverse md:flex-row justify-center items-center mt-20 md:mt-64 pb-12 md:pb-24 md:px-12 lg:px-31">
               <div
-                className="mr-0 md:mr-64 bg-left bg-no-repeat"
+                className="mr-0 md:mr-64 bg-center md:bg-left bg-no-repeat"
                 style={{
                   backgroundImage: selectedProduct.animations.img4,
                 }}>
@@ -200,7 +201,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
           {selectedProduct.images.img5 && (
             <div className="bg-black">
               <div className="flex flex-col md:flex-row justify-center items-center py-20 md:py-56 md:px-4 lg:px-0">
-                <div className="pl-0 md:pl-24">
+                <div className="pl-0 md:pl-12 lg:pl-24">
                   <h1 className="max-w-30 text-white text-2xl md:text-5xl leading-loose md:leading-12 text-center md:text-left textGrayColor font-medium px-4 md:px-0">
                     {selectedProduct.descriptions.description5}
                   </h1>
@@ -209,7 +210,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
                   </p>
                 </div>
                 <div
-                  className="px-2 md:px-0 max-w-850 bg-left bg-no-repeat"
+                  className="px-2 md:px-0 max-w-850 bg-center md:bg-left bg-no-repeat"
                   style={{
                     backgroundImage: selectedProduct.animations.img5,
                   }}>
@@ -306,14 +307,14 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
 
           {!isEmpty(productCard) ? (
             <div className="pt-8 md:pt-24 pb-8 md:pb-24">
-              <div className="flex flex-col justify-between items-start  px-16 md:px-31">
+              <div className="flex flex-col justify-between items-start  px-16  md:px-31">
                 <h1 className="text-white text-2xl leading-loose md:leading-12 md:text-5xl font-medium pt-12 md:pt-40">
                   {' '}
                   Similar from Alpino
                 </h1>
                 <p className="text-white text-xs md:text-lg font-normal mb-10 mt-2">Best always deserves better</p>
               </div>
-              <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-4 md:pl-31 pr-4 md:pr-10 items-center">
+              <div className="flex flex-row pt-16 lg:pt-32 justify-center lg:justify-between pl-4 lg:pl-31 pr-4 md:pr-10 items-center">
                 {productCard.map((i, index) => (
                   <div className={`${index !== 0 && 'hidden'} lg:block`}>
                     <ProductCard data={i} key={index} />
