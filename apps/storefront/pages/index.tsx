@@ -68,14 +68,14 @@ export default class Home extends React.Component {
                 <ProductFeature data={i} key={index} />
               ))}
             </div>
-            <div className="bg-home p-16 md:p-31 flex flex-col lg:flex-row items-center lg:items-start">
+            <div className="bg-home p-4 md:p-31 flex flex-col lg:flex-row items-center lg:items-start">
               <img src="/home-incubate.png" alt="head" className=" w-full lg:w-2/4 object-cover lg:min-h-50" />
 
-              <div className="w-full lg:w-2/4 flex-grow flex flex-col pt-8 lg:pt-0 pl-0  lg:pl-31 items-center lg:items-start">
+              <div className="w-full lg:w-2/4 flex-grow flex flex-col pt-4 lg:pt-0 pl-0  lg:pl-31 items-center lg:items-start">
                 <h1 className="text-maximum-red font-medium text-2xl md:text-5xl lg:text-left lg:pt-31 text-center lg:max-w-30 leading-7 md:leading-12">
                   Your ideas are worthy of so much more than the kudos in your imagination.
                 </h1>
-                <div className="lg:pt-56 pt-8 ">
+                <div className="lg:pt-56 pt-4 ">
                   <Link href="/incubate-with-alpino">
                     <a className="button-transparent  py-4 px-8 border-none bg-black  outline-none text-maximum-red button-home-incubate">
                       Incubate with Alpino
@@ -109,15 +109,15 @@ export default class Home extends React.Component {
                 </span>
               </div>
             </div>
-            <div className="background-image-people p-16 md:p-32 bg-no-repeat mt-16  md:mt-32 bg-cover">
+            <div className="background-image-people p-5 md:p-32 bg-no-repeat mt-16  md:mt-32 bg-cover">
               <div className="flex flex-col md:flex-row">
                 <div className="flex-grow">
                   <h1 className="text-left text-white font-medium text-2xl md:text-5xl leading-loose md:leading-12">
                     About us
                   </h1>
                 </div>
-                <div className="flex-grow flex flex-col justify-center md:w-2/4 w-full md:pt-0 pt-8">
-                  <h3 className="text-left text-xs md:text-xl text-white font-normal leading-3 md:leading-tight max-w-45 pb-12 md:pb-32 ">
+                <div className="flex-grow flex flex-col justify-center md:w-2/4 w-full pt-4 md:pt-0 ">
+                  <h3 className="text-left text-xs md:text-xl text-white font-normal leading-3 md:leading-tight max-w-45 pb-6 md:pb-32 ">
                     We refuse to conform to the idea of being just a consumer electronics brand, and instead believe
                     we’re a lifestyle brand. As a fast-paced company, we make sure our products help you listen to the
                     voice of righteousness and block out the noise of negativity.
