@@ -63,16 +63,16 @@ export default class Home extends React.Component {
           </Head>
           <main>
             <Header />
-            <div className="pb-56 px-31">
+            <div className="pb-56 lg:px-31">
               {productFeature.map((i, index) => (
                 <ProductFeature data={i} key={index} />
               ))}
             </div>
-            <div className="background-red-dark p-16 md:p-31 flex flex-col lg:flex-row items-center lg:items-start">
-              <img src="/compo.png" alt="head" className=" w-full lg:w-2/4 rounded-large" />
+            <div className="bg-home p-16 md:p-31 flex flex-col lg:flex-row items-center lg:items-start">
+              <img src="/home-incubate.png" alt="head" className=" w-full lg:w-2/4 object-contain" />
 
               <div className="w-full lg:w-2/4 flex-grow flex flex-col pt-8 lg:pt-0 pl-0  lg:pl-31 items-center lg:items-start">
-                <h1 className="text-black font-medium text-2xl md:text-5xl lg:text-left lg:pt-31 text-center lg:max-w-30 leading-7 md:leading-12">
+                <h1 className="text-maximum-red font-medium text-2xl md:text-5xl lg:text-left lg:pt-31 text-center lg:max-w-30 leading-7 md:leading-12">
                   Your ideas are worthy of so much more than the kudos in your imagination.
                 </h1>
                 <div className="lg:pt-56 pt-8 ">

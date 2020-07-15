@@ -55,7 +55,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
       return;
     }
     updateImageArray(product.variants[0]);
-  }, []);
+  }, [product._id]);
 
   useEffect(() => {}, [imageArray]);
 
@@ -78,7 +78,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
           />
           <div className="h-screen pb-1400 md:pb-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40">
-              <Carousel showThumbs={false}>
+              <Carousel showThumbs={false} showStatus={false} showArrows={false}>
                 {!isEmpty(imageArray) &&
                   imageArray?.media?.map((i, j) => (
                     <img
