@@ -65,6 +65,7 @@ export default class ProductFeature extends React.Component<Props> {
 
   scrollController: any;
   scrollScene: any;
+  elements: any;
 
   componentDidMount() {
     if (!this.props.data.animation) {
@@ -73,26 +74,11 @@ export default class ProductFeature extends React.Component<Props> {
     const mobile = window.screen.availWidth <= 1024 ? true : false;
 
     if (process.browser) {
-      const elements = document.getElementsByClassName('product-alignment');
-      console.log(elements);
-      if (!elements || !elements.length) {
+      this.elements = document.getElementsByClassName('product-alignment');
+      if (!this.elements || !this.elements.length) {
         return;
       }
-
-      window.addEventListener('scroll', () => {
-        const scrollHeight = elements[2].getBoundingClientRect().top - window.screen.availHeight / 100;
-        if (scrollY > scrollHeight) {
-          this.setState({ positionValue: true });
-        } else {
-          this.setState({ positionValue: false });
-        }
-
-        if (scrollY > 20) {
-          this.setState({ fade: true });
-        } else {
-          this.setState({ fade: false });
-        }
-      });
+      window.addEventListener('scroll', this.scrollListener);
     }
 
     const { TweenMax, TimelineMax } = require('gsap');
@@ -135,10 +121,26 @@ export default class ProductFeature extends React.Component<Props> {
       .addTo(this.scrollController);
   }
 
+  scrollListener = () => {
+    const scrollHeight = this.elements[2].getBoundingClientRect().top - window.screen.availHeight / 100;
+    if (scrollY > scrollHeight) {
+      this.setState({ positionValue: true });
+    } else {
+      this.setState({ positionValue: false });
+    }
+
+    if (scrollY > 20) {
+      this.setState({ fade: true });
+    } else {
+      this.setState({ fade: false });
+    }
+  };
+
   componentWillUnmount() {
     if (!this.props.data.animation) {
       return;
     }
+    window.removeEventListener('scroll', this.scrollListener);
     this.scrollScene.destroy();
     this.scrollController.destroy();
   }
