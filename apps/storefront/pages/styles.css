@@ -876,3 +876,6 @@ input::placeholder {
     padding-top: 80vh;
   }
 }
+.button-home-incubate:hover {
+  @apply text-black bg-maximum-red border border-solid border-maximum-red;
+}

@@ -69,7 +69,7 @@ export default class Home extends React.Component {
               ))}
             </div>
             <div className="bg-home p-16 md:p-31 flex flex-col lg:flex-row items-center lg:items-start">
-              <img src="/home-incubate.png" alt="head" className=" w-full lg:w-2/4 object-contain" />
+              <img src="/home-incubate.png" alt="head" className=" w-full lg:w-2/4 object-cover lg:min-h-50" />
 
               <div className="w-full lg:w-2/4 flex-grow flex flex-col pt-8 lg:pt-0 pl-0  lg:pl-31 items-center lg:items-start">
                 <h1 className="text-maximum-red font-medium text-2xl md:text-5xl lg:text-left lg:pt-31 text-center lg:max-w-30 leading-7 md:leading-12">
@@ -77,7 +77,7 @@ export default class Home extends React.Component {
                 </h1>
                 <div className="lg:pt-56 pt-8 ">
                   <Link href="/incubate-with-alpino">
-                    <a className="button-transparent  py-4 px-8 border-none bg-black outline-none text-white button-hover-invert">
+                    <a className="button-transparent  py-4 px-8 border-none bg-black  outline-none text-maximum-red button-home-incubate">
                       Incubate with Alpino
                     </a>
                   </Link>
@@ -94,8 +94,8 @@ export default class Home extends React.Component {
                   Best always deserves better
                 </h3>
               </div>
-              <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
-                <div className="flex flex-row flex-grow justify-between">
+              <div className="flex flex-row pt-16 lg:pt-32 justify-center lg:justify-between pl-4 lg:pl-31 pr-4 lg:pr-10 items-center">
+                <div className="flex flex-row flex-grow justify-center lg:justify-between">
                   {bestSellers.map((i, index) => (
                     <div className={`${index !== 0 && 'hidden'} lg:block`}>
                       <ProductCard data={i} key={index} />
@@ -139,8 +139,8 @@ export default class Home extends React.Component {
                   The future before it happens
                 </h3>
               </div>
-              <div className="flex flex-row pt-16 md:pt-32 justify-center lg:justify-between pl-16 md:pl-31 pr-4 md:pr-10 items-center">
-                <div className="flex flex-row flex-grow justify-between">
+              <div className="flex flex-row pt-16 lg:pt-32 justify-center lg:justify-between pl-4 lg:pl-31 pr-4 lg:pr-10 items-center">
+                <div className="flex flex-row flex-grow justify-center lg:justify-between">
                   {sneakPeek.map((i, index) => (
                     <div className={`${index !== 0 && 'hidden'} lg:block`}>
                       <ProductCard data={i} key={index} comingSoon />
