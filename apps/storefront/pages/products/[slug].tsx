@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
-import AliceCarousel from 'react-alice-carousel';
 
 import { Carousel } from 'react-responsive-carousel';
-import { isEmpty, toLowerCase } from 'lodash';
+import { isEmpty } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
@@ -58,8 +57,6 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
   }, [product._id]);
 
   useEffect(() => {}, [imageArray]);
-
-  console.log(product);
 
   return (
     <div className="overflow-x-hidden">
