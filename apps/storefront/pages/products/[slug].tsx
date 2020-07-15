@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
-import AliceCarousel from 'react-alice-carousel';
 
 import { Carousel } from 'react-responsive-carousel';
-import { isEmpty, toLowerCase } from 'lodash';
+import { isEmpty } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ProductCard from '../../components/ProductCard';
@@ -59,8 +58,6 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
 
   useEffect(() => {}, [imageArray]);
 
-  console.log(product);
-
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
@@ -78,7 +75,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
           />
           <div className="h-screen pb-1400 md:pb-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40">
-              <Carousel showThumbs={false}>
+              <Carousel showThumbs={false} showArrows={false}>
                 {!isEmpty(imageArray) &&
                   imageArray?.media?.map((i, j) => (
                     <img
