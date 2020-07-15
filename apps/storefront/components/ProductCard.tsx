@@ -35,7 +35,7 @@ export default function ProductCard({
               <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{name}</h3>
               <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{type}</h3>
             </div>
-            <span className="text-white text-xs md:text-base">₹ {price}</span>
+            <span className="text-white text-xs md:text-base"> {price}</span>
           </div>
           <div className="flex flex-row justify-between items-center pt-10 hover-show">
             <Link href="/products/[slug]" as={`/products/${slug}`}>

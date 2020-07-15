@@ -1,11 +1,12 @@
 export default `
-query catalogItems($shopIds: [ID]!, $slugOrIds: [String]!) {
-    catalogItems(shopIds: $shopIds, slugOrIds: $slugOrIds) {
-      ...TagInfo
-    }
-}
-fragment ProductInfo on CatalogItemProduct {
-  product {
+query catalogItems($shopIds: [ID]!, $tagIds: [ID]!) {
+    catalogItems(shopIds: $shopIds, tagIds: $tagIds) {
+      nodes{
+        ... on CatalogItemProduct{
+          product {
+            slug
+            description
+            pageTitle
         title
         pricing {
           displayPrice
@@ -16,6 +17,9 @@ fragment ProductInfo on CatalogItemProduct {
           }
         }
       }
+        }
+      }
+
     }
 }
 `;
