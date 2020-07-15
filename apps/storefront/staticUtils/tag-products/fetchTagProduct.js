@@ -1,6 +1,6 @@
 import graphQLRequest from '../graphQLRequest';
 import fetchPrimaryShop from '../shop/fetchPrimaryShop';
-import tagQuery from './tag.js';
+import catalogItem from './tagProduct.js';
 
 /**
  * Fetch a tag by its slug or id
@@ -9,9 +9,9 @@ import tagQuery from './tag.js';
  * @param {String} lang - The shop's language
  * @returns {Object} The fetched tag object
  */
-export default async function fetchTag(slugOrId, lang) {
+export default async function fetchTagProduct(slugOrId, lang) {
   const { shop } = await fetchPrimaryShop(lang);
-  const data = await graphQLRequest(tagQuery, { shopId: shop && shop._id, slugOrId });
+  const data = await graphQLRequest(catalogItem, { shopId: shop && shop._id, slugOrId });
 
-  return data && data.tag && { tag: data.tag };
+  return data && { data: data };
 }
