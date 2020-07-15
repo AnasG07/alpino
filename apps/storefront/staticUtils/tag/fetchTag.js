@@ -1,5 +1,5 @@
-import graphQLRequest from 'staticUtils/graphQLRequest';
-import fetchPrimaryShop from 'staticUtils/shop/fetchPrimaryShop';
+import graphQLRequest from '../graphQLRequest';
+import fetchPrimaryShop from '../shop/fetchPrimaryShop';
 import tagQuery from './tag.js';
 
 /**

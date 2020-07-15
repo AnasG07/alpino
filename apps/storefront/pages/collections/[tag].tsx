@@ -7,17 +7,24 @@ import classNames from 'classnames';
 import styles from './tag.module.css';
 import ProductCard from '../../components/ProductCard';
 import { getProductsByTag } from '../../data/functions';
+import fetchTag from '../../staticUtils/tag/fetchTag';
+import fetchTagProduct from '../../staticUtils/tag-products/fetchTagProduct';
 
 export async function getServerSideProps({ params }) {
+  const { tag } = await fetchTag(params.tag, 'en');
+  const data = await fetchTagProduct(tag._id, 'en');
+
   return {
     props: {
-      tag: params.tag,
+      tag: tag,
+      data: data,
       productCard: getProductsByTag(params.tag),
     },
   };
 }
 
-export default function Tag({ tag, productCard }) {
+export default function Tag({ productCard, tag, data }) {
+  console.log(tag, data);
   const [imgHover, updateImgHover] = useState(false);
   return (
     <div className="overflow-x-hidden">
@@ -30,9 +37,9 @@ export default function Tag({ tag, productCard }) {
           <Header />
           <div
             className="flex flex-col items-center justify-center mt-20 md:mt-30 bg-cover bg-center"
-            style={{ backgroundImage: 'url(/earphones.png)', height: '50vh' }}>
+            style={{ backgroundImage: `url(${tag.heroMediaUrl})`, height: '50vh' }}>
             <h1 className="text-center text-2xl leading-loose md:leading-12 md:text-5xl text-white font-medium md:font-semibold">
-              {startCase(tag)}
+              {tag.displayTitle}
             </h1>
             <p className="text-center mt-4 text-white font-normal md:font-medium leading-tight md:leading-loose text-sm md:text-2xl">
               Tune in and you’d never want to pull the plug

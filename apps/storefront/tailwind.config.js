@@ -29,6 +29,7 @@ module.exports = {
         'login-b': '#737373',
         'login-background': 'rgb(3,3,3)',
         'form-color': 'rgb(158,173,194)',
+        home: '#141517',
       },
       lineHeight: {
         16: '4rem',
@@ -73,6 +74,7 @@ module.exports = {
         '136': '33.75rem',
         '174': '174px',
         '30px': '30px',
+        '44': '11rem',
         '302': '322px',
         '28': '112px',
         '149': '149px',
