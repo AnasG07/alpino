@@ -637,9 +637,11 @@ input::placeholder {
     filter: invert(0);
   }
 }
-
+.tag-hover {
+  filter: invert(1);
+}
 .button-hover:hover .tag-hover {
-  border-color: black;
+  filter: invert(0);
 }
 
 .min-height-60 {

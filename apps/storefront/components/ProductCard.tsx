@@ -30,7 +30,7 @@ export default function ProductCard({
           <div className={classNames('flex items-center justify-center')} ref={imageBox}>
             <img src={image} alt={name} className="w-full" />
           </div>
-          <div className="flex flex-row items-center  justify-between">
+          <div className="flex flex-row items-center  justify-between pt-4">
             <div>
               <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{name}</h3>
               <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{type}</h3>

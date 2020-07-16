@@ -10,6 +10,8 @@ query catalogItems($shopIds: [ID]!, $tagIds: [ID]!) {
         title
         pricing {
           displayPrice
+          maxPrice
+          minPrice
         }
         primaryImage{
           URLs{

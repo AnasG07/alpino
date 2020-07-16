@@ -187,7 +187,7 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
             </Link>
           </div>
           <div className="flex flex-row flex-shrink-0">
-            <Link href="/user">
+            <Link href="/login">
               <a
                 className={`header-link px-2  lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
                   !toggle && invert && !scroll && 'filter-invert'
