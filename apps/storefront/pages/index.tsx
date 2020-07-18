@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Carousel from 'react-multi-carousel';
 import ProductFeature from '../components/ProductFeature';
 import ProductCard from '../components/ProductCard';
 import Header from '../components/Header';
@@ -54,6 +55,21 @@ export default class Home extends React.Component {
 
   render() {
     const { productFeature, bestSellers, sneakPeek } = this.props;
+    const responsive = {
+      desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 1,
+      },
+      tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 1,
+      },
+      mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+      },
+    };
+    console.log(bestSellers, sneakPeek);
     return (
       <div className="overflow-x-hidden">
         <div className="min-h-screen bg-black pt-20">

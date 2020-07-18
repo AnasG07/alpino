@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import classNames from 'classnames';
-
-import { Carousel } from 'react-responsive-carousel';
+import useCart from '../../hooks/cart/useCart.js';
+import Carousel from 'react-multi-carousel';
 import { isEmpty } from 'lodash';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -29,10 +29,12 @@ export async function getServerSideProps({ params: { slug } }) {
 
 function Slug({ productToDisplay, productCard, selectedProduct, shop, product }) {
   const handleOnDragStart = (e) => e.preventDefault();
-  console.log(product);
   const buyRef = useRef(null);
   const [stickyHeight, setStickyHeight] = useState(0);
   const [imageArray, updateImageArray] = useState([]);
+  const [selectedVariantId, updateSelectedVariantId] = useState('');
+  const [loading, updateLoading] = useState(false);
+  const [cartOpen, updateCartOpen] = useState(false);
   useEffect(() => {
     if (!buyRef || !buyRef.current) {
       return;
@@ -45,9 +47,40 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
 
   const selectImage = (id) => {
     const imageSelect = product?.variants?.find((i) => i.variantId === id);
+    const variantSelected = product?.variants?.find((i) => i.variantId === id)?.variantId;
+    if (variantSelected) {
+      updateSelectedVariantId(variantSelected);
+    }
     if (imageSelect) {
       updateImageArray(imageSelect);
     }
+  };
+
+  const { addItemsToCart } = useCart();
+
+  const onBuyNow = async () => {
+    const cartData = [
+      {
+        price: {
+          amount: product?.pricing[0]?.maxPrice,
+          currencyCode: product?.pricing[0]?.currency?.code,
+        },
+        productConfiguration: {
+          productId: product?.productId, // Pass the productId, not to be confused with _id
+          productVariantId: selectedVariantId, // Pass the variantId, not to be confused with _id
+        },
+        quantity: 1,
+      },
+    ];
+
+    // set loading to true;
+    updateCartOpen(false);
+    updateLoading(true);
+    await addItemsToCart(cartData);
+    updateLoading(false);
+    updateCartOpen(true);
+
+    // set loading to false;
   };
 
   useEffect(() => {
@@ -55,9 +88,25 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
       return;
     }
     updateImageArray(product.variants[0]);
+    updateSelectedVariantId(product.variants[0].variantId);
   }, [product._id]);
 
   useEffect(() => {}, [imageArray]);
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   return (
     <div className="overflow-x-hidden">
@@ -73,10 +122,13 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
             stickyHeight={stickyHeight}
             cost={selectedProduct.cost}
             name={selectedProduct.name}
+            onBuyNow={onBuyNow}
+            loading={loading}
+            cartOpen={cartOpen}
           />
           <div className="h-screen pb-1400 md:pb-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-44">
-              <Carousel showThumbs={false} showStatus={false} showArrows={false}>
+              <Carousel responsive={responsive} showDots={true} arrows={false}>
                 {!isEmpty(imageArray) &&
                   imageArray?.media?.map((i, j) => (
                     <img
@@ -114,11 +166,11 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
                 </p>
                 <div className="flex flex-row max-w-sm justify-between items-center pt-10">
                   <button
+                    disabled={loading}
+                    onClick={onBuyNow}
                     ref={buyRef}
-                    className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center whitespace-no-wrap mr-3 md:mr-0">
-                    <span className="font-semibold text-black text-base md:text-lg leading-tight md:leading-6 ">
-                      Buy now
-                    </span>
+                    className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center whitespace-no-wrap mr-3 md:mr-0 font-semibold text-black text-base md:text-lg leading-tight md:leading-6 ">
+                    Buy now
                   </button>
                   <button className="rounded-full py-3 px-10 border-2 bg-transparent flex justify-center button-hover whitespace-no-wrap ml-3 md:ml-0">
                     View Details
