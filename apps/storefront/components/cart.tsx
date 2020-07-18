@@ -1,13 +1,15 @@
 import React from 'react';
 import Modal from 'react-modal';
 import style from './cart.module.css';
+import useCart from '../hooks/cart/useCart.js';
 import Link from 'next/link';
 import classNames from 'classnames';
+import { withApollo } from '../lib/apollo/withApollo';
 import CardItemCard from '../components/CartItemCard';
 
 const customStyles = {
   content: {
-    height: '960px',
+    minHeight: '960px',
     width: '420px',
     left: 'auto',
     top: '0px',
@@ -23,7 +25,17 @@ const customStyles = {
   },
 };
 
-export default function Cart({ modalIsOpen, closeModal, items }) {
+function Cart({ modalIsOpen, closeModal, items }) {
+  const { cart, onRemoveCartItems, onChangeCartItemsQuantity } = useCart();
+
+  const handleRemoveItem = async (itemId) => {
+    const { data, error } = await onRemoveCartItems(itemId);
+  };
+
+  const handleItemQuantityChange = (quantity, cartItemId) => {
+    onChangeCartItemsQuantity({ quantity, cartItemId });
+  };
+
   return (
     <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}>
       <div className="bg-black flex flex-row justify-between py-6 px-6">
@@ -41,15 +53,22 @@ export default function Cart({ modalIsOpen, closeModal, items }) {
       <p className={classNames(style.productHeading, 'text-base px-6 mt-2 font-normal')}>Products</p>
 
       <div className="px-6 mt-3">
-        {items.map((i, index) => (
-          <CardItemCard i={i} index={index} />
+        {cart.items.map((i, index) => (
+          <CardItemCard
+            data={i}
+            index={index}
+            handleRemoveItem={handleRemoveItem}
+            handleItemQuantityChange={handleItemQuantityChange}
+          />
         ))}
       </div>
       <Link href="/checkout">
-        <a className={classNames('bg-black cursor-pointer mx-6 text-center mt-40 rounded-full block')}>
+        <a className={classNames('bg-black cursor-pointer mx-6 text-center mt-32 rounded-full block')}>
           <span className={classNames(style.checkoutButton, 'font-medium')}>Checkout</span>
         </a>
       </Link>
     </Modal>
   );
 }
+
+export default withApollo()(Cart);
