@@ -82,7 +82,7 @@ export default function Support({ faq }) {
               All our products come with a guarantee of excellence and if there persists any problem during the warranty
               usage of any product, feel free to reach out to us at +91-9870-456-457 or write to us at &nbsp;
               <a
-                href="https://support@alpino.tech"
+                href="mailto:support@alpino.tech"
                 className="text-link-color underline"
                 target="_blank"
                 rel="noreferrer">

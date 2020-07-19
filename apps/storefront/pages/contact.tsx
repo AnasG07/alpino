@@ -38,7 +38,7 @@ export default function Contact() {
                 It’s always a delight to hear from you! It not only gives us a chance to hear from a valued customer,
                 but also helps us improve our services. Reach out to us at{' '}
                 <span>
-                  <a href="https://connect@alpino.tech" className="text-link-color">
+                  <a href="mailto:contact@alpino.tech" className="text-link-color">
                     connect@alpino.tech{' '}
                   </a>
                 </span>
@@ -63,16 +63,30 @@ export default function Contact() {
               </div>
               <form className={styles['pt-35']}>
                 <div>
-                  <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input required placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
-                  <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    required
+                    type="email"
+                    placeholder="Email ID"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-20">
-                  <input placeholder="Message" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    required
+                    placeholder="Message"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-20 ">
-                  <input placeholder="Contact Number" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    required
+                    type="tel"
+                    placeholder="Contact Number"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-12 md:pt-30 flex justify-start md:justify-end">
                   <button className="leading-5 rounded-full text-sm md:text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center text-right hover-transparent border-2 border-white border-solid">

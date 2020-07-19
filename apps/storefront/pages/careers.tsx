@@ -161,7 +161,7 @@ export default function Careers({ job }) {
               of others. If our ideas resonate with you, and you’d like to join us in this journey of growth, introduce
               yourself and write to us at &nbsp;
               <span>
-                <a href="https://connect@alpino.tech" className="underline">
+                <a href="mailto:contact@alpino.tech" className="underline">
                   connect@alpino.tech
                 </a>
               </span>
@@ -173,18 +173,33 @@ export default function Careers({ job }) {
           <div className="rounded-large bg-grey-darker w-full lg:w-2/4 w-full">
             <div className="px-10 md:px-12 lg:px-16 py-10 md:py-16 lg:py-31">
               <div>
-                <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
+                <input required placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
               </div>
               <div className="pt-8">
-                <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />
+                <input
+                  required
+                  type="email"
+                  placeholder="Email ID"
+                  className={classNames(styles['input-styles'], 'text-content')}
+                />
               </div>
               <div className="pt-8">
-                <input placeholder="Phone Number" className={classNames(styles['input-styles'], 'text-content')} />
+                <input
+                  required
+                  type="tel"
+                  placeholder="Phone Number"
+                  className={classNames(styles['input-styles'], 'text-content')}
+                />
               </div>
               <div className="pt-8">
-                <input placeholder="Profile" className={classNames(styles['input-styles'], 'text-content')} />
+                <input required placeholder="Profile" className={classNames(styles['input-styles'], 'text-content')} />
               </div>
-              <input className={classNames(styles['input-styles'], 'text-content hidden')} type="file" id="resume" />
+              <input
+                required
+                className={classNames(styles['input-styles'], 'text-content hidden')}
+                type="file"
+                id="resume"
+              />
               <div className="pt-8 border-b pb-2 w-full border-grey-border flex flex-row justify-between">
                 <p className="text-lg text-white-light font-normal leading-normal">Resume / Portfolio</p>
                 <button className="button-transparent py-2 px-4 font-semi-imp" onClick={() => fileUpload()}>
