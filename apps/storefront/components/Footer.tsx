@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
+async function subscribe(email) {
+  return fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email }),
+  });
+}
+
 export default function Footer() {
+  const [loading, setLoading] = useState(false);
+  const [subscribed, setSubscribed] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const onSubscribe = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    await subscribe(email);
+    setSubscribed(true);
+    setLoading(false);
+  };
+
   return (
     <div className="px-12 md:px-20 lg:px-28 pb-8 bg-black max-w-1400 mx-auto">
       <hr className="border-gray-900 border" />
@@ -18,11 +39,11 @@ export default function Footer() {
                 <a className="pt-8 footer-font leading-6"> Privacy Policy </a>
               </Link>
             </div>
-            <div>
-              <Link href="/">
-                <a className="footer-font leading-6"> Terms and Condition </a>
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="/">*/}
+            {/*    <a className="footer-font leading-6"> Terms and Condition </a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
             <div>
               <Link href="/warranty">
                 <a className="footer-font leading-6"> Warranty </a>
@@ -141,14 +162,36 @@ export default function Footer() {
             </div>
             <h6 className="footer-font footer-text-color pt-2 lg:pt-8"> Even Trump can’t call this news fake</h6>
             <span className="row justify-center lg:justify-start pt-6">
-              <input placeholder="Enter your email address" className="pl-4 input-footer-color input w-3/4 lg:w-full" />
-              <button className="padding-notify-button">Join</button>
+              <input
+                required
+                type="email"
+                placeholder="Enter your email address"
+                className="pl-4 input-footer-color input w-3/4 lg:w-full"
+                value={email}
+                disabled={loading || subscribed}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button
+                style={loading || subscribed ? { cursor: 'default' } : {}}
+                className="padding-notify-button"
+                onClick={onSubscribe}
+                disabled={loading || subscribed}>
+                {loading ? 'Subscribing' : subscribed ? 'Subscribed' : 'Join'}
+              </button>
             </span>
             <div className="pt-10 lg:pt-16 flex lg:justify-start justify-center">
-              <img src="/facebook.png" alt="facebook" className="px-3 height-17" />
-              <img src="/instagram.png" alt="instagram" className="px-3 height-17" />
-              <img src="/youtube.png" alt="youtube" className=" px-3 height-17" />
-              <img src="/twitter.png" alt="twitter" className=" px-3 height-17" />
+              <a href="https://www.facebook.com/alpino.tech/" className="px-3">
+                <img src="/facebook.png" alt="facebook" className="height-17" />
+              </a>
+              <a href="https://www.instagram.com/alpino.tech/" className="px-3">
+                <img src="/instagram.png" alt="instagram" className="height-17" />
+              </a>
+              <a href="https://www.youtube.com/channel/UC9TU2qLRCWp24Dmm2F7M7Mg" className="px-3">
+                <img src="/youtube.png" alt="youtube" className="height-17" />
+              </a>
+              <a href="https://twitter.com/alpino.tech" className="px-3">
+                <img src="/twitter.png" alt="twitter" className="height-17" />
+              </a>
             </div>
           </div>
         </div>

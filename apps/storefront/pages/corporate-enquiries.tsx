@@ -14,7 +14,7 @@ export default function Careers() {
       </Head>
       <main className="bg-black">
         <div className={classNames(styles['background-glass'], 'min-h-25 md:min-h-60')}>
-          <Header invert unfixed black />
+          <Header invert black />
           <div className={classNames(styles['pt-86'], 'flex justify-center flex-col items-center px-6 md:px-0')}>
             <h1 className="text-center leading-loose text-2xl  md:leading-12 md:text-black font-medium md:text-7xl">
               Corporate Enquiries
@@ -50,19 +50,30 @@ export default function Careers() {
             <div className={classNames(styles['p-15'], 'form-card-darker')}>
               <form className={styles['pt-15']}>
                 <div>
-                  <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input required placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20 ">
-                  <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    required
+                    type="email"
+                    placeholder="Email ID"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-20">
-                  <input placeholder="Phone Number" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    required
+                    type="tel"
+                    placeholder="Phone Number"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-20">
                   <input placeholder="Company & City" className={classNames(styles['input-styles'], 'text-content')} />
                 </div>
                 <div className="pt-20">
                   <input
+                    required
                     placeholder="Details of Requirements"
                     className={classNames(styles['input-styles'], 'text-content')}
                   />
@@ -90,7 +101,7 @@ export default function Careers() {
                 <h3 className={classNames(styles['text-h3'], 'pt-4')}>
                   You can also reach us at{' '}
                   <span>
-                    <a href="https://connect@alpino.tech" className="underline">
+                    <a href="mailto:contact@alpino.tech" className="underline">
                       connect@alpino.tech
                     </a>
                   </span>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function QuestionCard({ data, index, invert }) {
+export default function QuestionCard({ data, index, invert = false }) {
   const [showAnswer, updateShowAnswer] = useState(false);
   return (
     <div className={`py-8 border-solid border-t ${invert ? 'border-faq-border-invert' : 'border-gray-custom'}`}>
