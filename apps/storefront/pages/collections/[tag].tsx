@@ -28,6 +28,7 @@ export async function getServerSideProps({ params }) {
 }
 
 export default function Tag({ productCard, tag, data }) {
+  console.log(data, tag);
   const listData = data.map((i) => {
     return {
       image: i?.product?.primaryImage?.URLs?.medium,
@@ -80,9 +81,9 @@ export default function Tag({ productCard, tag, data }) {
           <Header />
           <div
             className="flex flex-col items-center justify-center mt-20 md:mt-30 bg-cover bg-center"
-            style={{ backgroundImage: `url("${tag.heroMediaUrl}")`, height: '50vh' }}>
+            style={{ backgroundImage: `url("${tag?.heroMediaUrl}")`, height: '50vh' }}>
             <h1 className="text-center text-2xl leading-loose md:leading-12 md:text-5xl text-white font-medium md:font-semibold">
-              {tag.displayTitle}
+              {tag?.displayTitle}
             </h1>
             <p className="text-center mt-4 text-white font-normal md:font-medium leading-tight md:leading-loose text-sm md:text-2xl">
               Tune in and you’d never want to pull the plug
