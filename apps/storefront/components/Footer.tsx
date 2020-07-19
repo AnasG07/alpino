@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
+async function subscribe(email) {
+  return fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email }),
+  });
+}
+
 export default function Footer() {
+  const [loading, setLoading] = useState(false);
+  const [subscribed, setSubscribed] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const onSubscribe = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    await subscribe(email);
+    setSubscribed(true);
+    setLoading(false);
+  };
+
   return (
     <div className="px-12 md:px-20 lg:px-28 pb-8 bg-black max-w-1400 mx-auto">
       <hr className="border-gray-900 border" />
@@ -141,8 +162,22 @@ export default function Footer() {
             </div>
             <h6 className="footer-font footer-text-color pt-2 lg:pt-8"> Even Trump can’t call this news fake</h6>
             <span className="row justify-center lg:justify-start pt-6">
-              <input placeholder="Enter your email address" className="pl-4 input-footer-color input w-3/4 lg:w-full" />
-              <button className="padding-notify-button">Join</button>
+              <input
+                required
+                type="email"
+                placeholder="Enter your email address"
+                className="pl-4 input-footer-color input w-3/4 lg:w-full"
+                value={email}
+                disabled={loading || subscribed}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button
+                style={loading || subscribed ? { cursor: 'default' } : {}}
+                className="padding-notify-button"
+                onClick={onSubscribe}
+                disabled={loading || subscribed}>
+                {loading ? 'Subscribing' : subscribed ? 'Subscribed' : 'Join'}
+              </button>
             </span>
             <div className="pt-10 lg:pt-16 flex lg:justify-start justify-center">
               <img src="/facebook.png" alt="facebook" className="px-3 height-17" />
