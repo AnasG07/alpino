@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { set } from 'lodash';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from './static.module.css';
 import classNames from 'classnames';
+import submit from '../staticUtils/formSubmit.js';
 
 export default function Contact() {
+  const [contact, updateContact] = useState({ name: '', email: '', contactNumber: '', message: '' });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const inputHandler = (value, name) => {
+    const newData = { ...contact };
+    set(newData, name, value);
+    updateContact(newData);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    await submit(contact, 'Contact');
+    setSubmitted(true);
+    setLoading(false);
+  };
   return (
     <div className="min-h-screen overflow-x-hidden bg-black">
       <Head>
@@ -61,12 +80,18 @@ export default function Contact() {
                   Registration Form
                 </p>
               </div>
-              <form className={styles['pt-35']}>
+              <form className={styles['pt-35']} onSubmit={onSubmit}>
                 <div>
-                  <input required placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    onChange={(e) => inputHandler(e.target.value, 'name')}
+                    required
+                    placeholder="Name"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'email')}
                     required
                     type="email"
                     placeholder="Email ID"
@@ -75,6 +100,7 @@ export default function Contact() {
                 </div>
                 <div className="pt-20">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'message')}
                     required
                     placeholder="Message"
                     className={classNames(styles['input-styles'], 'text-content')}
@@ -82,6 +108,7 @@ export default function Contact() {
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'contactNumber')}
                     required
                     type="tel"
                     placeholder="Contact Number"
@@ -89,8 +116,10 @@ export default function Contact() {
                   />
                 </div>
                 <div className="pt-12 md:pt-30 flex justify-start md:justify-end">
-                  <button className="leading-5 rounded-full text-sm md:text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center text-right hover-transparent border-2 border-white border-solid">
-                    Submit
+                  <button
+                    disabled={loading || submitted}
+                    className="leading-5 rounded-full text-sm md:text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center text-right hover-transparent border-2 border-white border-solid">
+                    {loading ? 'Submitting' : submitted ? 'Submitted' : 'Submit'}
                   </button>
                 </div>
               </form>

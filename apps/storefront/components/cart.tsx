@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import style from './cart.module.css';
 import useCart from '../hooks/cart/useCart.js';
+import { isEmpty } from 'lodash';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { withApollo } from '../lib/apollo/withApollo';
@@ -25,7 +26,7 @@ const customStyles = {
   },
 };
 
-function Cart({ modalIsOpen, closeModal, items }) {
+function Cart({ modalIsOpen, closeModal, items, cartOpen }) {
   const { cart, onRemoveCartItems, onChangeCartItemsQuantity } = useCart();
 
   const handleRemoveItem = async (itemId) => {
@@ -50,23 +51,33 @@ function Cart({ modalIsOpen, closeModal, items }) {
         </button>
       </div>
 
-      <p className={classNames(style.productHeading, 'text-base px-6 mt-2 font-normal')}>Products</p>
+      {!isEmpty(cart.items) && (
+        <p className={classNames(style.productHeading, 'text-base px-6 mt-2 font-normal')}>Products</p>
+      )}
 
       <div className="px-6 mt-3">
-        {cart.items.map((i, index) => (
-          <CardItemCard
-            data={i}
-            index={index}
-            handleRemoveItem={handleRemoveItem}
-            handleItemQuantityChange={handleItemQuantityChange}
-          />
-        ))}
+        {!isEmpty(cart.items) ? (
+          cart.items.map((i, index) => (
+            <CardItemCard
+              data={i}
+              index={index}
+              handleRemoveItem={handleRemoveItem}
+              handleItemQuantityChange={handleItemQuantityChange}
+            />
+          ))
+        ) : (
+          <p className={classNames(style.productHeading, 'text-base text-center px-6 mt-2 font-normal pt-24')}>
+            No products here, yet
+          </p>
+        )}
       </div>
-      <Link href="/checkout">
-        <a className={classNames('bg-black cursor-pointer mx-6 text-center mt-32 rounded-full block')}>
-          <span className={classNames(style.checkoutButton, 'font-medium')}>Checkout</span>
-        </a>
-      </Link>
+      {!isEmpty(cart.items) && (
+        <Link href="/checkout">
+          <a className={classNames('bg-black cursor-pointer mx-6 text-center mt-32 rounded-full block')}>
+            <span className={classNames(style.checkoutButton, 'font-medium')}>Checkout</span>
+          </a>
+        </Link>
+      )}
     </Modal>
   );
 }

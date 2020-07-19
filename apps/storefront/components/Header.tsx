@@ -223,7 +223,7 @@ export default function Header({
             </button>
           </div>
         </div>
-        <Cart items={items} modalIsOpen={cartVisible} closeModal={() => updateCartVisible(false)} />
+        <Cart items={items} modalIsOpen={cartVisible} closeModal={() => updateCartVisible(false)} cartOpen={cartOpen} />
         {sticky && stickyToggle && (
           <div className=" max-w-1400 fixed w-full z-10 p-30px top-65 flex flex-row bg-black justify-between items-center">
             <div className="flex flex-col pr-8 md:pr-0">

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import JobCard from '../components/job-card';
 import styles from './static.module.css';
 import classNames from 'classnames';
+import { set } from 'lodash';
+import submit from '../staticUtils/formSubmit.js';
 
 export async function getStaticProps() {
   return {
@@ -81,6 +83,31 @@ export async function getStaticProps() {
 }
 
 export default function Careers({ job }) {
+  const [careers, updateCareers] = useState({
+    name: '',
+    email: '',
+    phoneNumber: '',
+    profile: '',
+    portfolio: '',
+  });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const inputHandler = (value, name) => {
+    const newData = { ...careers };
+    set(newData, name, value);
+    updateCareers(newData);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    await submit(careers, 'Careers');
+    setSubmitted(true);
+    setLoading(false);
+  };
+  console.log(careers);
+
   const fileUpload = () => {
     document.getElementById('resume').click();
   };
@@ -172,45 +199,64 @@ export default function Careers({ job }) {
           </div>
           <div className="rounded-large bg-grey-darker w-full lg:w-2/4 w-full">
             <div className="px-10 md:px-12 lg:px-16 py-10 md:py-16 lg:py-31">
-              <div>
-                <input required placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
-              </div>
-              <div className="pt-8">
+              <form onSubmit={onSubmit}>
+                <div>
+                  <input
+                    onChange={(e) => inputHandler(e.target.value, 'name')}
+                    required
+                    placeholder="Name"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
+                </div>
+                <div className="pt-8">
+                  <input
+                    onChange={(e) => inputHandler(e.target.value, 'email')}
+                    required
+                    type="email"
+                    placeholder="Email ID"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
+                </div>
+                <div className="pt-8">
+                  <input
+                    onChange={(e) => inputHandler(e.target.value, 'phoneNumber')}
+                    required
+                    type="tel"
+                    placeholder="Phone Number"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
+                </div>
+                <div className="pt-8">
+                  <input
+                    onChange={(e) => inputHandler(e.target.value, 'profile')}
+                    required
+                    placeholder="Profile"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
+                </div>
                 <input
+                  onChange={(e) => inputHandler(e.target.value, 'portfolio')}
                   required
-                  type="email"
-                  placeholder="Email ID"
-                  className={classNames(styles['input-styles'], 'text-content')}
+                  className={classNames(styles['input-styles'], 'text-content hidden')}
+                  type="file"
+                  id="resume"
                 />
-              </div>
-              <div className="pt-8">
-                <input
-                  required
-                  type="tel"
-                  placeholder="Phone Number"
-                  className={classNames(styles['input-styles'], 'text-content')}
-                />
-              </div>
-              <div className="pt-8">
-                <input required placeholder="Profile" className={classNames(styles['input-styles'], 'text-content')} />
-              </div>
-              <input
-                required
-                className={classNames(styles['input-styles'], 'text-content hidden')}
-                type="file"
-                id="resume"
-              />
-              <div className="pt-8 border-b pb-2 w-full border-grey-border flex flex-row justify-between">
-                <p className="text-lg text-white-light font-normal leading-normal">Resume / Portfolio</p>
-                <button className="button-transparent py-2 px-4 font-semi-imp" onClick={() => fileUpload()}>
-                  Upload
-                </button>
-              </div>
-              <div className="pt-10 md:pt-16 lg:pt-24 flex justify-start">
-                <button className="leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center text-right font-semibold hover-transparent border-2 border-white border-solid">
-                  Apply
-                </button>
-              </div>
+                <div className="pt-8 border-b pb-2 w-full border-grey-border flex flex-row justify-between">
+                  <p className="text-lg text-white-light font-normal leading-normal">
+                    {careers.portfolio !== '' ? 'File Uploaded' : 'Resume / Portfolio'}
+                  </p>
+                  <button className="button-transparent py-2 px-4 font-semi-imp" onClick={() => fileUpload()}>
+                    Upload
+                  </button>
+                </div>
+                <div className="pt-10 md:pt-16 lg:pt-24 flex justify-start">
+                  <button
+                    disabled={loading || submitted}
+                    className="leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center text-right font-semibold hover-transparent border-2 border-white border-solid">
+                    {loading ? 'Applying' : submitted ? 'Applied' : 'Apply'}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

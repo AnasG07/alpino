@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from './static.module.css';
 import classNames from 'classnames';
+import { set } from 'lodash';
+import submit from '../staticUtils/formSubmit.js';
 
 export default function IncubateALpino() {
+  const [incubate, updateIncubate] = useState({ name: '', email: '', college: '', problemSolving: '', bringTable: '' });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const inputHandler = (value, name) => {
+    const newData = { ...incubate };
+    set(newData, name, value);
+    updateIncubate(newData);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    await submit(incubate, 'Incubate');
+    setSubmitted(true);
+    setLoading(false);
+  };
+  console.log(incubate);
   return (
     <div className="overflow-x-hidden bg-black">
       <Head>
@@ -144,12 +164,18 @@ export default function IncubateALpino() {
                 </div>
                 <p className="text-content font-semi-imp"> Application Form</p>
               </div>
-              <form className={styles['pt-35']}>
+              <form className={styles['pt-35']} onSubmit={onSubmit}>
                 <div>
-                  <input required placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    onChange={(e) => inputHandler(e.target.value, 'name')}
+                    required
+                    placeholder="Name"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-20">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'email')}
                     required
                     type="email"
                     placeholder="Email"
@@ -158,6 +184,7 @@ export default function IncubateALpino() {
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'college')}
                     required
                     placeholder="College / Organization"
                     className={classNames(styles['input-styles'], 'text-content')}
@@ -166,20 +193,24 @@ export default function IncubateALpino() {
                 <div className="pt-20">
                   <input
                     required
+                    onChange={(e) => inputHandler(e.target.value, 'problemSolving')}
                     placeholder="What problem are you passionate about solving?"
                     className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'bringTable')}
                     required
                     placeholder="What would you bring to the table?"
                     className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-30">
-                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center font-semibold hover-transparent border-2 border-white border-solid">
-                    Submit
+                  <button
+                    disabled={loading || submitted}
+                    className="leading-5 rounded-full text-sm md:text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-center text-right hover-transparent border-2 border-white border-solid">
+                    {loading ? 'Submitting' : submitted ? 'Submitted' : 'Submit'}
                   </button>
                 </div>
               </form>
