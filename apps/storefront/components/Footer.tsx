@@ -180,10 +180,18 @@ export default function Footer() {
               </button>
             </span>
             <div className="pt-10 lg:pt-16 flex lg:justify-start justify-center">
-              <img src="/facebook.png" alt="facebook" className="px-3 height-17" />
-              <img src="/instagram.png" alt="instagram" className="px-3 height-17" />
-              <img src="/youtube.png" alt="youtube" className=" px-3 height-17" />
-              <img src="/twitter.png" alt="twitter" className=" px-3 height-17" />
+              <a href="https://www.facebook.com/alpino.tech/" className="px-3">
+                <img src="/facebook.png" alt="facebook" className="px-3 height-17" />
+              </a>
+              <a href="https://www.instagram.com/alpino.tech/" className="px-3">
+                <img src="/instagram.png" alt="instagram" className="px-3 height-17" />
+              </a>
+              <a href="https://www.youtube.com/channel/UC9TU2qLRCWp24Dmm2F7M7Mg" className="px-3">
+                <img src="/youtube.png" alt="youtube" className="height-17" />
+              </a>
+              <a href="https://twitter.com/alpino.tech" className="px-3">
+                <img src="/twitter.png" alt="twitter" className="height-17" />
+              </a>
             </div>
           </div>
         </div>
