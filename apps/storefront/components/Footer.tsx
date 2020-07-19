@@ -18,11 +18,11 @@ export default function Footer() {
                 <a className="pt-8 footer-font leading-6"> Privacy Policy </a>
               </Link>
             </div>
-            <div>
-              <Link href="/">
-                <a className="footer-font leading-6"> Terms and Condition </a>
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="/">*/}
+            {/*    <a className="footer-font leading-6"> Terms and Condition </a>*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
             <div>
               <Link href="/warranty">
                 <a className="footer-font leading-6"> Warranty </a>
