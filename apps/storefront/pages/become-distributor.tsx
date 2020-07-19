@@ -1,11 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from './static.module.css';
 import classNames from 'classnames';
+import { set } from 'lodash';
+import submit from '../staticUtils/formSubmit.js';
 
 export default function becomeDistributor() {
+  const [distributor, updateDistributor] = useState({
+    companyName: '',
+    email: '',
+    name: '',
+    contactNumber: '',
+    district: '',
+    existingConsumer: '',
+    saleProjection: '',
+    support: '',
+  });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const inputHandler = (value, name) => {
+    const newData = { ...distributor };
+    set(newData, name, value);
+    updateDistributor(newData);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    await submit(distributor, 'Distributor');
+    setSubmitted(true);
+    setLoading(false);
+  };
+  console.log(distributor);
   return (
     <div className="min-h-screen overflow-x-hidden bg-black">
       <Head>
@@ -68,12 +97,18 @@ export default function becomeDistributor() {
                 </div>
                 <p className="text-content">Registration Form</p>
               </div>
-              <form className={styles['pt-35']}>
+              <form className={styles['pt-35']} onSubmit={onSubmit}>
                 <div>
-                  <input required placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    onChange={(e) => inputHandler(e.target.value, 'name')}
+                    required
+                    placeholder="Name"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'companyName')}
                     required
                     placeholder="Company Name"
                     className={classNames(styles['input-styles'], 'text-content')}
@@ -81,6 +116,7 @@ export default function becomeDistributor() {
                 </div>
                 <div className="pt-20">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'contactNumber')}
                     required
                     type="tel"
                     placeholder="Contact Number"
@@ -89,6 +125,7 @@ export default function becomeDistributor() {
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'email')}
                     required
                     type="email"
                     placeholder="Email ID"
@@ -97,6 +134,7 @@ export default function becomeDistributor() {
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'district')}
                     required
                     placeholder="What districts would you want to launch Alpino in?"
                     className={classNames(styles['input-styles'], 'text-content')}
@@ -104,6 +142,7 @@ export default function becomeDistributor() {
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'existingConsumer')}
                     required
                     placeholder="Are you already working with existing consumer tech companies?If yes, please name them."
                     className={classNames(styles['input-styles'], 'text-content')}
@@ -111,6 +150,7 @@ export default function becomeDistributor() {
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'saleProjection')}
                     required
                     placeholder="What are the monthly sales projections that you would want to achieve with Alpino?"
                     className={classNames(styles['input-styles'], 'text-content')}
@@ -118,14 +158,17 @@ export default function becomeDistributor() {
                 </div>
                 <div className="pt-20 ">
                   <input
+                    onChange={(e) => inputHandler(e.target.value, 'support')}
                     required
                     placeholder="How do you want us to support you?"
                     className={classNames(styles['input-styles'], 'text-content')}
                   />
                 </div>
                 <div className="pt-12 flex justify-start md:justify-end">
-                  <button className="leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-end font-semibold hover-transparent border-2 border-white border-solid">
-                    Submit
+                  <button
+                    disabled={loading || submitted}
+                    className="leading-5 rounded-full text-base py-3 px-8 outline-none  bg-white text-black  max-w-8 w-full flex justify-end font-semibold hover-transparent border-2 border-white border-solid">
+                    {loading ? 'Submitting' : submitted ? 'Submitted' : 'Submit'}
                   </button>
                 </div>
               </form>
