@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './login.module.css';
+import Link from 'next/link';
 import classNames from 'classnames';
 
 export default function LoginContainer({ type }) {
@@ -40,11 +41,24 @@ export default function LoginContainer({ type }) {
           <div className="pt-6 text-center">
             {type === 'login' ? (
               <p className="font-light text-sm md:text-lg leading-8 text-login-font">
-                Don’t have an account? <span className="font-semibold">Sign Up </span>
+                Don’t have an account?{' '}
+                <span className="font-semibold">
+                  <Link href="/signup">
+                    <a>Sign Up</a>
+                  </Link>{' '}
+                </span>
               </p>
             ) : (
               <p className="font-light text-sm md:text-lg leading-8 text-login-font">
-                Already have an account? <span className="font-semibold">Login </span>
+                Already have an account?{' '}
+                <span className="font-semibold">
+                  {' '}
+                  <span className="font-semibold">
+                    <Link href="/login">
+                      <a>Login</a>
+                    </Link>{' '}
+                  </span>{' '}
+                </span>
               </p>
             )}
           </div>

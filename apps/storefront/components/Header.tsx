@@ -10,7 +10,19 @@ interface HeaderProps {
   black?: boolean;
 }
 
-export default function Header({ invert, transparent, opacity, black, sticky, stickyHeight, name, cost }: HeaderProps) {
+export default function Header({
+  invert,
+  transparent,
+  opacity,
+  black,
+  sticky,
+  stickyHeight,
+  name,
+  cartOpen,
+  cost,
+  loading,
+  onBuyNow,
+}: HeaderProps) {
   const [cartVisible, updateCartVisible] = useState(false);
   const [subnav, updateSubnav] = useState(false);
   const [scroll, updateScroll] = useState(false);
@@ -57,6 +69,11 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
       quantity: '1',
     },
   ];
+  useEffect(() => {
+    if (cartOpen) {
+      updateCartVisible(true);
+    }
+  }, [cartOpen]);
 
   return (
     <>
@@ -187,7 +204,7 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
             </Link>
           </div>
           <div className="flex flex-row flex-shrink-0">
-            <Link href="/user">
+            <Link href="/login">
               <a
                 className={`header-link px-2  lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
                   !toggle && invert && !scroll && 'filter-invert'
@@ -213,7 +230,10 @@ export default function Header({ invert, transparent, opacity, black, sticky, st
               <p className="font-medium leading-5 md:leading-7 text-sm md:text-3xl text-white">{name}</p>
               <p className="leading-5 md:leading-7 text-xs md:text-base text-white">MRP Rs. {cost}</p>
             </div>
-            <button className="mr-4 rounded-full py-3 px-8 md:px-10 outline-none border-2 bg-white flex justify-center text-black hover-transparent">
+            <button
+              disabled={loading}
+              onClick={onBuyNow}
+              className="mr-4 rounded-full py-3 px-8 md:px-10 outline-none border-2 bg-white flex justify-center text-black hover-transparent">
               Buy now
             </button>
           </div>

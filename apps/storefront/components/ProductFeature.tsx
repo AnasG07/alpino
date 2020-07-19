@@ -158,7 +158,7 @@ export default class ProductFeature extends React.Component<Props> {
             fade,
           })}
           id={animation ? 'animation-content' : ''}>
-          <h1 className="pt-4 lg:pt-0 max-w-30 text-center lg:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
+          <h1 className="pt-4 lg:pt-0 px-5 lg:px-0 max-w-30 text-center lg:text-left text-white font-medium text-2xl md:text-5xl leading-7 md:leading-12">
             {description}
           </h1>
           <div className="pt-4 md:pt-16">

@@ -212,21 +212,21 @@ export default function Warranty({ faq }) {
           </p>
           <p
             className={classNames(
-              'leading-7 md:leading-loose text-sm text-white text-left md:text-center pt-4 md:pt-0 md:mx-auto',
+              'leading-7 md:leading-loose text-sm md:text-xl text-white text-left md:text-center pt-4 md:pt-0 md:mx-auto',
               styles['max-width-42'],
             )}>
             Under this policy:
           </p>
           <p
             className={classNames(
-              'leading-7 md:leading-loose text-sm text-white text-left md:text-center md:mx-auto',
+              'leading-7 md:leading-loose text-sm  md:text-xl text-white text-left md:text-center md:mx-auto',
               styles['max-width-42'],
             )}>
             1. Cancellation requests will not be entertained if the order has been dispatched from the warehouse.
           </p>
           <p
             className={classNames(
-              'leading-7 md:leading-loose text-sm text-white text-left md:text-center md:mx-auto',
+              'leading-7 md:leading-loose text-sm md:text-xl text-white text-left md:text-center md:mx-auto',
               styles['max-width-42'],
             )}>
             2. To cancel your order, send us an e-mail on support@alpino.tech with your ORDER id within 6 hours of

@@ -22,7 +22,7 @@ export default function ProductCard({
   }, [imageBox]);
   return (
     <div className={classNames('relative h-full mx-auto mb-8', className)} style={{ maxWidth: '25rem' }}>
-      <Link href="/products/[slug]" as={`/products/${slug}`} className="cursor-pointer">
+      <Link href="/products/[slug]" as={`/products/${slug}`}>
         <span
           className={`flex flex-col p-8 min-height-35 lg:mr-8  ${
             noround ? 'rounded-none' : 'rounded-super'
@@ -30,12 +30,12 @@ export default function ProductCard({
           <div className={classNames('flex items-center justify-center')} ref={imageBox}>
             <img src={image} alt={name} className="w-full" />
           </div>
-          <div className="flex flex-row items-center  justify-between">
+          <div className="flex flex-row items-center  justify-between pt-4">
             <div>
               <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{name}</h3>
               <h3 className="max-w-14 leading-5 text-left text-white font-semibold text-sm md:text-xl">{type}</h3>
             </div>
-            <span className="text-white text-xs md:text-base">₹ {price}</span>
+            <span className="text-white text-xs md:text-base"> {price}</span>
           </div>
           <div className="flex flex-row justify-between items-center pt-10 hover-show">
             <Link href="/products/[slug]" as={`/products/${slug}`}>
