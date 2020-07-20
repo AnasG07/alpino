@@ -108,6 +108,14 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
     },
   };
 
+  const scrollOpening = (id) => {
+    var element = document.querySelector(id);
+    element.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="overflow-x-hidden">
       <div className="min-h-screen bg-black w-full">
@@ -172,7 +180,9 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
                     className="rounded-full py-3 px-8 md:px-10 outline-none border-none bg-white flex justify-center whitespace-no-wrap mr-3 md:mr-0 font-semibold text-black text-base md:text-lg leading-tight md:leading-6 ">
                     Buy now
                   </button>
-                  <button className="rounded-full py-3 px-10 border-2 bg-transparent flex justify-center button-hover whitespace-no-wrap ml-3 md:ml-0">
+                  <button
+                    onClick={() => scrollOpening('#specs')}
+                    className="rounded-full py-3 px-10 border-2 bg-transparent flex justify-center button-hover whitespace-no-wrap ml-3 md:ml-0">
                     View Details
                   </button>
                 </div>
@@ -271,7 +281,7 @@ function Slug({ productToDisplay, productCard, selectedProduct, shop, product })
               </div>
             </div>
           )}
-          <div className={classNames(style.specsContainerBg, 'pr-4 md:pr-0')}>
+          <div id="specs" className={classNames(style.specsContainerBg, 'pr-4 md:pr-0')}>
             <h1 className="text-white text-2xl md:text-5xl leading-loose md:leading-12 font-medium leading-10 mb-12 md:mb-24 pt-10 md:pt-40 ml-8 md:ml-24">
               {`Specs - ${selectedProduct.name}`}
             </h1>
