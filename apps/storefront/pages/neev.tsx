@@ -24,16 +24,18 @@ export default function Neev({ bestSellers }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-black">
-        <div className={classNames(styles['background-neev'], 'bg-center min-h-25 md:min-h-60')}>
+        <div className={classNames(styles['background-neev'], 'bg-center min-h-25 md:min-h-60 ')}>
           <Header transparent />
-          <h1 className={classNames(styles['text-heading'], 'pt-370 text-center')}>Neev</h1>
-          <h3 className="pt-8 text-base leading-8 text-center text-white-light"> FOR A BETTER WORLD</h3>
+          <h1 className={classNames(styles['text-heading'], 'pt-40 md:pt-370 text-center')}>Neev</h1>
+          <h3 className="pt-4 pb-31 md:pb-0 md:pt-8 text-sm md:text-base leading-tight md:leading-8 text-center text-white-light">
+            {' '}
+            FOR A BETTER WORLD
+          </h3>
         </div>
-        <div className="flex flex-col lg:flex-row bg-black px-31 justify-between items-center min-h-60">
-          <div className="">
-            <img src="/seven.svg" />
-          </div>
-          <h1 className="max-w-30 text-5xl leading-16  text-white ">
+        <div className="flex flex-col lg:flex-row bg-black py-20 lg:py-0 px-5 md:px-12 lg:px-31 lg:justify-between items-center lg:min-h-60">
+          <img src="/seven.svg" />
+
+          <h1 className="max-w-30 text-base md:text-5xl leading-tight md:leading-16  text-white pt-20 lg:pt-0 font-medium">
             Most people consider in the world seven to be their lucky number. And why shouldn’t they? It’s associated
             with the likes of James Bond and MS Dhoni. Alpino just made the luckiest number in the world even luckier!
           </h1>
@@ -41,12 +43,12 @@ export default function Neev({ bestSellers }) {
         <div
           className={classNames(
             styles['background-hands'],
-            'bg-center md:min-h-60 px-31 flex flex-row items-center justify-between',
+            'bg-center lg:min-h-60 px-5 md:px-12 lg:px-31 flex flex-col lg:flex-row items-center  py-20 lg:py-0 justify-between',
           )}>
-          <h1 className="max-w-30 text-5xl leading-16 text-white">
+          <h1 className="max-w-30 text-base md:text-5xl leading-tight md:leading-16  text-white font-medium">
             Neev, our brainchild will lay the foundation for community service in our organization.
           </h1>
-          <h3 className="max-w-30 font-semibold leading-tight text-lg text-white-light">
+          <h3 className="max-w-30 font-medium md:font-semibold leading-tight text-base md:text-lg text-white-light pt-10  lg:pt-0 ">
             We aim to empower the society through extending support to social enterprises. We plan to partner with a
             social enterprise and donate 7% of our sales from a particular set of SKUs to that organization. With the
             help of this partnership we will be able to leverage funds for social enterprises that are in dire need of
@@ -55,26 +57,26 @@ export default function Neev({ bestSellers }) {
             organisations as possible.
           </h3>
         </div>
-        <div className="py-44 px-31 justify-between flex flex-row">
-          <h3 className="leading-6 text-lg text-white-light max-w-30">
+        <div className="py-20 lg:py-44 md:px-12 px-5 lg:px-31 justify-between flex flex-col lg:flex-row items-center">
+          <h3 className="leading-tight md:leading-6 text-base md:text-lg text-white-light max-w-30 font-medium">
             We have always maintained that our customers are a part of the Alpino family, and with Neev we aim to give
             back to our extended family. This way our sound resonates into the lives of millions and gives them a voice!
           </h3>
-          <h3 className="leading-6 text-lg text-white-light max-w-30">
+          <h3 className="leading-tight md:leading-6 text-base md:text-lg text-white-light max-w-30 font-medium pt-20 lg:pt-0 ">
             Through Neev, we wish to create a common platform to discuss these issues and amplify the voices of those
             working tirelessly to eradicate them from around us. We’re ready to go all in and help with the operations
             and logistics of these organisations, if need be.
           </h3>
         </div>
         <div className="bg-maximum-red md:min-h-60">
-          <h1 className="text-5xl leading-16 text-white px-31 pt-31">
+          <h1 className="text-base md:text-5xl leading-tight md:leading-16  text-white  px-5 px-12 lg:px-31 pt-20 lg:pt-31 font-medium">
             At Alpino, we take mental health and anxiety seriously. It is our persistent effort to ensure our work
             environment is diverse and welcoming and our employees feel heard. We recognise that globally mental health
             and related disorders affect over 450 million people and this makes mental health related problems the
             leading cause of ill-health and disability across the world. We’re ready to start combating these issues and
             strive for the mental well-being of the community at large.
           </h1>
-          <div className="flex flex-col md:flex-row justify-between  items-start md:items-center px-16 md:px-31 pt-60">
+          <div className="flex flex-col md:flex-row justify-between  items-start md:items-center px-16 md:px-31 pt-20  lg:pt-60">
             <h1 className="leading-loose md:leading-12 text-white font-medium text-2xl md:text-5xl">Best Sellers</h1>
             <h3 className="text-left text-xs md:text-xl text-white font-normal leading-tight">
               Best always deserves better

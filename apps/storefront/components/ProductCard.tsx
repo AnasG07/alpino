@@ -27,7 +27,7 @@ export default function ProductCard({
         <span
           className={`flex flex-col p-8 min-height-35 lg:mr-8  ${
             noround ? 'rounded-none' : 'rounded-super'
-          } md:rounded-super bg-grey-card lg:${neev ? 'bg-maximum-red' : 'bg-black'} ${
+          } md:rounded-super ${neev ? 'bg-maximum-red' : 'bg-grey-card'} lg:${neev ? 'bg-maximum-red' : 'bg-black'} ${
             neev ? 'bg-neev' : 'bg-greyCard'
           } hover-main`}>
           <div className={classNames('flex items-center justify-center')} ref={imageBox}>
