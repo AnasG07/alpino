@@ -55,10 +55,11 @@ export default class Home extends React.Component {
 
   render() {
     const { productFeature, bestSellers, sneakPeek } = this.props;
+    const handleOnDragStart = (e) => e.preventDefault();
     const responsive = {
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 1,
+        items: 3,
       },
       tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -69,7 +70,7 @@ export default class Home extends React.Component {
         items: 1,
       },
     };
-    console.log(bestSellers, sneakPeek);
+
     return (
       <div className="overflow-x-hidden">
         <div className="min-h-screen bg-black pt-20">
@@ -159,7 +160,7 @@ export default class Home extends React.Component {
                 <div className="flex flex-row flex-grow justify-center lg:justify-between">
                   {sneakPeek.map((i, index) => (
                     <div className={`${index !== 0 && 'hidden'} lg:block`}>
-                      <ProductCard data={i} key={index} comingSoon />
+                      <ProductCard data={i} key={`${i.title}-${index}`} comingSoon onDragStart={handleOnDragStart} />
                     </div>
                   ))}
                 </div>
