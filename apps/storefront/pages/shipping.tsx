@@ -6,12 +6,20 @@ import Link from 'next/link';
 import style from './checkout.module.css';
 import classNames from 'classnames';
 import Dropdown from 'react-dropdown';
+import { withApollo } from '../lib/apollo/withApollo';
+import useCart from '../hooks/cart/useCart.js';
 
 const options = ['Home', 'Work'];
 
 const defaultOption = options[0];
 
-export default function Checkout({ items }) {
+function Shipping({ items }) {
+  const { cart, onRemoveCartItems } = useCart();
+  console.log(cart);
+  const handleRemoveItem = async (itemId) => {
+    const { data, error } = await onRemoveCartItems(itemId);
+  };
+
   return (
     <div className="overflow-x-hidden">
       <main>
@@ -85,13 +93,14 @@ export default function Checkout({ items }) {
                 <img className={classNames(style.ellipse)} src="/cart/ellipse.png"></img>
                 <p className="text-sm font-light ml-4">Express Shipping</p>
               </div>
-
-              <div className="flex flex-row w-full justify-start ml-4 mt-2 items-center mt-4">
-                <img className="mr-2" src="/cart/leftarrow.png"></img>
-                <h1 classNames={classNames(style.keepShoppingText, 'text-base font-normal tracking-wider')}>
-                  Return to information
-                </h1>
-              </div>
+              <Link className="border-none outline-none" href="/checkout">
+                <a className="flex flex-row w-full justify-start ml-4 mt-2 items-center mt-4">
+                  <img className="mr-2" src="/cart/leftarrow.png"></img>
+                  <h1 classNames={classNames(style.keepShoppingText, 'text-base font-normal tracking-wider')}>
+                    Return to information
+                  </h1>
+                </a>
+              </Link>
               <Link href="/">
                 <div
                   className={classNames(
@@ -111,81 +120,78 @@ export default function Checkout({ items }) {
                     <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
                   </div>
                 </div>
-                <div className={classNames(style.itemCards, 'flex flex-row h-32 mb-8')}>
-                  <div className={classNames(style.imagesBorderRadius, 'bg-black h-42 w-56 flex')}>
-                    <img className="mx-auto my-auto" src="/cart/cart1.png"></img>
-                  </div>
-                  <div className="flex flex-col w-full justify-around items-start">
-                    <div className="flex justify-between px-4 w-full">
-                      <div>
-                        <h1 className={classNames(style.titleFontColor, 'text-2xl font-medium')}>Thar GT</h1>
-                        <div className="flex justify-start items-center">
-                          <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')}></div>
-                          <span className={classNames(style.titleFontColor, 'text-xs font-light')}>Black</span>
-                        </div>
+                {cart?.items.map((item) => (
+                  <div className={classNames(style.itemCards, 'flex flex-row mb-8 w-full')}>
+                    <div className={classNames(style.imagesBorderRadius, 'bg-black w-24 md:w-56 flex')}>
+                      <Link href={`products/${item?.productSlug}`}>
+                        <a>
+                          <img className="mx-auto my-auto" src={item.imageURLs} />
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="flex flex-col w-full justify-between items-start">
+                      <div className="flex justify-between px-4 w-full">
+                        <Link href={`products/${item?.productSlug}`}>
+                          <a>
+                            <h1 className={classNames(style.titleFontColor, 'text-2xl font-medium')}>{item?.title}</h1>
+                          </a>
+                        </Link>
+                        <p className={classNames(style.titleFontColor, 'text-xs font-light mt-3')}>
+                          {item?.price?.displayAmount}
+                        </p>
                       </div>
-                      <p className={classNames(style.titleFontColor, 'text-xs font-light mt-3')}>₹ 2999</p>
-                    </div>
-                    <div className="flex flex-row w-full items-center justify-between px-5">
-                      <button className="flex flex-col border-none outline-none">
-                        <img className={classNames(style.marginBottom)} src="/cart/deletetop.png"></img>
-                        <img src="/cart/deletebottom.png"></img>
-                      </button>
-                      <h1 className={(style.smallCard, 'text-xs font-normal')}>1 Pcs</h1>
-                    </div>
-                  </div>
-                </div>
-
-                <div className={classNames(style.itemCards, 'flex flex-row h-32 mb-8')}>
-                  <div className={classNames(style.imagesBorderRadius, 'bg-black h-42 w-56 flex')}>
-                    <img className="mx-auto my-auto" src="/cart/cart2.png"></img>
-                  </div>
-                  <div className="flex flex-col w-full justify-around items-start">
-                    <div className="flex justify-between px-4 w-full">
-                      <div>
-                        <h1 className={classNames(style.titleFontColor, 'text-2xl font-medium')}>Flex Pro</h1>
-                        <div className="flex justify-start items-center">
-                          <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')}></div>
-                          <span className={classNames(style.titleFontColor, 'text-xs font-light')}>Black</span>
-                        </div>
+                      <div className="flex justify-start items-center mt-1 mb-auto px-4">
+                        <div className={classNames(style.coloredBalls, 'rounded-full bg-black mr-1 ml-1')} />
+                        <span className={classNames(style.titleFontColor, 'text-xs font-light')}>
+                          {item?.variantTitle}
+                        </span>
                       </div>
-                      <p className={classNames(style.titleFontColor, 'text-xs font-light mt-3')}>₹ 2499</p>
-                    </div>
-                    <div className="flex flex-row w-full items-center justify-between px-5">
-                      <button className="flex flex-col border-none outline-none">
-                        <img className={classNames(style.marginBottom)} src="/cart/deletetop.png"></img>
-                        <img src="/cart/deletebottom.png"></img>
-                      </button>
-                      <h1 className={(style.smallCard, 'text-xs font-normal')}>2 Pcs</h1>
+                      <div className="flex flex-row w-full items-center justify-between px-5 pb-1">
+                        <button
+                          onClick={() => handleRemoveItem(item._id)}
+                          className="flex flex-col border-none outline-none">
+                          <img className={classNames(style.marginBottom)} src="/cart/deletetop.png" />
+                          <img src="/cart/deletebottom.png" />
+                        </button>
+                        <h1 className={(style.smallCard, 'text-xs font-normal')}>{item?.quantity} Pcs</h1>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
               <div className={classNames(style.smallCard1, 'px-6')}>
                 <h1 className="text-xl font-medium tracking-wide mt-6">Order Summary</h1>
                 <p className={classNames(style.labelColor, 'text-sm font-light')}>
                   Total cost includes taxes and delivery charges
                 </p>
-                <p className={classNames(style.labelColor, 'text-right text-sm font-light')}>2 items</p>
+                <p className={classNames(style.labelColor, 'text-right text-sm font-light')}>
+                  {cart?.totalItemQuantity} items
+                </p>
                 <div className="flex flex-row items-center justify-between mt-4 px-4">
                   <h1 className="text-lg font-medium tracking-wider ml-4">Item Total</h1>
-                  <p className="text-sm font-medium">₹ 7897</p>
+                  <p className="text-sm font-medium">{cart?.checkout?.summary?.itemTotal?.displayAmount}</p>
                 </div>
 
                 <div className="flex flex-row items-center justify-between mt-5 px-4">
                   <h1 className={classNames(style.labelColor, 'text-base font-normal tracking-wider ml-4')}>Taxes</h1>
-                  <p className={classNames(style.labelColor, 'text-sm font-medium')}>₹ 58</p>
+                  <p className={classNames(style.labelColor, 'text-sm font-medium')}>
+                    {cart?.checkout?.summary?.taxTotal || 0}
+                  </p>
                 </div>
                 <div className="flex flex-row items-center justify-between mt-5 px-4">
                   <h1 className={classNames(style.labelColor, 'text-base font-normal tracking-wider ml-4')}>
                     Delivery Charges
                   </h1>
-                  <p className={classNames(style.labelColor, 'text-sm font-medium')}>₹ 48</p>
+                  <p className={classNames(style.labelColor, 'text-sm font-medium')}>
+                    {cart?.checkout?.summary?.surchargeTotal?.displayAmount}
+                  </p>
                 </div>
-
                 <div className="flex flex-row items-center justify-between mt-6 px-4">
                   <h1 className={classNames(style.greenFontColor, 'text-lg font-normal tracking-wider ml-4')}>Total</h1>
-                  <p className={classNames(style.greenFontColor, 'text-sm font-medium')}>₹ 48</p>
+                  <p className={classNames(style.greenFontColor, 'text-sm font-medium')}>
+                    {' '}
+                    {cart?.checkout?.summary?.total?.displayAmount}
+                  </p>
                 </div>
                 <div>
                   <h1 className="text-lg font-medium tracking-wider text-center ml-4">Coupon code</h1>
@@ -211,3 +217,4 @@ export default function Checkout({ items }) {
     </div>
   );
 }
+export default withApollo()(Shipping);

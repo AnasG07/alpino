@@ -125,7 +125,7 @@
     @apply text-sm leading-tight text-white font-normal leading-normal;
   }
   .text-heading {
-    @apply leading-12 text-white font-medium text-7xl;
+    @apply leading-8 text-white font-medium text-2xl;
   }
 }
 
