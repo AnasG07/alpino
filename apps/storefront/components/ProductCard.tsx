@@ -12,6 +12,7 @@ interface ProductCardProps {
 export default function ProductCard({
   data: { slug, image, name, price, description, launch, type, buttonText },
   comingSoon,
+  neev,
   noround,
   className,
 }: ProductCardProps) {
@@ -26,7 +27,9 @@ export default function ProductCard({
         <span
           className={`flex flex-col p-8 min-height-35 lg:mr-8  ${
             noround ? 'rounded-none' : 'rounded-super'
-          } md:rounded-super bg-grey-card lg:bg-black bg-greyCard hover-main`}>
+          } md:rounded-super bg-grey-card lg:${neev ? 'bg-maximum-red' : 'bg-black'} ${
+            neev ? 'bg-neev' : 'bg-greyCard'
+          } hover-main`}>
           <div className={classNames('flex items-center justify-center')} ref={imageBox}>
             <img src={image} alt={name} className="w-full" />
           </div>
@@ -39,7 +42,10 @@ export default function ProductCard({
           </div>
           <div className="flex flex-row justify-between items-center pt-10 hover-show">
             <Link href="/products/[slug]" as={`/products/${slug}`}>
-              <a className="leading-5 rounded-full py-3 text-xs md:text-base px-8 outline-none border-none bg-black max-w-8 w-full flex justify-center text-white font-semibold">
+              <a
+                className={`leading-5 rounded-full py-3 text-xs md:text-base px-8 outline-none ${
+                  neev ? 'border-solid border-white border-2' : 'border-none'
+                } ${neev ? 'bg-transparent' : 'bg-black'} max-w-8 w-full flex justify-center text-white font-semibold`}>
                 Details
               </a>
             </Link>

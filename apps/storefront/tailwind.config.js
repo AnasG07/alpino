@@ -83,6 +83,8 @@ module.exports = {
         '13.5': '54px',
         '350': '350px',
         '2px': '2px',
+        '370': '370px',
+        '60': '240px',
       },
       borderRadius: {
         super: '30px',

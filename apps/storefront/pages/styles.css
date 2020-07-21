@@ -549,6 +549,9 @@ input:-ms-input-placeholder {
 .bg-greyCard:hover {
   background-color: #262626;
 }
+.bg-neev:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
 
 .customGrid {
   display: grid;
