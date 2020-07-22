@@ -102,6 +102,7 @@ export default function becomeDistributor() {
                   <input
                     onChange={(e) => inputHandler(e.target.value, 'name')}
                     required
+                    pattern="^[a-zA-Z\s\.]+$"
                     placeholder="Name"
                     className={classNames(styles['input-styles'], 'text-content')}
                   />

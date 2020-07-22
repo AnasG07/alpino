@@ -83,14 +83,11 @@ function Checkout({ items }) {
             <div className={classNames(style.card, 'px-8 mb-8 lg:mb-0 mx-6 lg:mx-0')}>
               <h1 className="text-xl font-medium mt-6">Contact Information</h1>
               <div className="placeholderCheck">
-                <input
-                  className="grayBackGroundColor box text-black p-4 w-full rounded-md mt-2"
-                  placeholder="Email ID"
-                />
+                <input className="grayBackGroundColor box text-black p-4 w-full rounded-md mt-2" placeholder="Email" />
               </div>
               <h1 className="text-xl font-medium mt-6">Shipping Address</h1>
               <h1 className={classNames(style.labelColor, 'text-base font-normal mt-2 mb-2')}>Full Name</h1>
-              <input className="grayBackGroundColor box text-black p-4 w-full rounded-md mt-2" placeholder="Email ID" />
+              <input className="grayBackGroundColor box text-black p-4 w-full rounded-md mt-2" placeholder="Name" />
               <h1 className={classNames(style.labelColor, 'text-base font-normal mt-4 mb-2')}>Address</h1>
               <input
                 className="grayBackGroundColor box text-black p-4 w-full rounded-md mt-2"
@@ -129,9 +126,9 @@ function Checkout({ items }) {
                 value={defaultOption}
                 placeholder="Select an option"
               />
-              <div className="flex items-center">
-                <img className="w-2 h-2 mr-2 mt-2" src="/cart/checkbox.png" />
-                <p className={classNames(style.labelColor, 'text-sm font-light tracking-wider mt-2')}>
+              <div className="flex items-baseline">
+                <input type="checkbox" />
+                <p className={classNames(style.labelColor, 'text-sm font-light tracking-wider mt-2 ml-4')}>
                   Save this information for next time
                 </p>
               </div>

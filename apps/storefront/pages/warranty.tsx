@@ -141,7 +141,11 @@ export default function Warranty({ faq }) {
               </div>
               <form className="pt-24">
                 <div>
-                  <input placeholder="Name" className={classNames(styles['input-styles'], 'text-content')} />
+                  <input
+                    pattern="^[a-zA-Z\s\.]+$"
+                    placeholder="Name"
+                    className={classNames(styles['input-styles'], 'text-content')}
+                  />
                 </div>
                 <div className="pt-16">
                   <input placeholder="Email ID" className={classNames(styles['input-styles'], 'text-content')} />

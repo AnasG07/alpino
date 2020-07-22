@@ -65,10 +65,12 @@ function Shipping({ items }) {
                   <h1 className="text-sm font-light tracking-wider mt-6 mb-6">Email ID</h1>
                   <h1 className="text-lg font-normal tracking-wider mt-6 mb-6">johndoe12@gmail.com</h1>
                 </div>
-                <div className="flex flex-row justify-center items-center mr-4">
-                  <img src="/cart/edit.png"></img>
-                  <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
-                </div>
+                <Link href="/checkout">
+                  <a className="flex flex-row justify-center items-center mr-4">
+                    <img src="/cart/edit.png"></img>
+                    <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
+                  </a>
+                </Link>
               </div>
 
               <h1 className="text-lg font-normal ml-4 mt-1">Shipping Address</h1>
@@ -83,10 +85,12 @@ function Shipping({ items }) {
                     <br /> NORWOOD SA 5067
                   </h1>
                 </div>
-                <div className="flex flex-row justify-center items-center mr-4">
-                  <img src="/cart/edit.png"></img>
-                  <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
-                </div>
+                <Link href="/checkout">
+                  <a className="flex flex-row justify-center items-center mr-4">
+                    <img src="/cart/edit.png"></img>
+                    <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
+                  </a>
+                </Link>
               </div>
               <h1 className="text-lg font-normal ml-4 mt-4">Shipping method</h1>
               <div className="flex flex-row grayBackGroundColor items-center bg-black ml-4 p-4 mt-4 rounded-md mt-2">
@@ -115,10 +119,6 @@ function Shipping({ items }) {
               <div className={classNames(style.smallCard, 'flex flex-col justify-around px-6')}>
                 <div className="flex flex-row items-center justify-between">
                   <h1 className="text-xl font-medium tracking-wide mt-6 mb-6">Cart Summary</h1>
-                  <div className="flex flex-row justify-center items-center mr-4">
-                    <img src="/cart/edit.png"></img>
-                    <p className={classNames(style.labelColor, 'ml-2 text-xs font-normal')}>Edit</p>
-                  </div>
                 </div>
                 {cart?.items.map((item) => (
                   <div className={classNames(style.itemCards, 'flex flex-row mb-8 w-full')}>
