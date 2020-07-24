@@ -18,7 +18,7 @@ export default function useAddAccountAddressBookEntry() {
 
   const addAccountAddressBookEntry = async (address) => {
     // TEMP delete `addressName` prop until API supports it.
-    delete address.addressName;
+    //  delete address.addressName;
 
     const data = await addAccountAddressBookEntryFunc({
       variables: {

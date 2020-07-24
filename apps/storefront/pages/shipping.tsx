@@ -62,8 +62,8 @@ function Shipping({ items }) {
               <h1 className="text-lg font-normal ml-4 mt-6">Contact Details</h1>
               <div className="flex flex-row items-center justify-between px-10">
                 <div className="flex flex-rol items-center justify-between w-3/5">
-                  <h1 className="text-sm font-light tracking-wider mt-6 mb-6">Email ID</h1>
-                  <h1 className="text-lg font-normal tracking-wider mt-6 mb-6">johndoe12@gmail.com</h1>
+                  <h1 className="text-sm font-light tracking-wider mt-6 mb-6 flex-shrink-0">Email ID</h1>
+                  <h1 className="text-lg font-normal tracking-wider mt-6 mb-6 flex-shrink-0 lg:pl-16">{cart?.email}</h1>
                 </div>
                 <Link href="/checkout">
                   <a className="flex flex-row justify-center items-center mr-4">
@@ -75,9 +75,9 @@ function Shipping({ items }) {
 
               <h1 className="text-lg font-normal ml-4 mt-1">Shipping Address</h1>
               <div className="flex flex-row items-center justify-between px-10">
-                <div className="flex flex-rol items-center w-9/12 justify-between">
-                  <h1 className="text-sm font-light tracking-wider mt-6 mb-6">Ship to</h1>
-                  <h1 className="text-lg font-normal tracking-wider mt-6 mb-6">
+                <div className="flex flex-rol items-center w-9/12 ">
+                  <h1 className="text-sm font-light tracking-wider mt-6 mb-6 flex-shrink-0">Ship to</h1>
+                  <h1 className="text-lg font-normal tracking-wider mt-6 mb-6 flex-shrink-0 lg:pl-16">
                     {cart?.checkout?.fulfillmentGroups[0]?.shippingAddress?.address1}
                     <br /> {cart?.checkout?.fulfillmentGroups[0]?.shippingAddress?.address2}
                     <br /> {cart?.checkout?.fulfillmentGroups[0]?.shippingAddress?.city} ,
@@ -112,7 +112,7 @@ function Shipping({ items }) {
                 <div
                   className={classNames(
                     style.continueButton,
-                    'cursor-pointer mx-auto flex justify-center items-center mt-6',
+                    'cursor-pointer mx-auto flex justify-center items-center mt-6 mb-16',
                   )}>
                   <h1 className="text-base text-white font-medium">Continue to payment</h1>
                 </div>
@@ -208,7 +208,7 @@ function Shipping({ items }) {
                   <div
                     className={classNames(
                       style.applyButton,
-                      'cursor-pointer mx-auto flex justify-center items-center mt-8',
+                      'cursor-pointer mx-auto flex justify-center items-center mt-8 mb-8',
                     )}>
                     <h1 className="text-base text-white font-medium">Apply</h1>
                   </div>
