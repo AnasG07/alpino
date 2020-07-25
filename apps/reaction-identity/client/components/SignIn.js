@@ -105,8 +105,6 @@ function SignIn() {
     validator,
   });
 
-  console.log(styles);
-
   return (
     <div>
       <h1 className="text-white text-2xl md:text-3xl leading-8 text-center">Login</h1>
