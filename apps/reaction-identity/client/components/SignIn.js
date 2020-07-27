@@ -12,6 +12,9 @@ import { useTranslation } from 'react-i18next';
 import { useHistory, useLocation } from 'react-router-dom';
 import useReactoForm from 'reacto-form/cjs/useReactoForm';
 import SimpleSchema from 'simpl-schema';
+import './spinner.css';
+import Footer from './Footer.jsx';
+import Header from './Header.jsx';
 
 /**
  * @summary Does `Meteor.loginWithPassword` followed by
@@ -106,7 +109,110 @@ function SignIn() {
   });
 
   return (
-    <div>
+    <div className="min-h-screen overflow-x-hidden bg-black">
+      <main className="bg-login-background">
+        <Header transparent />
+        <div className="flex flex-row w-full">
+          <div className="w-full lg:w-2/4 pt-12 md:pt-16 lg:pt-40 px-8  md:px-16 pb-20">
+            <div>
+              <h1 className="text-white text-2xl md:text-3xl leading-8 text-center pt-12 lg:pt-0">Login</h1>
+              <div className="pt-24">
+                <form>
+                  <div>
+                    <Field
+                      isRequired
+                      errors={getErrors(['email'])}
+                      name="email"
+                      placeholder="Email"
+                      labelFor={`email-${uniqueId}`}>
+                      <TextInput
+                        type="email"
+                        id={`email-${uniqueId}`}
+                        {...getInputProps('email')}
+                        placeholder="Email"
+                        className="input-login"
+                      />
+                      <ErrorsBlock errors={getErrors(['email'])} />
+                    </Field>
+                  </div>
+                  <div className="pt-12">
+                    <Field
+                      isRequired
+                      errors={getErrors(['password'])}
+                      name="password"
+                      placeholder={t('password')}
+                      labelFor={`password-${uniqueId}`}>
+                      <TextInput
+                        type="password"
+                        id={`password-${uniqueId}`}
+                        placeholder="Password"
+                        {...getInputProps('password')}
+                        className="input-login"
+                      />
+                      <ErrorsBlock errors={getErrors(['password'])} />
+                    </Field>
+                  </div>
+
+                  <div className="pt-4">
+                    <span>
+                      <input type="checkbox" className="checkbox-round" />
+                    </span>
+                    <span className="leading-8 text-xxs md:text-xs text-login-font pl-2 md:pl-4 font-light">
+                      Remember me
+                    </span>
+                  </div>
+                  {submitError && (
+                    <InlineAlert alertType="error" className={classes.inlineAlert} message={submitError} />
+                  )}
+                  <div className="flex justify-center pt-10 md:pt-8">
+                    <Button
+                      actionType="important"
+                      isFullWidth
+                      isWaiting={isSubmitting}
+                      onClick={submitForm}
+                      className="button-login">
+                      {t('Login')}
+                    </Button>
+                  </div>
+                  <div className="pt-6 text-center">
+                    <p className="font-light text-sm md:text-lg leading-8 text-login-font">
+                      Don’t have an account ? &nbsp;
+                      <span className="font-semibold">
+                        <a href="/account/enroll">Sign Up</a>
+                      </span>
+                    </p>
+                  </div>
+                  <div className="pt-20">
+                    <h1 className="text-base md:text-2xl text-login-font leading-8 font-bold text-center">Or</h1>
+                    <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Sign up with</p>
+                  </div>
+                  <div className="px-8 md:px-12 lg:px-24 flex justify-between pt-12">
+                    <div className="flex flex-col justify-center items-center ">
+                      <img src="/google.svg" alt="google" className="height-22" />
+                      <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Google</p>
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <img src="/fbLogin.svg" alt="Facebook" className="height-22" />
+                      <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Facebook</p>
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <img src="/twitterlogin.svg" alt="Twitter" className="height-22" />
+                      <p className="text-xs md:text-sm leading-8 text-login-font font-light text-center">Twitter</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div className="hidden lg:block lg:w-2/4">
+            <img src="/login.jpeg" alt="login" className="w-full h-full" />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+  /*  <div>
       <h1 className="text-white text-2xl md:text-3xl leading-8 text-center">Login</h1>
       <div className="pt-24">
         <Field isRequired errors={getErrors(['email'])} name="email" label="Email" labelFor={`email-${uniqueId}`}>
@@ -149,8 +255,7 @@ function SignIn() {
           {t('signUp')}
         </Button>
       </div>
-    </div>
-  );
+    </div> */
 }
 
 export default SignIn;
