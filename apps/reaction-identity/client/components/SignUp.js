@@ -3,7 +3,7 @@ import Button from '@reactioncommerce/components/Button/v1';
 import ErrorsBlock from '@reactioncommerce/components/ErrorsBlock/v1';
 import Field from '@reactioncommerce/components/Field/v1';
 import InlineAlert from '@reactioncommerce/components/InlineAlert/v1';
-import TextInput from '@reactioncommerce/components/TextInput/v1';
+import TextInput from './Input.js';
 import Random from '@reactioncommerce/random';
 import { Accounts } from 'meteor/accounts-base';
 import { Meteor } from 'meteor/meteor';
@@ -14,6 +14,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import useReactoForm from 'reacto-form/cjs/useReactoForm';
 import SimpleSchema from 'simpl-schema';
 import Footer from './Footer.jsx';
+import Header from './Header.jsx';
 
 /**
  * @summary Does `Accounts.createUser` followed by
@@ -63,6 +64,10 @@ const useStyles = makeStyles(() => ({
 }));
 
 const formSchema = new SimpleSchema({
+  fullName: {
+    type: String,
+    min: 3,
+  },
   email: {
     type: String,
     min: 3,
@@ -111,6 +116,7 @@ function SignUp() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-black">
       <main className="bg-login-background">
+        <Header transparent />
         <div className="flex flex-row w-full">
           <div className="w-full lg:w-2/4 pt-12 md:pt-16 lg:pt-40 px-8  md:px-16 pb-20">
             <div>
@@ -118,6 +124,21 @@ function SignUp() {
               <div className="pt-24">
                 <form>
                   <div>
+                    <Field
+                      errors={getErrors(['fullName'])}
+                      isRequired
+                      labelFor={`fullName-${uniqueId}`}
+                      name="fullName">
+                      <TextInput
+                        placeholder="Full Name"
+                        id={`fullName-${uniqueId}`}
+                        className="input-login"
+                        {...getInputProps('fullName')}
+                      />
+                      <ErrorsBlock errors={getErrors(['fullName'])} />
+                    </Field>
+                  </div>
+                  <div className="pt-12">
                     <Field errors={getErrors(['email'])} isRequired labelFor={`email-${uniqueId}`} name="email">
                       <TextInput
                         placeholder="Email"
@@ -204,44 +225,6 @@ function SignUp() {
       </main>
       <Footer />
     </div>
-    /*  <div>
-      <div className={classes.pageTitle}>{t('createAccount')}</div>
-
-      <Field
-        errors={getErrors(['email'])}
-        isRequired
-        label={t('emailAddress')}
-        labelFor={`email-${uniqueId}`}
-        name="email">
-        <TextInput type="email" id={`email-${uniqueId}`} {...getInputProps('email')} />
-        <ErrorsBlock errors={getErrors(['email'])} />
-      </Field>
-      <Field
-        errors={getErrors(['password'])}
-        isRequired
-        label={t('password')}
-        labelFor={`password-${uniqueId}`}
-        name="password">
-        <TextInput type="password" id={`password-${uniqueId}`} {...getInputProps('password')} />
-        <ErrorsBlock errors={getErrors(['password'])} />
-      </Field>
-
-      {submitError && <InlineAlert alertType="error" className={classes.inlineAlert} message={submitError} />}
-
-      <Button actionType="important" isFullWidth isWaiting={isSubmitting} onClick={submitForm}>
-        {t('signUpButton')}
-      </Button>
-      <Button
-        isDisabled={isSubmitting}
-        isFullWidth
-        isShortHeight
-        isTextOnly
-        onClick={() => {
-          history.push({ pathname: '/account/login', search: location.search });
-        }}>
-        {t('signIn')}
-      </Button>
-    </div> */
   );
 }
 

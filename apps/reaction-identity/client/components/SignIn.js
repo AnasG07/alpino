@@ -3,7 +3,7 @@ import Button from '@reactioncommerce/components/Button/v1';
 import ErrorsBlock from '@reactioncommerce/components/ErrorsBlock/v1';
 import Field from '@reactioncommerce/components/Field/v1';
 import InlineAlert from '@reactioncommerce/components/InlineAlert/v1';
-import TextInput from '@reactioncommerce/components/TextInput/v1';
+import TextInput from './Input.js';
 import Random from '@reactioncommerce/random';
 import { Meteor } from 'meteor/meteor';
 import queryString from 'query-string';
@@ -212,50 +212,6 @@ function SignIn() {
       <Footer />
     </div>
   );
-  /*  <div>
-      <h1 className="text-white text-2xl md:text-3xl leading-8 text-center">Login</h1>
-      <div className="pt-24">
-        <Field isRequired errors={getErrors(['email'])} name="email" label="Email" labelFor={`email-${uniqueId}`}>
-          <TextInput type="email" id={`email-${uniqueId}`} {...getInputProps('email')} />
-          <ErrorsBlock errors={getErrors(['email'])} />
-        </Field>
-        <Field
-          isRequired
-          errors={getErrors(['password'])}
-          name="password"
-          label={t('password')}
-          labelFor={`password-${uniqueId}`}>
-          <TextInput type="password" id={`password-${uniqueId}`} {...getInputProps('password')} />
-          <ErrorsBlock errors={getErrors(['password'])} />
-        </Field>
-
-        {submitError && <InlineAlert alertType="error" className={classes.inlineAlert} message={submitError} />}
-
-        <Button actionType="important" isFullWidth isWaiting={isSubmitting} onClick={submitForm}>
-          {t('signIn')}
-        </Button>
-        <Button
-          isDisabled={isSubmitting}
-          isFullWidth
-          isShortHeight
-          isTextOnly
-          onClick={() => {
-            history.push({ pathname: '/account/forgot-password', search: location.search });
-          }}>
-          {t('forgotPassword')}
-        </Button>
-        <Button
-          isDisabled={isSubmitting}
-          isFullWidth
-          isShortHeight
-          isTextOnly
-          onClick={() => {
-            history.push({ pathname: '/account/enroll', search: location.search });
-          }}>
-          {t('signUp')}
-        </Button>
-      </div>
-    </div> */
 }
 
 export default SignIn;
