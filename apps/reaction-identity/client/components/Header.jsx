@@ -89,7 +89,7 @@ const Header = ({
             </button>
           </div>
 
-          <a href="/" className="flex-shrink-0">
+          <a href={urlAlpino} className="flex-shrink-0">
             <img
               src="/logo.svg"
               alt="Alipno Logo"
@@ -191,7 +191,7 @@ const Header = ({
           </div>
           <div className="flex flex-row flex-shrink-0">
             <a
-              href={`${urlAlpino}/login`}
+              href={urlAlpino}
               className={`header-link px-2  lg:px-4 inline-block ${black && !scroll && 'filter-invert-temp'} ${
                 !toggle && invert && !scroll && 'filter-invert'
               }`}>
