@@ -114,44 +114,46 @@ function user({ cartData }) {
                   <img src="/user.png" alt="user" className="w-12 rounded-full" />
                   <h3 className="leading-8 text-account-name text-base pt-2 ">Change Profile Picture</h3>
                 </div>
-                <div className="bg-black-about px-4 py-2 rounded-account mt-8">
-                  <p className="text-sm font-light leading-8 text-account-name"> Full Name</p>
-                  <input
-                    className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
-                    required
-                  />
-                </div>
-                <div className="bg-black-about px-4 py-2 rounded-account mt-8">
-                  <p className="text-sm font-light leading-8 text-account-name"> Email Id</p>
-                  <input
-                    className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
-                    type="email"
-                    required
-                  />
-                </div>
-                <div className="bg-black-about px-4 py-2 rounded-account mt-8">
-                  <p className="text-sm font-light leading-8 text-account-name">Country/Region</p>
-                  <input
-                    className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
-                    required
-                  />
-                </div>
-                <div className="bg-black-about px-4 py-2 rounded-account mt-8">
-                  <p className="text-sm font-light leading-8 text-account-name"> Mobile Number</p>
-                  <input
-                    type="tel"
-                    className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
-                    required
-                  />
-                </div>
-                <div className="bg-black-about px-4 py-2 rounded-account mt-8">
-                  <p className="text-sm font-light leading-8 text-account-name"> Change Password</p>
-                  <input
-                    className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
-                    required
-                    type="password"
-                  />
-                </div>
+                <form>
+                  <div className="bg-black-about px-4 py-2 rounded-account mt-8">
+                    <p className="text-sm font-light leading-8 text-account-name"> Full Name</p>
+                    <input
+                      className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
+                      required
+                    />
+                  </div>
+                  <div className="bg-black-about px-4 py-2 rounded-account mt-8">
+                    <p className="text-sm font-light leading-8 text-account-name"> Email Id</p>
+                    <input
+                      className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
+                      type="email"
+                      required
+                    />
+                  </div>
+                  <div className="bg-black-about px-4 py-2 rounded-account mt-8">
+                    <p className="text-sm font-light leading-8 text-account-name">Country/Region</p>
+                    <input
+                      className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
+                      required
+                    />
+                  </div>
+                  <div className="bg-black-about px-4 py-2 rounded-account mt-8">
+                    <p className="text-sm font-light leading-8 text-account-name"> Mobile Number</p>
+                    <input
+                      type="tel"
+                      className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
+                      required
+                    />
+                  </div>
+                  <div className="bg-black-about px-4 py-2 rounded-account mt-8">
+                    <p className="text-sm font-light leading-8 text-account-name"> Change Password</p>
+                    <input
+                      className="text-lg font-medium leading-8 text-account-name bg-transparent border-none w-full"
+                      required
+                      type="password"
+                    />
+                  </div>
+                </form>
               </div>
             ) : buttonRole === 'order' ? (
               <div className="bg-black rounded-order py-8 px-8  ml-auto mr-auto md:mr-12 ">
