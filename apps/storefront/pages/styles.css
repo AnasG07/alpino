@@ -910,3 +910,16 @@ input:-ms-input-placeholder {
 .carousel .slide img {
   margin-bottom: 4rem;
 }
+
+.circle-position {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+}
+
+.active:active {
+  border-left: 1px solid red;
+}
+.active:focus {
+  border-left: 1px solid red;
+}
