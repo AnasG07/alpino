@@ -30,6 +30,15 @@ module.exports = {
         'login-background': 'rgb(3,3,3)',
         'form-color': 'rgb(158,173,194)',
         home: '#141517',
+        green: '#00D564',
+        order: 'rgb(28,28,28)',
+        'b-order': '#484848',
+        line: '#ebebeb',
+        circle: '#f4f4f4',
+        account: '#e9e9e9',
+        'account-name': '#eeeeee',
+        'bor-account': '#272727',
+        logout: '#EB2929',
       },
       lineHeight: {
         16: '4rem',
@@ -62,6 +71,7 @@ module.exports = {
         '400': '400px',
         '1280': '1280px',
         '58': '58%',
+        '350': '350px',
         '1400': '1400px',
       },
       padding: {
@@ -89,6 +99,8 @@ module.exports = {
       borderRadius: {
         super: '30px',
         login: '88px',
+        order: '16px',
+        account: '8px',
       },
       margin: {
         '344': '344px',
@@ -96,15 +108,24 @@ module.exports = {
         '120': '120px',
         '17': '3.75rem',
         '30px': '30px',
+        '350': '350px',
       },
       width: {
         '120': '120px',
         '44': '44%',
         '130': '130px',
         '150': '170px',
+        '280': '280px',
       },
       inset: {
         '65': '65px',
+      },
+      borderWidth: {
+        '1/2': '.5px',
+      },
+      height: {
+        '1/2': '1px',
+        '80': '80%',
       },
     },
   },
