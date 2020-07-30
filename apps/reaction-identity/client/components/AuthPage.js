@@ -7,11 +7,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh',
+    minHeight: '100vh',
   },
   content: {
     width: '100%',
-    maxWidth: 480,
     [theme.breakpoints.down('sm')]: {
       maxWidth: '85%',
     },
