@@ -917,9 +917,6 @@ input:-ms-input-placeholder {
   left: 50%;
 }
 
-.active:active {
-  border-left: 1px solid red;
-}
-.active:focus {
+.active {
   border-left: 1px solid red;
 }
