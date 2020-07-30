@@ -102,6 +102,7 @@ function user({ cartData }) {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -82,6 +82,7 @@ function user() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
