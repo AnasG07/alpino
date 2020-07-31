@@ -1,4 +1,3 @@
-const path = require('path');
 const appConfig = require('./config');
 
 module.exports = {
@@ -19,6 +18,79 @@ module.exports = {
   // generateBuildId: async () => {
   //   return process.env.npm_package_version;
   // },
+
+  experimental: {
+    redirects() {
+      return [
+        {
+          source: '/graphiql',
+          destination: appConfig.EXTERNAL_GRAPHQL_URL,
+          permanent: true,
+        },
+        {
+          source: '/graphql-beta',
+          destination: appConfig.EXTERNAL_GRAPHQL_URL,
+          permanent: true,
+        },
+        {
+          source: '/graphql-alpha',
+          destination: appConfig.EXTERNAL_GRAPHQL_URL,
+          permanent: true,
+        },
+        {
+          source: '/graphql',
+          destination: appConfig.EXTERNAL_GRAPHQL_URL,
+          permanent: true,
+        },
+      ];
+    },
+    rewrites() {
+      return [
+        // Sitemap
+        {
+          source: '/sitemap:subPage?.xml',
+          destination: '/api/sitemap',
+        },
+        // Accounts
+        {
+          source: '/change-password',
+          destination: '/api/account/changePassword',
+        },
+        {
+          source: '/post-logout-callback',
+          destination: '/api/account/postLogoutCallback',
+        },
+        {
+          source: '/token',
+          destination: '/api/account/token',
+        },
+        {
+          source: '/signin',
+          destination: '/api/account/signin',
+        },
+        {
+          source: '/signup',
+          destination: '/api/account/signup',
+        },
+        {
+          source: '/callback',
+          destination: '/api/account/callback',
+        },
+        {
+          source: '/logout',
+          destination: '/api/account/logout',
+        },
+        {
+          source: '/refresh',
+          destination: '/api/account/refresh',
+        },
+        {
+          source: '/',
+          destination: '/api/detectLanguage',
+        },
+      ];
+    },
+  },
 
   webpack: (webpackConfig) => {
     webpackConfig.module.rules.push({
