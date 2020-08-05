@@ -14,7 +14,6 @@ const Footer = () => {
   const [loading, setLoading] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
   const [email, setEmail] = useState('');
-  console.log(urlAlpino);
   const onSubscribe = async (e) => {
     e.preventDefault();
 
