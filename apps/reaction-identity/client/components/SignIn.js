@@ -15,7 +15,7 @@ import SimpleSchema from 'simpl-schema';
 import './spinner.css';
 import Footer from './Footer.jsx';
 import Header from './Header.jsx';
-
+import { urlAlpino } from './static.js';
 /**
  * @summary Does `Meteor.loginWithPassword` followed by
  *   calling the "oauth/login" method.
@@ -38,6 +38,7 @@ function callSignIn({ challenge, email, password }) {
           return;
         }
         Meteor.call('oauth/login', { challenge }, (oauthLoginError, redirectUrl) => {
+          console.log(oauthLoginError);
           if (oauthLoginError) {
             reject(oauthLoginError);
           } else {
@@ -101,6 +102,7 @@ function SignIn() {
         setIsSubmitting(false);
         return { ok: false };
       }
+      console.log(redirectUrl);
       setIsSubmitting(false);
       if (redirectUrl) window.location.href = redirectUrl;
       return { ok: true };
