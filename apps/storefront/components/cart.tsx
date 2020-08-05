@@ -51,12 +51,12 @@ function Cart({ modalIsOpen, closeModal, items, cartOpen }) {
         </button>
       </div>
 
-      {!isEmpty(cart.items) && (
+      {!isEmpty(cart?.items) && (
         <p className={classNames(style.productHeading, 'text-base px-6 mt-2 font-normal')}>Products</p>
       )}
 
       <div className="px-6 mt-3">
-        {!isEmpty(cart.items) ? (
+        {!isEmpty(cart?.items) ? (
           cart.items.map((i, index) => (
             <CardItemCard
               data={i}
@@ -71,7 +71,7 @@ function Cart({ modalIsOpen, closeModal, items, cartOpen }) {
           </p>
         )}
       </div>
-      {!isEmpty(cart.items) && (
+      {!isEmpty(cart?.items) && (
         <Link href="/checkout">
           <a className={classNames('bg-black cursor-pointer mx-6 text-center mt-32 rounded-full block')}>
             <span className={classNames(style.checkoutButton, 'font-medium')}>Checkout</span>
