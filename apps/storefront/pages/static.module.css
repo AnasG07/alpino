@@ -10,6 +10,14 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.background-baloon {
+  background-image: url('/ballon.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .background-hands {
   background-image: url('/hands.png');
   background-size: cover;
