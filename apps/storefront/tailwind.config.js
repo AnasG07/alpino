@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'grey-loyalty': 'rgba(19, 19, 19)',
         'grey-light': 'rgba(242, 242, 242, 0.6)',
         'grey-dark': 'rgba(255, 255, 255, 0.15)',
         'grey-darker': 'rgba(242, 242, 242, 0.1)',
@@ -42,6 +43,7 @@ module.exports = {
       },
       lineHeight: {
         16: '4rem',
+        20: '5rem',
         12: '3rem',
         14: '3.5rem',
       },
@@ -49,6 +51,8 @@ module.exports = {
         '7xl': '4.5rem',
         '4.5xl': '3.5rem',
         xxs: '10px',
+        '144': '144px',
+        '80': '80px',
       },
       minHeight: {
         '20': '20rem',
@@ -69,10 +73,13 @@ module.exports = {
       },
       maxWidth: {
         '400': '400px',
+        '480': '480px',
         '1280': '1280px',
+        '550': '550px',
         '58': '58%',
         '350': '350px',
         '1400': '1400px',
+        '360': '360px',
       },
       padding: {
         '31': '7.5rem',
@@ -103,6 +110,7 @@ module.exports = {
         account: '8px',
       },
       margin: {
+        '31': '7.5rem',
         '344': '344px',
         '150': '150px',
         '120': '120px',
@@ -116,6 +124,7 @@ module.exports = {
         '130': '130px',
         '150': '170px',
         '280': '280px',
+        '336': '336px',
       },
       inset: {
         '65': '65px',
@@ -126,6 +135,7 @@ module.exports = {
       height: {
         '1/2': '1px',
         '80': '80%',
+        '300': '300px',
       },
     },
   },
