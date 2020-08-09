@@ -68,7 +68,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.background-corporate-en {
+  background-image: url('/enquiry-cor.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 @media (max-width: 768px) {
   .background-warranty,
   .background-privacy,
