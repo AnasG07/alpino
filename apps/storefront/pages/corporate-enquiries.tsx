@@ -39,7 +39,7 @@ export default function Careers() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-black">
-        <div className={classNames(styles['background-glass'], 'min-h-25 md:min-h-60')}>
+        <div className={classNames(styles['background-corporate-en'], 'min-h-25 md:min-h-60')}>
           <Header invert black />
           <div className={classNames(styles['pt-86'], 'flex justify-center flex-col items-center px-6 md:px-0')}>
             <h1 className="text-center leading-loose text-2xl  md:leading-12 md:text-black font-medium md:text-7xl">
