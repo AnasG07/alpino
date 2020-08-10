@@ -172,12 +172,12 @@ export default function Careers({ job }) {
               me the opportunity to try something new.”
             </h2>
             <p className=" text-base lg:text-lg leading-5 text-white-light pt-2 lg:pt-0 font-semibold max-w-30">
-              John Doe <br />
-              Strategy Manager,
-              <br /> Brand and Communications
+              Mayank Arora
+              <br />
+              Sr Accounts Manager,
             </p>
           </div>
-          <img src="/johndoe.jpeg" alt="none" className="w-full lg:w-2/4 rounded-super lg:rounded-none" />
+          <img src="/arora.jpg" alt="none" className="w-full lg:w-2/4 rounded-super lg:rounded-none" />
         </div>
         <div
           id="apply"
