@@ -102,7 +102,7 @@ const Header = ({
 
           <div
             className={classNames(
-              ' flex-col items-start pl-0 lg:flex pl-24 xl:pl-136 lg:flex-row lg:items-center lg:ml-auto',
+              'whitespace-no-wrap flex-col items-start pl-0 lg:flex pl-24 xl:pl-136 lg:flex-row lg:items-center lg:ml-auto',
               {
                 'bg-black': scroll,
                 hidden: !toggle,
